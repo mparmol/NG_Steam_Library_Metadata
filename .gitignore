@@ -11,6 +11,7 @@
 *.sln.docstates
 
 aux_time.txt
+.Rhistory
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
