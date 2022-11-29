@@ -1,7 +1,15 @@
 let hltb = require('howlongtobeat');
 let hltbService = new hltb.HowLongToBeatService();
 
-hltbService.search('Nioh: Complete Edition').then(result => console.log(result));
+/*
+// print process.argv
+process.argv.forEach(function (val, index, array) {
+  console.log(index + ': ' + val);
+
+});
+*/
+
+hltbService.search(process.argv[2]).then(result => console.log(result));
 
 //hltbService.detail('50087').then(result => console.log(result)).catch(e => console.error(e));
 //hltbService.search('Nioh');
