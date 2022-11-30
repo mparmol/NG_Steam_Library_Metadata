@@ -1,6 +1,10 @@
 {
     "r.lsp.promptToInstall": false,
     "projectManager.git.baseFolders": [
+<<<<<<< HEAD
         "D:\\Projects\\"
+=======
+        "D:\\Projects_laptop\\"
+>>>>>>> e3492a76fde0685f1888c26358b36718eb92d693
     ]
 }
