@@ -13,8 +13,6 @@ hltbService.search(process.argv[2]).then(result => console.log(result));
 
 //"Terraria: 49h"
 //Football_Manager_2017
-//Holaaadd
-//JAJAJAJ
 
 //hltbService.detail('50087').then(result => console.log(result)).catch(e => console.error(e));
 //hltbService.search('Nioh');
