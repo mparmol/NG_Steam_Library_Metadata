@@ -1,5 +1,12 @@
 ##NextGame
 
+
+###Pintar diagrama flujo
+
+
+###Data Adquisition-Data Pre-Processing-Machine Algo-Pattern evaluation-Knowledge Representation
+###                               - Data analysis/Representation
+
 ### Extract game list, from windows
 
 library(data.table)
@@ -20,8 +27,7 @@ for(i in 2:(str_count(h,"name")[1]+1))
 write.table(res_games,"Games.txt",quote = F,row.names = F,col.names = F)
 
 #https://github.com/Depressurizer/Depressurizer/releases
-
-##ss
+#https://github.com/Twombs/Steam-Games-List
 
 
 ### Extract gameplay time 
@@ -29,8 +35,9 @@ write.table(res_games,"Games.txt",quote = F,row.names = F,col.names = F)
 ### NO COGE EL QUE DEBE, MIRAR BIEN QUE COJA EL NOMBRE PERFECTO
 
 game_list<-read.delim("Games.txt")
+game_list[,2]<-NA
 
-
+cont=0
 
 for(i in 1:dim(game_list)[1])
 {
@@ -55,23 +62,39 @@ for(i in 1:dim(game_list)[1])
     
     system(paste("node New.js ",pasted_value," > aux_time.txt", sep=""))
     
-    data_time<-read.delim("aux_time.txt")
-    
-    if(dim(data_time)[1]>0)
+    if(file.info("aux_time.txt")$size>0)
     {
-      if(gsub(",","",strsplit(grep("gameplayMain:",data_time[,1],value=T), "Main: ")[[1]][2])>0)
+      data_time<-read.delim("aux_time.txt")
+      
+      if(dim(data_time)[1]>0)
       {
-        print(paste(game_list[i,1],": ",gsub(",","",strsplit(grep("gameplayMain:",data_time[,1],value=T), "Main: ")[[1]][2]),"h",sep = ""))
-        game_list[i,2]<-gsub(",","",strsplit(grep("gameplayMain:",data_time[,1],value=T), "Main: ")[[1]][2])
+        if(gsub(",","",strsplit(grep("gameplayMain:",data_time[,1],value=T), "Main: ")[[1]][2])>0)
+        {
+          print(paste(game_list[i,1],": ",gsub(",","",strsplit(grep("gameplayMain:",data_time[,1],value=T), "Main: ")[[1]][2]),"h",sep = ""))
+          game_list[i,2]<-gsub(",","",strsplit(grep("gameplayMain:",data_time[,1],value=T), "Main: ")[[1]][2])
+        }else
+        {
+          print(paste(game_list[i,1],": ","Sin registro de tiempo",sep = ""))
+          game_list[i,2]<-"Sin registro de tiempo"
+        }
       }else
       {
-        print(paste(game_list[i,1],": ","Sin registro de tiempo",sep = ""))
-        game_list[i,2]<-"Sin registro de tiempo"
+        print(paste(game_list[i,1],": NA",sep = ""))
+        game_list[i,2]<-"NA"
+      }
+      
+      cont=cont+1
+      
+      if(cont==20)
+      {
+        print("Sleep")
+        Sys.sleep(30)
+        cont=0
       }
     }else
     {
-      print(paste(game_list[i,1],": NA",sep = ""))
-      game_list[i,2]<-"NA"
+      Sys.sleep(120)
+      i=i-1
     }
   }
 }
