@@ -10,13 +10,7 @@ process.argv.forEach(function (val, index, array) {
 */
 
 hltbService.search(process.argv[2]).then(result => console.log(result));
-
-//"Terraria: 49h"
-//Football_Manager_2017
-//FLY'N: 55h"
-//FLYN: 6h"
-//"King's Quest: 19h"
-
+//hltbService.search("Trine 2").then(result => console.log(result));
 
 //hltbService.detail('50087').then(result => console.log(result)).catch(e => console.error(e));
 //hltbService.search('Nioh');

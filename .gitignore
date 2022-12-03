@@ -16,6 +16,10 @@ Games.txt
 index.html?tab=all
 PRUEBA.txt
 Games_HowLong.txt
+index.htmltab=all
+package.json
+package-lock.json
+
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
