@@ -67,7 +67,7 @@ for(i in 1:dim(game_list)[1])
     {
       data_time<-read.delim("aux_time.txt")
       
-      if(dim(data_time)[1]>0 & grepl(paste("'",game_list[i,1],"'",sep=""),data_time))  ### No funciona con simbolos numéricos
+      if(dim(data_time)[1]>0 & grepl(paste("'",game_list[i,1],"'",sep=""),data_time,fixed=TRUE))
       {
         if(gsub(",","",strsplit(grep("gameplayMain:",data_time[,1],value=T), "Main: ")[[1]][2])>0)
         {
@@ -78,7 +78,7 @@ for(i in 1:dim(game_list)[1])
           print(paste(game_list[i,1],": ","Sin registro de tiempo",sep = ""))
           game_list[i,2]<-"Sin registro de tiempo"
         }
-      }else if(dim(data_time)[1]>0 & grepl(str_to_title(paste("'",game_list[i,1],"'",sep="")),data_time))
+      }else if(dim(data_time)[1]>0 & grepl(str_to_title(paste("'",game_list[i,1],"'",sep="")),data_time,fixed=TRUE))
       {
         if(gsub(",","",strsplit(grep("gameplayMain:",data_time[,1],value=T), "Main: ")[[1]][2])>0)
         {
