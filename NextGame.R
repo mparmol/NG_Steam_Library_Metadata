@@ -94,7 +94,7 @@ for(i in 1:dim(game_list)[1])
           print(paste(game_list[i,1]," ",pasted_value,": ",gsub(",","",strsplit(grep("gameplayMain:",data_time[,1],value=T), "Main: ")[[1]][2]),"h",sep = ""))
           print(paste(game_list[i,1]," ",pasted_value,": ",gsub(",","",strsplit(grep("gameplayCompletionist:",data_time[,1],value=T), "Completionist: ")[[1]][2]),"h",sep = ""))
           game_list[i,2]<-gsub(",","",strsplit(grep("gameplayMain:",data_time[,1],value=T), "Main: ")[[1]][2])
-          game_list[i,3]<-gsub(",","",strsplit(grep("gameplayCompletionist:",data_time[,1],value=T), "Main: ")[[1]][2])
+          game_list[i,3]<-gsub(",","",strsplit(grep("gameplayCompletionist:",data_time[,1],value=T), "Completionist: ")[[1]][2])
         }else
         {
           print(paste(game_list[i,1]," ",pasted_value,": ","Sin registro de tiempo",sep = ""))
@@ -108,14 +108,14 @@ for(i in 1:dim(game_list)[1])
         game_list[i,3]<-"NA"
       }
       
-      cont=cont+1
+      #cont=cont+1
       
-      if(cont==20)
-      {
-        print("Sleep")
-        Sys.sleep(30)
-        cont=0
-      }
+      #if(cont==20)
+      #{
+      #  print("Sleep")
+      #  Sys.sleep(30)
+      #  cont=0
+      #}
     }else
     {
       Sys.sleep(120)
