@@ -5,6 +5,9 @@
 library(data.table)
 library(stringr)
 
+isEmpty <- function(x) { #This function checks if a data frame is empty or not
+  return(length(x)==0)
+}
 #########system("rm -rf index.html?tab=all")
 #########system("wget https://steamcommunity.com/id/marko_pakete/games/?tab=all")
 
@@ -34,20 +37,32 @@ game_list<-read.delim("Games.txt")
 
 for(i in 1:dim(game_list)[1])
 {
-    if(grepl("\\u2122",game_list[i,1],fixed=TRUE))
-    {
-      game_list[i,1]=gsub("\\u2122","",game_list[i,1],fixed=TRUE)
-    }
-    
-    if(grepl("\\u00fc",game_list[i,1],fixed=TRUE))
-    {
-      game_list[i,1]=gsub("\\u00fc","ü",game_list[i,1],fixed=TRUE)
-    }
+  aux_game_name<-gsub(" ","",game_list[i,1])
 
-    if(grepl("\\u00ae",game_list[i,1],fixed=TRUE))
-    {
-      game_list[i,1]=gsub("\\u00ae","ü",game_list[i,1],fixed=TRUE)
-    }
+  if(!isEmpty(which(game_list[,1]==aux_game_name)) & length(strsplit(game_list[i,1], " ")[[1]])>1)
+  {
+    aa<-which(game_list[,1]==aux_game_name)
+    game_list<-as.data.frame(game_list[-aa,])
+  }else if(!isEmpty(which(game_list[,1]==aux_game_name)) & length(which(game_list[,1]==aux_game_name))>1)
+  {
+    aa<-which(game_list[,1]==aux_game_name)
+    game_list<-as.data.frame(game_list[-aa[2:length(aa)],])
+  }
+
+  if(grepl("\\u2122",game_list[i,1],fixed=TRUE))
+  {
+    game_list[i,1]=gsub("\\u2122","",game_list[i,1],fixed=TRUE)
+  }
+    
+  if(grepl("\\u00fc",game_list[i,1],fixed=TRUE))
+  {
+    game_list[i,1]=gsub("\\u00fc","ü",game_list[i,1],fixed=TRUE)
+  }
+
+  if(grepl("\\u00ae",game_list[i,1],fixed=TRUE))
+  {
+    game_list[i,1]=gsub("\\u00ae","ü",game_list[i,1],fixed=TRUE)
+  }
 }
 
 
@@ -91,19 +106,18 @@ for(i in 1:dim(game_list)[1])
       {
         if(gsub(",","",strsplit(grep("gameplayMain:",data_time[,1],value=T), "Main: ")[[1]][2])>0)
         {
-          print(paste(game_list[i,1]," ",pasted_value,": ",gsub(",","",strsplit(grep("gameplayMain:",data_time[,1],value=T), "Main: ")[[1]][2]),"h",sep = ""))
-          print(paste(game_list[i,1]," ",pasted_value,": ",gsub(",","",strsplit(grep("gameplayCompletionist:",data_time[,1],value=T), "Completionist: ")[[1]][2]),"h",sep = ""))
+          print(paste(game_list[i,1],": ",gsub(",","",strsplit(grep("gameplayMain:",data_time[,1],value=T), "Main: ")[[1]][2]),"h"," ",gsub(",","",strsplit(grep("gameplayCompletionist:",data_time[,1],value=T), "Completionist: ")[[1]][2]),"h",sep = ""))
           game_list[i,2]<-gsub(",","",strsplit(grep("gameplayMain:",data_time[,1],value=T), "Main: ")[[1]][2])
           game_list[i,3]<-gsub(",","",strsplit(grep("gameplayCompletionist:",data_time[,1],value=T), "Completionist: ")[[1]][2])
         }else
         {
-          print(paste(game_list[i,1]," ",pasted_value,": ","Sin registro de tiempo",sep = ""))
+          print(paste(game_list[i,1],": Sin registro de tiempo",sep = ""))
           game_list[i,2]<-"Sin registro de tiempo"
           game_list[i,3]<-"Sin registro de tiempo"
         }
       }else
       {
-        print(paste(game_list[i,1]," ",pasted_value,": NA",sep = ""))
+        print(paste(game_list[i,1]," : NA",sep = ""))
         game_list[i,2]<-"NA"
         game_list[i,3]<-"NA"
       }

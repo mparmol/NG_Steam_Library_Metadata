@@ -19,6 +19,7 @@ Proyecto 1
 - Completar el mayor número de NA posibles
 - Descargar otros metadatos. Género, Calidad, fecha lanzamiento...
 - Integrar
+- Qué hacer con los que acaban con un espacio...quitar el espacio? (Need for Speed Heat)
 
 Proyecto 2
 Visualizar datos
@@ -38,3 +39,8 @@ Recomendación de compra
 
 La info de Completationist no la coge bien en la tabla, arreglar...
 
+5-12-22
+
+- Eliminado los duplicados que aparecen con espacios
+- Puestos tiempos de juego base y completacionista en una sola línea
+- Eliminado lo de que aparezca el nombre del juego dos veces
