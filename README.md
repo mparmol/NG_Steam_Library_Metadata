@@ -10,7 +10,7 @@ Utility to predict next playable game.
 Por hacer:
 
 Proyecto 1
-- Problema con desconexión, se pierde un match (regular el valor de "i")
+X - Problema con desconexión, se pierde un match (regular el valor de "i")
 - Buscar el hit por similarity?
     - Porblemas con los ":"
     - Algunos no se encuentan porque aparecen escritos de forma similar. Problemas con Complete o Remaster
@@ -20,6 +20,7 @@ Proyecto 1
 - Descargar otros metadatos. Género, Calidad, fecha lanzamiento...
 - Integrar
 - Qué hacer con los que acaban con un espacio...quitar el espacio? (Need for Speed Heat)
+- Warhammer 40,000 no sale bien, me cargo las ","
 
 Proyecto 2
 Visualizar datos
@@ -30,6 +31,7 @@ Recomendación juegos
 
 Proyecto 4
 Recomendación de compra
+
 
 
 4-12-22
@@ -44,3 +46,11 @@ La info de Completationist no la coge bien en la tabla, arreglar...
 - Eliminado los duplicados que aparecen con espacios
 - Puestos tiempos de juego base y completacionista en una sola línea
 - Eliminado lo de que aparezca el nombre del juego dos veces
+
+6-12-22
+
+- No se salta un elemento de la lista cuando hay error, la recorremos con un While. 
+- Comprueba que el archivo Game.txt existe, no vuelve a descargar el archivo desde Steam.
+- Busca también coincidencias cercanas, apunta cuales pasan por exactas y cuales no
+- elimina todos los "\u{4}" 
+- Quita también los | 

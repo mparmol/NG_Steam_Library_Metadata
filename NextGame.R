@@ -8,20 +8,24 @@ library(stringr)
 isEmpty <- function(x) { #This function checks if a data frame is empty or not
   return(length(x)==0)
 }
-#########system("rm -rf index.html?tab=all")
-#########system("wget https://steamcommunity.com/id/marko_pakete/games/?tab=all")
 
-#########file_process<-as.data.frame(fread("index.html?tab=all",fill = T))
-#########h<-file_process[grep("rgGames",file_process[,1]),]
+if(!file.exists("Games.txt"))
+{
+  system("rm -rf index.html?tab=all")
+  system("wget https://steamcommunity.com/id/marko_pakete/games/?tab=all")
 
-#########res_games<-data.frame(matrix(nrow=str_count(h,"name")[1]))
+  file_process<-as.data.frame(fread("index.html?tab=all",fill = T))
+  h<-file_process[grep("rgGames",file_process[,1]),]
 
-#########for(i in 2:(str_count(h,"name")[1]+1))
-#########{
-  #########res_games[i,1]<-substr(strsplit(sapply(strsplit(h[1], "name"), "[[", i),",")[[1]][1],4,nchar(strsplit(sapply(strsplit(h[1], "name"), "[[", i),",")[[1]][1])-1)
-#########}
+  res_games<-data.frame(matrix(nrow=str_count(h,"name")[1]))
 
-#########write.table(res_games,"Games.txt",quote = F,row.names = F,col.names = F)
+  for(i in 2:(str_count(h,"name")[1]+1))
+  {
+    res_games[i,1]<-substr(strsplit(sapply(strsplit(h[1], "name"), "[[", i),",")[[1]][1],4,nchar(strsplit(sapply(strsplit(h[1], "name"), "[[", i),",")[[1]][1])-1)
+  }
+
+  write.table(res_games,"Games.txt",quote = F,row.names = F,col.names = F)
+}
 
 #https://github.com/Depressurizer/Depressurizer/releases
 #https://github.com/Twombs/Steam-Games-List
@@ -49,19 +53,9 @@ for(i in 1:dim(game_list)[1])
     game_list<-as.data.frame(game_list[-aa[2:length(aa)],])
   }
 
-  if(grepl("\\u2122",game_list[i,1],fixed=TRUE))
+  if(grepl("\\\\u[a-zA-Z0-9]{4}",game_list[i,1])) #######################
   {
-    game_list[i,1]=gsub("\\u2122","",game_list[i,1],fixed=TRUE)
-  }
-    
-  if(grepl("\\u00fc",game_list[i,1],fixed=TRUE))
-  {
-    game_list[i,1]=gsub("\\u00fc","ü",game_list[i,1],fixed=TRUE)
-  }
-
-  if(grepl("\\u00ae",game_list[i,1],fixed=TRUE))
-  {
-    game_list[i,1]=gsub("\\u00ae","ü",game_list[i,1],fixed=TRUE)
+    game_list[i,1]=gsub("\\\\u[a-zA-Z0-9]{4}","",game_list[i,1])
   }
 }
 
@@ -72,10 +66,13 @@ for(i in 1:dim(game_list)[1])
 
 game_list[,2]<-NA
 game_list[,3]<-NA
+game_list[,4]<-NA
 
 cont=0
+i=1
 
-for(i in 1:dim(game_list)[1])
+#for(i in 1:dim(game_list)[1])
+while(i<dim(game_list)[1])
 {
   if(is.na(game_list[i,2]))
   {
@@ -96,6 +93,11 @@ for(i in 1:dim(game_list)[1])
       pasted_value=gsub("\\'","_",pasted_value)
     }
 
+    if(grepl("\\|",pasted_value))
+    {
+      pasted_value=gsub("\\|","_",pasted_value)
+    }
+
     system(paste("node New.js ",pasted_value," > aux_time.txt", sep=""))
     
     if(file.info("aux_time.txt")$size>0)
@@ -106,18 +108,41 @@ for(i in 1:dim(game_list)[1])
       {
         if(gsub(",","",strsplit(grep("gameplayMain:",data_time[,1],value=T), "Main: ")[[1]][2])>0)
         {
-          print(paste(game_list[i,1],": ",gsub(",","",strsplit(grep("gameplayMain:",data_time[,1],value=T), "Main: ")[[1]][2]),"h"," ",gsub(",","",strsplit(grep("gameplayCompletionist:",data_time[,1],value=T), "Completionist: ")[[1]][2]),"h",sep = ""))
+          print(paste(game_list[i,1],": ",gsub(",","",strsplit(grep("gameplayMain:",data_time[,1],value=T), "Main: ")[[1]][2]),"h"," ",gsub(",","",strsplit(grep("gameplayCompletionist:",data_time[,1],value=T), "Completionist: ")[[1]][2]),"h"," ",gsub("\\'","",gsub(",","",strsplit(grep("name:",data_time[,1],value=T), "name: ")[[1]][2])),sep = ""))
           game_list[i,2]<-gsub(",","",strsplit(grep("gameplayMain:",data_time[,1],value=T), "Main: ")[[1]][2])
           game_list[i,3]<-gsub(",","",strsplit(grep("gameplayCompletionist:",data_time[,1],value=T), "Completionist: ")[[1]][2])
+          game_list[i,4]<-gsub("\\'","",gsub(",","",strsplit(grep("name:",data_time[,1],value=T), "name: ")[[1]][2]))
+          game_list[i,5]<-"Exact"
+        }else if(gsub(",","",strsplit(grep("gameplayCompletionist:",data_time[,1],value=T), "Completionist: ")[[1]][2])>0)
+        {
+          print(paste(game_list[i,1],": ",gsub(",","",strsplit(grep("gameplayMain:",data_time[,1],value=T), "Main: ")[[1]][2]),"h"," ",gsub(",","",strsplit(grep("gameplayCompletionist:",data_time[,1],value=T), "Completionist: ")[[1]][2]),"h"," ",gsub("\\'","",gsub(",","",strsplit(grep("name:",data_time[,1],value=T), "name: ")[[1]][2])),sep = ""))
+          game_list[i,2]<-gsub(",","",strsplit(grep("gameplayMain:",data_time[,1],value=T), "Main: ")[[1]][2])
+          game_list[i,3]<-gsub(",","",strsplit(grep("gameplayCompletionist:",data_time[,1],value=T), "Completionist: ")[[1]][2])
+          game_list[i,4]<-gsub("\\'","",gsub(",","",strsplit(grep("name:",data_time[,1],value=T), "name: ")[[1]][2]))
+          game_list[i,5]<-"Exact"
         }else
         {
           print(paste(game_list[i,1],": Sin registro de tiempo",sep = ""))
           game_list[i,2]<-"Sin registro de tiempo"
           game_list[i,3]<-"Sin registro de tiempo"
         }
+      }else if(dim(data_time)[1]>0)
+      {
+          print(paste(game_list[i,1],": ",gsub(",","",strsplit(grep("gameplayMain:",data_time[,1],value=T), "Main: ")[[1]][2]),"h"," ",gsub(",","",strsplit(grep("gameplayCompletionist:",data_time[,1],value=T), "Completionist: ")[[1]][2]),"h"," ",gsub("\\'","",gsub(",","",strsplit(grep("name:",data_time[,1],value=T), "name: ")[[1]][2])),sep = ""))
+          game_list[i,2]<-gsub(",","",strsplit(grep("gameplayMain:",data_time[,1],value=T), "Main: ")[[1]][2])
+          game_list[i,3]<-gsub(",","",strsplit(grep("gameplayCompletionist:",data_time[,1],value=T), "Completionist: ")[[1]][2])
+          game_list[i,4]<-gsub("\\'","",gsub(",","",strsplit(grep("name:",data_time[,1],value=T), "name: ")[[1]][2]))
+          game_list[i,6]<-"Non Exact"
       }else
       {
-        print(paste(game_list[i,1]," : NA",sep = ""))
+
+        #for(o in 1:length())
+        #{
+
+        #  system(paste("node New.js ",pasted_value," > aux_time.txt", sep=""))
+        #}
+
+        print(paste(game_list[i,1],": NA",sep = ""))
         game_list[i,2]<-"NA"
         game_list[i,3]<-"NA"
       }
@@ -130,12 +155,15 @@ for(i in 1:dim(game_list)[1])
       #  Sys.sleep(30)
       #  cont=0
       #}
+      
     }else
     {
-      Sys.sleep(120)
       print("Descansando buffer 2 min")
-      i=i-2
+      Sys.sleep(120)
+      i=i-1
     }
+
+    i=i+1
   }
 }
 
