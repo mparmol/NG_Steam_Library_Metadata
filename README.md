@@ -12,9 +12,9 @@ Por hacer:
 Proyecto 1
 X - Problema con desconexión, se pierde un match (regular el valor de "i")
 - Buscar el hit por similarity?
-    - Porblemas con los ":"
+    - Problemas con los ":"
     - Algunos no se encuentan porque aparecen escritos de forma similar. Problemas con Complete o Remaster
-    - Problema con juegos como Trine 2, no es el mismo orden
+    X - Problema con juegos como Trine 2, no es el mismo orden
 
 - Completar el mayor número de NA posibles
 - Descargar otros metadatos. Género, Calidad, fecha lanzamiento...
@@ -54,3 +54,10 @@ La info de Completationist no la coge bien en la tabla, arreglar...
 - Busca también coincidencias cercanas, apunta cuales pasan por exactas y cuales no
 - elimina todos los "\u{4}" 
 - Quita también los | 
+
+7-12-22
+
+- Grandes cambios.
+  - Se filtran los resultados y se coge el de mayor similitud, no el primero.
+  - Se han hecho varios cambios de control de filtrado de información para evitar problemas al procesas el dato.
+  - Esto soluciona el problema de Trine 2 y similares
