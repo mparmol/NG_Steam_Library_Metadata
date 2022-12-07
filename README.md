@@ -19,7 +19,7 @@ X - Problema con desconexión, se pierde un match (regular el valor de "i")
 - Completar el mayor número de NA posibles
 - Descargar otros metadatos. Género, Calidad, fecha lanzamiento...
 - Integrar
-- Qué hacer con los que acaban con un espacio...quitar el espacio? (Need for Speed Heat)
+X - Qué hacer con los que acaban con un espacio...quitar el espacio? (Need for Speed Heat)
 - Warhammer 40,000 no sale bien, me cargo las ","
 - Probar el archivo solo con las últimas lineas de "Game.txt", que no tenga que quitarlas a mano
 
