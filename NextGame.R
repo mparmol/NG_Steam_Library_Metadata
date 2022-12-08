@@ -79,7 +79,7 @@ while(i<dim(game_list)[1])
   {
     pasted_value=paste(strsplit(game_list[i,1],split = " ")[[1]],collapse =  "_")
     
-    if(grepl("&",pasted_value)) #Este bloque de modificaciones sirven para encontrar ya que con el nombre exacto no salen resultados..problemas con símbolos
+    if(grepl("&",pasted_value)) #Este bloque de modificaciones sirven para encontrar ya que con el nombre exacto no salen resultados..problemas con símbolos ## NO VA BIEN!!!   HACER: & $ . -
     {
       pasted_value=strsplit(pasted_value,"&_")[[1]][2]
     }
