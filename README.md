@@ -22,6 +22,7 @@ X - Problema con desconexión, se pierde un match (regular el valor de "i")
 X - Qué hacer con los que acaban con un espacio...quitar el espacio? (Need for Speed Heat)
 - Warhammer 40,000 no sale bien, me cargo las ","
 - Probar el archivo solo con las últimas lineas de "Game.txt", que no tenga que quitarlas a mano
+- Quitar simbolos especiales del Game.txt, pero mantener en una columna el nombre original
 
 Proyecto 2
 Visualizar datos
