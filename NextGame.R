@@ -40,7 +40,7 @@ game_list<-read.delim("Games.txt")
 
 ###Limpiar nombre, chequeo de estado.
 
-for(i in 1:dim(game_list)[1])
+for(i in 1:dim(game_list)[1]) ## Muy bien todo esto, pero mantener el nombre original para llevarlo a tabla final...
 {
   aux_game_name<-gsub(" ","",game_list[i,1])
 
@@ -57,6 +57,22 @@ for(i in 1:dim(game_list)[1])
   if(grepl("\\\\u[a-zA-Z0-9]{4}",game_list[i,1])) #######################
   {
     game_list[i,1]=gsub("\\\\u[a-zA-Z0-9]{4}","",game_list[i,1])
+  }
+
+  if(grepl("&",game_list[i,1])) #Este bloque de modificaciones sirven para encontrar ya que con el nombre exacto no salen resultados..problemas con símbolos ## NO VA BIEN!!!   HACER: & $ . -
+  {
+      #pasted_value=strsplit(pasted_value,"&_")[[1]][2]
+      game_list[i,1]=gsub(" &","",game_list[i,1])   ####Quitar de la misma forma los apostrofes
+  }
+
+  if(grepl("\\'",game_list[i,1]))
+  {
+    game_list[i,1]=gsub("\\'","_",game_list[i,1])
+  }
+
+  if(grepl("\\|",game_list[i,1]))
+  {
+    game_list[i,1]=gsub("\\|","_",game_list[i,1])
   }
 }
 
@@ -79,24 +95,11 @@ while(i<dim(game_list)[1])
   {
     pasted_value=paste(strsplit(game_list[i,1],split = " ")[[1]],collapse =  "_")
     
-    if(grepl("&",pasted_value)) #Este bloque de modificaciones sirven para encontrar ya que con el nombre exacto no salen resultados..problemas con símbolos ## NO VA BIEN!!!   HACER: & $ . -
-    {
-      pasted_value=strsplit(pasted_value,"&_")[[1]][2]
-    }
+    
     
     if(grepl("\\(",pasted_value))
     {
       pasted_value=strsplit(pasted_value,"_\\(")[[1]][1]
-    }
-    
-    if(grepl("\\'",pasted_value))
-    {
-      pasted_value=gsub("\\'","_",pasted_value)
-    }
-
-    if(grepl("\\|",pasted_value))
-    {
-      pasted_value=gsub("\\|","_",pasted_value)
     }
 
     band_f=0
@@ -179,9 +182,11 @@ while(i<dim(game_list)[1])
               game_list[i,5]<-"Exact"
             }else
             {
-              print(paste(game_list[i,1],": Sin registro de tiempo",sep = ""))
+              print(paste(game_list[i,1],": Sin registro de tiempo"," ",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1],sep = ""))
               game_list[i,2]<-"Sin registro de tiempo"
               game_list[i,3]<-"Sin registro de tiempo"
+              game_list[i,4]<-"Sin registro de tiempo"
+
             }
           #}else if(dim(data_time)[1]>0)
           }else

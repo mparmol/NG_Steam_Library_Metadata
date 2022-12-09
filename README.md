@@ -66,3 +66,7 @@ La info de Completationist no la coge bien en la tabla, arreglar...
 8-12-22
 
 - Modificación grande para los ":", no va bien del todo...ver por qué algunos se abren...monitorear durante ejecución
+
+9-12-22
+
+- Fallaba por cómo se gestiona "&". Sigue fallando con el cambio que tiene hecho, modificarlo (tiene que estar) y ver si a los juegos que tienen "Collector's edition" etc les afecta y se arregla al cortar esa cola
