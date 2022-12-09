@@ -62,3 +62,7 @@ La info de Completationist no la coge bien en la tabla, arreglar...
   - Se filtran los resultados y se coge el de mayor similitud, no el primero.
   - Se han hecho varios cambios de control de filtrado de información para evitar problemas al procesas el dato.
   - Esto soluciona el problema de Trine 2 y similares
+
+8-12-22
+
+- Modificación grande para los ":", no va bien del todo...ver por qué algunos se abren...monitorear durante ejecución

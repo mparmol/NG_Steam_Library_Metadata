@@ -21,6 +21,7 @@ package.json
 package-lock.json
 Games_HowLong_v1.xlsx
 Games_HowLong_v2.txt
+Games_HowLong_back_bueno.txt
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
