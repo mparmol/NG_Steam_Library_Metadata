@@ -22,7 +22,7 @@ X - Problema con desconexión, se pierde un match (regular el valor de "i")
 X - Qué hacer con los que acaban con un espacio...quitar el espacio? (Need for Speed Heat)
 - Warhammer 40,000 no sale bien, me cargo las ","
 - Probar el archivo solo con las últimas lineas de "Game.txt", que no tenga que quitarlas a mano
-- Quitar simbolos especiales del Game.txt, pero mantener en una columna el nombre original
+X - Quitar simbolos especiales del Game.txt, pero mantener en una columna el nombre original
 
 Proyecto 2
 Visualizar datos
@@ -71,3 +71,5 @@ La info de Completationist no la coge bien en la tabla, arreglar...
 9-12-22
 
 - Fallaba por cómo se gestiona "&". Sigue fallando con el cambio que tiene hecho, modificarlo (tiene que estar) y ver si a los juegos que tienen "Collector's edition" etc les afecta y se arregla al cortar esa cola
+- Nueva forma del pasted, pero fallan otros juegos como "Mount & Blade: With Fire and Sword". Ver qué pasa, antes iba...Probar también Red Comrades Save the Galaxy: Reloaded
+- Mount & Blade arreglado, Red Comrades no. Quitar ":" y "-" en la próxima versión

@@ -37,7 +37,7 @@ if(!file.exists("Games.txt"))
 ### NO COGE EL QUE DEBE, MIRAR BIEN QUE COJA EL NOMBRE PERFECTO
 
 game_list<-read.delim("Games.txt")
-
+game_list_aux<-game_list
 ###Limpiar nombre, chequeo de estado.
 
 for(i in 1:dim(game_list)[1]) ## Muy bien todo esto, pero mantener el nombre original para llevarlo a tabla final...
@@ -48,31 +48,100 @@ for(i in 1:dim(game_list)[1]) ## Muy bien todo esto, pero mantener el nombre ori
   {
     aa<-which(game_list[,1]==aux_game_name)
     game_list<-as.data.frame(game_list[-aa,])
+    game_list_aux<-as.data.frame(game_list_aux[-aa,])
   }else if(!isEmpty(which(game_list[,1]==aux_game_name)) & length(which(game_list[,1]==aux_game_name))>1)
   {
     aa<-which(game_list[,1]==aux_game_name)
     game_list<-as.data.frame(game_list[-aa[2:length(aa)],])
+    game_list_aux<-as.data.frame(game_list_aux[-aa[2:length(aa)],])
   }
 
   if(grepl("\\\\u[a-zA-Z0-9]{4}",game_list[i,1])) #######################
   {
     game_list[i,1]=gsub("\\\\u[a-zA-Z0-9]{4}","",game_list[i,1])
+    game_list_aux[i,1]=gsub("\\\\u[a-zA-Z0-9]{4}","",game_list_aux[i,1])
   }
 
-  if(grepl("&",game_list[i,1])) #Este bloque de modificaciones sirven para encontrar ya que con el nombre exacto no salen resultados..problemas con símbolos ## NO VA BIEN!!!   HACER: & $ . -
+  if(grepl(" Collection$",game_list[i,1])) #######################
   {
-      #pasted_value=strsplit(pasted_value,"&_")[[1]][2]
-      game_list[i,1]=gsub(" &","",game_list[i,1])   ####Quitar de la misma forma los apostrofes
+    game_list[i,1]=gsub(" Collection","",game_list[i,1])
+    #game_list_aux[i,1]=gsub("\\\\u[a-zA-Z0-9]{4}","",game_list_aux[i,1])
   }
+
+  if(grepl(" Ultimate Edition$",game_list[i,1])) #######################
+  {
+    game_list[i,1]=gsub(" Ultimate Edition","",game_list[i,1])
+    #game_list_aux[i,1]=gsub("\\\\u[a-zA-Z0-9]{4}","",game_list_aux[i,1])
+  }
+
+  if(grepl(" Extended Edition$",game_list[i,1])) #######################
+  {
+    game_list[i,1]=gsub(" Extended Edition","",game_list[i,1])
+    #game_list_aux[i,1]=gsub("\\\\u[a-zA-Z0-9]{4}","",game_list_aux[i,1])
+  }
+
+  if(grepl(" Reloaded$",game_list[i,1])) #######################
+  {
+    game_list[i,1]=gsub(" Reloaded","",game_list[i,1])
+    #game_list_aux[i,1]=gsub("\\\\u[a-zA-Z0-9]{4}","",game_list_aux[i,1])
+  }
+
+  if(grepl(" Remastered$",game_list[i,1])) #######################
+  {
+    game_list[i,1]=gsub(" Remastered","",game_list[i,1])
+    #game_list_aux[i,1]=gsub("\\\\u[a-zA-Z0-9]{4}","",game_list_aux[i,1])
+  }
+
+  if(grepl(" Enhanced Edition$",game_list[i,1])) #######################
+  {
+    game_list[i,1]=gsub(" Enhanced Edition","",game_list[i,1])
+    #game_list_aux[i,1]=gsub("\\\\u[a-zA-Z0-9]{4}","",game_list_aux[i,1])
+  }
+
+  if(grepl(" Definitive Edition$",game_list[i,1])) #######################
+  {
+    game_list[i,1]=gsub(" Definitive Edition","",game_list[i,1])
+    #game_list_aux[i,1]=gsub("\\\\u[a-zA-Z0-9]{4}","",game_list_aux[i,1])
+  }
+
+  if(grepl(" Complete$",game_list[i,1])) #######################
+  {
+    game_list[i,1]=gsub(" Complete","",game_list[i,1])
+    #game_list_aux[i,1]=gsub("\\\\u[a-zA-Z0-9]{4}","",game_list_aux[i,1])
+  }
+
+  if(grepl(" Steam Edition$",game_list[i,1])) #######################
+  {
+    game_list[i,1]=gsub(" Steam Edition","",game_list[i,1])
+    #game_list_aux[i,1]=gsub("\\\\u[a-zA-Z0-9]{4}","",game_list_aux[i,1])
+  }
+
+  if(grepl(" and ",game_list[i,1])) #######################
+  {
+    game_list[i,1]=gsub(" and "," ",game_list[i,1])
+    #game_list_aux[i,1]=gsub("\\\\u[a-zA-Z0-9]{4}","",game_list_aux[i,1])
+  }
+  #if(grepl("&",game_list[i,1])) #Este bloque de modificaciones sirven para encontrar ya que con el nombre exacto no salen resultados..problemas con símbolos ## NO VA BIEN!!!   HACER: & $ . -
+  #{
+  #    #pasted_value=strsplit(pasted_value,"&_")[[1]][2]
+  #    game_list[i,1]=gsub(" &","",game_list[i,1])   ####Quitar de la misma forma los apostrofes
+  #}
 
   if(grepl("\\'",game_list[i,1]))
   {
     game_list[i,1]=gsub("\\'","_",game_list[i,1])
+    #game_list_aux=gsub("\\'","_",game_list[i,1])
   }
 
   if(grepl("\\|",game_list[i,1]))
   {
     game_list[i,1]=gsub("\\|","_",game_list[i,1])
+    #game_list_aux=gsub("\\|","_",game_list[i,1])
+  }
+
+  if(grepl("\\(",game_list[i,1]))
+  {
+    game_list[i,1]=strsplit(game_list[i,1]," \\(")[[1]][1]
   }
 }
 
@@ -93,14 +162,8 @@ while(i<dim(game_list)[1])
 {
   if(is.na(game_list[i,2]))
   {
-    pasted_value=paste(strsplit(game_list[i,1],split = " ")[[1]],collapse =  "_")
-    
-    
-    
-    if(grepl("\\(",pasted_value))
-    {
-      pasted_value=strsplit(pasted_value,"_\\(")[[1]][1]
-    }
+    #pasted_value=paste(strsplit(game_list[i,1],split = " ")[[1]],collapse =  "_")
+    pasted_value=paste("'",game_list[i,1],"'",sep="")
 
     band_f=0
     cont_long_string=0
@@ -163,7 +226,7 @@ while(i<dim(game_list)[1])
               #game_list[i,2]<-gsub(",","",strsplit(grep("gameplayMain:",data_time[,1],value=T), "Main: ")[[1]][2])
               #game_list[i,3]<-gsub(",","",strsplit(grep("gameplayCompletionist:",data_time[,1],value=T), "Completionist: ")[[1]][2])
               #game_list[i,4]<-gsub("\\'","",gsub(",","",strsplit(grep("name:",data_time[,1],value=T), "name: ")[[1]][2]))
-              print(paste(game_list[i,1],": ",name_list_j_gpm[which(max(name_list_j_simil)==name_list_j_simil)][1],"h"," ",name_list_j_gpc[which(max(name_list_j_simil)==name_list_j_simil)][1],"h"," ",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1],sep = ""))
+              print(paste(game_list_aux[i,1],": ",name_list_j_gpm[which(max(name_list_j_simil)==name_list_j_simil)][1],"h"," ",name_list_j_gpc[which(max(name_list_j_simil)==name_list_j_simil)][1],"h"," ",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1],sep = ""))
               game_list[i,2]<-name_list_j_gpm[which(max(name_list_j_simil)==name_list_j_simil)][1]
               game_list[i,3]<-name_list_j_gpc[which(max(name_list_j_simil)==name_list_j_simil)][1]
               game_list[i,4]<-name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]
@@ -175,14 +238,14 @@ while(i<dim(game_list)[1])
               #game_list[i,2]<-gsub(",","",strsplit(grep("gameplayMain:",data_time[,1],value=T), "Main: ")[[1]][2])
               #game_list[i,3]<-gsub(",","",strsplit(grep("gameplayCompletionist:",data_time[,1],value=T), "Completionist: ")[[1]][2])
               #game_list[i,4]<-gsub("\\'","",gsub(",","",strsplit(grep("name:",data_time[,1],value=T), "name: ")[[1]][2]))
-              print(paste(game_list[i,1],": ",name_list_j_gpm[which(max(name_list_j_simil)==name_list_j_simil)][1],"h"," ",name_list_j_gpc[which(max(name_list_j_simil)==name_list_j_simil)][1],"h"," ",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1],sep = ""))
+              print(paste(game_list_aux[i,1],": ",name_list_j_gpm[which(max(name_list_j_simil)==name_list_j_simil)][1],"h"," ",name_list_j_gpc[which(max(name_list_j_simil)==name_list_j_simil)][1],"h"," ",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1],sep = ""))
               game_list[i,2]<-name_list_j_gpm[which(max(name_list_j_simil)==name_list_j_simil)][1]
               game_list[i,3]<-name_list_j_gpc[which(max(name_list_j_simil)==name_list_j_simil)][1]
               game_list[i,4]<-name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]
               game_list[i,5]<-"Exact"
             }else
             {
-              print(paste(game_list[i,1],": Sin registro de tiempo"," ",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1],sep = ""))
+              print(paste(game_list_aux[i,1],": Sin registro de tiempo"," ",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1],sep = ""))
               game_list[i,2]<-"Sin registro de tiempo"
               game_list[i,3]<-"Sin registro de tiempo"
               game_list[i,4]<-"Sin registro de tiempo"
@@ -195,7 +258,7 @@ while(i<dim(game_list)[1])
               #game_list[i,2]<-gsub(",","",strsplit(grep("gameplayMain:",data_time[,1],value=T), "Main: ")[[1]][2])
               #game_list[i,3]<-gsub(",","",strsplit(grep("gameplayCompletionist:",data_time[,1],value=T), "Completionist: ")[[1]][2])
               #game_list[i,4]<-gsub("\\'","",gsub(",","",strsplit(grep("name:",data_time[,1],value=T), "name: ")[[1]][2]))
-              print(paste(game_list[i,1],": ",name_list_j_gpm[which(max(name_list_j_simil)==name_list_j_simil)][1],"h"," ",name_list_j_gpc[which(max(name_list_j_simil)==name_list_j_simil)][1],"h"," ",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1],sep = ""))
+              print(paste(game_list_aux[i,1],": ",name_list_j_gpm[which(max(name_list_j_simil)==name_list_j_simil)][1],"h"," ",name_list_j_gpc[which(max(name_list_j_simil)==name_list_j_simil)][1],"h"," ",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1],sep = ""))
               game_list[i,2]<-name_list_j_gpm[which(max(name_list_j_simil)==name_list_j_simil)][1]
               game_list[i,3]<-name_list_j_gpc[which(max(name_list_j_simil)==name_list_j_simil)][1]
               game_list[i,4]<-name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]
@@ -212,10 +275,10 @@ while(i<dim(game_list)[1])
               pasted_value<-strsplit(game_list[i,1], " ")[[1]][1]
             }else if(cont_long_string==y)
             {
-              pasted_value<-paste(pasted_value,":_",strsplit(game_list[i,1], " ")[[1]][y],sep="")
+              pasted_value<-paste(pasted_value,": ",strsplit(game_list[i,1], " ")[[1]][y],sep="")
             }else
             {
-              pasted_value<-paste(pasted_value,"_",strsplit(game_list[i,1], " ")[[1]][y],sep="")
+              pasted_value<-paste(pasted_value," ",strsplit(game_list[i,1], " ")[[1]][y],sep="")
             }
           } 
         }
@@ -249,4 +312,5 @@ while(i<dim(game_list)[1])
   }
 }
 
+game_list[,1]<-game_list_aux[,1]
 write.table(game_list,"Games_HowLong.txt",quote = F,row.names = F,col.names = F,sep = "\t")
