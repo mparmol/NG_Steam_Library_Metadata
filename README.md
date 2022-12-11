@@ -12,20 +12,22 @@ Por hacer:
 Proyecto 1
 X - Problema con desconexión, se pierde un match (regular el valor de "i")
 - Buscar el hit por similarity?
-    - Problemas con los ":"
-    - Algunos no se encuentan porque aparecen escritos de forma similar. Problemas con Complete o Remaster
+    X - Problemas con los ":"
+    X - Algunos no se encuentan porque aparecen escritos de forma similar. Problemas con Complete o Remaster
     X - Problema con juegos como Trine 2, no es el mismo orden
 
-- Completar el mayor número de NA posibles
+X - Completar el mayor número de NA posibles
 - Descargar otros metadatos. Género, Calidad, fecha lanzamiento...
 - Integrar
 X - Qué hacer con los que acaban con un espacio...quitar el espacio? (Need for Speed Heat)
-- Warhammer 40,000 no sale bien, me cargo las ","
-- Probar el archivo solo con las últimas lineas de "Game.txt", que no tenga que quitarlas a mano
+X - Warhammer 40,000 no sale bien, me cargo las ","
+X - Probar el archivo solo con las últimas lineas de "Game.txt", que no tenga que quitarlas a mano
 X - Quitar simbolos especiales del Game.txt, pero mantener en una columna el nombre original
 
 Proyecto 2
 Visualizar datos
+- Juegos con logros más fáciles: diferencia menor de tiempo entre completacionista y base, se puede relativizar a tiempo de juego base y se genera un índice (cuanto más alto mejor)
+- Etiqueta de "Tiempo en completarlo/logros", "Removed", "Géneros", "Completado", "Puntuación en %", "Fecha salida", "Cuándo se compró"
 
 Proyecto 3
 Recomendación juegos
@@ -72,4 +74,16 @@ La info de Completationist no la coge bien en la tabla, arreglar...
 
 - Fallaba por cómo se gestiona "&". Sigue fallando con el cambio que tiene hecho, modificarlo (tiene que estar) y ver si a los juegos que tienen "Collector's edition" etc les afecta y se arregla al cortar esa cola
 - Nueva forma del pasted, pero fallan otros juegos como "Mount & Blade: With Fire and Sword". Ver qué pasa, antes iba...Probar también Red Comrades Save the Galaxy: Reloaded
+
+10-12-22
+
 - Mount & Blade arreglado, Red Comrades no. Quitar ":" y "-" en la próxima versión
+- SEGA Mega Drive & Genesis Classics
+
+11-12-22
+
+- Arreglado los problemas, los NA solucionados. Ver cómo limitar los falsos positivos
+
+12-12-22
+
+- Hay que revisar el xls, vamos por el 200 de los no match
