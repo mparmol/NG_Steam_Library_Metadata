@@ -32,9 +32,7 @@ if(!file.exists("Games.txt"))
 #https://www.kaggle.com/datasets/ca06934a676693b069bc319eb7c76647afbcf8019dc4828cabb50678a064f3ff BAJAR METADATO
 #https://github.com/Duerkos/steam_analysis BAJAR METADATA
 
-### Extract gameplay time 
-
-### NO COGE EL QUE DEBE, MIRAR BIEN QUE COJA EL NOMBRE PERFECTO
+### Extract gameplay time
 
 game_list<-read.delim("Games.txt")
 game_list_aux<-game_list
@@ -62,7 +60,7 @@ for(i in 1:dim(game_list)[1]) ## Muy bien todo esto, pero mantener el nombre ori
     game_list_aux[i,1]=gsub("\\\\u[a-zA-Z0-9]{4}","",game_list_aux[i,1])
   }
 
-  if(grepl("Collection$",game_list[i,1])) #######################
+  if(grepl("Transformed Collection$",game_list[i,1])) #######################
   {
     game_list[i,1]=gsub("Collection","",game_list[i,1])
   }
@@ -92,10 +90,10 @@ for(i in 1:dim(game_list)[1]) ## Muy bien todo esto, pero mantener el nombre ori
     game_list[i,1]=gsub("Maximum Edition","",game_list[i,1])
   }
 
-  if(grepl("Reloaded$",game_list[i,1])) #######################
-  {
-    game_list[i,1]=gsub("Reloaded","",game_list[i,1])
-  }
+  #if(grepl("Reloaded$",game_list[i,1])) #######################
+  #{
+  #  game_list[i,1]=gsub("Reloaded","",game_list[i,1])
+  #}
 
   if(grepl("Remastered$",game_list[i,1])) #######################
   {
@@ -152,6 +150,11 @@ for(i in 1:dim(game_list)[1]) ## Muy bien todo esto, pero mantener el nombre ori
     game_list[i,1]=gsub("\\|","_",game_list[i,1])
   }
 
+  if(grepl("\\.",game_list[i,1]))
+  {
+    game_list[i,1]=gsub("\\.","_",game_list[i,1])
+  }
+
   if(grepl("\\(",game_list[i,1]))
   {
     game_list[i,1]=strsplit(game_list[i,1]," \\(")[[1]][1]
@@ -178,7 +181,7 @@ while(i<dim(game_list)[1])
 
     band_f=0
     cont_long_string=0
-
+    
     while(band_f==0 & cont_long_string<length(strsplit(game_list[i,1], " ")[[1]]))
     {
       cont_long_string=cont_long_string+1
@@ -280,7 +283,7 @@ while(i<dim(game_list)[1])
           {
             if(y==1)
             {
-              pasted_value<-strsplit(game_list[i,1], " ")[[1]][1]
+              pasted_value<-paste("'",strsplit(game_list[i,1], " ")[[1]][1],sep="")
             }else if(cont_long_string==y)
             {
               pasted_value<-paste(pasted_value,": ",strsplit(game_list[i,1], " ")[[1]][y],sep="")
@@ -288,7 +291,9 @@ while(i<dim(game_list)[1])
             {
               pasted_value<-paste(pasted_value," ",strsplit(game_list[i,1], " ")[[1]][y],sep="")
             }
-          } 
+          }
+
+          pasted_value=paste(pasted_value,"'",sep="") 
         }
       }else
       {

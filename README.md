@@ -87,3 +87,8 @@ La info de Completationist no la coge bien en la tabla, arreglar...
 12-12-22
 
 - Hay que revisar el xls, vamos por el 200 de los no match
+- Voy por el 400
+- Arreglado los problemas con "Reload" y "Collection". Se han dejado, el único collection que se ha modificado es el "Sonic Transformed Collection".
+- Arreglado los casos en que no se daba el hit y se intentaba poner ":", no se ponía bien en esta versión y solo buscaba la primera palabra.
+- Parece que se ha mejorado todo lo que había que mirar, revisar la lista de los NA y los No Exact a ver qué se puede apurar...
+- Quedan muy pocos en No Exact, se han ido mucho a NA...por ejemplo PUBG, estaba bien. Comparar el V3 y V4!
