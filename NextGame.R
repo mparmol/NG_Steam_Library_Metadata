@@ -14,6 +14,12 @@ if(!file.exists("Games.txt"))
   system("rm -rf index.html?tab=all")
   system("wget https://steamcommunity.com/id/marko_pakete/games/?tab=all")
 
+  # André: https://steamcommunity.com/profiles/76561198012006378/games/?tab=all
+  # Jolas: https://steamcommunity.com/id/guayabazo/games/?tab=all
+  # Álvaro: https://steamcommunity.com/profiles/76561197992225029/games/?tab=all
+  # Jimmy: https://steamcommunity.com/profiles/76561198124010932/games/?tab=all
+  # Álvaro: https://steamcommunity.com/id/DuckSaucer77/games/?tab=all
+
   file_process<-as.data.frame(fread("index.html?tab=all",fill = T))
   h<-file_process[grep("rgGames",file_process[,1]),]
 
@@ -78,6 +84,11 @@ for(i in 1:dim(game_list)[1]) ## Muy bien todo esto, pero mantener el nombre ori
   if(grepl("Extended Edition$",game_list[i,1])) #######################
   {
     game_list[i,1]=gsub("Extended Edition","",game_list[i,1])
+  }
+
+  if(grepl("Gold Edition$",game_list[i,1])) #######################
+  {
+    game_list[i,1]=gsub("Gold Edition","",game_list[i,1])
   }
 
   if(grepl("Premium Edition$",game_list[i,1])) #######################
