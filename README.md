@@ -92,5 +92,15 @@ La info de Completationist no la coge bien en la tabla, arreglar...
 - Arreglado los casos en que no se daba el hit y se intentaba poner ":", no se ponía bien en esta versión y solo buscaba la primera palabra.
 - Parece que se ha mejorado todo lo que había que mirar, revisar la lista de los NA y los No Exact a ver qué se puede apurar...
 - Quedan muy pocos en No Exact, se han ido mucho a NA...por ejemplo PUBG, estaba bien. Comparar el V3 y V4!
-- Con la comparación, quitar Disney del principio.
+
+13-12-22
+
+- Si no encuentra hit, mirar si tiene Disney al principio. Si lo tiene, quitarlo.
 - Si no encuentra nada, después de poner ":", buscar solo la primera palabra...si solo hay un hit, guardarlo.
+- Las dos cosas ya funcionan
+- Arreglar: Saw, Monaco, Resident Evil 0, Age of Empires II (2013), ARCADE GAME SERIES: PAC-MAN: 1h 3h Ms. Pac-Man. Entran en Exact pero no deberían, corregir esa parte del código para que solo guarde los exactos 100%.
+- No se cortan bien los nombres para generar Games.txt. Problemas con el juego anterior a: "Aesthetic World", "F1 Race Stars"
+- Arreglado el recorte de los nombres. Ahora no aparecen nombres duplicados, se puede eliminar esa parte de código! Además los dos de arriba ya aparecen bien.
+- Generamos el V5, comparar con V3 y V4, a ver cuántos se han solucionado.
+- Hay mucho Exact que no está bien...mirar los que están en la línea 4, a ver qué se puede hacer..contar los problemas que hay! El V6 será la versión donde los exact sean exact perfectos...ahí caerán los :, '...mirar bien
+- Enhanced edition habría que dejarlo...cuál más dejar? Ver cuántos hay de casa caso, dejar un archivo Game.txt con todos ellos (sacar con un grep)

@@ -13,6 +13,7 @@ if(!file.exists("Games.txt"))
 {
   system("rm -rf index.html?tab=all")
   system("wget https://steamcommunity.com/id/marko_pakete/games/?tab=all")
+  #system("wget https://steamcommunity.com/id/guayabazo/games/?tab=all")
 
   # André: https://steamcommunity.com/profiles/76561198012006378/games/?tab=all
   # Jolas: https://steamcommunity.com/id/guayabazo/games/?tab=all
@@ -23,11 +24,11 @@ if(!file.exists("Games.txt"))
   file_process<-as.data.frame(fread("index.html?tab=all",fill = T))
   h<-file_process[grep("rgGames",file_process[,1]),]
 
-  res_games<-data.frame(matrix(nrow=str_count(h,"name")[1]))
+  res_games<-data.frame(matrix(nrow=str_count(h,'"name"')[1]))
 
-  for(i in 2:(str_count(h,"name")[1]+1))
+  for(i in 2:(str_count(h,'"name"')[1]+1))
   {
-    res_games[i,1]<-substr(strsplit(sapply(strsplit(h[1], "name"), "[[", i),",\\\"")[[1]][1],4,nchar(strsplit(sapply(strsplit(h[1], "name"), "[[", i),",\\\"")[[1]][1])-1)
+    res_games[i,1]<-substr(strsplit(sapply(strsplit(h[1], '"name"'), "[[", i),",\\\"")[[1]][1],3,nchar(strsplit(sapply(strsplit(h[1], '"name"'), "[[", i),",\\\"")[[1]][1])-1)
   }
 
   write.table(res_games,"Games.txt",quote = F,row.names = F,col.names = F)
@@ -37,6 +38,7 @@ if(!file.exists("Games.txt"))
 #https://github.com/Twombs/Steam-Games-List
 #https://www.kaggle.com/datasets/ca06934a676693b069bc319eb7c76647afbcf8019dc4828cabb50678a064f3ff BAJAR METADATO
 #https://github.com/Duerkos/steam_analysis BAJAR METADATA
+#https://github.com/scjustice/steam_webscraper EL SCRAPPER PRO
 
 ### Extract gameplay time
 
@@ -96,6 +98,16 @@ for(i in 1:dim(game_list)[1]) ## Muy bien todo esto, pero mantener el nombre ori
     game_list[i,1]=gsub("Premium Edition","",game_list[i,1])
   }
 
+  if(grepl("Deluxe Edition$",game_list[i,1])) #######################
+  {
+    game_list[i,1]=gsub("Deluxe Edition","",game_list[i,1])
+  }
+
+  if(grepl("Special Editions$",game_list[i,1])) #######################
+  {
+    game_list[i,1]=gsub("Special Editions","",game_list[i,1])
+  }
+
   if(grepl("Maximum Edition$",game_list[i,1])) #######################
   {
     game_list[i,1]=gsub("Maximum Edition","",game_list[i,1])
@@ -131,6 +143,11 @@ for(i in 1:dim(game_list)[1]) ## Muy bien todo esto, pero mantener el nombre ori
     game_list[i,1]=gsub("Steam Edition","",game_list[i,1])
   }
 
+  if(grepl("- Anniversary Edition$",game_list[i,1])) #######################
+  {
+    game_list[i,1]=gsub("- Anniversary Edition","",game_list[i,1])
+  }
+
   if(grepl(" and ",game_list[i,1])) #######################
   {
     game_list[i,1]=gsub(" and "," ",game_list[i,1])
@@ -138,7 +155,7 @@ for(i in 1:dim(game_list)[1]) ## Muy bien todo esto, pero mantener el nombre ori
 
   if(grepl(":",game_list[i,1])) #######################
   {
-    game_list[i,1]=gsub(":"," ",game_list[i,1])
+    game_list[i,1]=gsub(":","",game_list[i,1])
   }
 
   if(grepl(" & ",game_list[i,1])) #######################
@@ -172,8 +189,8 @@ for(i in 1:dim(game_list)[1]) ## Muy bien todo esto, pero mantener el nombre ori
   }
 }
 
-
-
+game_list[i,1]<-NA
+game_list_aux[i,1]<-NA
 
 ###
 
@@ -192,8 +209,9 @@ while(i<dim(game_list)[1])
 
     band_f=0
     cont_long_string=0
+    valor_unico=0
     
-    while(band_f==0 & cont_long_string<length(strsplit(game_list[i,1], " ")[[1]]))
+    while(band_f==0 & cont_long_string<length(strsplit(game_list[i,1], " ")[[1]])+2)
     {
       cont_long_string=cont_long_string+1
 
@@ -203,7 +221,12 @@ while(i<dim(game_list)[1])
       {
         data_time<-read.delim("aux_time.txt")
 
-        if(dim(data_time)[1]>0)
+        if(valor_unico==1 & length(data_time[grepl(" name:",data_time[,1]),])==1)
+        {
+          valor_unico=0
+        }
+
+        if(dim(data_time)[1]>0 & valor_unico==0)
         {
           band_f=1
 
@@ -242,23 +265,23 @@ while(i<dim(game_list)[1])
             if(name_list_j_gpm[which(max(name_list_j_simil)==name_list_j_simil)][1]>0)
             {
               print(paste(game_list_aux[i,1],": ",name_list_j_gpm[which(max(name_list_j_simil)==name_list_j_simil)][1],"h"," ",name_list_j_gpc[which(max(name_list_j_simil)==name_list_j_simil)][1],"h"," ",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1],sep = ""))
-              game_list[i,2]<-name_list_j_gpm[which(max(name_list_j_simil)==name_list_j_simil)][1]
-              game_list[i,3]<-name_list_j_gpc[which(max(name_list_j_simil)==name_list_j_simil)][1]
-              game_list[i,4]<-name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]
+              game_list[i,2]<-name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]
+              game_list[i,3]<-name_list_j_gpm[which(max(name_list_j_simil)==name_list_j_simil)][1]
+              game_list[i,4]<-name_list_j_gpc[which(max(name_list_j_simil)==name_list_j_simil)][1]
               game_list[i,5]<-"Exact"
             }else if(name_list_j_gpc[which(max(name_list_j_simil)==name_list_j_simil)][1]>0)
             {
               print(paste(game_list_aux[i,1],": ",name_list_j_gpm[which(max(name_list_j_simil)==name_list_j_simil)][1],"h"," ",name_list_j_gpc[which(max(name_list_j_simil)==name_list_j_simil)][1],"h"," ",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1],sep = ""))
-              game_list[i,2]<-name_list_j_gpm[which(max(name_list_j_simil)==name_list_j_simil)][1]
-              game_list[i,3]<-name_list_j_gpc[which(max(name_list_j_simil)==name_list_j_simil)][1]
-              game_list[i,4]<-name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]
+              game_list[i,2]<-name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]
+              game_list[i,3]<-name_list_j_gpm[which(max(name_list_j_simil)==name_list_j_simil)][1]
+              game_list[i,4]<-name_list_j_gpc[which(max(name_list_j_simil)==name_list_j_simil)][1]
               game_list[i,5]<-"Exact"
             }else
             {
               print(paste(game_list_aux[i,1],": Sin registro de tiempo"," ",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1],sep = ""))
-              game_list[i,2]<-"Sin registro de tiempo"
+              game_list[i,2]<-name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]
               game_list[i,3]<-"Sin registro de tiempo"
-              game_list[i,4]<-name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]
+              game_list[i,4]<-"Sin registro de tiempo"
               game_list[i,5]<-"Exact"
             }
           }else
@@ -266,45 +289,55 @@ while(i<dim(game_list)[1])
             if(name_list_j_gpm[which(max(name_list_j_simil)==name_list_j_simil)][1]>0)
             {
               print(paste(game_list_aux[i,1],": ",name_list_j_gpm[which(max(name_list_j_simil)==name_list_j_simil)][1],"h"," ",name_list_j_gpc[which(max(name_list_j_simil)==name_list_j_simil)][1],"h"," ",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1],sep = ""))
-              game_list[i,2]<-name_list_j_gpm[which(max(name_list_j_simil)==name_list_j_simil)][1]
-              game_list[i,3]<-name_list_j_gpc[which(max(name_list_j_simil)==name_list_j_simil)][1]
-              game_list[i,4]<-name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]
+              game_list[i,2]<-name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]
+              game_list[i,3]<-name_list_j_gpm[which(max(name_list_j_simil)==name_list_j_simil)][1]
+              game_list[i,4]<-name_list_j_gpc[which(max(name_list_j_simil)==name_list_j_simil)][1]
               game_list[i,5]<-"Non Exact"
             }else if(name_list_j_gpc[which(max(name_list_j_simil)==name_list_j_simil)][1]>0)
             {
               print(paste(game_list_aux[i,1],": ",name_list_j_gpm[which(max(name_list_j_simil)==name_list_j_simil)][1],"h"," ",name_list_j_gpc[which(max(name_list_j_simil)==name_list_j_simil)][1],"h"," ",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1],sep = ""))
-              game_list[i,2]<-name_list_j_gpm[which(max(name_list_j_simil)==name_list_j_simil)][1]
-              game_list[i,3]<-name_list_j_gpc[which(max(name_list_j_simil)==name_list_j_simil)][1]
-              game_list[i,4]<-name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]
+              game_list[i,2]<-name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]
+              game_list[i,3]<-name_list_j_gpm[which(max(name_list_j_simil)==name_list_j_simil)][1]
+              game_list[i,4]<-name_list_j_gpc[which(max(name_list_j_simil)==name_list_j_simil)][1]
               game_list[i,5]<-"Non Exact"
             }else
             {
               print(paste(game_list_aux[i,1],": Sin registro de tiempo"," ",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1],sep = ""))
-              game_list[i,2]<-"Sin registro de tiempo"
+              game_list[i,2]<-name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]
               game_list[i,3]<-"Sin registro de tiempo"
-              game_list[i,4]<-name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]
+              game_list[i,4]<-"Sin registro de tiempo"
               game_list[i,5]<-"Non Exact"
             }
           }
         }else
         {
-          pasted_value<-NULL
-
-          for(y in 1:length(strsplit(game_list[i,1], " ")[[1]]))
+          if(cont_long_string<length(strsplit(game_list[i,1], " ")[[1]]))
           {
-            if(y==1)
-            {
-              pasted_value<-paste("'",strsplit(game_list[i,1], " ")[[1]][1],sep="")
-            }else if(cont_long_string==y)
-            {
-              pasted_value<-paste(pasted_value,": ",strsplit(game_list[i,1], " ")[[1]][y],sep="")
-            }else
-            {
-              pasted_value<-paste(pasted_value," ",strsplit(game_list[i,1], " ")[[1]][y],sep="")
-            }
-          }
+            pasted_value<-NULL
 
-          pasted_value=paste(pasted_value,"'",sep="") 
+            for(y in 1:length(strsplit(game_list[i,1], " ")[[1]]))
+            {
+              if(y==1)
+              {
+                pasted_value<-paste("'",strsplit(game_list[i,1], " ")[[1]][1],sep="")
+              }else if(cont_long_string==y)
+              {
+                pasted_value<-paste(pasted_value,": ",strsplit(game_list[i,1], " ")[[1]][y],sep="")
+              }else
+              {
+                pasted_value<-paste(pasted_value," ",strsplit(game_list[i,1], " ")[[1]][y],sep="")
+              }
+            }
+
+            pasted_value=paste(pasted_value,"'",sep="")
+          }else if(grepl("^Disney ",game_list[i,1])) #######################
+          {
+            pasted_value=paste("'",gsub("Disney ","",game_list[i,1]),"'",sep="")
+          }else
+          {
+            pasted_value<-strsplit(game_list[i,1], " ")[[1]][1]
+            valor_unico<-1
+          } 
         }
       }else
       {
@@ -317,8 +350,8 @@ while(i<dim(game_list)[1])
     if(band_f==0)
     {
       print(paste(game_list[i,1],": NA",sep = ""))
-      game_list[i,2]<-"NA"
-      game_list[i,3]<-"NA"
+      #game_list[i,2]<-"NA"
+      #game_list[i,3]<-"NA"
     }
 
     i=i+1
