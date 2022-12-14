@@ -123,10 +123,10 @@ for(i in 1:dim(game_list)[1]) ## Muy bien todo esto, pero mantener el nombre ori
     game_list[i,1]=gsub("Remastered","",game_list[i,1])
   }
 
-  if(grepl("Enhanced Edition$",game_list[i,1])) #######################
-  {
-    game_list[i,1]=gsub("Enhanced Edition","",game_list[i,1])
-  }
+  #if(grepl("Enhanced Edition$",game_list[i,1])) #######################
+  #{
+  #  game_list[i,1]=gsub("Enhanced Edition","",game_list[i,1])
+  #}
 
   if(grepl("Definitive Edition$",game_list[i,1])) #######################
   {
