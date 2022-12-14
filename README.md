@@ -1,20 +1,24 @@
-# **NextGame**
-Utility to predict next playable game.
+# **NextGame - Database creation**
+Utility to create personal account Steam metadata table.
 
 ## What do you need:
 
-### Install miniconda:
+### Install miniconda (available for Windows and Linux):
 
 https://docs.conda.io/en/latest/miniconda.html
 
 ### Create conda environment with R:
 
-conda create -n r_env r-essentials r-base
+> conda create -n r_env r-essentials r-base
 
 ### Usage:
 
-1. Load conda environment
-2. Rscript NextGame.R 
+1. Open NextGame.R file and modifify line 16 with your own Steam game link
+    > system("wget https://steamcommunity.com/id/marko_pakete/games/?tab=all")
+2. Load conda environment. 
+    > conda activate r_env
+3. Run script
+    > Rscript NextGame.R 
 
-
+![NewGame](Cap.png "NewGame")
 
