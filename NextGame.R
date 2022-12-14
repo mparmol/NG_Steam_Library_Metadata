@@ -2,8 +2,9 @@
 
 ### Extract game list, from windows
 
-library(data.table)
-library(stringr)
+require(c("data.table","stringr"))
+#library(data.table)
+#library(stringr)
 
 isEmpty <- function(x) { #This function checks if a data frame is empty or not
   return(length(x)==0)
@@ -128,10 +129,10 @@ for(i in 1:dim(game_list)[1]) ## Muy bien todo esto, pero mantener el nombre ori
   #  game_list[i,1]=gsub("Enhanced Edition","",game_list[i,1])
   #}
 
-  if(grepl("Definitive Edition$",game_list[i,1])) #######################
-  {
-    game_list[i,1]=gsub("Definitive Edition","",game_list[i,1])
-  }
+  #if(grepl("Definitive Edition$",game_list[i,1])) #######################
+  #{
+  #  game_list[i,1]=gsub("Definitive Edition","",game_list[i,1])
+  #}
 
   if(grepl("Complete$",game_list[i,1])) #######################
   {
@@ -146,6 +147,11 @@ for(i in 1:dim(game_list)[1]) ## Muy bien todo esto, pero mantener el nombre ori
   if(grepl("- Anniversary Edition$",game_list[i,1])) #######################
   {
     game_list[i,1]=gsub("- Anniversary Edition","",game_list[i,1])
+  }
+
+  if(grepl("ARCADE GAME SERIES: ",game_list[i,1])) #######################
+  {
+    game_list[i,1]=gsub("ARCADE GAME SERIES: ","",game_list[i,1])
   }
 
   if(grepl(" and ",game_list[i,1])) #######################
@@ -183,9 +189,9 @@ for(i in 1:dim(game_list)[1]) ## Muy bien todo esto, pero mantener el nombre ori
     game_list[i,1]=gsub("\\.","_",game_list[i,1])
   }
 
-  if(grepl("\\(",game_list[i,1]))
+  if(grepl("\\)$",game_list[i,1]))
   {
-    game_list[i,1]=strsplit(game_list[i,1]," \\(")[[1]][1]
+    game_list[i,1]=strsplit(game_list[i,1]," \\)$")[[1]][1]
   }
 }
 
@@ -260,7 +266,8 @@ while(i<dim(game_list)[1])
           name_list_j_gpm[which(max(name_list_j_simil)==name_list_j_simil)][1]
           name_list_j_gpc[which(max(name_list_j_simil)==name_list_j_simil)][1]
         
-          if((grepl(paste("'",game_list[i,1],"'",sep=""),data_time,fixed=TRUE) | grepl(str_to_title(paste("'",game_list[i,1],"'",sep="")),data_time,fixed=TRUE))) # Busca el nombre exacto, si no se sale de la búsqueda. Si no encuentra el nombre exacto en la lista, convierte todo a minúscula menos la primera letra
+          #if((grepl(paste("'",game_list[i,1],"'",sep=""),data_time,fixed=TRUE) | grepl(str_to_title(paste("'",game_list[i,1],"'",sep="")),data_time,fixed=TRUE))) # Busca el nombre exacto, si no se sale de la búsqueda. Si no encuentra el nombre exacto en la lista, convierte todo a minúscula menos la primera letra
+          if(name_list_j_simil>0.95)
           {
             if(name_list_j_gpm[which(max(name_list_j_simil)==name_list_j_simil)][1]>0)
             {
@@ -333,6 +340,12 @@ while(i<dim(game_list)[1])
           }else if(grepl("^Disney ",game_list[i,1])) #######################
           {
             pasted_value=paste("'",gsub("Disney ","",game_list[i,1]),"'",sep="")
+          }else if(grepl("Enhanced Edition$",game_list[i,1])) #######################
+          {
+            pasted_value=gsub("Enhanced Edition","",game_list[i,1])
+          }else if(grepl("Definitive Edition$",game_list[i,1])) #######################
+          {
+            pasted_value=gsub("Definitive Edition","",game_list[i,1])
           }else
           {
             pasted_value<-strsplit(game_list[i,1], " ")[[1]][1]
