@@ -11,6 +11,14 @@ https://docs.conda.io/en/latest/miniconda.html
 
 > conda create -n r_env r-essentials r-base
 
+### Install Howlongtobeat API
+
+> https://github.com/ckatzorke/howlongtobeat
+
+Install the dependency
+
+> npm install howlongtobeat --save
+
 ### Usage:
 
 1. Open NextGame.R file and modifify line 16 with your own Steam game link

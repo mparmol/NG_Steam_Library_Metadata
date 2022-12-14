@@ -105,4 +105,8 @@ La info de Completationist no la coge bien en la tabla, arreglar...
 14-12-22
 
 - Algun cambio más. Dejamos las ENhanced y las Definitive, pero lo recortamos si no encontramos nada
-- Vamos a poner para que los Exact sean Exact. "My Destiny"	no puede dar "My Jigsaw Adventures - Forgotten Destiny". Cribamos por similaridad >0.95
+- Vamos a poner para que los Exact sean Exact. "My Destiny"	no puede dar "My Jigsaw Adventures - Forgotten Destiny". Cribamos por similaridad >0.925
+- Cambiadas algunas cosas del preprocesado
+- Seguimos metiendo cambios, y ahora dejamos algunas cosas y las quitamos solo cuando el algoritmo no encuentre nada, forzándolo...no hacer desde un principio porque en un principio, si queremos probar a poner ":" ya deberíamos haber procesado un mínimo el nombre
+- En próxima versión intentar quitar los número que esté en medio de un nombre, no se leen
+- Red Comrades Save the Galaxy: Reloaded vuelve a fallar...?
