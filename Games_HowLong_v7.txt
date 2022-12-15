@@ -1,0 +1,3072 @@
+MONSTER HUNTER RISE	Monster Hunter Rise	21	150	1	Exact
+Grand Theft Auto V	Grand Theft Auto V	32	80	1	Exact
+Monster Hunter Stories 2: Wings of Ruin	Monster Hunter Stories 2: Wings of Ruin	40	145	1	Exact
+ELDEN RING	Elden Ring	54	132	1	Exact
+Monster Hunter: World	Monster Hunter: World	48	393	1	Exact
+PAYDAY 2	Payday 2	25	465	1	Exact
+Spyro Reignited Trilogy	Spyro Reignited Trilogy	17	32	1	Exact
+Yu-Gi-Oh! Legacy of the Duelist	Yu-Gi-Oh! Legacy of the Duelist	17	65	1	Exact
+Road Redemption	Road Redemption	6	26	1	Exact
+Fable Anniversary	Fable Anniversary	13	32	1	Exact
+Torchlight II	Torchlight II	21	73	1	Exact
+Vampire Survivors	Vampire Survivors	8	34	1	Exact
+The Witness	The Witness	17	41	1	Exact
+Magic 2015	Magic: The Gathering - Duels of the Planeswalkers 2015	10	51	0.19	Non Exact
+Yooka-Laylee	Yooka-Laylee	15	25	1	Exact
+Deadpool	Deadpool	7	16	1	Exact
+Mercenary Kings	Mercenary Kings	20	54	1	Exact
+N++	N++	27	317	1	Exact
+Dead Island	Dead Island	18	48	1	Exact
+Wasteland 2	Wasteland 2	41	108	1	Exact
+Resident Evil 4	Resident Evil 4	16	31	1	Exact
+Unepic	UnEpic	18	43	1	Exact
+Plants vs. Zombies: Game of the Year	Plants vs. Zombies	8	44	0.47	Non Exact
+Mark of the Ninja	Mark of the Ninja	8	20	1	Exact
+The Whispered World Special Edition	The Whispered World	10	13	0.54	Non Exact
+Orcs Must Die! 2	Orcs Must Die! 2	8	41	1	Exact
+Dust: An Elysian Tail	Dust: An Elysian Tail	10	18	1	Exact
+DRAGON BALL XENOVERSE	Dragon Ball Xenoverse	17	92	1	Exact
+METAL SLUG	Metal Slug	1	2	1	Exact
+Sonic Generations	Sonic Generations	6	24	1	Exact
+Dead Rising 3	Dead Rising 3	14	46	1	Exact
+Resident Evil 5	Resident Evil 5	12	33	1	Exact
+Owlboy	Owlboy	8	13	1	Exact
+Darksiders II Deathinitive Edition	Darksiders II: Deathinitive Edition	20	52	0.97	Exact
+Resident Evil 2	Resident Evil 2	9	34	1	Exact
+Battle vs Chess	Battle vs. Chess	17	0	0.94	Exact
+Blasphemous	Blasphemous	13	27	1	Exact
+Cuphead	Cuphead	10	24	1	Exact
+Oceanhorn: Monster of Uncharted Seas	Oceanhorn: Monster of Uncharted Seas	9	16	1	Exact
+Brütal Legend	Brütal Legend	9	24	1	Exact
+River City Ransom: Underground	River City Ransom: Underground	10	25	1	Exact
+Blackguards	Blackguards	41	49	1	Exact
+BloodRayne: Betrayal (Legacy)	BloodRayne: Betrayal	5	12	1	Exact
+Warhammer 40,000: Dawn of War III	Warhammer 40,000: Dawn of War III	17	25	1	Exact
+Plague Inc: Evolved	Plague Inc: Evolved	4	47	1	Exact
+Tumblestone	Tumblestone	21	25	1	Exact
+One Finger Death Punch	One Finger Death Punch	7	33	1	Exact
+Euro Truck Simulator 2	Euro Truck Simulator 2	43	418	1	Exact
+The East New World	The East New World	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Always Sometimes Monsters	Always Sometimes Monsters	9	13	1	Exact
+Risk of Rain	Risk of Rain	4	53	1	Exact
+Terraria	Terraria	49	179	1	Exact
+Teleglitch: Die More Edition	Teleglitch: Die More Edition	5	18	1	Exact
+Revolution Ace	Revolution Ace	6	9	1	Exact
+Saints Row IV	Saints Row IV	15	36	1	Exact
+Project Night	Project Night	3	0	1	Exact
+Deponia Doomsday	Deponia Doomsday	11	14	1	Exact
+Saviors	Star Saviors	2	30	0.58	Non Exact
+Tropico 4	Tropico 4	40	103	1	Exact
+Mortal Kombat X	Mortal Kombat X	6	50	1	Exact
+Bastion	Bastion	6	20	1	Exact
+Antichamber	Antichamber	6	9	1	Exact
+MURDERED: SOUL SUSPECT	Murdered: Soul Suspect	7	11	1	Exact
+Poof	Poof	0	9	1	Exact
+Jotun: Valhalla Edition	Jotun	5	7	0.22	Non Exact
+NotTheNameWeWanted	NotTheNameWeWanted	1	5	1	Exact
+Clickr	Clickr	4	0	1	Exact
+The Night of the Rabbit	The Night of the Rabbit	10	15	1	Exact
+Wasteland 2: Director's Cut	Wasteland 2	41	108	0.41	Non Exact
+Full Mojo Rampage	Full Mojo Rampage	6	44	1	Exact
+Borealis	Borealis	1	5	1	Exact
+AR-K	AR-K	5	7	1	Exact
+Beyond Space	Beyond Space	2	0	1	Exact
+The Cat Lady	The Cat Lady	8	12	1	Exact
+Turok	Turok	8	10	1	Exact
+Outlast	Outlast	5	10	1	Exact
+Project Highrise	Project Highrise	10	48	1	Exact
+Monkey Island 2: Special Edition	Monkey Island 2: LeChuck's Revenge	7	8	0.56	Non Exact
+Resident Evil 6	Resident Evil 6	21	53	1	Exact
+BattleBlock Theater	BattleBlock Theater	10	41	1	Exact
+Awesomenauts	Awesomenauts	12	184	1	Exact
+Goodbye Deponia	Goodbye Deponia	10	12	1	Exact
+Castle Crashers	Castle Crashers	7	39	1	Exact
+DRAGON BALL FighterZ	Dragon Ball FighterZ	12	43	1	Exact
+POSTAL 2	Postal 2	7	27	1	Exact
+Genital Jousting	Genital Jousting	2	6	1	Exact
+Broken Sword 3 - the Sleeping Dragon	NA	NA	NA	NA	NA
+DuckTales Remastered	DuckTales	2	2	1	Exact
+Resident Evil Revelations	Resident Evil: Revelations	8	34	0.96	Exact
+Teslagrad	Teslagrad	5	7	1	Exact
+Hell Yeah!	Hell Yeah! Wrath of the Dead Rabbit	7	10	0.29	Non Exact
+Dead Island Definitive Edition	Dead Island: Definitive Edition	17	51	0.97	Exact
+Super Daryl Deluxe	Super Daryl Deluxe	19	35	1	Exact
+Magicka	Magicka	10	46	1	Exact
+Shovel Knight: Treasure Trove	Shovel Knight	7	17	0.45	Non Exact
+Second Sight	Second Sight	9	14	1	Exact
+Football Manager 2017	Football Manager 2017	217	460	1	Exact
+Comedy Night	Comedy Night	1	8	1	Exact
+The Room Three	The Room Three	5	6	1	Exact
+Planescape: Torment: Enhanced Edition	NA	NA	NA	NA	NA
+99 Spirits	Tsukumogami	13	27	0	Non Exact
+Conan Exiles	Conan Exiles	33	122	1	Exact
+Sherlock Holmes: The Devil's Daughter	Sherlock Holmes: The Devil's Daughter	10	12	0.97	Exact
+Supraball	Supraball	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Holy Potatoes! A Weapon Shop?!	Holy Potatoes! A Weapon Shop?!	11	27	1	Exact
+Reign Of Kings	Reign of Kings	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Injustice: Gods Among Us Ultimate Edition	Injustice: Gods Among Us	5	19	1	Exact
+Left 4 Dead 2	Left 4 Dead 2	10	52	1	Exact
+GRID Autosport	Grid Autosport	32	159	1	Exact
+Chaos on Deponia	Chaos on Deponia	10	13	1	Exact
+Worms W.M.D	Worms W.M.D	14	41	0.82	Non Exact
+Resident Evil 7 Biohazard	Resident Evil 7: Biohazard	9	24	0.96	Exact
+Deponia	Deponia	8	10	1	Exact
+Solo	Solo	3	6	1	Exact
+Dead Rising	Dead Rising	12	76	1	Exact
+Sonic & All-Stars Racing Transformed Collection	Sonic & All-Stars Racing Transformed	7	43	0.97	Exact
+Football Manager 2016	Football Manager 2016	271	1083	1	Exact
+Crash Bandicoot N. Sane Trilogy	Crash Bandicoot N. Sane Trilogy	15	44	0.97	Exact
+The Sims 3	The Sims 3	51	177	1	Exact
+Gauntlet 	Gauntlet	6	31	1	Exact
+8-Bit Adventures 1: The Forgotten Journey Remastered Edition	NA	NA	NA	NA	NA
+Soul Axiom	Soul Axiom	13	16	1	Exact
+GRIS	GRIS	4	6	1	Exact
+Turok 2: Seeds of Evil	Turok 2: Seeds of Evil	11	16	1	Exact
+Abyss Odyssey	Abyss Odyssey	4	17	1	Exact
+Call of Duty: Black Ops III	Call of Duty: Black Ops III	9	75	1	Exact
+Sid Meier's Civilization VI	Sid Meier's Civilization VI	22	293	0.96	Exact
+Blade Symphony	Blade Symphony	0	1	1	Exact
+Lost Ark	Lost Ark	37	536	1	Exact
+Serious Sam 3: BFE	Serious Sam 3: BFE	10	26	1	Exact
+Little Nightmares	Little Nightmares	4	7	1	Exact
+Angry Birds Space	Angry Birds Space	5	17	1	Exact
+OVERKILL's The Walking Dead	Overkill's The Walking Dead	9	31	0.96	Exact
+Citizens of Earth	Citizens of Earth	14	34	1	Exact
+Dragon's Dogma: Dark Arisen	Dragon's Dogma: Dark Arisen	34	113	0.96	Exact
+Pillars of Eternity	Pillars of Eternity	36	106	1	Exact
+Call of Duty: WWII	Call of Duty: WWII	7	20	1	Exact
+Double Dragon Neon	Double Dragon Neon	4	12	1	Exact
+RUNNING WITH RIFLES	RUNNING WITH RIFLES	20	45	1	Exact
+GALAK-Z	Galak-Z: Variant S	10	0	0.39	Non Exact
+Broken Sword 2 - the Smoking Mirror: Remastered	Broken Sword II: The Smoking Mirror - Remastered	7	8	0.67	Non Exact
+Gods Will Be Watching	Gods Will Be Watching	6	13	1	Exact
+Batman: Arkham Knight	Batman: Arkham Knight	16	49	1	Exact
+Minion Masters	Minion Masters	4	108	1	Exact
+Shantae: Risky's Revenge - Director's Cut	Shantae: Risky's Revenge - Director's Cut	5	7	0.9	Non Exact
+God Mode	God Mode	9	17	1	Exact
+Split\/Second	Split / Second	10	20	0.86	Non Exact
+Alan Wake	Alan Wake	11	26	1	Exact
+Afterfall InSanity Extended Edition	Afterfall: InSanity	7	18	0.95	Exact
+Narita Boy	Narita Boy	7	9	1	Exact
+Age of Empires III (2007)	Age of Empires III	15	32	1	Exact
+STRAFE: Gold Edition	Strafe	5	0	1	Exact
+Hellblade: Senua's Sacrifice	Hellblade: Senua's Sacrifice	8	9	0.96	Exact
+The Room 4: Old Sins	The Room 4: Old Sins	4	4	1	Exact
+Eon Altar	Eon Altar	14	0	1	Exact
+60 Parsecs!	60 Parsecs!	2	16	1	Exact
+The Walking Dead	The Walking Dead	1	0	1	Exact
+Microtransaction Simulator	Microtransaction Simulator	1	4	1	Exact
+Seven: Enhanced Edition	Seven: The Days Long Gone	16	77	0.4	Non Exact
+Gato Roboto	Gato Roboto	3	4	1	Exact
+Goat Simulator	Goat Simulator	2	10	1	Exact
+Full Metal Furies	Full Metal Furies	10	27	1	Exact
+Train Simulator	Train Simulator	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Ultra Street Fighter IV	Ultra Street Fighter IV	2	114	1	Exact
+Braid	Braid	5	8	1	Exact
+PUBG: BATTLEGROUNDS	NA	NA	NA	NA	NA
+For Honor	For Honor	7	17	1	Exact
+Company of Heroes 	Company of Heroes	19	84	1	Exact
+Guacamelee! Super Turbo Championship Edition	Guacamelee!: Super Turbo Championship Edition	7	16	0.98	Exact
+Project CARS 2	Project Cars 2	24	225	1	Exact
+Warhammer: End Times - Vermintide	Warhammer: End Times - Vermintide	8	138	0.94	Exact
+DiRT 3 Complete Edition	Dirt 3: Complete Edition	15	38	0.96	Exact
+This Is the Police	This is the Police	20	31	1	Exact
+Disney Classic Games Aladdin and the Lion King	Disney Classic Games: Aladdin and The Lion King	4	9	0.89	Non Exact
+7 Grand Steps, Step 1: What Ancients Begat	7 Grand Steps, Step 1: What Ancients Begat	10	13	1	Exact
+Sonic Mania	Sonic Mania	6	19	1	Exact
+Mad Max	Mad Max	20	62	1	Exact
+Titan Quest Anniversary Edition	Titan Quest: Anniversary Edition	31	90	0.97	Exact
+War for the Overworld	War for the Overworld	14	48	1	Exact
+PURE	Pure	9	16	1	Exact
+What Remains of Edith Finch	What Remains of Edith Finch	2	3	1	Exact
+Monsti	Monsti	0	34	1	Exact
+Blur	Blur	10	21	1	Exact
+Icewind Dale: Enhanced Edition	Icewind Dale: Enhanced Edition	32	59	1	Exact
+Rogue Legacy	Rogue Legacy	16	37	1	Exact
+Mad Nords: Probably an Epic Quest	Mad Nords: Probably an Epic Quest	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Dying Light	Dying Light	17	56	1	Exact
+Punch Club	Punch Club	10	23	1	Exact
+Squad	Squad	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Disc Jam	Disc Jam	3	9	1	Exact
+XCOM 2	XCOM 2	33	72	1	Exact
+Mordheim: City of the Damned	Mordheim: City of The Damned	12	73	1	Exact
+Train Valley	Train Valley	7	18	1	Exact
+MOTHERGUNSHIP	Mothergunship	5	18	1	Exact
+Abyss: The Wraiths of Eden	Abyss: The Wraiths of Eden	3	7	1	Exact
+Vanquish	Vanquish	6	17	1	Exact
+1Quest	1Quest	2	36	1	Exact
+99 Levels To Hell	99 Levels to Hell	7	24	1	Exact
+A Valley Without Wind	A Valley Without Wind	13	92	1	Exact
+Football Manager 2018	Football Manager 2018	213	576	1	Exact
+LEGO Pirates of the Caribbean The Video Game	LEGO Pirates of the Caribbean: The Video Game	9	25	0.98	Exact
+Gang Beasts	Gang Beasts	2	8	1	Exact
+Albedo: Eyes from Outer Space	Albedo: Eyes From Outer Space	4	5	1	Exact
+Adventurezator: When Pigs Fly	Adventurezator: When Pigs Fly	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+SYNTHETIK	SYNTHETIK 2	4	0	0.82	Non Exact
+Tales of Symphonia	Tales of Symphonia	47	198	1	Exact
+F1 2015	F1 2015	13	39	1	Exact
+Epic Battle Fantasy 4	Epic Battle Fantasy 4	20	35	1	Exact
+Shantae and the Pirate's Curse	Shantae and the Pirate's Curse	8	10	0.83	Non Exact
+Dungeons 2	Dungeons 2	15	26	1	Exact
+Battleborn	Battleborn	9	131	1	Exact
+Dead Rising 4	Dead Rising 4	10	30	1	Exact
+Seasons after Fall	Seasons After Fall	6	8	1	Exact
+Bayonetta	Bayonetta	11	42	1	Exact
+Kerbal Space Program	Kerbal Space Program	116	428	1	Exact
+NeuroVoider	NeuroVoider	5	0	1	Exact
+Umbrella Corps	Umbrella Corps	4	12	1	Exact
+The Mean Greens - Plastic Warfare	The Mean Greens: Plastic Warfare	3	16	0.97	Exact
+A Hat in Time	A Hat in Time	9	18	1	Exact
+Aerena	Aerena: Clash of Champions	Sin registro de tiempo	Sin registro de tiempo	0.23	Non Exact
+Mother Russia Bleeds	Mother Russia Bleeds	4	10	1	Exact
+The Escapists	The Escapists	20	43	1	Exact
+The Sexy Brutale	The Sexy Brutale	6	8	1	Exact
+Baldur's Gate II: Enhanced Edition	Baldur's Gate II: Enhanced Edition	46	140	0.97	Exact
+Pony Island	Pony Island	2	5	1	Exact
+Okhlos: Omega	Okhlos	4	0	0.5	Non Exact
+Rising Storm\/Red Orchestra 2 Multiplayer	NA	NA	NA	NA	NA
+Saw	Warsaw	7	21	0.5	Non Exact
+Distance	Distance	2	17	1	Exact
+Teenage Mutant Ninja Turtles: Portal Power	Teenage Mutant Ninja Turtles: Portal Power	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Immortal Redneck	Immortal Redneck	17	63	1	Exact
+Town of Night	Town of Night	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Holy Potatoes! Were in Space?!	Holy Potatoes! We're in Space?!	12	26	0.97	Exact
+Belladonna	Belladonna	1	1	1	Exact
+DungeonUp	DungeonUp	7	0	1	Exact
+The Evil Within	The Evil Within	15	39	1	Exact
+My Time At Portia	My Time At Portia	67	132	1	Exact
+Sacred 3	Sacred 3	8	17	1	Exact
+Tacoma	Tacoma	3	4	1	Exact
+Mark of the Ninja: Remastered	Mark of the Ninja: Remastered	8	18	0.62	Non Exact
+Epistory - Typing Chronicles	Epistory: Typing Chronicles	5	10	0.96	Exact
+Warframe	Warframe	107	1413	1	Exact
+Super Rude Bear Resurrection	Super Rude Bear Resurrection	4	63	1	Exact
+Bacteria	Bacteria	0	2	1	Exact
+Beholder	Beholder	6	20	1	Exact
+Warhammer 40,000: Space Marine - Anniversary Edition	Warhammer 40,000: Space Marine	8	21	1	Exact
+Red Comrades Save the Galaxy: Reloaded	Red Comrades Save the Galaxy - Reloaded	7	8	0.95	Exact
+Grey Goo	Grey Goo	14	22	1	Exact
+Steampunk Syndicate	Steampunk Syndicate	15	0	1	Exact
+BlazBlue: Chronophantasma Extend	NA	NA	NA	NA	NA
+Move or Die	Move or Die	13	0	1	Exact
+Interplanetary	Interplanetary	4	0	1	Exact
+RUINER	RUINER	5	14	1	Exact
+Dungeon of the ENDLESS	Dungeon of the Endless	7	127	1	Exact
+Dead Rising 2: Off the Record	Dead Rising 2: Off the Record	13	40	1	Exact
+Risen	Risen	28	46	1	Exact
+Toren	Toren	2	3	1	Exact
+Love is Dead	Love Is Dead	0	14	1	Exact
+Overcooked	Overcooked	8	12	1	Exact
+The Big Secret of a Small Town	The Big Secret of a Small Town	4	0	1	Exact
+Shenmue I & II	Shenmue I & II	37	44	0.93	Exact
+Guacamelee! 2	Guacamelee! 2	9	15	1	Exact
+ABZ	ABZÛ	2	4	0.75	Non Exact
+TRON: Evolution	Tron: Evolution	7	13	1	Exact
+Mr Shifty	Mr. Shifty	4	7	0.9	Non Exact
+Lethal League	Lethal League	7	16	1	Exact
+Baldur's Gate: Enhanced Edition	Baldur's Gate: Enhanced Edition	30	90	0.97	Exact
+God's Trigger	God's Trigger	5	10	0.92	Non Exact
+Game Corp DX	Game Corp DX	4	6	1	Exact
+11-11 Memories Retold	11-11: Memories Retold	5	11	0.95	Exact
+Serial Cleaner	Serial Cleaner	5	10	1	Exact
+Yakuza Kiwami	Yakuza Kiwami	18	82	1	Exact
+Katamari Damacy REROLL	Katamari Damacy Reroll	5	21	1	Exact
+Ultimate Chicken Horse	Ultimate Chicken Horse	5	19	1	Exact
+The Banner Saga 2	The Banner Saga 2	11	23	1	Exact
+Crawl	Crawl	1	9	1	Exact
+Galactic Civilizations III	Galactic Civilizations III	23	72	1	Exact
+Slain: Back from Hell	Slain: Back from Hell	6	11	1	Exact
+Armello	Armello	2	163	1	Exact
+HITMAN	Hitman	11	90	1	Exact
+Shank 2	Shank 2	4	19	1	Exact
+Ori and the Blind Forest	Ori and the Blind Forest	8	11	0.83	Non Exact
+Iron Sky Invasion	Iron Sky: Invasion	6	8	0.94	Exact
+Radical Spectrum: Volume 1	Radical Spectrum: Volume 1	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Guilty Gear Isuka	Guilty Gear Isuka	2	0	1	Exact
+Energy Balance	Energy Balance	2	4	1	Exact
+Rivals of Aether	Rivals of Aether	1	79	1	Exact
+Doctor Who: The Adventure Games	Doctor Who: The Adventure Games	7	9	1	Exact
+Endorlight	Endorlight	3	3	1	Exact
+Oniken	Oniken	3	6	1	Exact
+Mount & Blade: With Fire and Sword	Mount & Blade: With Fire & Sword	27	69	0.91	Non Exact
+DiRT Rally	Dirt Rally	28	144	1	Exact
+Suits: A Business RPG	Suits: A Business RPG	3	6	1	Exact
+Botanicula	Botanicula	3	5	1	Exact
+Jalopy	Jalopy	6	20	1	Exact
+Shadow Complex Remastered	Shadow Complex	5	11	1	Exact
+Crazy Machines 3	Crazy Machines 3	7	25	1	Exact
+Grim Dawn	Grim Dawn	21	159	1	Exact
+Spellsworn	Spellsworn	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Dead Island Riptide Definitive Edition	Dead Island: Riptide - Definitive Edition	10	28	0.93	Exact
+RIVE	RIVE	4	13	1	Exact
+Stardew Valley	Stardew Valley	52	154	1	Exact
+Spoiler Alert	Spoiler Alert	1	1	1	Exact
+Magicka 2	Magicka 2	6	27	1	Exact
+Between Me and The Night	Between Me and the Night	3	4	0.83	Non Exact
+Disgaea PC	Disgaea: Hour of Darkness	46	234	0.32	Non Exact
+Sakura Fantasy Chapter 1	Sakura Fantasy - Chapter 1	3	4	0.92	Non Exact
+Force of Nature	Force of Nature	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Life is Strange	Life Is Strange	14	18	1	Exact
+Tooth and Tail	Tooth and Tail	9	17	0.71	Non Exact
+Undertale	Undertale	7	21	1	Exact
+Red Comrades 2: For the Great Justice. Reloaded	Red Comrades 2: For the Great Justice - Reloaded	3	4	0.96	Exact
+The Legend of Heroes: Trails in the Sky	The Legend of Heroes: Trails in the Sky	40	66	1	Exact
+Gurumin: A Monstrous Adventure	Gurumin: A Monstrous Adventure	10	18	1	Exact
+Realms of Arkania 1 - Blade of Destiny Classic	NA	NA	NA	NA	NA
+Overfall	Overfall	5	0	1	Exact
+Phoenix Force	Phoenix Force	4	8	1	Exact
+Mushroom 11	Mushroom 11	5	6	1	Exact
+SteamWorld Heist	SteamWorld Heist	12	21	1	Exact
+Sniper Elite V2	Sniper Elite V2	7	29	1	Exact
+Mahjong World Contest	Mahjong World Contest	0	13	1	Exact
+Velocity 2X	Velocity 2X	5	26	1	Exact
+Defend Your Life	Defend Your Life	11	23	1	Exact
+Total War: WARHAMMER	Total War: Warhammer	35	166	1	Exact
+Rogue'n Roll	Rogue'n Roll	0	7	0.92	Non Exact
+Deus Ex: Mankind Divided	Deus Ex: Mankind Divided	15	50	1	Exact
+Moonlighter	Moonlighter	14	25	1	Exact
+Black Mesa	Black Mesa	15	22	1	Exact
+Poly Bridge	Poly Bridge	11	47	1	Exact
+Pathologic Classic HD	Pathologic	27	78	0.48	Non Exact
+R.I.P.D.: The Game	R.I.P.D. The Game	7	21	0.76	Non Exact
+GoNNER	GoNNER	8	10	1	Exact
+Hacknet	Hacknet	7	10	1	Exact
+Pathfinder Adventures	Pathfinder Adventures	30	37	1	Exact
+Z	Z	6	7	1	Exact
+qop 2	qop 2	1	1	1	Exact
+Last Day of June	Last Day of June	3	4	1	Exact
+Acceleration of SUGURI 2	Acceleration of SUGURI 2	1	11	1	Exact
+UNO	Uno	5	13	1	Exact
+Streets of Rage 4	Streets of Rage 4	3	28	1	Exact
+Rollers of the Realm	Rollers of the Realm	5	11	1	Exact
+World to the West	World to the West	11	19	1	Exact
+Castle of Illusion	Castle of Illusion Starring Mickey Mouse	3	5	0.45	Non Exact
+Carmageddon Max Pack	Carmageddon: Max Pack	19	0	0.95	Exact
+Resident Evil 0	Resident Evil	11	20	0.87	Non Exact
+Disney Universe	Disney Universe	11	13	1	Exact
+Machinarium	Machinarium	5	6	1	Exact
+ICEY	ICEY	3	5	1	Exact
+Satellite Reign	Satellite Reign	21	43	1	Exact
+Snake Pass	Snake Pass	5	12	1	Exact
+Prison Architect	Prison Architect	17	62	1	Exact
+Final Slam 2	Final Slam 2	0	2	1	Exact
+FOTONICA	FOTONICA	2	4	1	Exact
+Carmageddon: Reincarnation	Carmageddon: Reincarnation	18	0	1	Exact
+City of Chains	City of Chains	8	20	1	Exact
+Sine Mora EX	Sine Mora EX	3	14	1	Exact
+Slime Rancher	Slime Rancher	15	39	1	Exact
+Borderlands: The Pre-Sequel	Borderlands: The Pre-Sequel!	18	56	0.96	Exact
+Moon Hunters	Moon Hunters	2	28	1	Exact
+FINAL FANTASY X\/X-2 HD Remaster	Final Fantasy X/X-2 HD Remaster	50	155	0.97	Exact
+Overgrowth	Overgrowth	3	7	1	Exact
+They Bleed Pixels	They Bleed Pixels	9	15	1	Exact
+Elements: Soul of Fire	Elements: Soul of Fire	70	105	1	Exact
+Red Faction Guerrilla Re-Mars-tered	Red Faction: Guerrilla - Re-Mars-tered	11	34	0.92	Non Exact
+Sakura Magical Girls	Sakura Magical Girls	2	2	1	Exact
+Double Dragon Trilogy	Double Dragon Trilogy	1	7	1	Exact
+Aviary Attorney	Aviary Attorney	5	8	1	Exact
+Interplanetary: Enhanced Edition	Interplanetary	4	0	0.44	Non Exact
+Disney Pirates of the Caribbean: At Worlds End	Pirates of the Caribbean: At World's End	6	22	0.98	Exact
+Mystery Masters: Psycho Train Deluxe Edition	Mystery Masters: Psycho Train	3	3	1	Exact
+The Warlock of Firetop Mountain	The Warlock of Firetop Mountain	3	33	1	Exact
+Cities: Skylines	Cities: Skylines	26	137	1	Exact
+Tower Defense Ultimate	Tower Defense Ultimate	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Hard Reset Redux	Hard Reset Redux	6	13	1	Exact
+ZOMBI	Zombi	12	20	1	Exact
+Maze Lord	Maze Lord	4	7	1	Exact
+Zup! X	Zup! X	1	2	1	Exact
+Counter-Strike: Global Offensive	Counter-Strike: Global Offensive	55	782	1	Exact
+Depth Hunter 2: Deep Dive	Depth Hunter 2: Deep Dive	2	11	1	Exact
+Zombie Army Trilogy	Zombie Army Trilogy	14	29	1	Exact
+State of Mind	State of Mind	10	13	1	Exact
+Sniper Elite 4	Sniper Elite 4	10	36	1	Exact
+Subterrain	Subterrain	49	59	1	Exact
+Sakura Beach	Sakura Beach	3	3	1	Exact
+Nex Machina	Nex Machina	2	17	1	Exact
+Who Wants To Be A Millionaire? Special Editions	Who Wants to Be a Millionaire?	0	4	1	Exact
+Dead Rising 2	Dead Rising 2	14	52	1	Exact
+Spellblast	Spellblast	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+SOMA	Soma	9	11	1	Exact
+Fran Bow	Fran Bow	8	9	1	Exact
+Shiness: The Lightning Kingdom	Shiness: The Lightning Kingdom	16	32	1	Exact
+Age of Empires II (2013)	Age of Empires III	15	32	0.94	Exact
+Fly Away	NA	NA	NA	NA	NA
+Forza Horizon 4	Forza Horizon 4	13	135	1	Exact
+The Long Dark	The Long Dark	21	227	1	Exact
+Retro City Rampage DX	Retro City Rampage DX	5	18	1	Exact
+Disney Epic Mickey 2	Epic Mickey 2: The Power of Two	9	27	0.42	Non Exact
+DARK SOULS III	Dark Souls III	32	97	1	Exact
+Sakura Agent	Sakura Agent	3	4	1	Exact
+SpeedRunners	SpeedRunners	2	14	1	Exact
+Evergarden	Evergarden	8	12	1	Exact
+Trine 2	Trine 2	8	22	1	Exact
+Battle Chef Brigade	Battle Chef Brigade	9	12	1	Exact
+A Boy and His Blob	A Boy and His Blob	10	18	0.78	Non Exact
+Shadow Ninja: Apocalypse	Shadow Ninja: Apocalypse	1	0	1	Exact
+Slay the Spire	Slay the Spire	11	205	1	Exact
+Star Drifter	Star Drifter	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Blackguards 2	Blackguards 2	13	23	1	Exact
+Dino Run DX	Dino Run DX	2	0	1	Exact
+Super Mustache	Super Mustache	1	2	1	Exact
+Ascendant	Ascendant	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Dead Pixels	Dead Pixels	2	15	1	Exact
+Out of the Park Baseball 18	Out of the Park Baseball 18	275	0	1	Exact
+Gaben Kingdom	Gaben Kingdom	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Eaten Alive	Eaten Alive	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Super Mega Neo Pug	Super Mega Neo Pug	1	3	1	Exact
+Survival Zombies The Inverted Evolution	Survival Zombies: The Inverted Evolution	2	2	0.98	Exact
+Super Space Pug	Super Space Pug	0	2	1	Exact
+Incitement 3	Incitement 3	24	0	1	Exact
+Pool Nation	Pool Nation	10	17	1	Exact
+Primal Carnage: Extinction	Primal Carnage: Extinction	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Mafia III: Definitive Edition	Mafia III: Definitive Edition	25	62	1	Exact
+Deadly 30	Deadly 30	4	6	1	Exact
+Luna Sky	Luna Sky	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Cyber City 2157: The Visual Novel	Cyber City 2157	1	1	1	Exact
+SEGA Mega Drive & Genesis Classics	SEGA Genesis Classics Collection	9	13	0.59	Non Exact
+Divide by Sheep	Divide By Sheep	5	8	1	Exact
+Baba Is You	Baba Is You	7	46	1	Exact
+Rocking Pilot	Rocking Pilot	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Jet Racing Extreme	Jet Racing Extreme	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Zup! 6	Zup! 6	1	1	1	Exact
+Doodle God	Doodle God	4	8	1	Exact
+Super Hexagon	Super Hexagon	5	19	1	Exact
+TowerFall Ascension	TowerFall Ascension	4	32	1	Exact
+To The Capital	To The Capital	1	0	1	Exact
+Evolve Stage 2	Evolve: Stage 2	Sin registro de tiempo	Sin registro de tiempo	0.93	Exact
+Septerra Core	Septerra Core: Legacy of the Creator	44	58	0.36	Non Exact
+Guns'N'Zombies	Guns'N'Zombies	3	0	0.86	Non Exact
+Space Run Galaxy	Space Run Galaxy	40	80	1	Exact
+The Room	The Room	3	3	1	Exact
+Sid Meier's Civilization V	Sid Meier's Civilization V	40	403	0.96	Exact
+Castle of no Escape	Castle of No Escape	1	1	1	Exact
+Silence	In Silence	Sin registro de tiempo	Sin registro de tiempo	0.7	Non Exact
+Renowned Explorers: International Society	Renowned Explorers: International Society	5	63	1	Exact
+Sakura Nova	Sakura Nova	2	4	1	Exact
+TRON 2.0	Tron 2.0	12	14	0.88	Non Exact
+Sakura Swim Club	Sakura Swim Club	2	3	1	Exact
+Firewatch	Firewatch	4	5	1	Exact
+Carmageddon 2: Carpocalypse Now	Carmageddon II: Carpocalypse Now	12	29	0.94	Exact
+HIVESWAP: ACT 1	HIVESWAP: ACT 1	2	4	1	Exact
+Sentinels of the Multiverse	Sentinels of the Multiverse	3	181	1	Exact
+Strategic War in Europe	Strategic War in Europe	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Just Cause 3	Just Cause 3	18	62	1	Exact
+Sig.Null	Sig.NULL	1	0	0.88	Non Exact
+Shuyan Saga	Shuyan Saga	3	5	1	Exact
+Broforce	Broforce	7	16	1	Exact
+DarkBase 01	DarkBase 01	2	2	1	Exact
+Dungeon of Zolthan	Dungeon of Zolthan	1	2	1	Exact
+Kero Blaster	Kero Blaster	3	12	1	Exact
+Warmachine Tactics	Warmachine: Tactics	29	0	0.95	Exact
+The Apotheosis Project	The Apotheosis Project	4	6	1	Exact
+GOD EATER 2 Rage Burst	God Eater 2: Rage Burst	54	114	0.96	Exact
+PAC-MAN Championship Edition DX+	Pac-Man Championship Edition DX	4	5	0.97	Exact
+Real Boxing	Real Boxing	4	6	1	Exact
+Tales of Berseria	Tales of Berseria	44	162	1	Exact
+Warhammer 40,000: Mechanicus	Warhammer 40,000: Mechanicus	19	47	1	Exact
+Mini Metro	Mini Metro	6	38	1	Exact
+Turbo Pug 3D	Turbo Pug 3D	1	4	1	Exact
+Mythic Wonders: The Philosopher's Stone	Mythic Wonders: The Philosopher's Stone	3	4	0.97	Exact
+WASTED	Wasted	14	27	1	Exact
+Escape Dead Island	Escape Dead Island	6	18	1	Exact
+CHUCHEL	Chuchel	2	3	1	Exact
+Lionheart	Lionheart	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Legends of the Universe - StarCore	Legends of the Universe: StarCore	0	5	0.97	Exact
+Offworld Trading Company	Offworld Trading Company	7	136	1	Exact
+THE KING OF FIGHTERS XIII STEAM EDITION	The King of Fighters XIII	3	157	0.64	Non Exact
+Aaero	Aaero	2	10	1	Exact
+Black The Fall	Black The Fall	3	4	1	Exact
+Blackbay Asylum	Blackbay Asylum	5	0	1	Exact
+Jade's Journey	Jade's Journey	Sin registro de tiempo	Sin registro de tiempo	0.93	Exact
+Batman: Arkham Origins	Batman: Arkham Origins	12	40	1	Exact
+Bear With Me - Collector's Edition	Bear With Me	7	10	1	Exact
+Styx: Shards of Darkness	Styx: Shards of Darkness	12	28	1	Exact
+Dead Age	Dead Age	19	58	1	Exact
+Hearts of Iron IV	Hearts of Iron IV	49	520	1	Exact
+Flockers	Flockers	0	57	1	Exact
+Sweet fantasy	Sweet Fantasy	0	1	1	Exact
+GemCraft - Chasing Shadows	Gemcraft: Chasing Shadows	49	106	0.96	Exact
+Hentai Memory	Hentai Memory	0	1	1	Exact
+Monster Puzzle	Monster Puzzle	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Ticket to Ride	Ticket to Ride	1	20	1	Exact
+Yakuza 0	Yakuza 0	31	141	1	Exact
+Resident Evil	Resident Evil	11	20	1	Exact
+Nongünz	Nongunz	20	32	0.86	Non Exact
+Rampage Knights	Rampage Knights	7	39	1	Exact
+Sakura Beach 2	Sakura Beach 2	2	3	1	Exact
+Outlast 2	Outlast II	7	13	0.8	Non Exact
+Darksiders Warmastered Edition	Darksiders	17	28	0.33	Non Exact
+Layers of Fear	Layers of Fear	3	10	1	Exact
+Make America Great Again: The Trump Presidency	Make America Great Again: The Trump Presidency	0	3	1	Exact
+Nyan Cat: Lost In Space	Nyan Cat: Lost In Space	0	13	1	Exact
+Darkestville Castle	Darkestville Castle	5	6	1	Exact
+Ken Follett's The Pillars of the Earth	The Pillars of the Earth	15	19	0.63	Non Exact
+Out of the Park Baseball 17	Out of the Park Baseball 17	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Falcon 4.0	Falcon 4.0	Sin registro de tiempo	Sin registro de tiempo	0.9	Non Exact
+Remothered: Tormented Fathers	Remothered: Tormented Fathers	6	7	1	Exact
+Falcon Gold	Falcon Gold	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Alice in Wonderland	Alice in Wonderland	9	10	1	Exact
+Watch_Dogs	Watch Dogs	19	60	0.9	Non Exact
+Hand of Fate	Hand of Fate	11	60	1	Exact
+Kingdom: New Lands	Kingdom: New Lands	10	38	1	Exact
+AXYOS	Axyos	0	2	1	Exact
+Shiftlings	Shiftlings	16	0	1	Exact
+Tricky Towers	Tricky Towers	9	0	1	Exact
+Big Pharma	Big Pharma	27	90	1	Exact
+Alex Hunter - Lord of the Mind	Alex Hunter: Lord Of The Mind	0	6	0.97	Exact
+Husk	Husk	4	5	1	Exact
+Guts and Glory	Guts and Glory	5	8	0.71	Non Exact
+Murder Miners	Murder Miners	0	11	1	Exact
+2064: Read Only Memories	2064: Read Only Memories	9	18	1	Exact
+Cursed Castilla (Maldita Castilla EX)	Cursed Castilla	4	16	1	Exact
+Atonement: Scourge of Time	Atonement: Scourge of Time	0	14	1	Exact
+Orwell	Orwell	5	9	1	Exact
+Two Worlds II HD	Two Worlds II: Call of the Tenebrae	7	33	0.43	Non Exact
+Drayt Empire	Drayt Empire	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Star Chronicles: Delta Quadrant	Star Chronicles: Delta Quadrant	0	35	1	Exact
+Sword of Asumi	Sword of Asumi	2	4	1	Exact
+Stone Age Wars	Stone Age Wars	4	0	1	Exact
+Risky Rescue	Risky Rescue	1	6	1	Exact
+Strider	Strider	5	13	1	Exact
+Cosmic Dust & Rust	Cosmic Dust & Rust	1	0	0.94	Exact
+Artificial Defense	Artificial Defense	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Neon Chrome	Neon Chrome	5	18	1	Exact
+Middle-earth: Shadow of Mordor	Middle-Earth: Shadow of Mordor	16	32	1	Exact
+Calcu-Late	Calcu-Late	1	1	1	Exact
+Doorways: The Underworld	Doorways: Chapter 3 - The Underworld	2	3	0.67	Non Exact
+Adventure Time: The Secret Of The Nameless Kingdom	Adventure Time: The Secret of the Nameless Kingdom	10	25	1	Exact
+Trine	Trine	6	15	1	Exact
+PulseCharge	PulseCharge	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Oddworld: New 'n' Tasty	Oddworld: New 'n' Tasty!	7	11	0.88	Non Exact
+Snik	Snik	0	10	1	Exact
+Infinifactory	Infinifactory	35	65	1	Exact
+Project Starship	Project Starship	1	2	1	Exact
+Atari Vault	Atari Vault	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Figment	Figment	5	7	1	Exact
+FINAL FANTASY IX	Final Fantasy IX	39	82	1	Exact
+Portal of Evil: Stolen Runes Collector's Edition	Portal of Evil: Stolen Runes	4	6	1	Exact
+The Witcher 2: Assassins of Kings Enhanced Edition	The Witcher 2: Assassins of Kings	24	55	1	Exact
+Machine Hunt	Machine Hunt	1	1	1	Exact
+METAL SLUG 3	Metal Slug 3	2	4	1	Exact
+Chronicles of a Dark Lord: Episode 1 Tides of Fate Complete	Chronicles of a Dark Lord: Episode 1 - Tides of Fate	18	0	0.96	Exact
+Western Press	Western Press	0	3	1	Exact
+Ampersand	Ampersand	0	2	1	Exact
+Qasir al-Wasat: International Edition	Qasir al-Wasat: A Night in-Between	8	17	0.54	Non Exact
+Red Bit Ninja	Red Bit Ninja	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+DreadOut: Keepers of The Dark	DreadOut: Keepers of The Dark	4	5	1	Exact
+Sakura Shrine Girls	Sakura Shrine Girls	2	3	1	Exact
+VA-11 Hall-A: Cyberpunk Bartender Action	VA-11 Hall-A: Cyberpunk Bartender Action	11	18	1	Exact
+Outrage	Outrage	2	11	1	Exact
+RUSSIA BATTLEGROUNDS	RUSSIA BATTLEGROUNDS	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Planet of the Eyes	Planet of the Eyes	1	2	1	Exact
+Unhack	Unhack	1	1	1	Exact
+Power of Love	Power of Love	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Turbo Pug DX	Turbo Pug DX	1	4	1	Exact
+Catch a Falling Star	Catch a Falling Star	1	6	1	Exact
+Mega Man Legacy Collection	Mega Man Legacy Collection	16	46	1	Exact
+Rabiez: Epidemic	Rabiez: Epidemic	0	4	1	Exact
+Rocket League	Rocket League	5	62	1	Exact
+BioShock 2 Remastered	BioShock 2	11	23	1	Exact
+Lost Castle	Lost Castle	14	62	1	Exact
+Neon Hardcorps	Neon Hardcorps	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Sins Of The Demon RPG	Sins Of The Demon	10	12	0.81	Non Exact
+Damned	Damned	0	14	1	Exact
+DanceWall Remix	DanceWall Remix	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+INSIDE	Inside	4	5	1	Exact
+Drive Megapolis	Drive Megapolis	1	0	1	Exact
+Interloper	Interloper	1	0	1	Exact
+Elements II: Hearts of Light	Elements II: Hearts of Light	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Chroma Squad	Chroma Squad	13	34	1	Exact
+SQUAKE	Squake	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+CAFE 0 ~The Drowned Mermaid~	Cafe 0 ~The Drowned Mermaid~	1	2	1	Exact
+Staxel	Staxel	33	95	1	Exact
+HuniePop	HuniePop	9	31	1	Exact
+Murderous Pursuits	Murderous Pursuits	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Rise of the Tomb Raider	Rise of the Tomb Raider	13	35	1	Exact
+Disney Planes	Disney's Planes	4	0	0.87	Non Exact
+Teddy Floppy Ear - Kayaking	Teddy Floppy Ear: Kayaking	1	2	0.96	Exact
+Dead6hot	Dead6hot	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Reset 1-1	Reset 1-1	1	2	1	Exact
+ShapeShifter	Shape Shifter	Sin registro de tiempo	Sin registro de tiempo	0.92	Non Exact
+Zombie Night Terror	Zombie Night Terror	12	22	1	Exact
+Dead by Daylight	Dead by Daylight	64	781	1	Exact
+Turbo Pug	Turbo Pug	1	2	1	Exact
+Hollow Knight	Hollow Knight	27	61	1	Exact
+Fallen Enchantress: Legendary Heroes	Fallen Enchantress: Legendary Heroes	12	104	1	Exact
+QuestRun	QuestRun	11	17	1	Exact
+Shift	Shift	1	3	1	Exact
+CONSORTIUM	Consortium	4	11	1	Exact
+Sakura Angels	Sakura Angels	3	5	1	Exact
+Sundered: Eldritch Edition	Sundered	12	19	0.31	Non Exact
+Strike Vector	Strike Vector	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+HunieCam Studio	Huniecam Studio	2	18	1	Exact
+ONE PIECE PIRATE WARRIORS 3	One Piece: Pirate Warriors 3	16	109	0.96	Exact
+The Surge	The Surge	21	47	1	Exact
+Scythe: Digital Edition	Scythe: Digital Edition	2	67	1	Exact
+DUCATI - 90th Anniversary	DUCATI: 90th Anniversary	11	20	0.96	Exact
+Day of the Tentacle Remastered	Day of the Tentacle	7	11	1	Exact
+Fortified	Fortified	5	0	1	Exact
+Mahluk:Dark demon	NA	NA	NA	NA	NA
+A Story About My Uncle	A Story About My Uncle	3	9	1	Exact
+Grim Fandango Remastered	Grim Fandango	11	12	1	Exact
+Regions Of Ruin	Regions Of Ruin	10	19	1	Exact
+Trouble In The Manor	Trouble In The Manor	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Shark Attack Deathmatch 2	Shark Attack Deathmatch 2	3	6	1	Exact
+RiME	Rime	6	10	1	Exact
+Wizard of Legend	Wizard of Legend	7	24	1	Exact
+System Shock: Enhanced Edition	System Shock	13	21	0.4	Non Exact
+Warriors of Vilvatikta	Warriors of Vilvatikta	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+SimplePlanes	SimplePlanes	5	0	1	Exact
+Cook, Serve, Delicious! 2!!	Cook, Serve, Delicious! 2!!	26	79	1	Exact
+The Inner World: The Last Wind Monk	The Inner World: The Last Wind Monk	7	9	1	Exact
+STARWHAL	STARWHAL	1	0	1	Exact
+Lakeview Cabin Collection	Lakeview Cabin Collection	9	20	1	Exact
+Sniper Elite 3	Sniper Elite III	9	31	0.81	Non Exact
+The Jackbox Party Pack 2	The Jackbox Party Pack 2	6	9	1	Exact
+State of Anarchy	State of Anarchy	1	4	1	Exact
+Sniper Elite	Sniper Elite	13	20	1	Exact
+The New Queen	The New Queen	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+The Darkside Detective	The Darkside Detective	4	6	1	Exact
+Sakura Spirit	Sakura Spirit	3	4	1	Exact
+Laraan	Laraan	1	2	1	Exact
+Bleed 2	Bleed 2	1	9	1	Exact
+Pirate Pop Plus	Pirate Pop Plus	2	25	1	Exact
+Tinboy	Tinboy	3	0	1	Exact
+Guardians of Victoria	Guardians of Victoria	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Garry's Mod	Garry's Mod	56	595	0.91	Non Exact
+Red Comrades 3: Return of Alaska. Reloaded	Red Comrades 3: Return of Alaska. Reloaded	4	7	0.98	Exact
+The Bard's Tale	The Bard's Tale	14	27	0.93	Exact
+Pixel Piracy	Pixel Piracy	8	28	1	Exact
+Melting Hearts: Our Love Will Grow 2	Melting Hearts: Our Love Will Grow 2	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Beyond Eyes	Beyond Eyes	2	3	1	Exact
+Zup! 7	Zup! 7	1	1	1	Exact
+Power-Up	Power-Up	0	12	1	Exact
+The Final Station	The Final Station	5	7	1	Exact
+Slingshot people	Slingshot People	1	0	1	Exact
+Oddworld: Munch's Oddysee	Oddworld: Munch's Oddysee	12	18	0.96	Exact
+AI: Rampage	AI: Rampage	0	3	1	Exact
+Passpartout: The Starving Artist	Passpartout: The Starving Artist	4	10	1	Exact
+OR	OR	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Planets Under Attack	Planets Under Attack	6	38	1	Exact
+State of Decay: Year-One	State of Decay: Year-One	17	79	1	Exact
+School Bus Fun	School Bus Fun	3	0	1	Exact
+Bit Blaster XL	Bit Blaster XL	3	5	1	Exact
+Papers, Please	Papers, Please	5	16	1	Exact
+140	140	1	6	1	Exact
+Stonerid	Stonerid	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Surgeon Simulator	Surgeon Simulator	3	15	1	Exact
+Poi	Poi	6	9	1	Exact
+Gunpoint	Gunpoint	3	7	1	Exact
+Shadow Tactics: Blades of the Shogun	Shadow Tactics: Blades of the Shogun	25	57	1	Exact
+Deadly Sin 2	Deadly Sin 2	15	29	1	Exact
+METAL GEAR SOLID V: THE PHANTOM PAIN	Metal Gear Solid V: The Phantom Pain	46	164	1	Exact
+Action Henk	Action Henk	4	17	1	Exact
+Project CARS	Project CARS	33	110	1	Exact
+Slime-san	Slime-san	9	49	1	Exact
+Broken Dreams	Broken Dreams	1	1	1	Exact
+GOD EATER RESURRECTION	God Eater: Resurrection	31	91	0.96	Exact
+Mirror 2: Project X	Mirror 2: Project X	2	6	1	Exact
+Carmageddon: Max Damage	Carmageddon: Max Damage	15	40	1	Exact
+Shank	Shank	3	10	1	Exact
+Cube Destroyer	Cube Destroyer	0	2	1	Exact
+Styx: Master of Shadows	Styx: Master of Shadows	17	43	1	Exact
+Beastiarium	Beastiarium	1	0	1	Exact
+Pesadelo - Regresso	NA	NA	NA	NA	NA
+Hentai Girl	Hentai Girl	0	1	1	Exact
+100% Orange Juice	100% Orange Juice	7	96	1	Exact
+Orcs Must Die!	Orcs Must Die!	8	27	1	Exact
+Dustforce	Dustforce	34	41	1	Exact
+Party Hard	Party Hard	6	13	1	Exact
+Furi	Furi	6	16	1	Exact
+Day One: Garry's Incident	Day One: Garry's Incident	3	4	0.96	Exact
+Gorky 17	Gorky 17	9	14	1	Exact
+FX Football - The Manager for Every Football Fan	NA	NA	NA	NA	NA
+Wargame: Red Dragon	Wargame: Red Dragon	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Questerium: Sinister Trinity HD	NA	NA	NA	NA	NA
+PAC-MAN 256	Pac-Man 256	4	19	1	Exact
+Quantum Break	Quantum Break	10	19	1	Exact
+One Finger Death Punch 2	One Finger Death Punch 2	11	26	1	Exact
+HoPiKo	HoPiKo	5	0	1	Exact
+Screencheat	Screencheat	4	9	1	Exact
+Deadly Premonition: The Director's Cut	Deadly Premonition	18	36	0.47	Non Exact
+Holodrive	Holodrive	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Mahjong Deluxe 2: Astral Planes	Mahjong Deluxe 2: Astral Planes	0	4	1	Exact
+Starward Rogue	Starward Rogue	3	0	1	Exact
+The Tower Of Elements	The Tower of Elements	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Fahrenheit: Indigo Prophecy Remastered	Indigo Prophecy / Fahrenheit	8	10	0.11	Non Exact
+Randal's Monday	Randal's Monday	14	18	0.93	Exact
+DreadOut	DreadOut	4	8	1	Exact
+Deathtrap	Deathtrap Dungeon	11	13	0.53	Non Exact
+Dark Arcana: The Carnival	Dark Arcana: The Carnival	3	5	1	Exact
+The Vanishing of Ethan Carter	The Vanishing of Ethan Carter	4	4	1	Exact
+METAL SLUG X	Metal Slug X	1	4	1	Exact
+Dementium II HD	Dementium II HD	5	11	1	Exact
+Symphony	Symphony	8	20	1	Exact
+Stikbold!	Stikbold! A Dodgeball Adventure	2	11	0.29	Non Exact
+Star Fields	Star Fields	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Pixel Painter	NA	NA	NA	NA	NA
+Mini Motor Racing EVO	Mini Motor Racing Evo	5	13	1	Exact
+To the Moon	To the Moon	4	4	1	Exact
+So Many Cubes	So Many Cubes	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Tales of Maj'Eyal	Tales of Maj'Eyal	38	258	0.94	Exact
+Sakura Space	Sakura Space	2	3	1	Exact
+Sakura Santa	Sakura Santa	2	3	1	Exact
+Mega Man Legacy Collection 2	Mega Man Legacy Collection 2	13	36	1	Exact
+Nux	Nux	1	0	1	Exact
+Bulb Boy	Bulb Boy	2	3	1	Exact
+DARK	Dark	7	12	1	Exact
+Portal 2	Portal 2	9	21	1	Exact
+Data Hacker: Corruption	Data Hacker: Corruption	18	0	1	Exact
+I am weapon: Revival	I Am Weapon: Revival	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Midnight Carnival	Midnight Carnival	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+TransOcean: The Shipping Company	TransOcean: The Shipping Company	16	23	1	Exact
+Democracy 3	Democracy 3	6	25	1	Exact
+Dreamfall Chapters	Dreamfall Chapters	22	36	1	Exact
+Cubicle Quest	Cubicle Quest	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+DEADBOLT	Deadbolt	6	12	1	Exact
+Dinosaur Forest	Dinosaur Forest	1	4	1	Exact
+House of 1,000 Doors - Family Secrets	House of 1,000 Doors: Family Secrets	3	5	0.97	Exact
+Refunct	Refunct	0	1	1	Exact
+House of 1000 Doors: The Palm of Zoroaster Collector's Edition	House of 1000 Doors: The Palm of Zoroaster	3	4	1	Exact
+X-Blades	X-Blades	7	11	1	Exact
+Burstfire	Burstfire	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+FATE: The Cursed King	Fate: The Cursed King	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+ENDLESS Space - Definitive Edition	Endless Space	15	109	1	Exact
+ibb & obb	Ibb and Obb	6	16	0.73	Non Exact
+7 Days to Die	7 Days to Die	51	385	1	Exact
+Dinosaur Hunt	Dinosaur Hunt	0	2	1	Exact
+Bud Spencer & Terence Hill - Slaps And Beans	Bud Spencer & Terence Hill - Slaps And Beans	3	4	0.93	Exact
+RADical ROACH Remastered	Radical Roach	1	0	1	Exact
+Zeno Clash 2	Zeno Clash II	6	8	0.85	Non Exact
+System Shock 2	System Shock 2	14	22	1	Exact
+Nuclear Throne	Nuclear Throne	16	193	1	Exact
+Observer	Observer	7	11	1	Exact
+The Red Solstice	The Red Solstice	18	0	1	Exact
+The Elder Scrolls Online	The Elder Scrolls Online	42	447	1	Exact
+Barnyard Mahjong 3	Barnyard Mahjong 3	3	27	1	Exact
+UltraGoodness	Ultra Goodness	0	9	0.93	Exact
+Spikit	Spikit	0	2	1	Exact
+Momodora: Reverie Under the Moonlight	Momodora: Reverie Under the Moonlight	4	9	1	Exact
+The Flame in the Flood	The Flame in the Flood	9	31	1	Exact
+Apartment 666	Apartment 666	1	1	1	Exact
+Brothers - A Tale of Two Sons	Brothers: A Tale of Two Sons	3	4	0.96	Exact
+Lup	Lup	1	0	1	Exact
+VVVVVV	VVVVVV	2	5	1	Exact
+Gunnheim	Gunnheim	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Sleeping Valley	Sleeping Valley	0	1	1	Exact
+BioShock Remastered	BioShock	12	22	1	Exact
+FATE: Undiscovered Realms	Fate: Undiscovered Realms	13	0	1	Exact
+Superfrog HD	Superfrog HD	3	7	1	Exact
+Steredenn	Steredenn	2	50	1	Exact
+Spintires	Spintires	9	48	1	Exact
+The Saint: Abyss of Despair	The Saint: Abyss of Despair	2	3	1	Exact
+Anna's Quest	Anna's Quest	10	11	0.92	Non Exact
+Rock of Ages 2	Rock of Ages II: Bigger & Boulder	4	9	0.39	Non Exact
+Hostile Waters: Antaeus Rising	Hostile Waters: Antaeus Rising	10	0	1	Exact
+The Shrouded Isle	The Shrouded Isle	4	12	1	Exact
+The Dreamlord	The Dreamlord	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Abrix the robot	Abrix the Robot	0	3	1	Exact
+POSTAL Redux	Postal Redux	2	4	1	Exact
+Tribloos 2	Tribloos 2	0	14	1	Exact
+Event[0]	Event-D	0	5	0.71	Non Exact
+Sudden Strike 4	Sudden Strike 4	20	0	1	Exact
+Osmos	Osmos	6	10	1	Exact
+Zup! 8	Zup! 8	1	2	1	Exact
+Aritana and the Harpy's Feather	Aritana and the Harpy's Feather	3	6	0.84	Non Exact
+HackyZack	HackyZack	4	6	1	Exact
+Duke Nukem 3D: Megaton Edition	Duke Nukem 3D: Megaton Edition	11	22	1	Exact
+Into the Dark	Into the Dark: Ultimate Trash Edition	4	0	0.35	Non Exact
+The Incredible Adventures of Van Helsing II	The Incredible Adventures of Van Helsing II	10	39	1	Exact
+Loren The Amazon Princess	Loren the Amazon Princess	11	35	1	Exact
+Need for Speed: SHIFT	Need for Speed: Shift	13	29	1	Exact
+Coin Crypt	Coin Crypt	5	80	1	Exact
+Insurgency	Insurgency	6	36	1	Exact
+Sorry, James	Sorry, James	3	5	1	Exact
+Invasion: Brain Craving	Invasion: Brain Craving	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+The Room Two	The Room Two	3	3	1	Exact
+Dead Island Riptide	Dead Island: Riptide	12	35	0.95	Exact
+Valiant Hearts: The Great War \/ Soldats Inconnus : Mmoires de la Grande Guerre	NA	NA	NA	NA	NA
+Enigmatis: The Ghosts of Maple Creek	Enigmatis: The Ghosts of Maple Creek	4	6	1	Exact
+Hyper color ball	Hyper Color Ball	0	1	1	Exact
+Level 22: Garys Misadventures	Level 22: Gary's Misadventures	3	4	0.97	Exact
+Snakebird	Snakebird	7	11	1	Exact
+Ring Runner: Flight of the Sages	Ring Runner: Flight of the Sages	17	82	1	Exact
+Oath of Genesis	NA	NA	NA	NA	NA
+Poker Night at the Inventory	Poker Night at the Inventory	3	28	1	Exact
+Transcripted	Transcripted	4	0	1	Exact
+Bloodsports.TV	Bloodsports.TV	Sin registro de tiempo	Sin registro de tiempo	0.93	Exact
+Oknytt	Oknytt	5	5	1	Exact
+Skyborn	Skyborn	8	13	1	Exact
+Deep Space Dash	Deep Space Dash	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Silence of the Sleep	Silence of the Sleep	6	8	1	Exact
+Night Blights	Night Blights	2	0	1	Exact
+Streets of Chaos	Streets of Chaos	1	0	1	Exact
+The Void	The Void	25	43	1	Exact
+Atonement 2: Ruptured by Despair	Atonement 2: Ruptured by Despair	0	14	1	Exact
+Desolate Wastes: Vendor Chronicles	Desolate Wastes: Vendor Chronicles	0	3	1	Exact
+Hero of the Kingdom II	Hero of the Kingdom II	5	6	1	Exact
+Expert Rifleman - Reloaded	Expert Rifleman: Reloaded	Sin registro de tiempo	Sin registro de tiempo	0.96	Exact
+Mount Your Friends	Mount Your Friends	1	9	1	Exact
+Freebie	Freebie	0	1	1	Exact
+FINAL FANTASY V	Final Fantasy V	32	63	1	Exact
+The Norwood Suite	The Norwood Suite	2	2	1	Exact
+Germ Wars	Germ Wars	0	8	1	Exact
+CHRONO TRIGGER	Chrono Trigger	23	43	1	Exact
+Q.U.B.E. 2	Q.U.B.E. 2	5	7	0.6	Non Exact
+Emily is Away Too	Emily is Away Too	2	4	1	Exact
+Velocibox	Velocibox	2	19	1	Exact
+The Turing Test	The Turing Test	5	6	1	Exact
+Street Fighter X Tekken	Street Fighter X Tekken	2	40	1	Exact
+Clergy Splode	Clergy Splode	0	14	1	Exact
+Legends of Eisenwald	Legends of Eisenwald	24	80	1	Exact
+Little Racers STREET	Little Racers STREET	8	23	1	Exact
+Kivi, Toilet and Shotgun	Kivi, Toilet and Shotgun	Sin registro de tiempo	Sin registro de tiempo	0.83	Non Exact
+Ampu-Tea	Ampu-Tea	1	2	1	Exact
+AER Memories of Old	AER: Memories of Old	3	4	0.95	Exact
+Kathy Rain	Kathy Rain	6	6	1	Exact
+Insincere	Insincere	2	2	1	Exact
+qop	qop	1	1	1	Exact
+Kingdom: Classic	Kingdom: Classic	7	23	1	Exact
+ONE PIECE BURNING BLOOD	One Piece: Burning Blood	5	21	0.96	Exact
+BlazeRush	BlazeRush	7	12	1	Exact
+Riptide GP2	Riptide GP2	7	8	1	Exact
+Sometimes: Success Requires Sacrifice	Sometimes	0	1	0.24	Non Exact
+Dreaming Sarah	Dreaming Sarah	2	2	1	Exact
+SteamWorld Dig	SteamWorld Dig	5	8	1	Exact
+Killer is Dead	Killer Is Dead	7	25	1	Exact
+Strangers in a Strange Land	Strangers in a Strange Land	5	0	1	Exact
+Sheltered	Sheltered	22	34	1	Exact
+Dead Army - Radio Frequency	Dead Army: Radio Frequency	3	0	0.96	Exact
+Chip	Chip	5	9	1	Exact
+New kind of adventure	New Kind of Adventure	2	0	1	Exact
+Geometry Dash	Geometry Dash	16	1028	1	Exact
+Stories: The Path of Destinies	Stories: The Path Of Destinies	5	20	1	Exact
+Hero Quest: Tower Conflict	Hero Quest: Tower Conflict	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Mother Simulator	Mother Simulator	2	6	1	Exact
+LIMBO	Limbo	4	6	1	Exact
+Space Pilgrim Episode I: Alpha Centauri	Space Pilgrim: Episode One - Alpha Centauri	1	2	0.86	Non Exact
+Shadow Warrior Classic Redux	Shadow Warrior Classic Redux	9	15	1	Exact
+Gnomoria	Gnomoria	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+THOTH	THOTH	2	16	1	Exact
+Koi-Koi Japan [Hanafuda playing cards]	Koi-Koi Japan: Hanafuda Playing Cards	10	0	0.35	Non Exact
+Ryse: Son of Rome	Ryse: Son of Rome	6	18	1	Exact
+Killing Floor 2	Killing Floor 2	14	98	1	Exact
+Sid Meier's Ace Patrol: Pacific Skies	Sid Meier's Ace Patrol: Pacific Skies	4	0	0.97	Exact
+LEAVES - The Return	LEAVES - The Return	3	4	0.89	Non Exact
+Candle	Candles	Sin registro de tiempo	Sin registro de tiempo	0.86	Non Exact
+Hurtworld	Hurtworld	0	100	1	Exact
+LEAVES - The Journey	LEAVES - The Journey	4	5	0.9	Non Exact
+Absolute Drift	Absolute Drift	3	9	1	Exact
+Orbital Gear	Orbital Gear	0	11	1	Exact
+[Old Edition] Croixleur Sigma	Croixleur Sigma	1	18	1	Exact
+Battlepaths	Battlepaths	9	44	1	Exact
+The Bug Butcher	The Bug Butcher	2	7	1	Exact
+Adventure Time: Finn and Jake Investigations	Adventure Time: Finn & Jake Investigations	9	9	0.95	Exact
+Pressure	Pressure	3	8	1	Exact
+THE KING OF FIGHTERS 2002 UNLIMITED MATCH	The King of Fighters 2002 Unlimited Match	2	0	1	Exact
+Wuppo - Definitive Edition	Wuppo	8	15	1	Exact
+Wrath of Anna	Wrath of Anna	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+The Samaritan Paradox	The Samaritan Paradox	6	7	1	Exact
+POSTAL	Postal	3	10	1	Exact
+Portal	Portal	3	10	1	Exact
+Stellar 2D	Stellar 2D	2	5	1	Exact
+Onikira: Demon Killer	Onikira: Demon Killer	4	0	1	Exact
+Mutiny!!	Mutiny!!	5	17	1	Exact
+Out of the Park Baseball 15	Out of the Park Baseball 15	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Steel Storm: Burning Retribution	Steel Storm: Burning Retribution	5	10	1	Exact
+Zup! 2	Zup! 2	1	1	1	Exact
+Polychromatic	Polychromatic	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Tower of Guns	Tower of Guns	3	10	1	Exact
+Dead or Alive 5 Last Round	Dead or Alive 5 Last Round	4	48	1	Exact
+Guns of Icarus Online	Guns of Icarus Online	7	0	1	Exact
+Football Manager 2014	Football Manager 2014	456	1681	1	Exact
+Fall Guys	Fall Guys	7	88	1	Exact
+I Have No Mouth, and I Must Scream	I Have No Mouth, and I Must Scream	6	8	0.88	Non Exact
+Farnham Fables	Farnham Fables	1	0	1	Exact
+Hell Girls	Hell Girls	6	8	1	Exact
+Hatred	Hatred	3	7	1	Exact
+Fall of Civilization	Fall of Civilization	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Flesh Eaters	Flesh Eaters	2	12	1	Exact
+Killing Floor	Killing Floor	19	293	1	Exact
+Time Ramesside (A New Reckoning)	A New Reckoning	Sin registro de tiempo	Sin registro de tiempo	0.27	Non Exact
+Metro: Last Light	Metro: Last Light	10	35	1	Exact
+Colin McRae Rally	Colin McRae Rally	10	11	1	Exact
+Vanguard Princess	Vanguard Princess	1	2	1	Exact
+The Culling Of The Cows	The Culling Of The Cows	2	3	1	Exact
+YAIBA: NINJA GAIDEN Z	Yaiba: Ninja Gaiden Z	6	10	1	Exact
+Terra Incognita Chapter One: The Descendant	Terra Incognita ~ Chapter One: The Descendant	3	3	0.96	Exact
+Zup!	Zup!	0	1	1	Exact
+Porcunipine	Porcunipine	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+G-Force	G-Force	9	11	1	Exact
+InFlux	InFlux	3	3	1	Exact
+The Fall	The Fall	3	5	1	Exact
+Heavy Bullets	Heavy Bullets	6	16	1	Exact
+Flight Sim World	Flight Sim World	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+$1 Ride	$1 Ride	1	0	1	Exact
+BATTLE PIXELS	Battle Pixels	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Frozen Synapse Prime	Frozen Synapse Prime	18	34	1	Exact
+FINAL FANTASY VI	Final Fantasy VI	35	64	1	Exact
+BioShock Infinite	BioShock Infinite	12	27	1	Exact
+Unforgiving Trials: The Darkest Crusade	Unforgiving Trials: The Darkest Crusade	11	0	1	Exact
+GRID 2	Grid 2	17	29	1	Exact
+The Blue Flamingo	The Blue Flamingo	0	2	1	Exact
+Stronghold 3	Stronghold 3	7	7	1	Exact
+VelocityUltra	NA	NA	NA	NA	NA
+Broken Sword 5 - the Serpent's Curse	Broken Sword 5: The Serpent's Curse	11	14	0.94	Exact
+THE KING OF FIGHTERS '98 ULTIMATE MATCH FINAL EDITION	NA	NA	NA	NA	NA
+Shadowrun Chronicles - Boston Lockdown	Shadowrun Chronicles: Boston Lockdown	23	144	0.97	Exact
+Two Digits	Two Digits	4	4	1	Exact
+Never Alone (Kisima Ingitchuna)	Never Alone	3	4	1	Exact
+Final Fantasy III (3D Remake)	Final Fantasy III	18	23	1	Exact
+Master Reboot	Master Reboot	4	7	1	Exact
+Trine 3: The Artifacts of Power	Trine 3: The Artifacts of Power	5	7	1	Exact
+Deus Ex: Human Revolution - Director's Cut	Deus Ex: Human Revolution - Director's Cut	23	45	0.93	Exact
+Worms World Party Remastered	Worms World Party	9	23	1	Exact
+FEMINAZI: The Triggering	FEMINAZI: The Triggering	0	2	1	Exact
+The Architect	The Architect	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Yury	Yury	1	2	1	Exact
+DmC Devil May Cry	DmC: Devil May Cry	9	40	0.94	Exact
+Red Faction: Guerrilla Steam Edition	Red Faction: Guerrilla	13	43	1	Exact
+Demonicon	Demonicon	13	29	1	Exact
+Dungeon Siege	Dungeon Siege	28	43	1	Exact
+Psychonauts	Psychonauts	12	21	1	Exact
+The Magic Circle	The Magic Circle	3	9	1	Exact
+BloodRayne	BloodRayne	7	11	1	Exact
+Frederic: Evil Strikes Back	Frederic: Evil Strikes Back	2	7	1	Exact
+Lara Croft GO	Lara Croft GO	4	7	1	Exact
+Mayjasmine episode01 What is God? 	Mayjasmine Episode 01 - What is God?	6	0	0.28	Non Exact
+Data Hacker: Reboot	Data Hacker: Reboot	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Infinite Space III: Sea of Stars	Infinite Space III: Sea of Stars	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Nightmares from the Deep 3: Davy Jones	Nightmares from the Deep 3: Davy Jones	4	7	1	Exact
+Data Hacker: Initiation	Data Hacker: Initiation	25	54	1	Exact
+Tower Wars	Tower Wars	4	4	1	Exact
+Crazy Machines 2	Crazy Machines 2	22	0	1	Exact
+Dino D-Day	Dino D-Day	6	17	1	Exact
+PAYDAY: The Heist	Payday: The Heist	10	58	1	Exact
+Freedom Planet	Freedom Planet	5	22	1	Exact
+Hitman: Absolution	Hitman: Absolution	12	36	1	Exact
+Frederic: Resurrection of Music	Frederic: Resurrection of Music	2	6	1	Exact
+Faerie Solitaire	Faerie Solitaire	13	36	1	Exact
+BloodRayne 2	BloodRayne 2	9	10	1	Exact
+Ravaged Zombie Apocalypse	Ravaged Zombie Apocalypse	2	0	1	Exact
+The Ship	The Ship	3	5	1	Exact
+Mount & Blade	Mount & Blade	43	170	0.92	Non Exact
+Type:Rider	Type:Rider	3	4	1	Exact
+Overture	Overture	6	10	1	Exact
+Zup! 5	Zup! 5	1	1	1	Exact
+The Journey Down: Chapter One	The Journey Down: Chapter One - Over the Edge	2	3	0.64	Non Exact
+Betrayer	Betrayer	7	12	1	Exact
+Stacking	Stacking	4	9	1	Exact
+Transistor	Transistor	6	16	1	Exact
+Gabe Newell Simulator	Gabe Newell Simulator	1	0	1	Exact
+Avalanche 2: Super Avalanche	Avalanche 2: Super Avalanche	5	11	1	Exact
+Super Meat Boy	Super Meat Boy	10	44	1	Exact
+Explottens	Explottens	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Tropico 5	Tropico 5	21	102	1	Exact
+Bright Memory	Bright Memory	1	2	1	Exact
+Foul Play	Foul Play	4	11	1	Exact
+Zup! 4	Zup! 4	1	1	1	Exact
+Reus	Reus	8	66	1	Exact
+Canyon Capers	Canyon Capers	4	16	1	Exact
+Crusader Kings II	Crusader Kings II	66	341	1	Exact
+Guacamelee! Gold Edition	Guacamelee!	6	14	1	Exact
+Company of Heroes 2	Company of Heroes 2	15	54	1	Exact
+Final Quest II	Final Quest II	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Final Quest	Final Quest	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Tales of Legends	Tales of Legends	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+The Elder Scrolls V: Skyrim	The Elder Scrolls V: Skyrim	34	232	1	Exact
+Tomb Raider	Tomb Raider	11	21	1	Exact
+BlobCat	BlobCat	5	9	1	Exact
+The Inner World	The Inner World	7	8	1	Exact
+Millie	Millie	7	35	1	Exact
+Super Comboman	Super ComboMan	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+METAL GEAR SOLID V: GROUND ZEROES	Metal Gear Solid V: Ground Zeroes	2	20	1	Exact
+Serious Sam HD: The First Encounter	Serious Sam HD: The First Encounter	6	17	1	Exact
+Hammerwatch	Hammerwatch	8	30	1	Exact
+Costume Quest	Costume Quest	6	7	1	Exact
+Deponia: The Complete Journey	Deponia: The Complete Journey	26	35	1	Exact
+The Dream Machine	The Dream Machine	13	18	1	Exact
+Chicku	Chicku	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Victor Vran	Victor Vran	10	51	1	Exact
+Pixel Puzzles Ultimate	Pixel Puzzles Ultimate	12	1702	1	Exact
+Eador. Masters of the Broken World	Eador: Masters of the Broken World	87	228	0.97	Exact
+Loot Hunter	Loot Hunter	3	41	1	Exact
+Eldritch	Eldritch	4	15	1	Exact
+Talisman: Prologue	Talisman Prologue	1	17	1	Exact
+Lost Planet 3	Lost Planet 3	11	19	1	Exact
+Draw a Stickman: EPIC	Draw a Stickman: EPIC	2	7	1	Exact
+Skara - The Blade Remains	Skara: The Blade Remains	Sin registro de tiempo	Sin registro de tiempo	0.96	Exact
+Astebreed: Definitive Edition	NA	NA	NA	NA	NA
+Her Story	Her Story	2	4	1	Exact
+Caster	Caster	2	4	1	Exact
+Ethan: Meteor Hunter	Ethan: Meteor Hunter	10	0	1	Exact
+The Bridge	The Bridge	4	8	1	Exact
+Pizza Express	Pizza Express	9	0	1	Exact
+Cook, Serve, Delicious!	Cook, Serve, Delicious!	18	37	1	Exact
+Kumoon : Ballistic Physics Puzzle	Kumoon: Ballistic Physics Puzzle	0	5	0.97	Exact
+Galcon Legends	Galcon Legends	1	9	1	Exact
+Broken Age	Broken Age: Act 1	4	5	0.59	Non Exact
+NASCAR The Game: 2013	NASCAR The Game: 2013	37	0	1	Exact
+Shadowrun Returns	Shadowrun Returns	12	18	1	Exact
+Serious Sam HD: The Second Encounter	Serious Sam HD: The Second Encounter	7	15	1	Exact
+Contagion	Contagion	10	0	1	Exact
+Risen 2 - Dark Waters	Risen 2: Dark Waters	26	47	0.95	Exact
+Cthulhu Saves the World 	Cthulhu Saves The World	8	13	1	Exact
+FINAL FANTASY IV: THE AFTER YEARS	Final Fantasy IV: The After Years	36	94	1	Exact
+Full Bore	Full Bore	12	24	1	Exact
+Party of Sin	Party of Sin	4	0	1	Exact
+The Banner Saga	The Banner Saga	11	27	1	Exact
+Talisman: Digital Edition	Talisman: Digital Edition	2	155	1	Exact
+Tales from Space: Mutant Blobs Attack	Tales from Space: Mutant Blobs Attack	4	7	1	Exact
+Batman: Arkham City GOTY	Batman: Arkham City GOTY	13	56	1	Exact
+Natural Selection 2	Natural Selection 2	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Mutant Mudds Deluxe	Mutant Mudds Deluxe	5	10	1	Exact
+Warlock - Master of the Arcane	Warlock: Master of the Arcane	11	41	0.97	Exact
+Frozen Synapse	Frozen Synapse	22	0	1	Exact
+Saints Row: The Third	Saints Row: The Third	15	44	1	Exact
+Mitsurugi Kamui Hikae	Mitsurugi Kamui Hikae	2	8	1	Exact
+Bardbarian	Bardbarian	6	9	1	Exact
+StuntMANIA Reloaded	StuntMANIA Reloaded	6	8	1	Exact
+Cloud Chamber	Cloud Chamber	6	12	1	Exact
+Unholy Heights	Unholy Heights	10	26	1	Exact
+The Dark Eye: Chains of Satinav	The Dark Eye: Chains of Satinav	10	13	1	Exact
+Resident Evil Revelations 2	Resident Evil: Revelations 2	10	35	0.96	Exact
+Quest for Infamy	Quest for Infamy	11	0	1	Exact
+Shadowrun: Dragonfall - Director's Cut	Shadowrun: Dragonfall - Director's Cut	21	43	0.92	Non Exact
+Monaco	Monaco GP	Sin registro de tiempo	Sin registro de tiempo	0.67	Non Exact
+Toybox Turbos	Toybox Turbos	2	5	1	Exact
+Final Fantasy IV (3D Remake)	Final Fantasy IV	22	36	1	Exact
+Chivalry: Medieval Warfare	Chivalry: Medieval Warfare	16	80	1	Exact
+Zup! 3	Zup! 3	1	1	1	Exact
+The Bureau: XCOM Declassified	The Bureau: XCOM Declassified	10	17	1	Exact
+Hotline Miami	Hotline Miami	5	15	1	Exact
+Lucius	Lucius	6	40	1	Exact
+Giana Sisters: Twisted Dreams	Giana Sisters: Twisted Dreams	7	21	1	Exact
+Mafia II (Classic)	Mafia II	12	30	1	Exact
+Duet	Duet	2	13	1	Exact
+Thief	Thief	11	46	1	Exact
+Runespell: Overture	Runespell: Overture	7	15	1	Exact
+Edna & Harvey: Harvey's New Eyes	Edna & Harvey: Harvey's New Eyes	7	9	0.94	Exact
+Shadow Warrior	Shadow Warrior	12	35	1	Exact
+Paranormal State: Poison Spring Collector's Edition	Paranormal State: Poison Spring	4	6	1	Exact
+KickBeat Steam Edition	KickBeat	3	9	1	Exact
+Fist Puncher	Fist Puncher	4	0	1	Exact
+Half-Life 2	Half-Life 2	13	19	1	Exact
+QP Shooting - Dangerous!!	QP Shooting - Dangerous!!	9	0	0.92	Non Exact
+Kick-Ass 2	Kick-Ass 2	0	4	1	Exact
+REVOLVER360 RE:ACTOR	REVOLVER360 RE:ACTOR	2	0	1	Exact
+The Sun at Night	The Sun At Night	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Survivor Squad	Survivor Squad	16	45	1	Exact
+Rome: Total War	Rome: Total War	34	130	1	Exact
+Dungeons of Dredmor	Dungeons of Dredmor	17	78	1	Exact
+Pilgrims	Pilgrims	1	2	1	Exact
+Escape Machines	Escape Machines	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Hero Siege	Hero Siege	9	90	1	Exact
+Borderlands 2	Borderlands 2	30	129	1	Exact
+Super Toy Cars	Super Toy Cars	2	6	1	Exact
+Memoria	Memoria	9	10	1	Exact
+Outland	Outland	7	12	1	Exact
+The Rollingball's Melody	The Rollingball's Melody	Sin registro de tiempo	Sin registro de tiempo	0.96	Exact
+Edna & Harvey: The Breakout	Edna & Harvey: The Breakout	9	12	0.96	Exact
+Out There Somewhere	Out There Somewhere	2	5	1	Exact
+Dead Space (2008)	Dead Space	11	20	1	Exact
+Door Kickers	Door Kickers	8	39	1	Exact
+DOOM 64	Doom 64	7	11	1	Exact
+Ion Assault	Ion Assault	2	9	1	Exact
+Rust	Rust	27	86	1	Exact
+Really Big Sky	Really Big Sky	5	14	1	Exact
+Post Apocalyptic Mayhem	Post Apocalyptic Mayhem	1	6	1	Exact
+The Escapists 2	The Escapists 2	17	60	1	Exact
+Burnout Paradise: The Ultimate Box	Burnout Paradise Remastered	11	39	0.62	Non Exact
+Free to Play	Dwarfs!?: Free to Play	1	0	0.55	Non Exact
+Sanctum 2	Sanctum 2	12	59	1	Exact
+Worms Clan Wars	Worms: Clan Wars	9	18	0.94	Exact
+Rabbit Hole 3D: Steam Edition	Rabbit Hole 3D	0	10	1	Exact
+The Novelist	The Novelist	2	3	1	Exact
+PAC-MAN CHAMPIONSHIP EDITION 2	Pac-Man Championship Edition 2	5	12	1	Exact
+Rush Bros	Rush Bros.	3	14	0.9	Non Exact
+Doorways: Prelude	NA	NA	NA	NA	NA
+BIT.TRIP BEAT	Bit.Trip Beat	3	11	0.92	Non Exact
+gravilon	Gravilon	1	0	1	Exact
+Stranded In Time	Stranded In Time	2	2	1	Exact
+Save me Mr Tako: Tasukete Tako-San	Save me Mr Tako: Tasukete Tako-San	16	0	1	Exact
+GEARCRACK Arena	Gearcrack Arena	0	1	1	Exact
+Mashed	Mashed: Fully Loaded	0	9	0.3	Non Exact
+Gone Home	Gone Home	2	3	1	Exact
+Lilly and Sasha: Curse of the Immortals	Lilly and Sasha: Curse of the Immortals	Sin registro de tiempo	Sin registro de tiempo	0.9	Non Exact
+Valdis Story: Abyssal City	Valdis Story: Abyssal City	11	24	1	Exact
+Fable III	Fable III	13	46	1	Exact
+Ultimate General: Gettysburg	Ultimate General: Gettysburg	6	30	1	Exact
+Swipecart	Swipecart	0	13	1	Exact
+Batman: Arkham Asylum GOTY Edition	Batman: Arkham Asylum GOTY	11	25	1	Exact
+Polarity	Polarity	1	3	1	Exact
+Carnage Racing	Carnage Racing	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Memories of a Vagabond	Memories of A Vagabond	3	4	1	Exact
+Enclave	Enclave	8	16	1	Exact
+Volgarr the Viking	Volgarr the Viking	9	20	1	Exact
+Waveform	Waveform	6	0	1	Exact
+No Time to Explain	No Time To Explain	2	7	1	Exact
+Kingdom Wars	Kingdom Wars	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Total War: EMPIRE - Definitive Edition	Total War: Empire - Definitive Edition	Sin registro de tiempo	Sin registro de tiempo	0.95	Exact
+Shower With Your Dad Simulator 2015: Do You Still Shower With Your Dad	Shower With Your Dad Simulator 2015	2	3	0.5	Non Exact
+Closure	Closure	6	9	1	Exact
+Sang-Froid - Tales of Werewolves	Sang-Froid: Tales of Werewolves	9	21	0.97	Exact
+The Incredible Adventures of Van Helsing	The Incredible Adventures of Van Helsing	13	33	1	Exact
+Make it indie!	Make It Indie!	0	1	1	Exact
+The Swapper	The Swapper	5	6	1	Exact
+Knights and Merchants	Knights and Merchants: Historical Version	47	105	0.41	Non Exact
+Robot Rescue Revolution	Robot Rescue Revolution	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Sinister City	Sinister City	2	3	1	Exact
+Rooms: The Main Building	Rooms: The Main Building	3	18	1	Exact
+AoF Chess Club 2.0	Angels of Fasaria: World Online	Sin registro de tiempo	Sin registro de tiempo	0.1	Non Exact
+Race The Sun	Race the Sun	5	12	1	Exact
+Marvel vs. Capcom: Infinite	Marvel vs. Capcom: Infinite	4	11	0.96	Exact
+Remember Me	Remember Me	10	18	1	Exact
+Penguins Arena: Sedna's World	Penguins Arena: Sedna's World	1	5	0.97	Exact
+Defy Gravity	Defy Gravity	2	4	1	Exact
+Among the Sleep	Among the Sleep	2	3	1	Exact
+Hero of the Kingdom	Hero of the Kingdom	3	5	1	Exact
+Oddworld: Abe's Oddysee	Oddworld: Abe's Oddysee	13	15	0.96	Exact
+Paranautical Activity: Deluxe Atonement Edition	NA	NA	NA	NA	NA
+FLY'N	Fly'N	9	29	0.8	Non Exact
+One Way Heroics	One Way Heroics	2	34	1	Exact
+One Night	One Night	3	0	1	Exact
+The Marvellous Miss Take	The Marvellous Miss Take	6	13	1	Exact
+Jazzpunk: Director's Cut	Jazzpunk	2	4	0.33	Non Exact
+Deus Ex: The Fall	Deus Ex: The Fall	4	8	1	Exact
+Battleplan: American Civil War	Battleplan: American Civil War	8	0	1	Exact
+Deadlight	Deadlight	4	7	1	Exact
+Soundodger+	Soundodger+	2	30	1	Exact
+ReignMaker	ReignMaker	0	55	1	Exact
+Kill The Bad Guy	KTBG: Kill The Bad Guy	5	35	0.73	Non Exact
+Save Room - Organization Puzzle	Save Room - Organization Puzzle	1	2	0.94	Exact
+Aviator - Bush Pilot	Aviator - Bush Pilot	2	0	0.9	Non Exact
+Football Manager 2013	Football Manager 2013	289	534	1	Exact
+Element4l	Element4l	5	15	1	Exact
+Squishy the Suicidal Pig	Squishy the Suicidal Pig	8	13	1	Exact
+Platypus II	Platypus II	3	0	1	Exact
+Back to Bed	Back to Bed	1	4	1	Exact
+The Binding of Isaac	The Binding of Isaac	11	138	1	Exact
+Gun Monkeys	Gun Monkeys	0	8	1	Exact
+Toki Tori 2+	Toki Tori 2+	9	24	1	Exact
+Lilly Looking Through	Lilly Looking Through	2	3	1	Exact
+Beatbuddy: Tale of the Guardians	Beatbuddy: Tale of the Guardians	5	10	1	Exact
+Keep Talking and Nobody Explodes	Keep Talking and Nobody Explodes	5	14	0.88	Non Exact
+DISTRAINT: Deluxe Edition	Distraint	2	3	1	Exact
+Crystals of Time	Crystals of Time	3	3	1	Exact
+Card City Nights	Card City Nights	10	13	1	Exact
+Boson X	Boson X	3	9	1	Exact
+Dominique Pamplemousse	`Dominique Pamplemousse in It's All Over Once The Fat Lady Sings!`	1	2	0.33	Non Exact
+Commando Jack	Commando Jack	3	0	1	Exact
+Purgatory	Purgatory	3	6	1	Exact
+Strike Suit Infinity	Strike Suit Infinity	6	9	1	Exact
+Far Cry 3 Blood Dragon	Far Cry 3: Blood Dragon	4	9	0.96	Exact
+FORCED	Forced	7	19	1	Exact
+Syberia	Syberia	10	12	1	Exact
+Major Mayhem	Major Mayhem	3	0	1	Exact
+LUFTRAUSERS	Luftrausers	4	18	1	Exact
+Ukrainian Ninja	Ukrainian Ninja	2	0	1	Exact
+Nova-111	Nova-111	6	9	1	Exact
+Takedown: Red Sabre	Takedown: Red Sabre	5	6	1	Exact
+PARTICLE MACE	Particle Mace	3	13	1	Exact
+Teddy Floppy Ear - Mountain Adventure	Teddy Floppy Ear: Mountain Adventure	1	2	0.97	Exact
+Street Racing Syndicate	Street Racing Syndicate	12	15	1	Exact
+Thief Town	Thief Town	0	17	1	Exact
+Zup! Zero	Zup! Zero	1	1	1	Exact
+Cargo Commander	Cargo Commander	12	33	1	Exact
+EvilQuest	EvilQuest	4	7	1	Exact
+Desert Ashes	Desert Ashes	0	16	1	Exact
+Overcast - Walden and the Werewolf	Overcast - Walden and the Werewolf	1	3	0.82	Non Exact
+Anomaly 2	Anomaly 2	6	13	1	Exact
+No Time To Explain Remastered	No Time To Explain	2	7	1	Exact
+Tiny and Big: Grandpa's Leftovers	Tiny and Big: Grandpa's Leftovers	3	11	0.85	Non Exact
+SpaceChem	SpaceChem	43	66	1	Exact
+Sunless Sea	Sunless Sea	18	128	1	Exact
+Down To One	Down To One	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Zack Zero	Zack Zero	4	7	1	Exact
+PixelJunk Eden	PixelJunk Eden	9	22	1	Exact
+Sweet Lily Dreams	Sweet Lily Dreams	14	20	1	Exact
+The Deed	The Deed	1	2	1	Exact
+This War of Mine	This War of Mine	11	36	1	Exact
+Despair	Despair	1	1	1	Exact
+I Am Bread	I Am Bread	3	11	1	Exact
+METAL SLUG 2	Metal Slug 2	1	2	1	Exact
+Worms Revolution	Worms: Revolution	16	35	0.94	Exact
+Slender: The Arrival	Slender: The Arrival	2	6	1	Exact
+Apollo4x	Apollo4x	4	0	1	Exact
+Human: Fall Flat	Human: Fall Flat	6	22	1	Exact
+Overcooked! 2	Overcooked 2	7	22	0.92	Non Exact
+TERA	TERA	32	698	1	Exact
+8infinity	8infinity	0	2	1	Exact
+METAL SLUG XX	Metal Slug XX	1	4	1	Exact
+The Vanishing of Ethan Carter Redux	The Vanishing of Ethan Carter	4	4	0.83	Non Exact
+Tony Hawk's Pro Skater HD	Tony Hawk's Pro Skater HD	5	16	0.96	Exact
+Virtua Tennis 4	Virtua Tennis 4	9	39	1	Exact
+SOULCALIBUR VI	Soulcalibur VI	7	37	1	Exact
+Solar Flux	Solar Flux	3	11	1	Exact
+The Incredible Adventures of Van Helsing: Final Cut	The Incredible Adventures of Van Helsing: Final Cut	19	44	1	Exact
+The Last Door: Season 2 - Collector's Edition	The Last Door: Season 2	6	9	1	Exact
+The Land of Dasthir	The Land of Dasthir	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Zup! Z	Zup! Z	1	1	1	Exact
+Strip 'Em	Gremlins: Stripe vs. Gizmo	1	0	0.27	Non Exact
+Containment: The Zombie Puzzler	Containment: The Zombie Puzzler	3	10	1	Exact
+Battlefield: Bad Company 2	Battlefield: Bad Company 2	7	16	1	Exact
+Zup! F	Zup! F	1	1	1	Exact
+8-Bit Bayonetta	8-Bit Bayonetta	0	1	1	Exact
+ARK: Survival Evolved	ARK: Survival Evolved	55	608	1	Exact
+Hyper Knights: Battles	Hyper Knights: Battles	1	1	1	Exact
+99Vidas	99Vidas	4	35	1	Exact
+Windjammers 2	Windjammers 2	1	23	1	Exact
+100 hidden eternals	100 Hidden Eternals	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Zup! 9	Zup! 9	1	1	1	Exact
+Resident Evil 7 Teaser: Beginning Hour	Resident Evil 7 Teaser: Beginning Hour	1	2	1	Exact
+The Dark Pictures Anthology: Man of Medan	The Dark Pictures: Man of Medan	4	12	0.76	Non Exact
+The Expendabros	The Expendabros	1	1	1	Exact
+MakeThatMoney	MakeThatMoney	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Pang Adventures	Pang Adventures	3	0	1	Exact
+PRO EVOLUTION SOCCER 2019	Pro Evolution Soccer 2019	30	86	1	Exact
+Sacred Citadel	Sacred Citadel	5	22	1	Exact
+Resident Evil 2 \1-Shot Demo\	NA	NA	NA	NA	NA
+Barro	Barro	1	1	1	Exact
+Crash Time 2	Crash Time 2	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Disney's Hercules	Disney's Hercules Action Game	3	6	0.55	Non Exact
+Mortal Kombat Komplete Edition	Mortal Kombat: Komplete Edition	9	107	0.97	Exact
+FlatOut: Ultimate Carnage	FlatOut: Ultimate Carnage	15	30	1	Exact
+Emergency 2014	Emergency 2014	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+TEKKEN 7	Tekken 7	4	18	1	Exact
+Pro Evolution Soccer 2015	Pro Evolution Soccer 2015	49	186	1	Exact
+Montaro : RE	Montaro: RE	0	1	0.92	Non Exact
+Quake II	Quake II	8	12	1	Exact
+Marvel: Ultimate Alliance 2	Marvel: Ultimate Alliance 2	9	33	1	Exact
+Need for Speed: Undercover	Need for Speed: Undercover	11	22	1	Exact
+DARK SOULS II: Scholar of the First Sin	Dark Souls II: Scholar of the First Sin	36	106	1	Exact
+Hospital Tycoon	Hospital Tycoon	5	0	1	Exact
+Nosgoth	Nosgoth	26	83	1	Exact
+Half-Life	Half-Life	12	15	1	Exact
+Haydee	Haydee	11	15	1	Exact
+Crysis 2 Maximum Edition	Crysis 2	9	15	1	Exact
+JUMP FORCE	Jump Force	14	32	1	Exact
+Mara	Mara	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+OVERKILL's The Walking Dead - BETA	Overkill's The Walking Dead	9	31	0.33	Non Exact
+Teenage Mutant Ninja Turtles: Mutants in Manhattan	Teenage Mutant Ninja Turtles: Mutants in Manhattan	5	17	1	Exact
+Cryostasis	Cryostasis: Sleep of Reason	8	9	0.37	Non Exact
+Driver San Francisco	Driver: San Francisco	9	25	0.95	Exact
+Leisure Suit Larry in the Land of the Lounge Lizards: Reloaded	Leisure Suit Larry in the Land of the Lounge Lizards: Reloaded	4	7	1	Exact
+Tetris Ultimate	Tetris Ultimate	1	40	1	Exact
+Rayman Legends	Rayman Legends	10	30	1	Exact
+Sword Coast Legends	Sword Coast Legends	20	44	1	Exact
+100 hidden birds 2	100 Hidden Birds 2	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Grand Theft Auto 2	Grand Theft Auto 2	12	27	1	Exact
+The Chronicles of Riddick: Assault on Dark Athena	The Chronicles of Riddick: Assault on Dark Athena	9	15	1	Exact
+Pinball FX2	Pinball FX 2	12	0	0.92	Non Exact
+Audiosurf	Audiosurf	8	12	1	Exact
+Dragon's Lair	Dragon's Lair	1	3	0.92	Non Exact
+Resident Evil Village Gold Edition Gameplay Demo	NA	NA	NA	NA	NA
+Red Dead Online	Red Dead Online	8	0	1	Exact
+Worms Reloaded	Worms: Reloaded	9	44	0.93	Exact
+007 Legends	007 Legends	6	10	1	Exact
+Assassin's Creed II	Assassin's Creed II	19	35	0.95	Exact
+Alien: Isolation	Alien: Isolation	19	33	1	Exact
+Ride to Hell: Retribution	Ride to Hell: Retribution	9	62	1	Exact
+Ridge Racer Unbounded	Ridge Racer: Unbounded	8	18	0.95	Exact
+MARVEL SNAP	Marvel SNAP	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Girls	Girls	0	1	1	Exact
+Child of Light	Child of Light	11	15	1	Exact
+Alice: Madness Returns	Alice: Madness Returns	14	23	1	Exact
+Orcs Must Die! 3	Orcs Must Die! 3	9	47	1	Exact
+Crazy Taxi	Crazy Taxi	3	7	1	Exact
+Max Payne	Max Payne	8	12	1	Exact
+The Elder Scrolls IV: Oblivion 	The Elder Scrolls IV: Oblivion	27	184	1	Exact
+Gunman Clive	Gunman Clive	1	3	1	Exact
+Server is Down	Server is Down	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Take Over Body	NA	NA	NA	NA	NA
+100 hidden snails 2	100 Hidden Snails 2	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Fallout 3 - Game of the Year Edition	Fallout 3: Game of the Year Edition	27	107	0.97	Exact
+S.T.A.L.K.E.R.: Shadow of Chernobyl	S.T.A.L.K.E.R.: Shadow of Chernobyl	15	43	0.8	Non Exact
+Milk inside a bag of milk inside a bag of milk	Milk inside a bag of milk inside a bag of milk	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Pier Solar and the Great Architects	Pier Solar and the Great Architects	26	40	0.89	Non Exact
+Golden Axed: A Cancelled Prototype	Golden Axed: A Cancelled Prototype	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Among Us	Among Us	8	19	1	Exact
+Clive Barker's Jericho	Clive Barker's Jericho	7	10	0.95	Exact
+Beyond Good & Evil	Beyond Good & Evil	11	13	0.94	Exact
+Commandos 3: Destination Berlin	Commandos 3: Destination Berlin	13	19	1	Exact
+Hitman: Contracts	Hitman: Contracts	10	15	1	Exact
+Neighbours from Hell	Neighbours from Hell	3	6	1	Exact
+DOOM (1993)	Doom	12	26	1	Exact
+Ghostbusters: The Video Game	Ghostbusters: The Video Game	8	22	1	Exact
+F1 2010	F1 2010	31	74	1	Exact
+My Destiny	My Jigsaw Adventures - Forgotten Destiny	0	4	0.25	Non Exact
+Hitman: Codename 47	Hitman: Codename 47	11	15	1	Exact
+Section 8	Section 8	3	5	1	Exact
+F1 Race Stars	F1 Race Stars	12	25	1	Exact
+TrackMania United Forever	TrackMania United	8	57	0.68	Non Exact
+Wolfenstein: The New Order	Wolfenstein: The New Order	11	24	1	Exact
+Alien Breed: Impact	Alien Breed: Impact	6	9	1	Exact
+Roof Rage	Roof Rage	0	5	1	Exact
+The Expendables 2 Videogame	The Expendables 2: Videogame	5	0	0.96	Exact
+BioShock	BioShock	12	22	1	Exact
+Tomb Raider I	Tomb Raider II	16	21	0.93	Exact
+Accidental Runner	Accidental Runner	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Onimusha 3: Demon Siege	Onimusha 3: Demon Siege	12	16	1	Exact
+Amnesia: The Dark Descent	Amnesia: The Dark Descent	8	11	1	Exact
+Vinewing	NA	NA	NA	NA	NA
+Bully: Scholarship Edition	Bully: Scholarship Edition	14	27	1	Exact
+RACE 07	RACE 07	4	0	1	Exact
+Moto Racer  4	Moto Racer 4	8	0	0.92	Non Exact
+Manhunt	Manhunt	11	16	1	Exact
+FUEL	Fuel	26	60	1	Exact
+Mirror's Edge	Mirror's Edge	6	12	0.92	Non Exact
+Windborne	Windborne	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+100 hidden cats 2	100 Hidden Cats 2	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Space Quest Collection	Space Quest: Collection	Sin registro de tiempo	Sin registro de tiempo	0.96	Exact
+Hex Phase	NA	NA	NA	NA	NA
+Prototype	Prototype	11	30	1	Exact
+STAR WARS: Knights of the Old Republic	Star Wars: Knights of the Old Republic	29	47	1	Exact
+Need for Speed Most Wanted	Need for Speed: Most Wanted	10	33	0.96	Exact
+Under the Ocean	Under the Ocean	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+STAR WARS Jedi Knight: Jedi Academy	Star Wars Jedi Knight: Jedi Academy	10	14	1	Exact
+The Disgusting Slaughterman	NA	NA	NA	NA	NA
+Prince of Persia: The Sands of Time	Prince of Persia: The Sands of Time	9	11	1	Exact
+Titan Quest	Titan Quest	26	57	1	Exact
+The Harvest	The Harvest	5	12	1	Exact
+Quake	Quake	5	11	1	Exact
+Albacete Warrior	NA	NA	NA	NA	NA
+eFootball PES 2020	eFootball PES 2020	66	320	1	Exact
+Duke Nukem	Duke Nukem	5	8	1	Exact
+Half Minute Hero: Super Mega Neo Climax Ultimate Boy	Half Minute Hero: Super Mega Neo Climax Ultimate Boy	5	27	1	Exact
+Spore	Spore	12	109	1	Exact
+The Forest	The Forest	15	55	1	Exact
+The Plan	The Plan	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Zombie Driver	Zombie Driver HD	5	19	0.81	Non Exact
+Shank n' Bake	NA	NA	NA	NA	NA
+Kane & Lynch: Dead Men	Kane & Lynch: Dead Men	5	9	0.95	Exact
+Safecracker: The Ultimate Puzzle Adventure	Safecracker: The Ultimate Puzzle Adventure	4	6	1	Exact
+Resident Evil: Operation Raccoon City	Resident Evil: Operation Raccoon City	6	16	1	Exact
+Axiom Verge	Axiom Verge	11	17	1	Exact
+Streets Of Kamurocho	Streets of Kamurocho	0	1	1	Exact
+Project D Online	Project D Online	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+The Chronicles of Narnia - Prince Caspian	The Chronicles of Narnia: Prince Caspian	9	14	0.98	Exact
+Annual Intruders 2.0	NA	NA	NA	NA	NA
+C-RUSH	C-RUSH	1	0	1	Exact
+Prey	Prey	16	45	1	Exact
+AaaaaAAaaaAAAaaAAAAaAAAAA!!! for the Awesome	AaaaaAAaaaAAAaaAAAAaAAAAA!!! for the Awesome	3	13	1	Exact
+Raiden IV: OverKill	Raiden IV: OverKill	3	0	1	Exact
+Hot Wheels World's Best Driver	Hot Wheels: World's Best Driver	0	13	0.94	Exact
+Dungeon Siege 2	NA	NA	NA	NA	NA
+Microsoft Flight Simulator X: Steam Edition	Microsoft Flight Simulator X	20	3100	1	Exact
+Heavy Metal Machines	Heavy Metal Machines	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Midnight Club II	Midnight Club II	12	17	1	Exact
+Doki Doki Literature Club	Doki Doki Literature Club!	4	7	0.96	Exact
+SKYHILL: Black Mist	SKYHILL: Black Mist	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+WWE 2K16	WWE 2K16	13	78	1	Exact
+Fire & Steel	Fire and Steel	Sin registro de tiempo	Sin registro de tiempo	0.79	Non Exact
+The Legends of Owlia	The Legends of Owlia	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+JumpJet Rex	JumpJet Rex	3	15	1	Exact
+SINGULARITY WORLD	NA	NA	NA	NA	NA
+Robocraft	Robocraft	77	0	1	Exact
+WRC Powerslide	WRC Powerslide	6	6	1	Exact
+Duke Nukem: Manhattan Project	Duke Nukem: Manhattan Project	6	11	1	Exact
+Titan Quest: Immortal Throne	Titan Quest: Immortal Throne	15	39	1	Exact
+Gunducky Industries	Gunducky Industries	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Loadout	Loadout	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Bus Driver	Bus Driver	7	8	1	Exact
+Sine Mora	Sine Mora	3	3	1	Exact
+Windforge	Windforge	0	47	1	Exact
+Barbie Dreamhouse Party	Barbie: Dreamhouse Party	1	0	0.96	Exact
+Cactus Canyon	NA	NA	NA	NA	NA
+Counter-Strike: Source	Counter-Strike: Source	73	400	1	Exact
+World of Goo	World of Goo	6	14	1	Exact
+Sicier's Zweck	NA	NA	NA	NA	NA
+Pandemonium	Pandemonium	7	19	1	Exact
+Shattered Horizon	Shattered Horizon	21	0	1	Exact
+Stranger Things 3: The Game	Stranger Things 3: The Game	9	14	1	Exact
+Titan	Titan	0	2	1	Exact
+Armor Of Heroes	Armor of Heroes	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+ENDLESS Zone	Endless Zone	1	2	1	Exact
+Fidget Spinner	Fidget Spinner	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Moonrise	Moonrise	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Shatter	Shatter	3	5	1	Exact
+GTR Evolution	GTR Evolution	1	0	1	Exact
+Girlfriend Experience VR	NA	NA	NA	NA	NA
+Eets	Eets	5	7	1	Exact
+Automaton	Automaton Lung	0	6	0.64	Non Exact
+Shadow Man	Shadow Man	15	22	1	Exact
+Toy Story 3	Toy Story 3: The Video Game	5	18	0.41	Non Exact
+Law & Order: Legacies	Law & Order: Legacies	8	10	0.95	Exact
+Hentai 3018	Hentai 3018	0	2	1	Exact
+Hentai Lady	Lady's Hentai Mosaic	0	1	0.4	Non Exact
+Hentai Secrets	Hentai Secrets	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Zup! XS	Zup! XS	2	2	1	Exact
+Brawlhalla	Brawlhalla	72	181	1	Exact
+New York Taxi Simulator	New York Taxi Simulator	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Summertime Madness	Summertime Madness	2	0	1	Exact
+Broken Sword 1 - Shadow of the Templars: Director's Cut	NA	NA	NA	NA	NA
+FEZ	Fez	6	12	1	Exact
+Domina	Domina	5	15	1	Exact
+Kings Bounty: Legions	King's Bounty: Legions	Sin registro de tiempo	Sin registro de tiempo	0.95	Exact
+Worms Armageddon	Worms Armageddon	8	25	1	Exact
+Warspear Online	Warspear Online	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Crasher	Crasher	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Trivia Vault: Mixed Trivia	Trivia Vault: Mixed Trivia	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Actua Soccer 3	Actua Soccer 3	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+FaeVerse Alchemy	FaeVerse Alchemy	10	0	1	Exact
+Nyheim	Nyheim	3	0	1	Exact
+Tomb Raider II	Tomb Raider II	16	21	1	Exact
+Sacred Gold	Sacred Gold	19	84	1	Exact
+Just Hero	Just Hero	0	1	1	Exact
+Grand Theft Auto	Grand Theft Auto	13	16	1	Exact
+PICO PARK:Classic Edition	NA	NA	NA	NA	NA
+SONIC THE HEDGEHOG 4 Episode II	NA	NA	NA	NA	NA
+.hack\/\/G.U. Last Recode	.hack//G.U. Last Recode	50	124	0.8	Non Exact
+1 For Yes, 0 For No	NA	NA	NA	NA	NA
+2D Neon Cube	2D Neon Cube	1	1	1	Exact
+4 Alice : Lorange Journey	4 Alice: Lorange Journey	1	2	0.96	Exact
+4 Alice Magical Autistic Girls	NA	NA	NA	NA	NA
+7 Angels	7 Angels	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+7 Wonders: Ancient Alien Makeover	7 Wonders: Ancient Alien Makeover	7	12	1	Exact
+7 Wonders: The Treasures of Seven	NA	NA	NA	NA	NA
+7 Wonders II	7 Wonders II	6	6	1	Exact
+7th Legion	7th Legion	40	0	1	Exact
+18 Wheels of Steel: American Long Haul	18 Wheels of Steel: American Long Haul	20	25	1	Exact
+911 Operator	911 Operator	6	22	1	Exact
+1001 Spikes	1001 Spikes	7	17	1	Exact
+1993 Space Machine	1993 Space Machine	2	20	1	Exact
+A-Train 8	A-Train 8	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+A-Train 9	A-Train 9	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+A.L.A.N.	A.L.A.N.	0	1	0.5	Non Exact
+AaAaAA!!! - A Reckless Disregard for Gravity	AaAaAA!!! - A Reckless Disregard for Gravity	5	12	0.95	Exact
+Abstract Arena	Abstract Arena	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Achievement Idler: Red	Achievement Idler: Red	0	2	1	Exact
+Acorn Assault: Rodent Revolution	Acorn Assault: Rodent Revolution	0	2	1	Exact
+Actor Tycoon 2	NA	NA	NA	NA	NA
+ADR1FT	Adrift	5	10	0.83	Non Exact
+Adventures Of Pipi	Adventures Of Pipi	0	1	1	Exact
+Adventures of Robinson Crusoe	Adventures of Robinson Crusoe	2	2	1	Exact
+Adventure Time: Pirates of the Enchiridion	Adventure Time: Pirates of the Enchiridion	6	11	1	Exact
+ADVERSE	Adverse	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Aeolis Tournament	Aeolis Tournament	1	0	1	Exact
+Aesthetic World	NA	NA	NA	NA	NA
+Afterfall: Reconquest Episode I	Afterfall Reconquest: Episode 1	2	3	0.94	Exact
+Afterfall InSanity - Dirty Arena Edition	Afterfall: InSanity	7	18	0.45	Non Exact
+Agony	Agony	7	14	1	Exact
+Agony UNRATED	Agony	7	14	0.38	Non Exact
+Agricultural Simulator 2012: Deluxe Edition	Agricultural Simulator 2012	3	0	1	Exact
+Agricultural Simulator 2013 Steam Edition	Agricultural Simulator 2013	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Agricultural Simulator: Historical Farming	Agricultural Simulator: Historical Farming	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Airport Simulator 2014	Airport Simulator 2014	23	28	1	Exact
+AI War: Fleet Command	AI War: Fleet Command	24	0	1	Exact
+Aladdin : Save The Princess	NA	NA	NA	NA	NA
+Alan : Rift Breakers	A.L.A.N.: Rift Breakers	Sin registro de tiempo	Sin registro de tiempo	0.83	Non Exact
+Alan Wake's American Nightmare	Alan Wake's American Nightmare	4	8	0.97	Exact
+Alarameth TD	Alarameth TD	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Alice in Wonderland Jigsaw Puzzle	Alice in Wonderland - A Jigsaw Puzzle Tale	1	62	0.79	Non Exact
+Alien Breed 2: Assault	Alien Breed 2: Assault	6	9	1	Exact
+Alien Breed 3: Descent	Alien Breed 3: Descent	5	8	1	Exact
+Alien Carnage \/ Halloween Harry	NA	NA	NA	NA	NA
+Aliens: Colonial Marines	Aliens: Colonial Marines	7	22	1	Exact
+Aliens vs. Predator	Aliens vs. Predator	8	24	0.95	Exact
+Alone in the Dark (2008)	Alone in the Dark	9	15	1	Exact
+Alone in the Dark: The New Nightmare	Alone in the Dark: The New Nightmare	8	14	1	Exact
+Alpha Protocol	Alpha Protocol	13	26	1	Exact
+Alter Ego	Alter Ego	9	10	1	Exact
+Amazon Rush	Amazon Rush	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Amidst The Darkness	NA	NA	NA	NA	NA
+Amnesia: A Machine for Pigs	Amnesia: A Machine for Pigs	4	6	1	Exact
+Amnesia: Rebirth	Amnesia: Rebirth	9	13	1	Exact
+Anachronox	Anachronox	28	40	1	Exact
+Ancient Huntsmen	NA	NA	NA	NA	NA
+Andarilho	Andarilho	0	2	1	Exact
+Andor - the Cards of Wonder	NA	NA	NA	NA	NA
+A New Beginning - Final Cut	A New Beginning	10	10	0.6	Non Exact
+Angeldust	Angeldust	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Angelica Weaver: Catch Me When You Can - Collectors Edition	NA	NA	NA	NA	NA
+A night with Natalie	NA	NA	NA	NA	NA
+A night with Natalie VR	NA	NA	NA	NA	NA
+Anime And Your Life	NA	NA	NA	NA	NA
+Anime Manga Style Girl - Color By Number Pixel Art Coloring	NA	NA	NA	NA	NA
+ANONYMOUS || AGONY - Serial Killer Prologue	NA	NA	NA	NA	NA
+Another World	Another World	2	3	1	Exact
+Anti-Opoly	Anti-Opoly	2	0	1	Exact
+Antonball Deluxe Lite	Antonball Deluxe	4	0	0.56	Non Exact
+Apex Legends	Apex Legends	32	118	1	Exact
+Apocalypse: The Game	Apocalypse: The Game	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+ARCADE GAME SERIES: DIG DUG	Dig Dug	1	5	1	Exact
+ARCADE GAME SERIES: GALAGA	Galaga	1	3	1	Exact
+ARCADE GAME SERIES: Ms. PAC-MAN	Ms. Pac-Man	1	3	0.91	Non Exact
+ARCADE GAME SERIES: PAC-MAN	Pac-Man	1	4	1	Exact
+Arcanum	Sister's Secrecy: Arcanum Bloodlines	3	4	0.19	Non Exact
+Arctic Adventure	Arctic Adventure	5	0	1	Exact
+Argonauts Agency: Golden Fleece	NA	NA	NA	NA	NA
+Argonauts Agency: Pandora's Box	NA	NA	NA	NA	NA
+ARK: Survival Of The Fittest	ARK: Survival of the Fittest	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Armada 2526 Gold Edition	Armada 2526	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Armada Skies	Armada Skies	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Armikrog	Armikrog	3	5	1	Exact
+Army Men RTS	Army Men: RTS	8	20	0.92	Non Exact
+Arsenal of Democracy	Arsenal of Democracy	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Ascension	Ascension	1	1	1	Exact
+Ashes of the Singularity: Escalation	Ashes of the Singularity: Escalation	16	34	1	Exact
+A Smooth Game (Unlike... Life) 	NA	NA	NA	NA	NA
+Assassin's Creed	Assassin's Creed	15	31	0.94	Exact
+Assassin's Creed Brotherhood	Assassin's Creed: Brotherhood	15	41	0.93	Exact
+Assassin's Creed III Remastered	Assassin's Creed III	16	55	0.95	Exact
+Assassin's Creed IV Black Flag	Assassin's Creed IV: Black Flag	23	60	0.94	Exact
+Assassin's Creed Odyssey	Assassin's Creed Odyssey	45	141	0.96	Exact
+Assassin's Creed Revelations	Assassin's Creed: Revelations	12	34	0.93	Exact
+Assassin's Creed III	Assassin's Creed III	16	55	0.95	Exact
+Asterix & Obelix XXL	Asterix & Obelix XXL 2	8	10	0.86	Non Exact
+Asterix & Obelix XXL 2	Asterix & Obelix XXL 2	8	10	0.95	Exact
+Asterix & Obelix XXL 3  - The Crystal Menhir	Asterix & Obelix XXL 3: The Crystal Menhir	4	11	0.95	Exact
+Asteroids: Outpost	Asteroids: Outpost	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+ATV GP	ATV GP	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Auction	Millennium Auction	Sin registro de tiempo	Sin registro de tiempo	0.39	Non Exact
+Aura: Fate of the Ages	Aura: Fate of the Ages	6	6	1	Exact
+Aura Kingdom	Aura Kingdom	540	9342	1	Exact
+Automachef	Automachef	26	64	1	Exact
+A Valley Without Wind 2	A Valley Without Wind 2	9	0	1	Exact
+Avencast	Avencast: Rise of the Mage	13	18	0.31	Non Exact
+Avernum 2: Crystal Souls	Avernum 2: Crystal Souls	36	102	1	Exact
+AVICII Invector	AVICII Invector	2	11	1	Exact
+Axis Football 2021	NA	NA	NA	NA	NA
+A Year Of Rain	A Year of Rain	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Backfire	Backfire	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Back to the Future: Ep 1 - It's About Time	Back to the Future: The Game - Episode 1: It's About Time	3	3	0.68	Non Exact
+Back to the Future: Ep 2 - Get Tannen!	Back to the Future: The Game - Episode 2: Get Tannen!	2	3	0.68	Non Exact
+Back to the Future: Ep 3 - Citizen Brown	Back to the Future: The Game - Episode 3: Citizen Brown	2	3	0.69	Non Exact
+Back to the Future: Ep 4 - Double Visions	Back to the Future: The Game - Episode 4: Double Visions	3	3	0.7	Non Exact
+Back to the Future: Ep 5 - OUTATIME	Back to the Future: The Game - Episode 5: Outatime	2	3	0.66	Non Exact
+Balloon Blast	NA	NA	NA	NA	NA
+Balls of Steel	Balls of Steel	1	0	1	Exact
+Barro 2020	Barro 2020	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Barro F22	NA	NA	NA	NA	NA
+Barro GT	NA	NA	NA	NA	NA
+Bartlow's Dread Machine	Bartlow's Dread Machine	5	0	0.96	Exact
+BASEBALL STARS 2	Baseball Stars 2	9	0	1	Exact
+B A S E M E N T	Borderlands: Game of the Year	22	82	0.31	Non Exact
+Basketing	NA	NA	NA	NA	NA
+Battlefleet Gothic: Armada	Battlefleet Gothic: Armada	21	39	1	Exact
+Battle of Brains	NA	NA	NA	NA	NA
+Battles of the Ancient World	Battles of the Ancient World	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Battlestations: Midway	Battlestations: Midway	7	9	1	Exact
+Battlestations: Pacific	Battlestations: Pacific	11	13	1	Exact
+Battletoads	Battletoads	4	8	1	Exact
+Beast Boxing Turbo	Beast Boxing Turbo	1	2	1	Exact
+Beast Quest	Beast Quest	6	11	1	Exact
+Beasts of Prey	Beasts of Prey	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Beholder 2	Beholder 2	11	21	1	Exact
+Ben 10	Ben 10	2	7	1	Exact
+Ben 10: Power Trip	Ben 10: Power Trip	4	11	1	Exact
+Ben There, Dan That!	Ben There, Dan That!	2	3	1	Exact
+BENTO GIRL	inbento	3	4	0.71	Non Exact
+Beside Myself	Beside Myself	1	2	1	Exact
+Between the Stars	Between the Stars	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Beyond: Two Souls	Beyond: Two Souls	11	28	1	Exact
+Beyond Divinity	Beyond Divinity	20	56	1	Exact
+Bingo Hall	NA	NA	NA	NA	NA
+Biology Battle	Biology Battle	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Bio Menace	Bio Menace	7	13	1	Exact
+Bionic Commando	Bionic Commando	7	17	1	Exact
+Bionic Commando Rearmed	Bionic Commando Rearmed	5	14	1	Exact
+BioShock 2	BioShock 2	11	23	1	Exact
+Bitcoin Farm	Bitcoin Farm	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Black Book: Prologue	Black Book: Prologue	1	0	1	Exact
+Black Desert	Black Desert Online	95	1111	0.63	Non Exact
+Blackwake	Blackwake	3	0	1	Exact
+Blades of Time	Blades of Time	9	15	1	Exact
+Blake Stone: Aliens of Gold	Blake Stone: Aliens of Gold	3	8	1	Exact
+Blake Stone: Planet Strike	Blake Stone: Planet Strike	6	0	1	Exact
+Blaster Simulator	Blaster Simulator	1	0	1	Exact
+Blood Bond - Into the Shroud	Blood Bond - Into the Shroud	Sin registro de tiempo	Sin registro de tiempo	0.93	Exact
+Blood Bowl: Dark Elves Edition	Blood Bowl	3	195	0.33	Non Exact
+Blood Omen 2: Legacy of Kain	Blood Omen 2: Legacy of Kain	13	14	1	Exact
+BloodRayne 2: Terminal Cut	BloodRayne 2	9	10	0.46	Non Exact
+BloodRayne: Terminal Cut	BloodRayne	7	11	0.42	Non Exact
+Bomber Crew	Bomber Crew	15	27	1	Exact
+Bombergeddon	NA	NA	NA	NA	NA
+Bone: Out from Boneville	Bone: Out from Boneville	2	2	1	Exact
+Bone: The Great Cow Race	Bone: The Great Cow Race	3	3	1	Exact
+BOOBS SAGA: Prepare To Hentai Edition	NA	NA	NA	NA	NA
+Book of Demons	Book of Demons	10	34	1	Exact
+Borderlands 3	Borderlands 3	23	71	1	Exact
+Borderlands GOTY	Borderlands: Game of the Year	22	82	0.55	Non Exact
+Borderlands GOTY Enhanced	Borderlands: Game of the Year	22	82	0.55	Non Exact
+Boreal Blade	Boreal Blade	0	2	1	Exact
+BOW MAN	Tennis Elbow Manager	Sin registro de tiempo	Sin registro de tiempo	0.35	Non Exact
+Box: The Game	Box: The Game	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Breach	Breach	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Breeders of the Nephelym: Alpha	Breeders of the Nephelym: Alpha	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Bridge Constructor Stunts	Bridge Constructor Stunts	5	10	1	Exact
+Bright Memory: Infinite	Bright Memory: Infinite	2	6	1	Exact
+BRINK	Brink	6	22	1	Exact
+Broken Sword 4 - the Angel of Death	Broken Sword: The Angel of Death	11	12	0.94	Exact
+Brutal Japan | 	NA	NA	NA	NA	NA
+Bubble hunt	NA	NA	NA	NA	NA
+Bubble Struggle: Adventures	NA	NA	NA	NA	NA
+Bulletstorm	Bulletstorm	7	16	1	Exact
+Burak Bahar's Unseen Anchor	Burak Bahar's Unseen Anchor	0	1	0.96	Exact
+Bushfires: Animal Rescue	NA	NA	NA	NA	NA
+Buzzle	Jetix Puzzle Buzzle	Sin registro de tiempo	Sin registro de tiempo	0.32	Non Exact
+C.O.D.E.R.E.D	NA	NA	NA	NA	NA
+Cabela's African Adventures	Cabela's African Adventures	6	9	0.96	Exact
+Cabela's Big Game Hunter Pro Hunts	Cabela's Big Game Hunter: Pro Hunts	12	27	0.94	Exact
+Cabela's Dangerous Hunts 2013	Cabela's Dangerous Hunts 2013	3	0	0.97	Exact
+Cabela's Hunting Expeditions	Cabela's Hunting Expeditions	0	7	0.96	Exact
+Cabelas Trophy Bucks	Cabela's Trophy Bucks	0	10	0.95	Exact
+Caesar 3	Caesar III	36	88	0.7	Non Exact
+Caesar 4	Caesar IV	16	100	0.78	Non Exact
+Call of Duty: WWII - Multiplayer	NA	NA	NA	NA	NA
+Call of Juarez Gunslinger	Call of Juarez: Gunslinger	5	14	0.96	Exact
+Cally's Trials	Cally's Trials	6	8	0.93	Exact
+Capcom Arcade Stadium	Capcom Arcade Stadium	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Capsized	Capsized	4	10	1	Exact
+Carcassonne: The Official Board Game	Carcassonne - Tiles & Tactics	0	12	0.42	Non Exact
+Cardboard Wars	NA	NA	NA	NA	NA
+Carmageddon TDR 2000	Carmageddon TDR 2000	12	18	1	Exact
+Car Mechanic Simulator 2014	Car Mechanic Simulator 2014	11	20	1	Exact
+Car Mechanic Simulator 2015	Car Mechanic Simulator 2015	11	54	1	Exact
+Carrier Command: Gaea Mission	Carrier Command: Gaea Mission	15	57	1	Exact
+Cars 2	Cars 2	5	12	1	Exact
+Cars Toon: Mater's Tall Tales	Cars: Toon - Mater's Tall Tales	2	4	0.87	Non Exact
+Casino Inc	Casino Inc.	Sin registro de tiempo	Sin registro de tiempo	0.91	Non Exact
+Cassidy	NA	NA	NA	NA	NA
+Castle Adventure	Castle Adventure	3	0	1	Exact
+CastleMiner Z	CastleMiner Z	4	26	1	Exact
+Castle of Lust - Hentai Fantasy Game	NA	NA	NA	NA	NA
+Castlevania: Lords of Shadow - Ultimate Edition	Castlevania: Lords of Shadow	18	39	1	Exact
+Castlevania: Lords of Shadow 2	Castlevania: Lords of Shadow 2	15	31	1	Exact
+Castlevania: Lords of Shadow  Mirror of Fate HD	Castlevania: Lords of Shadow - Mirror of Fate	8	13	0.91	Non Exact
+CAT & MOUSE	Tom & Jerry: The Ultimate Game of Cat and Mouse!	6	0	0.21	Non Exact
+Catch Me If You Can	NA	NA	NA	NA	NA
+Cat Girl	Cat Girl	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Cat Jump	NA	NA	NA	NA	NA
+Caveman Alive	Caveman Alive	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Cave Story+	Cave Story+	6	10	1	Exact
+CCCP CALLS!	CCCP CALLS!	0	7	1	Exact
+Cemetery Warrior 4	NA	NA	NA	NA	NA
+Ceville	Ceville	9	11	1	Exact
+Chainz 2: Relinked	Chainz 2: Relinked	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Chaos Ride	Chaos Ride	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Chaos Souls	Chaos Souls	2	0	1	Exact
+Chariot	Chariot	13	31	1	Exact
+Chasm	Chasm	9	12	1	Exact
+Check, please! : Restaurant Simulator	NA	NA	NA	NA	NA
+Chernobyl: Terrorist Attack	Chernobyl: Terrorist Attack	2	6	1	Exact
+Chess Puzzles	NA	NA	NA	NA	NA
+Chibi Volleyball	NA	NA	NA	NA	NA
+Chionophile	Chionophile	1	1	1	Exact
+Chrome	Chrome	15	19	1	Exact
+Chrome: Specforce	Chrome: SpecForce	6	7	1	Exact
+Cibele	Cibele	1	1	1	Exact
+CID The Dummy	CID The Dummy	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Cities XL 2011	Cities XL 2011	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Cities XL 2012	Cities XL 2012	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+CivCity: Rome	CivCity: Rome	9	52	1	Exact
+CLASH	Clash	0	2	1	Exact
+Claustrophobia: The Downward Struggle	Claustrophobia: The Downward Struggle	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Close the Window!	Close the Window!	0	1	1	Exact
+Clown Of Duty	NA	NA	NA	NA	NA
+Clown Theft Auto: Woke City	NA	NA	NA	NA	NA
+Club Naughty	Club Naughty	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Clustertruck	Clustertruck	4	8	1	Exact
+Cobi Treasure Deluxe	Cobi Treasure	1	1	0.65	Non Exact
+Coldfire Keep	Coldfire Keep	8	0	1	Exact
+Coloring Pixels	Coloring Pixels	40	122	1	Exact
+Combat Tested	Combat Tested	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Comic Book Hero: The Greatest Cape	Comic Book Hero: The Greatest Cape	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Commandos 2: Men of Courage	Commandos 2: Men of Courage	20	32	1	Exact
+Commandos: Behind Enemy Lines	Commandos: Behind Enemy Lines	23	29	1	Exact
+Commandos: Beyond the Call of Duty	Commandos: Beyond the Call of Duty	16	28	1	Exact
+Company of Heroes - Legacy Edition	NA	NA	NA	NA	NA
+Company of Heroes: Opposing Fronts	Company of Heroes: Opposing Fronts	13	41	1	Exact
+Company of Heroes: Tales of Valor	Company of Heroes: Tales of Valor	5	28	1	Exact
+Conan Exiles - Testlive Client	NA	NA	NA	NA	NA
+Conflict: Denied Ops	Conflict: Denied Ops	6	0	1	Exact
+Conflict Desert Storm	Conflict: Desert Storm	7	14	0.95	Exact
+Cook, Serve, Delicious! 3?!	Cook, Serve, Delicious! 3?!	46	88	1	Exact
+Cookies vs. Claus	Cookies vs. Claus	Sin registro de tiempo	Sin registro de tiempo	0.94	Exact
+Cooking Academy Fire and Knives	Cooking Academy Fire and Knives	0	10	0.87	Non Exact
+Corporate Lifestyle Simulator	Corporate Lifestyle Simulator	2	2	1	Exact
+Corridor Z	Corridor Z	3	12	1	Exact
+Corrupt	Corrupted	Sin registro de tiempo	Sin registro de tiempo	0.78	Non Exact
+Cosmic Cube	NA	NA	NA	NA	NA
+Cosmic DJ	Cosmic DJ	1	2	1	Exact
+Cosmic Kites	NA	NA	NA	NA	NA
+Cosmo's Cosmic Adventure	Cosmo's Cosmic Adventure	3	4	0.96	Exact
+Counter-Strike	Counter-Strike	29	607	1	Exact
+Counter-Strike: Condition Zero	Counter-Strike: Condition Zero	4	17	1	Exact
+Counter-Strike: Condition Zero Deleted Scenes	Counter-Strike: Condition Zero Deleted Scenes	6	8	1	Exact
+Craft and Dungeon	Craft and Dungeon	Sin registro de tiempo	Sin registro de tiempo	0.76	Non Exact
+CrashMetal Cyberpunk	NA	NA	NA	NA	NA
+Crayola Scoot	Crayola Scoot	0	14	1	Exact
+Crazy Belts	Crazy Belts	0	4	1	Exact
+Crazy Machines	Crazy Machines	6	7	1	Exact
+Crazy Machines 1.5 Inventors Training Camp	Crazy Machines: Inventors Training Camp	1	2	0.9	Non Exact
+Crazy Machines 1.5 New from the Lab	NA	NA	NA	NA	NA
+Crazy Machines: Golden Gears	Crazy Machines: Golden Gears	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Crazy Shopping	NA	NA	NA	NA	NA
+CRIMSON METAL	CRIMSON METAL	1	2	1	Exact
+Crying Suns	Crying Suns	15	45	1	Exact
+Crypto Mining Simulator	NA	NA	NA	NA	NA
+Crysis	Crysis	10	13	1	Exact
+Crysis Warhead	Crysis Warhead	5	7	1	Exact
+Crysis Wars	Crysis Wars	3	0	1	Exact
+Crystal Caves	Crystal Caves	3	5	1	Exact
+Cthulhu Realms	Cthulhu Realms	3	0	1	Exact
+Cuban Missile Crisis	Cuban Missile Crisis	0	100	1	Exact
+Cube Runner	Cube Runner	2	2	1	Exact
+Cubetractor	Cubetractor	5	12	1	Exact
+Cult of the Wind	Cult of the Wind	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Cultures - 8th Wonder of the World	Cultures: 8th Wonder of the World	15	26	0.97	Exact
+Cultures - Northland	Cultures: Northland	14	33	0.95	Exact
+Cursed Queen : Wicked Witch	NA	NA	NA	NA	NA
+Cut the Rope	Cut the Rope	3	7	1	Exact
+Cyber Pussy 2020	NA	NA	NA	NA	NA
+CyberTaxi	CyberTaxi	4	0	1	Exact
+Cyborg Invasion Shooter 2: Battle Of Earth	Cyborg Invasion Shooter 2: Battle Of Earth	1	0	1	Exact
+Cyndy	Cyndy	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Dabado Puzzles	NA	NA	NA	NA	NA
+Daddy's gone a-hunting	Daddy's Gone A-hunting	Sin registro de tiempo	Sin registro de tiempo	0.95	Exact
+Daemonsgate	Daemonsgate	0	24	1	Exact
+Daikatana	Daikatana	12	15	1	Exact
+Damnation	Damnation	8	10	1	Exact
+Damnation City of Death	Damnation: City of Death	Sin registro de tiempo	Sin registro de tiempo	0.96	Exact
+Dangerous Golf	Dangerous Golf	7	7	1	Exact
+Danmaku Unlimited 2	Danmaku Unlimited 2	1	25	1	Exact
+Dark Ages	Dark Ages	1	0	1	Exact
+Dark Deception: Monsters & Mortals	Dark Deception: Monsters & Mortals	Sin registro de tiempo	Sin registro de tiempo	0.97	Exact
+Dark Fairies	Dark Fairies	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Dark Fall 1: The Journal	NA	NA	NA	NA	NA
+Dark Fall 2: Lights Out	NA	NA	NA	NA	NA
+Dark Home	Home Darkness - Escape	Sin registro de tiempo	Sin registro de tiempo	0.27	Non Exact
+Dark Matter	Dark Matter	4	7	1	Exact
+Dark Messiah of Might & Magic Multi-Player	NA	NA	NA	NA	NA
+Dark Messiah of Might & Magic Single Player	NA	NA	NA	NA	NA
+Dark Raid	Dark Raid	3	0	1	Exact
+Darksiders	Darksiders	17	28	1	Exact
+Darksiders II	Darksiders II	21	44	1	Exact
+DARK SOULS: Prepare To Die Edition	Dark Souls: Prepare to Die Edition	46	105	1	Exact
+Day of Defeat	Day of Defeat	6	84	1	Exact
+Day of Defeat: Source	Day of Defeat: Source	2	0	1	Exact
+Dead Island: Epidemic	Dead Island: Epidemic	4	84	1	Exact
+Dead Island Retro Revenge	Dead Island: Retro Revenge	4	8	0.96	Exact
+Deadlock II - Shrine Wars	Deadlock II: Shrine Wars	Sin registro de tiempo	Sin registro de tiempo	0.96	Exact
+Deadly Curse	NA	NA	NA	NA	NA
+Deadly Curse: Insane Nightmare	NA	NA	NA	NA	NA
+Deadly Silence	Resident Evil: Deadly Silence	6	9	0.48	Non Exact
+Dead Space 2	Dead Space 2	9	16	1	Exact
+Dear Esther	Dear Esther	1	2	1	Exact
+Dear Esther: Landmark Edition	Dear Esther	1	2	0.38	Non Exact
+Death's Door	Death's Door	9	15	0.92	Non Exact
+Deathmatch Classic	Deathmatch Classic	1	0	1	Exact
+Death Rally (Classic)	Death Rally	4	7	1	Exact
+Death Skid Marks	Death Skid Marks	0	23	1	Exact
+DEATH STRANDING	Death Stranding	40	113	1	Exact
+DEATH STRANDING DIRECTOR'S CUT	Death Stranding: Director's Cut	36	107	0.94	Exact
+Death to Spies: Moment of Truth	Death to Spies: Moment of Truth	7	18	1	Exact
+Deathtrap Dungeon	Deathtrap Dungeon	11	13	1	Exact
+Deep Under the Sky	Deep Under the Sky	2	4	1	Exact
+Defendoooooor!!	Defendoooooor!!	2	0	1	Exact
+Deiland	Deiland	11	15	1	Exact
+Delta Horizon	NA	NA	NA	NA	NA
+Derp Souls	NA	NA	NA	NA	NA
+Despotism 3k	Despotism 3k	3	0	1	Exact
+Destinys Plan	NA	NA	NA	NA	NA
+Destroy All Humans!  Clone Carnage	Destroy All Humans! - Clone Carnage	Sin registro de tiempo	Sin registro de tiempo	0.97	Exact
+Deus Ex: Game of the Year Edition	Deus Ex	23	39	0.21	Non Exact
+Deus Ex: Human Revolution	Deus Ex: Human Revolution	21	44	1	Exact
+Deus Ex: Human Revolution - The Missing Link	Deus Ex: Human Revolution - The Missing Link DLC	4	7	0.88	Non Exact
+Deus Ex: Invisible War	Deus Ex: Invisible War	9	18	1	Exact
+Devil Girl Needs Massages	NA	NA	NA	NA	NA
+Devil May Cry 3: Special Edition	Devil May Cry 3: Dante's Awakening - Special Edition	12	55	0.62	Non Exact
+Devil May Cry 4	Devil May Cry 4	11	62	1	Exact
+Devils & Demons	Devils & Demons	Sin registro de tiempo	Sin registro de tiempo	0.93	Exact
+Dex	Dex	11	17	1	Exact
+DiRT 2	Dirt Rally 2.0	11	161	0.43	Non Exact
+DiRT 3	Dirt 3	14	41	1	Exact
+DiRT 4	Dirt 4	29	83	1	Exact
+DiRT Showdown	Dirt: Showdown	9	18	0.93	Exact
+Dirty Bomb	Dirty Bomb	147	233	1	Exact
+Disaster Dragon x Girls from Different Worlds	NA	NA	NA	NA	NA
+Discovery! A Seek & Find Adventure	Discovery! A Seek and Find Adventure	2	0	0.92	Non Exact
+Dishonored	Dishonored	12	37	1	Exact
+Divine Divinity	Divine Divinity	32	72	1	Exact
+Divine Knockout (DKO)	Divine Knockout	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Divinity II: Developer's Cut	Divinity II: Developer's Cut	29	60	0.96	Exact
+Doctor Who Infinity	Doctor Who Infinity	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Dogs of War: Kill to Survive	NA	NA	NA	NA	NA
+Dollar Dash	Dollar Dash	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+DOOM 3	Doom 3	11	16	1	Exact
+DOOM 3: BFG Edition	Doom 3: BFG Edition	10	37	1	Exact
+DOOM 3: Resurrection of Evil	Doom 3: Resurrection of Evil	4	6	1	Exact
+DOOM II	Doom II RPG	4	13	0.64	Non Exact
+dot TANKI	NA	NA	NA	NA	NA
+Double Dragon - 	Double Dragon	1	3	1	Exact
+Double Stretch	NA	NA	NA	NA	NA
+Dovetail Games Flight School	Dovetail Games: Flight School	Sin registro de tiempo	Sin registro de tiempo	0.97	Exact
+Do you know de way	Do You Know De Way	0	2	1	Exact
+Dr. Daisy: Pet Vet	Dr. Daisy: Pet Vet	0	3	0.94	Exact
+Dracula's Legacy	Dracula's Legacy	3	3	0.94	Exact
+Draft Day Sports College Basketball 3	Draft Day Sports: College Basketball 3	Sin registro de tiempo	Sin registro de tiempo	0.97	Exact
+Draft Day Sports Pro Basketball 4	Draft Day Sports: Pro Basketball 4	Sin registro de tiempo	Sin registro de tiempo	0.97	Exact
+Dragon's Lair 2: Time Warp	NA	NA	NA	NA	NA
+Dragon Age: Origins	Dragon Age: Origins	40	87	1	Exact
+Dragon Age: Origins - Ultimate Edition	Dragon Age: Origins	40	87	1	Exact
+Dragon Age II	Dragon Age II	26	58	1	Exact
+Dragon Age Inquisition	Dragon Age: Inquisition	47	128	0.96	Exact
+Dragonia	Dragonia	3	13	1	Exact
+Dragon Knight	Dragon Knight	1	6	1	Exact
+Drakensang The River of Time	Drakensang: The River of Time	28	51	0.97	Exact
+Drawful 2	Drawful 2	2	7	1	Exact
+Draw Slasher	Draw Slasher	3	6	1	Exact
+Dream Daddy: A Dad Dating Simulator	Dream Daddy: A Dad Dating Simulator	4	13	1	Exact
+Dreaming	Dreaming Mary	Sin registro de tiempo	Sin registro de tiempo	0.62	Non Exact
+DreamWorks Dragons: Dawn of New Riders	DreamWorks Dragons Dawn of New Riders	6	8	1	Exact
+Drift Horizon Online	Drift Horizon Online	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Driftland: The Magic Revival	Driftland: The Magic Revival	24	45	1	Exact
+Driftmoon	Driftmoon	9	11	1	Exact
+Drift Streets Japan	Drift Streets Japan	1	0	1	Exact
+Droplitz	Droplitz	6	11	1	Exact
+Dropshipping Simulator	NA	NA	NA	NA	NA
+Ducati World Championship	Ducati World Championship	0	19	1	Exact
+Duke Nukem 2	Duke Nukem II	5	7	0.85	Non Exact
+Duke Nukem 3D	Duke Nukem 3D	9	13	1	Exact
+Duke Nukem Forever	Duke Nukem Forever	9	21	1	Exact
+Dungeon Dashers	Dungeon Dashers	0	2	1	Exact
+Dungeon Fighter Online	Dungeon Fighter Online	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Dungeon Lurk II - Leona	Dungeon Lurk II - Leona	Sin registro de tiempo	Sin registro de tiempo	0.91	Non Exact
+Dungeons Again	NA	NA	NA	NA	NA
+Dungeon Siege III	Dungeon Siege III	15	28	1	Exact
+Dungeon Souls	Dungeon Souls	12	35	1	Exact
+Dwarfs!?	Dwarfs!?	4	17	1	Exact
+Dying Light: Bad Blood	Dying Light: Bad Blood	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Dystopian Drift	Booth: A Dystopian Adventure	7	0	0.32	Non Exact
+East India Company Gold	East India Company: Gold Edition	Sin registro de tiempo	Sin registro de tiempo	0.72	Non Exact
+Edengrad	Edengrad	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+eFootball PES 2021 SEASON UPDATE	NA	NA	NA	NA	NA
+eFootball 2023	NA	NA	NA	NA	NA
+Electronic Super Joy: Groove City	Electronic Super Joy: Groove City	1	2	1	Exact
+ELEX	ELEX	27	86	1	Exact
+Elizabeth Find M.D. - Diagnosis Mystery - Season 2	Elizabeth Find M.D.: Diagnosis Mystery - Season 2	3	0	0.9	Non Exact
+EllrLand	NA	NA	NA	NA	NA
+Elly The Jelly	Jelly in the sky	Sin registro de tiempo	Sin registro de tiempo	0.5	Non Exact
+Else Heart.Break()	Else Heart.Break()	14	64	0.83	Non Exact
+Endciv	Endciv	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Endless Jade Sea -Midori no Umi-	Endless Jade Sea -Midori no Umi-	0	20	1	Exact
+English Country Tune	English Country Tune	10	15	1	Exact
+ENSLAVED: Odyssey to the West Premium Edition	Enslaved: Odyssey to the West	9	19	1	Exact
+Entre-Deux	Entre-Deux	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Epic Car Factory	Epic Car Factory	5	11	1	Exact
+Escape from Monkey Island	Escape from Monkey Island	10	12	1	Exact
+Eschalon: Book 1	NA	NA	NA	NA	NA
+Eschalon: Book 2	NA	NA	NA	NA	NA
+Eterium	Eterium	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Euclidean Skies	Euclidean Skies	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Europa Universalis IV	Europa Universalis IV	94	1619	1	Exact
+Euro Truck Simulator	Euro Truck Simulator	21	94	1	Exact
+Everhood	Everhood	7	22	1	Exact
+Evil Shogun	NA	NA	NA	NA	NA
+Evoland	Evoland	3	6	1	Exact
+Evoland Legendary Edition	Evoland: Legendary Edition	20	31	0.96	Exact
+Exertus	Exertus	0	2	1	Exact
+Exit Strategy	NA	NA	NA	NA	NA
+Explodemon	Explodemon	4	23	1	Exact
+Extreme Roads USA	Extreme Roads USA	1	0	1	Exact
+F-1 drive	F-1 Drive	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+F.E.A.R.	F.E.A.R.	8	12	0.5	Non Exact
+F.E.A.R. 2: Project Origin	F.E.A.R. 2: Project Origin	7	11	0.85	Non Exact
+F.E.A.R. 3	F.E.A.R. 3	6	15	0.6	Non Exact
+F.E.A.R.: Extraction Point	F.E.A.R. Extraction Point	5	6	0.84	Non Exact
+F.E.A.R.: Perseus Mandate	F.E.A.R. Perseus Mandate	5	7	0.83	Non Exact
+Fable - The Lost Chapters	Fable: The Lost Chapters	15	38	0.96	Exact
+Fadeout: Underground	NA	NA	NA	NA	NA
+Faerie Solitaire Remastered	Faerie Solitaire	13	36	1	Exact
+Falcon	Falcon	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Falcon A.T.	Falcon A.T.	Sin registro de tiempo	Sin registro de tiempo	0.82	Non Exact
+Fallen Enchantress	Fallen Enchantress	20	0	1	Exact
+Fallen Mage (Restocked)	Fallen Mage	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Fallout	Fallout	16	33	1	Exact
+Fallout 2	Fallout 2	30	83	1	Exact
+Fallout 3	Fallout 3	22	116	1	Exact
+Fallout: New Vegas	Fallout: New Vegas	27	131	1	Exact
+Fallout Tactics	Fallout Tactics: Brotherhood of Steel	24	48	0.41	Non Exact
+Family Guy: Back to the Multiverse	Family Guy: Back to the Multiverse	6	15	1	Exact
+Fantasy Blacksmith	Fantasy Blacksmith	0	52	1	Exact
+Far Cry	Far Cry	13	19	1	Exact
+Far Cry 2	Far Cry 2	17	42	1	Exact
+Far Cry 3	Far Cry 3	16	37	1	Exact
+Farm Mania: Hot Vacation	Farm Mania: Hot Vacation	5	7	1	Exact
+FAST & FURIOUS CROSSROADS	Fast & Furious: Crossroads	5	60	0.92	Non Exact
+Fault: Elder Orb	NA	NA	NA	NA	NA
+Fears of Glasses  o-o	NA	NA	NA	NA	NA
+Fear The Wolves	Fear The Wolves	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Fertile Heroine Seaworthy	NA	NA	NA	NA	NA
+Fieldrunners	Fieldrunners	7	57	1	Exact
+FIFA 22	FIFA 22	47	294	1	Exact
+Fight'N Rage	Fight'N Rage	3	28	0.92	Non Exact
+Final DOOM	Final Doom	13	16	1	Exact
+FINAL FANTASY VII	Final Fantasy VII	36	82	1	Exact
+FINAL FANTASY VIII	Final Fantasy VIII	40	80	1	Exact
+Finding Kathy	NA	NA	NA	NA	NA
+Fire Commander: First Response	NA	NA	NA	NA	NA
+Firescout	NA	NA	NA	NA	NA
+Fishing Adventure	Fishing Adventure	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+FIST OF AWESOME	Fist of Awesome	1	0	1	Exact
+Five Keys to Exit	Five Keys to Exit	0	3	1	Exact
+Five Nights at Freddy's	Five Nights at Freddy's	2	5	0.96	Exact
+Five Nights at Freddy's 2	Five Nights at Freddy's 2	3	17	0.96	Exact
+Five Nights at Freddy's: Sister Location	Five Nights at Freddy's: Sister Location	3	14	0.98	Exact
+Five Nights With Firearms	NA	NA	NA	NA	NA
+FLASHOUT 3D: Enhanced Edition	FLASHOUT 3D	0	3	0.38	Non Exact
+Flat Heroes	Flat Heroes	5	12	1	Exact
+FlatOut	FlatOut	7	11	1	Exact
+FlatOut 2	FlatOut 2	13	21	1	Exact
+Flatout 3	FlatOut 3: Chaos & Destruction	5	17	0.3	Non Exact
+Flora's Fruit Farm	Flora's Fruit Farm	4	6	0.94	Exact
+Flow:The Sliding	NA	NA	NA	NA	NA
+Fluffy Horde	Fluffy Horde	10	15	1	Exact
+Football Club Simulator - FCS #21	NA	NA	NA	NA	NA
+Football Manager 2009	Football Manager 2009	130	440	1	Exact
+Football Manager 2010	Football Manager 2010	321	524	1	Exact
+Football Manager 2011	Football Manager 2011	343	693	1	Exact
+Football Manager 2012	Football Manager 2012	416	503	1	Exact
+Football Manager 2015	Football Manager 2015	383	819	1	Exact
+Football Manager 2019	Football Manager 2019	171	452	1	Exact
+Football Manager 2019 Touch	Football Manager 2019 Touch	23	0	1	Exact
+Football Manager 2020	Football Manager 2020	258	360	1	Exact
+Football Manager 2020 Touch	Football Manager 2020 Touch	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Football Manager 2021	Football Manager 2021	118	0	1	Exact
+Football Manager 2021 Touch	Football Manager 2021 Touch	78	0	1	Exact
+Football Manager 2022	Football Manager 2022	49	0	1	Exact
+Football Manager Touch 2017	Football Manager Touch 2017	78	0	1	Exact
+Football Manager Touch 2018	Football Manager Touch 2018	18	0	1	Exact
+Football Russian 20!8	Football Russian 20!8	0	1	1	Exact
+Forbidden Planet	Forbidden Planet	0	2	1	Exact
+Forged Battalion	Forged Battalion	8	0	1	Exact
+For Honor - Public Test	NA	NA	NA	NA	NA
+Forts	Forts	8	0	1	Exact
+Fragile Allegiance	Fragile Allegiance	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Fred3ric	Fred3ric	1	2	1	Exact
+Freedom Force	Freedom Force	17	26	1	Exact
+Freedom Force vs. the 3rd Reich	Freedom Force vs. the 3rd Reich	11	34	0.97	Exact
+FreeFlight	NA	NA	NA	NA	NA
+Free Kick X	NA	NA	NA	NA	NA
+Freud Gate	Freud Gate	0	2	1	Exact
+Frog Demon	NA	NA	NA	NA	NA
+From The Sky	Food From The Sky	Sin registro de tiempo	Sin registro de tiempo	0.71	Non Exact
+FUCK PUTIN	FUCK PUTIN	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+FUSER	Fuser	10	79	1	Exact
+Future Proof	Future Proof	1	6	1	Exact
+Gabriel Knight 2: The Beast Within	NA	NA	NA	NA	NA
+Gabriel Knight 3: Blood of the Sacred, Blood of the Damned	NA	NA	NA	NA	NA
+Gabriel Knight: Sins of the Fathers	Gabriel Knight: Sins of the Fathers	11	13	1	Exact
+GAIN	GAIN	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Galactic Civilizations I: Ultimate Edition	Galactic Civilizations II: Dread Lords	21	0	0.66	Non Exact
+Galactic Civilizations II: Ultimate Edition	Galactic Civilizations II: Dread Lords	21	0	0.68	Non Exact
+Galcon Fusion	Galcon Fusion	1	0	1	Exact
+Game of Thrones - A Telltale Games Series	Game of Thrones - A Telltale Games Series	12	13	0.95	Exact
+Gare Sapphire Mechs	Gare Sapphire Mechs	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Garfield Kart	Garfield Kart	2	27	1	Exact
+Garfield Kart - Furious Racing	Garfield Kart - Furious Racing	2	13	0.93	Exact
+Gay World	Gay World	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Geometry Wars 3: Dimensions Evolved	Geometry Wars 3: Dimensions Evolved	8	23	1	Exact
+German Fortress 3D	German Fortress 3D	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+GET EVEN	Get Even	7	16	1	Exact
+Getting Over It with Bennett Foddy	Getting Over It with Bennett Foddy	7	29	1	Exact
+Ghost Pirates of Vooju Island	Ghost Pirates of Vooju Island	6	18	1	Exact
+Global Ops: Commando Libya	Global Ops: Commando Libya	4	5	1	Exact
+Gloom	Gloom	6	22	1	Exact
+Glowfish	Glowfish	6	13	1	Exact
+GOAT OF DUTY	Goat of Duty	2	38	1	Exact
+GODS Remastered	Gods	4	4	1	Exact
+Goetia	Goetia	7	9	1	Exact
+Golazo! Soccer League	Golazo! Soccer League	1	0	1	Exact
+Good Boy!	NA	NA	NA	NA	NA
+Goose Goose Duck	Goose Goose Duck	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Goth Dating Sim 2022	NA	NA	NA	NA	NA
+Gothic 1 Classic	NA	NA	NA	NA	NA
+Gothic 3	Gothic 3	45	122	1	Exact
+Gothic 3 Forsaken Gods Enhanced Edition	Gothic 3: Forsaken Gods	16	31	0.96	Exact
+Gothic II: Gold Classic	NA	NA	NA	NA	NA
+Gothic Playable Teaser	Gothic - Playable Teaser	2	4	0.92	Non Exact
+Grandpa and the Zombies	NA	NA	NA	NA	NA
+Grand Theft Auto: San Andreas	Grand Theft Auto: San Andreas	30	80	1	Exact
+Grand Theft Auto: Vice City	Grand Theft Auto: Vice City	18	41	1	Exact
+Grand Theft Auto III	Grand Theft Auto III	15	40	1	Exact
+Grand Theft Auto IV: The Complete Edition	Grand Theft Auto IV: The Complete Edition	33	99	1	Exact
+GRAV	GRAV	11	0	1	Exact
+Grav Blazer	Grav Blazer	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Grav Blazer Squared	Grav Blazer Squared	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Grey Skies: A War of the Worlds Story	Grey Skies: A War of the Worlds Story	0	5	1	Exact
+GRID	GRID	21	56	1	Exact
+GT Power Expansion	NA	NA	NA	NA	NA
+Guardians of Middle-earth	Guardians of Middle-Earth	1	0	1	Exact
+Guilty Gear X2 #Reload	Guilty Gear XX #Reload	1	0	0.95	Exact
+GUILTY GEAR Xrd -SIGN-	Guilty Gear Xrd -SIGN-	6	11	1	Exact
+GUNDAM EVOLUTION	Gundam Evolution	46	0	1	Exact
+Gunmetal Arcadia Zero	Gunmetal Arcadia Zero	2	3	1	Exact
+Gunspell: Steam Edition	Gunspell	25	0	1	Exact
+GUNS UP!	Guns Up!	10	15	1	Exact
+H1Z1: Test Server	NA	NA	NA	NA	NA
+Hacker Evolution Duality	Hacker Evolution: Duality	4	11	0.96	Exact
+Hacker Evolution Source Code	Hacker Evolution: Source Code	Sin registro de tiempo	Sin registro de tiempo	0.97	Exact
+Half-Life 2: Deathmatch	Half-Life 2: Deathmatch	3	13	1	Exact
+Half-Life 2: Episode One	Half-Life 2: Episode One	4	5	1	Exact
+Half-Life 2: Episode Two	Half-Life 2: Episode Two	5	9	1	Exact
+Half-Life 2: Lost Coast	Half-Life 2: Lost Coast	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Half-Life: Blue Shift	Half-Life: Blue Shift	3	4	1	Exact
+Half-Life: Opposing Force	Half-Life: Opposing Force	5	7	1	Exact
+Half-Life: Source	Half-Life: Source	11	13	1	Exact
+Half-Life Deathmatch: Source	Half-Life Deathmatch: Source	3	5	1	Exact
+Halo: Spartan Assault	Halo: Spartan Assault	4	17	1	Exact
+Halo: Spartan Strike	Halo: Spartan Strike	5	12	1	Exact
+Hanse - The Hanseatic League	Hanse: The Hanseatic League	Sin registro de tiempo	Sin registro de tiempo	0.96	Exact
+Hard Reset	Hard Reset	6	19	1	Exact
+Harry Is A Porter	NA	NA	NA	NA	NA
+Haste-Miner 2	NA	NA	NA	NA	NA
+Hate Free Heroes RPG 3.0	Hate Free Heroes RPG	Sin registro de tiempo	Sin registro de tiempo	0.83	Non Exact
+Haunted House: Cryptic Graves	Haunted House: Cryptic Graves	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+HEAVEN AND HELL - the last war	NA	NA	NA	NA	NA
+Heavy Rain	Heavy Rain	10	22	1	Exact
+Hector: Ep 1	Hector: Badge of Carnage - Episode 1: We Negotiate with Terrorists	2	2	0.18	Non Exact
+Hector: Ep 2	Hector: Badge of Carnage - Episode 2: Senseless Acts of Justice	3	3	0.19	Non Exact
+Hector: Ep 3	Hector: Badge of Carnage - Episode 3: Beyond Reasonable Doom	3	3	0.2	Non Exact
+Hellblade: Senua's Sacrifice VR Edition	Hellblade: Senua's Sacrifice - VR Edition	8	9	0.93	Exact
+HELLDIVERS	Helldivers	12	63	1	Exact
+Hentai Fetish Tycoon	NA	NA	NA	NA	NA
+Hentai Girl Fantasy	Hentai Girl Fantasy	0	1	1	Exact
+Hentai Girl Hime	Hentai Girl Hime	1	3	1	Exact
+Hentai Girl Karen	Hentai Girl Karen	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Hentai Girl Linda	Hentai Girl Linda	0	1	1	Exact
+Hentai Neighbors	Hentai Neighbors	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Hentai Pussy	Hentai Pussy 2	1	0	0.86	Non Exact
+Hentai Puzzle X	NA	NA	NA	NA	NA
+Heroes Arena	Heroes Arena	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Heroes of Might & Magic III - HD Edition	Heroes of Might and Magic III	58	94	0.62	Non Exact
+Hexus	Hexus	0	13	1	Exact
+Hidden & Dangerous 2: Courage Under Fire	NA	NA	NA	NA	NA
+Hidden & Dangerous: Action Pack	Hidden & Dangerous: Action Pack	Sin registro de tiempo	Sin registro de tiempo	0.97	Exact
+Hidden Farm 2 Top-Down 3D	NA	NA	NA	NA	NA
+Hidden Harbor 2 Top-Down 3D	NA	NA	NA	NA	NA
+Hide and Shriek	Hide and Shriek	Sin registro de tiempo	Sin registro de tiempo	0.73	Non Exact
+Hills Of Glory 3D	Hills of Glory 3D	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Hippo eating banana	NA	NA	NA	NA	NA
+Hipster Attack	NA	NA	NA	NA	NA
+Hitman 2: Silent Assassin	Hitman 2: Silent Assassin	14	19	1	Exact
+Hitman: Blood Money	Hitman: Blood Money	12	20	1	Exact
+Hitman: Sniper Challenge	Hitman: Absolution - Sniper Challenge	0	3	0.65	Non Exact
+Hitman GO: Definitive Edition	Hitman GO	5	7	0.31	Non Exact
+HITOTSU NO MORI	Hitotsu no Mori	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+HOARD	Hoard	8	39	1	Exact
+Hocus Pocus	Hocus Pocus	5	6	1	Exact
+Hogs of War	Hogs of War	12	13	1	Exact
+Homefront	Homefront	4	10	1	Exact
+Hopeless Dregs	NA	NA	NA	NA	NA
+Hop Skip Jump	NA	NA	NA	NA	NA
+Horny Girl	NA	NA	NA	NA	NA
+Hot Dish	Hot Dish	4	0	1	Exact
+Hotel Giant 2	Hotel Giant 2	3	0	1	Exact
+Hotline Miami 2: Wrong Number	Hotline Miami 2: Wrong Number	9	33	1	Exact
+HOUND	HOUND	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+House of Evil	House of Evil	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Houston, we have a problem	Houston, We Have a Problem	1	0	1	Exact
+How to bathe your cat	NA	NA	NA	NA	NA
+How To Bathe Your Cat: Drawing	NA	NA	NA	NA	NA
+How To Bathe Your Cat: Impossible Mission	NA	NA	NA	NA	NA
+Human Resource Machine	Human Resource Machine	4	10	1	Exact
+Hungry Flame	Hungry Flame	2	3	1	Exact
+Hunter of Antiques	Hunter of antiques	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Hunting Unlimited 2010	Hunting Unlimited 2010	1	0	1	Exact
+Huntsman - The Orphanage Halloween Edition	NA	NA	NA	NA	NA
+Hydrophobia: Prophecy	Hydrophobia: Prophecy	4	8	1	Exact
+Hyperdrive Massacre	Hyperdrive Massacre	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Hyper Knights	Hyper Knights	4	8	1	Exact
+HyperZen Training	NA	NA	NA	NA	NA
+Ice Age: Continental Drift: Arctic Games	Ice Age: Continental Drift - Arctic Games	1	0	0.93	Exact
+Icesolation	NA	NA	NA	NA	NA
+idleBeer	idleBeer	2	0	1	Exact
+IGT Slots Paradise Garden	IGT Slots Paradise Garden	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+IL-2 Sturmovik: 1946	IL-2 Sturmovik: 1946	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Immortal Darkness: Curse of The Pale King	Immortal Darkness: Curse of The Pale King	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Imperial Glory	Imperial Glory	11	16	1	Exact
+Indivisible	Indivisible	18	28	1	Exact
+Inertia	Inertia	0	4	1	Exact
+Infanticide | 	NA	NA	NA	NA	NA
+Infected: The Twin Vaccine - Collector's Edition	Infected: The Twin Vaccine	3	3	1	Exact
+Initia: Elemental Arena	Initia: Elemental Arena	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+inMomentum	inMomentum	3	0	1	Exact
+Insanely Twisted Shadow Planet	Insanely Twisted Shadow Planet	5	7	1	Exact
+Inscryption	Inscryption	12	21	1	Exact
+Into The War	Into The War	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Intrusion 2	Intrusion 2	4	9	1	Exact
+Invaders! From Outer Space	8-Bit Invaders!	25	0	0.6	Non Exact
+Invisible	Invisible	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Iron Grip: Warlord	Iron Grip: Warlord	4	0	1	Exact
+Jack Keane 2 - The Fire Within	Jack Keane 2: The Fire Within	8	0	0.97	Exact
+Jagged Alliance 2 - Wildfire 	Jagged Alliance 2: Wildfire	27	0	0.96	Exact
+Jagged Alliance Gold	Jagged Alliance Gold	11	28	1	Exact
+Jet Set Radio	Jet Set Radio	7	21	1	Exact
+Joana's Life	Joana's Life	1	2	0.92	Non Exact
+Judge Dredd 95	Judge Dredd 95	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Jumanji: The Video Game	JUMANJI: The Video Game	1	7	1	Exact
+Jurassic Park: The Game	Jurassic Park: The Game	7	9	1	Exact
+Just Cause	Just Cause	8	31	1	Exact
+Just Cause 2	Just Cause 2	18	87	1	Exact
+Just Ski	Just Ski	0	1	1	Exact
+Kabitis 2: Fire Sword	NA	NA	NA	NA	NA
+Kane & Lynch 2: Dog Days	Kane & Lynch 2: Dog Days	4	9	0.96	Exact
+Kanjozoku Game 	NA	NA	NA	NA	NA
+Kentucky Route Zero	Kentucky Route Zero	9	14	1	Exact
+KEO	Keo	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Kicks Online	NA	NA	NA	NA	NA
+Kick The Puppet	NA	NA	NA	NA	NA
+Killing Floor Mod: Defence Alliance 2	NA	NA	NA	NA	NA
+KILLRUN	KILLRUN	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Kimmy	Kimmy	2	2	1	Exact
+King's Quest	King's Quest	19	21	0.92	Non Exact
+King's Quest Collection	King's Quest Collection	16	27	0.96	Exact
+Kingdom Builders	NA	NA	NA	NA	NA
+Kingdom Elemental	Kingdom Elemental	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+KnifeBoy	NA	NA	NA	NA	NA
+KnightShift	KnightShift	25	100	1	Exact
+Kohan: Ahriman's Gift	Kohan: Ahriman's Gift	Sin registro de tiempo	Sin registro de tiempo	0.95	Exact
+Kohan: Immortal Sovereigns	Kohan: Immortal Sovereigns	16	0	1	Exact
+Kohan II: Kings of War	Kohan II: Kings of War	15	0	1	Exact
+KOLOBOK	Kolobok	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Kona	Kona	5	10	1	Exact
+Kraven Manor	Kraven Manor	1	2	1	Exact
+Kulebra and the Souls of Limbo - Prologue	NA	NA	NA	NA	NA
+Kung Fu Panda Showdown of Legendary Legends	Kung Fu Panda: Showdown of Legendary Legends	1	13	0.98	Exact
+Kung Fu Strike: The Warrior's Rise	Kung Fu Strike: The Warrior's Rise	4	36	0.97	Exact
+Kyle is Famous	Kyle is Famous	1	3	1	Exact
+L.A. Noire	L.A. Noire	22	41	0.8	Non Exact
+Lara Croft and the Guardian of Light	Lara Croft and the Guardian of Light	6	17	0.89	Non Exact
+Lara Croft and the Temple of Osiris	Lara Croft and the Temple of Osiris	5	13	0.89	Non Exact
+Laserium	Laserium	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Laser League: World Arena	NA	NA	NA	NA	NA
+Lead and Gold - Gangs of the Wild West	Lead and Gold: Gangs of the Wild West	0	33	0.86	Non Exact
+Learn Japanese To Survive - Hiragana Battle	Learn Japanese To Survive - Hiragana Battle	10	13	0.95	Exact
+Left 4 Dead	Left 4 Dead	7	63	1	Exact
+Legacy of Dorn: Herald of Oblivion	Legacy of Dorn: Herald of Oblivion	2	3	1	Exact
+Legacy of Kain: Defiance	Legacy of Kain: Defiance	12	17	1	Exact
+Legacy of Kain: Soul Reaver	Legacy of Kain: Soul Reaver	12	14	1	Exact
+Legacy of Kain: Soul Reaver 2	Legacy of Kain: Soul Reaver 2	10	14	1	Exact
+Legendary	Legendary	5	7	1	Exact
+Legend of Grimrock	Legend of Grimrock	16	28	1	Exact
+Legends of Koyannis	NA	NA	NA	NA	NA
+Legends of Pegasus	Legends of Pegasus	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+LEGENO SLAYER	NA	NA	NA	NA	NA
+LEGO Star Wars: The Complete Saga	LEGO Star Wars: The Complete Saga	13	40	1	Exact
+LEGO The Hobbit	LEGO The Hobbit	9	37	1	Exact
+LEGO The Lord of the Rings	LEGO The Lord of the Rings: The Video Game	10	34	0.62	Non Exact
+Leisure Suit Larry - Magna Cum Laude Uncut and Uncensored	Leisure Suit Larry: Magna Cum Laude	9	12	0.65	Non Exact
+Leisure Suit Larry - Wet Dreams Don't Dry	Leisure Suit Larry - Wet Dreams Don't Dry	9	10	0.93	Exact
+Leisure Suit Larry 1 - In the Land of the Lounge Lizards	Leisure Suit Larry in the Land of the Lounge Lizards	3	3	0.96	Exact
+Leisure Suit Larry 2 - Looking For Love (In Several Wrong Places)	Leisure Suit Larry Goes Looking for Love (in Several Wrong Places)	4	4	0.55	Non Exact
+Leisure Suit Larry 3 - Passionate Patti in Pursuit of the Pulsating Pectorals	Leisure Suit Larry III: Passionate Patti in Pursuit of the Pulsating Pectorals	4	7	0.95	Exact
+Leisure Suit Larry 5 - Passionate Patti Does a Little Undercover Work	Leisure Suit Larry 5: Passionate Patti Does a Little Undercover Work	5	5	0.99	Exact
+Leisure Suit Larry 6 - Shape Up Or Slip Out	Leisure Suit Larry 6: Shape Up or Slip Out!	6	8	0.95	Exact
+Leisure Suit Larry 7 - Love for Sail	Leisure Suit Larry: Love for Sail!	6	7	0.91	Non Exact
+Les Quatre Alices	Les Quatre Alices	0	2	1	Exact
+Let's Sing 2016	Let's Sing 2016	Sin registro de tiempo	Sin registro de tiempo	0.93	Exact
+Let's Sing 2019	Let's Sing 2019	0	7	0.93	Exact
+Level 22	Level 22: Gary's Misadventures	3	4	0.27	Non Exact
+Lightwire	NA	NA	NA	NA	NA
+LillyMonster	NA	NA	NA	NA	NA
+Lines Infinite	Lines Infinite by Nestor Yavorskyy	3	3	0.41	Non Exact
+LINX BATTLE ARENA	LINX BATTLE ARENA	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Liquidator	Liquidators	1	0	0.91	Non Exact
+Litil Divil	Litil Divil	12	0	1	Exact
+Little Farm	Little Farm	10	12	1	Exact
+Little Inferno	Little Inferno	3	4	1	Exact
+Living Legends: The Frozen Fear Collection	Living Legends: The Frozen Fear Collection	8	10	1	Exact
+London 2012: The Official Video Game of the Olympic Games	NA	NA	NA	NA	NA
+Lone Survivor: The Director's Cut	Lone Survivor	4	10	0.39	Non Exact
+Loop Hero	Loop Hero	29	55	1	Exact
+Lords of Ravage - hapter 1	NA	NA	NA	NA	NA
+Lost Chronicles of Zerzura	Lost Chronicles of Zerzura	9	22	1	Exact
+Lost in Random	Lost in Random	13	17	1	Exact
+Lost Legends: The Weeping Woman Collector's Edition	Lost Legends: The Weeping Woman	2	3	1	Exact
+Lost Planet 2	Lost Planet 2	10	26	1	Exact
+Lost Planet: Extreme Condition	Lost Planet: Extreme Condition	8	17	1	Exact
+Lost Planet: Extreme Condition - Colonies Edition	NA	NA	NA	NA	NA
+Love Letter	Love Letter	2	0	1	Exact
+LowPolyExplorer	NA	NA	NA	NA	NA
+Lucky Tlhalerwa - IMS Death Squad	NA	NA	NA	NA	NA
+Lume	Lume	1	1	1	Exact
+Lust for Darkness	Lust for Darkness	3	4	1	Exact
+Luxor 2 HD	Luxor 2	4	14	0.7	Non Exact
+Luxor 3	Luxor 3	7	9	1	Exact
+LUXOR: 5th Passage 	Luxor: 5th Passage	6	11	1	Exact
+Luxor Amun Rising HD	Luxor: Amun Rising	5	18	0.8	Non Exact
+Luxor Evolved	Luxor Evolved	4	12	1	Exact
+Luxor HD	Luxor HD	14	16	1	Exact
+Luxor Mahjong	NA	NA	NA	NA	NA
+Luxury Hotel Emporium	Luxury Hotel Emporium	2	0	1	Exact
+M-Plan	NA	NA	NA	NA	NA
+Maelstrom	Maelstrom	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Mafia	Mafia	16	21	1	Exact
+Mafia: Definitive Edition	Mafia: Definitive Edition	11	25	1	Exact
+Mafia II: Definitive Edition	Mafia II: Definitive Edition	11	32	1	Exact
+Magicka: Wizard Wars	Magicka: Wizard Wars	24	0	1	Exact
+Mahjongg Investigations: Under Suspicion	Mahjongg Investigations: Under Suspicion	8	0	1	Exact
+Mahjong Riichi Multiplayer	NA	NA	NA	NA	NA
+Main Assembly	Main Assembly	0	9	1	Exact
+Majesty 2	Majesty 2 Collection	19	34	0.45	Non Exact
+Majesty: Gold Edition	Majesty: Gold Edition	21	32	0.38	Non Exact
+Majesty Gold HD	Majesty: Gold Edition	21	32	0.67	Non Exact
+Major Stryker	Major Stryker	0	4	1	Exact
+Make Sail	Make Sail	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Mana Crusher	Mana Crusher	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Maniac Mansion	Maniac Mansion	3	6	1	Exact
+Manual Samuel - Anniversary Edition	Manual Samuel	2	6	1	Exact
+Marco Polo	Marco Polo	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Marine Sharpshooter II: Jungle Warfare	Marine Sharpshooter II: Jungle Warfare	4	0	1	Exact
+Marvel: Ultimate Alliance	Marvel: Ultimate Alliance	13	36	1	Exact
+Mass Effect (2007)	Mass Effect	17	43	1	Exact
+Mass Effect 2 (2010)	Mass Effect 2	24	50	1	Exact
+Mass Effect: Andromeda Deluxe Edition	Mass Effect: Andromeda	18	94	1	Exact
+Master Levels for DOOM II	Master Levels for Doom II	6	9	1	Exact
+Master of Orion	Master of Orion	13	127	1	Exact
+Master of Orion 1	Master of Orion	11	0	0.88	Non Exact
+Master of Orion 2	Master of Orion II: Battle at Antares	9	20	0.43	Non Exact
+Master of Orion 3	Master of Orion III	30	0	0.84	Non Exact
+Mata Hari	Mata Hari	7	11	1	Exact
+Math Rescue	Math Rescue	3	0	1	Exact
+Max Payne 2: The Fall of Max Payne	Max Payne 2: The Fall of Max Payne	6	10	1	Exact
+Max Payne 3	Max Payne 3	10	31	1	Exact
+Medieval Real Estate	Medieval Real Estate	0	1	1	Exact
+Medusa Frontier	NA	NA	NA	NA	NA
+Meister2	NA	NA	NA	NA	NA
+MEMETYPER	MEMETYPER	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Mensa Academy	Mensa Academy	0	11	1	Exact
+METAL GEAR RISING: REVENGEANCE	Metal Gear Rising: Revengeance	7	37	1	Exact
+Metrico+	Metrico+	3	7	1	Exact
+Metro 2033	Metro 2033	10	20	1	Exact
+Metro Explosion Simulator	NA	NA	NA	NA	NA
+Midnight Mysteries 3: Devil on the Mississippi	Midnight Mysteries 3: Devil on the Mississippi	3	8	1	Exact
+Midnight Mysteries 4: Haunted Houdini	Midnight Mysteries 4: Haunted Houdini	4	7	1	Exact
+Midnight Mysteries: Salem Witch Trials	Midnight Mysteries 2: Salem Witch Trials	3	5	0.93	Exact
+Midnight Mysteries: The Edgar Allan Poe Conspiracy	NA	NA	NA	NA	NA
+Midnight Mysteries: Witches of Abraham - Collector's Edition	Midnight Mysteries: Witches of Abraham	2	4	1	Exact
+Might & Magic: Clash of Heroes	Might and Magic: Clash of Heroes	25	35	0.91	Non Exact
+Military Life: Tank Simulator	Military Life: Tank Simulator	2	0	1	Exact
+Milky Way Prince  The Vampire Star	Milky Way Prince - The Vampire Star	2	5	0.97	Exact
+MineSweep	MineSweep	1	0	1	Exact
+Mini Battle Ground	Mini Battlegrounds	Sin registro de tiempo	Sin registro de tiempo	0.89	Non Exact
+MiniGolf Maker	NA	NA	NA	NA	NA
+MiniGolf Mania	MiniGolf Mania	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Mini Motor Racing X	Mini Motor Racing X	8	18	1	Exact
+Mining & Tunneling Simulator	Mining & Tunneling Simulator	7	0	0.96	Exact
+Mini Ninjas	Mini Ninjas	8	16	1	Exact
+Mirror	Mirror	6	15	1	Exact
+Mirror's Edge Catalyst	Mirror's Edge: Catalyst	8	34	0.91	Non Exact
+Mirror Maker	Mirror Maker	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+MISSING: An Interactive Thriller - Episode One	MISSING: An Interactive Thriller - Episode One	1	1	0.96	Exact
+Mission Control: NanoMech	Mission Control: NanoMech	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Mission Runway	Mission Runway	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+MLB Front Office Manager	MLB Front Office Manager	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Moderium	NA	NA	NA	NA	NA
+Mokoko	Mokoko	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+MOMO.EXE	MOMO.EXE	0	1	0.88	Non Exact
+Monster Bash	Monster Bash	6	0	1	Exact
+Monster Energy Supercross - The Official Videogame	Monster Energy Supercross - The Official Videogame	8	17	0.96	Exact
+Monster Hunter Rise: Sunbreak Demo	NA	NA	NA	NA	NA
+Montaro	Montaro	1	3	1	Exact
+Monuments of Mars	Monuments of Mars	3	0	1	Exact
+Morphblade	Morphblade	2	0	1	Exact
+Mortal Kombat Kollection	Mortal Kombat Arcade Kollection	5	8	0.77	Non Exact
+MotoGP13	NA	NA	NA	NA	NA
+Motor Rock	Motor Rock	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+MUD - FIM Motocross World Championship	MUD - FIM Motocross World Championship	13	16	0.95	Exact
+Muffin Knight	Muffin Knight	2	0	1	Exact
+MultiVersus	MultiVersus	4	0	1	Exact
+MX vs. ATV Reflex	MX vs. ATV: Reflex	18	29	0.89	Non Exact
+My Friend Peppa Pig	My Friend Peppa Pig	1	2	1	Exact
+Mysterium	Mysterium	2	11	1	Exact
+Mystic Towers	Mystic Towers	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+NAIRI: Tower of Shirin	NAIRI: Tower of Shirin	5	7	1	Exact
+Namariel Legends: Iron Lord Premium Edition	Namariel Legends: Iron Lord	3	4	1	Exact
+NASCAR '14	NASCAR '14	10	75	0.9	Non Exact
+NatureFly	NA	NA	NA	NA	NA
+NAVALNY: A Nightmare of Corrupt	NA	NA	NA	NA	NA
+Navalny: Posledniy miting	NA	NA	NA	NA	NA
+Naval Warfare	Carrier Battles 4 Guadalcanal - Pacific War Naval Warfare	Sin registro de tiempo	Sin registro de tiempo	0.23	Non Exact
+NaziShoot	NaziShoot	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+NBA 2K12	NBA 2K12	70	216	1	Exact
+NBA 2K13	NBA 2K13	74	665	1	Exact
+NBA 2K14	NBA 2K14	37	407	1	Exact
+NBA 2K15	NBA 2K15	60	576	1	Exact
+NBA 2K16	NBA 2K16	18	269	1	Exact
+NBA 2K17	NBA 2K17	40	127	1	Exact
+NBA 2K18	NBA 2K18	55	117	1	Exact
+NBA 2K19	NBA 2K19	43	296	1	Exact
+NBA 2K20	NBA 2K20	51	337	1	Exact
+NBA 2K21	NBA 2K21	23	72	1	Exact
+NBA 2K22	NBA 2K22	104	442	1	Exact
+NBA Playgrounds	NBA Playgrounds	6	11	1	Exact
+Nebula Within	NA	NA	NA	NA	NA
+Necromonads	Necromonads	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Need for Speed: Hot Pursuit	Need for Speed: Hot Pursuit	14	32	1	Exact
+Need for Speed Heat 	Need For Speed Heat	13	49	1	Exact
+Need for Speed Hot Pursuit Remastered	Need for Speed: Hot Pursuit	14	32	0.96	Exact
+Need for Speed Payback	Need for Speed: Payback	19	46	0.96	Exact
+Neighbours back From Hell	Neighbours back From Hell	5	7	1	Exact
+Neighbours from Hell 2	Neighbours from Hell 2: On Vacation	3	3	0.63	Non Exact
+Neon Outlast	NA	NA	NA	NA	NA
+Neverending Nightmares	Neverending Nightmares	2	3	1	Exact
+Neverland Treasure	NA	NA	NA	NA	NA
+New York Bus Simulator	New York Bus Simulator	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Next	Next	0	1	1	Exact
+Next 2	Next 2	0	2	1	Exact
+Next 3	Next 3	0	1	1	Exact
+Next 4	Next 4	0	1	1	Exact
+Nexuiz	Nexuiz	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Nexuiz Beta	NA	NA	NA	NA	NA
+Nexuiz STUPID Mode	NA	NA	NA	NA	NA
+Nightmares from the Deep: The Cursed Heart	Nightmares from the Deep: The Cursed Heart	3	6	1	Exact
+Night of the Full Moon	Night of the Full Moon	2	4	1	Exact
+NiGHTS into Dreams...	NiGHTS into Dreams...	3	6	0.86	Non Exact
+Nightwolf: Survive the Megadome	Nightwolf: Survive the Megadome	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Nine to Five	Nine To Five	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Ninja Stealth 4	NA	NA	NA	NA	NA
+NKCell	NA	NA	NA	NA	NA
+None	Sky Cannoneer	Sin registro de tiempo	Sin registro de tiempo	0.31	Non Exact
+Nongunz: Doppelganger Edition	Nongunz: Doppelganger Edition	3	5	1	Exact
+No one lives in heaven	NA	NA	NA	NA	NA
+Northern Blades	NA	NA	NA	NA	NA
+Nostradamus: The Last Prophecy	Nostradamus: The Last Prophecy	6	7	1	Exact
+No Sushi, No Life	NA	NA	NA	NA	NA
+Np Problems: Vertex Coloring	NA	NA	NA	NA	NA
+Nuts!: The Battle of the Bulge	Nuts!: The Battle of the Bulge	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+O.V.N.I. Abduction	NA	NA	NA	NA	NA
+Obscure	ObsCure	6	9	1	Exact
+Obscure 2	NA	NA	NA	NA	NA
+OBSCURY : THE LAST	NA	NA	NA	NA	NA
+Obulis	Obulis	4	10	1	Exact
+OCEAN CITY RACING: Redux	NA	NA	NA	NA	NA
+Oddworld: Abe's Exoddus	Oddworld: Abe's Exoddus	15	15	0.96	Exact
+Oddworld: Stranger's Wrath HD	Oddworld: Stranger's Wrath	10	27	0.86	Non Exact
+Office Space: Idle Profits	Office Space: Idle Profits	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Oil Rush	Oil Rush	10	16	1	Exact
+OK K.O.! Lets Play Heroes	OK K.O.! Let's Play Heroes	Sin registro de tiempo	Sin registro de tiempo	0.88	Non Exact
+OlliOlli	OlliOlli	4	15	1	Exact
+Olympic Games Tokyo 2020  The Official Video Game	Olympic Games Tokyo 2020: The Official Video Game	5	10	0.98	Exact
+Omikron - The Nomad Soul	Omikron: The Nomad Soul	14	20	0.96	Exact
+OMON Simulator	OMON Simulator	0	1	1	Exact
+Oneirogen	NA	NA	NA	NA	NA
+Only If	Only If	2	2	1	Exact
+On the Rain-Slick Precipice of Darkness, Episode One	Penny Arcade Adventures: Precipice of Darkness, Episode One	6	7	0.68	Non Exact
+On the Rain-Slick Precipice of Darkness, Episode Two	NA	NA	NA	NA	NA
+Operation Caucasus	Operation Caucasus	1	0	1	Exact
+Operation Flashpoint: Dragon Rising	Operation Flashpoint: Dragon Rising	12	20	1	Exact
+Operation Flashpoint: Red River	Operation Flashpoint: Red River	12	16	1	Exact
+Orborun	Orborun	2	0	1	Exact
+Orc Attack: Flatulent Rebellion	Orc Attack: Flatulent Rebellion	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Order of War	Order of War	19	0	1	Exact
+Out of the Park Baseball 14	Out of the Park Baseball 14	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Out of the Park Baseball 19	Out of the Park Baseball 19	163	1114	1	Exact
+Out of the Park Baseball 20	Out of the Park Baseball 20	75	1227	1	Exact
+Out of the Park Baseball 21	Out of the Park Baseball 21	34	0	1	Exact
+Out of the Park Baseball 22	Out of the Park Baseball 22	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Outpost Zero	Outpost Zero	41	0	1	Exact
+Outward	Outward	34	79	1	Exact
+Overlord	Overlord	18	28	1	Exact
+Overlord: Raising Hell	Overlord: Raising Hell	8	33	1	Exact
+Overlord II	Overlord II	16	25	1	Exact
+Override	Override	1	0	1	Exact
+Pacify	Pacify	2	12	1	Exact
+Paganitzu	Paganitzu	3	0	1	Exact
+Pahelika: Revelations HD	NA	NA	NA	NA	NA
+Painkiller: Black Edition	Painkiller: Black Edition	10	20	1	Exact
+Painkiller: Recurring Evil	Painkiller: Recurring Evil	4	5	1	Exact
+Painkiller: Redemption	Painkiller: Redemption	4	13	1	Exact
+Painkiller: Resurrection	Painkiller: Resurrection	5	18	1	Exact
+Painkiller Overdose	Painkiller: Overdose	6	15	0.95	Exact
+Painters Guild	Painters Guild	3	0	1	Exact
+Paladin Duty - Knights and Blades	Paladin Duty - Knights and Blades	0	1	0.82	Non Exact
+Panda Run	Panda Run	0	2	1	Exact
+Pandemic: The Board Game	Pandemic: The Board Game	1	23	1	Exact
+Pantropy	Pantropy	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Panzer Dragoon: Remake	Panzer Dragoon: Remake	1	16	1	Exact
+Paradise Checkers	NA	NA	NA	NA	NA
+Paradise Lofts	NA	NA	NA	NA	NA
+Paw Patrol: On A Roll	PAW Patrol: On a Roll	4	5	1	Exact
+PAW Patrol Mighty Pups  Save Adventure Bay	PAW Patrol: Mighty Pups Save Adventure Bay	3	4	0.95	Exact
+Paw Paw Paw	Paw Paw Paw	6	7	1	Exact
+Penumbra: Black Plague	Penumbra: Black Plague	5	6	1	Exact
+Penumbra: Overture	Penumbra: Overture	6	7	1	Exact
+Penumbra: Requiem	Penumbra: Requiem	3	4	1	Exact
+Petz Catz 2	Petz: Catz 2	4	0	0.92	Non Exact
+PGA TOUR 2K21	PGA Tour 2K21	22	35	1	Exact
+Phantasmagoria	Phantasmagoria	6	7	1	Exact
+Phantasmagoria 2	Phantasmagoria: A Puzzle of Flesh	6	8	0.45	Non Exact
+Pharaoh's Tomb	Pharaoh's Tomb	4	0	0.93	Exact
+Pianistic	NA	NA	NA	NA	NA
+Pickers	Pickers	5	10	1	Exact
+Pid 	Pid	9	21	1	Exact
+Pinball FX3	Pinball FX3	2	350	1	Exact
+PIPELINE RTX	Gorby no Pipeline Daisakusen	Sin registro de tiempo	Sin registro de tiempo	0.29	Non Exact
+Pixel Car	Pixel Car	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Pizza Connection	Pizza Connection	30	0	1	Exact
+Pizza Connection 2	Fast Food Tycoon 2	Sin registro de tiempo	Sin registro de tiempo	0.28	Non Exact
+planetarian ~the reverie of a little planet~	Planetarian: Chiisana Hoshi no Yume	3	4	0.36	Non Exact
+Planetary Annihilation: TITANS	Planetary Annihilation: Titans	5	15	1	Exact
+Platform Builder	Platform Builder	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+PLAYERUNKNOWN'S BATTLEBOXES	PlayerUnknown's Battlegrounds	105	537	0.48	Non Exact
+Poker Night 2	Poker Night 2	5	15	1	Exact
+Police: Destruction Street	Police: Destruction Street	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Police Monster Drift	NA	NA	NA	NA	NA
+Police Quest Collection	Police Quest Collection	0	36	1	Exact
+PolyKat	PolyKat	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+PongPong Girl	NA	NA	NA	NA	NA
+Poppy Playtime	Poppy Playtime	1	2	1	Exact
+Popup Dungeon	Popup Dungeon	4	0	1	Exact
+Portal Knights	Portal Knights	21	44	1	Exact
+Postal 3	Postal III	6	0	0.7	Non Exact
+Postmortem: one must die (Extended Cut)	Postmortem: One Must Die	1	1	1	Exact
+Praetorians	Praetorians	15	90	1	Exact
+Prehistorik	Prehistorik	1	0	1	Exact
+Press Any Button	Press Any Button	1	1	1	Exact
+Pretty Angel	Pretty Angel	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Prince of Persia	Prince of Persia	11	18	1	Exact
+Prince of Persia: The Forgotten Sands	Prince of Persia: The Forgotten Sands	8	11	1	Exact
+Prince of Persia: The Two Thrones	Prince of Persia: The Two Thrones	10	13	1	Exact
+Prince of Persia: Warrior Within	Prince of Persia: Warrior Within	12	18	1	Exact
+Prince of Qin	Prince Of Qin	32	50	1	Exact
+Prisoner	Prisoner	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Pro Basketball Manager 2021	NA	NA	NA	NA	NA
+Pro Cycling Manager 2013	Pro Cycling Manager 2013	14	30	1	Exact
+Pro Cycling Manager 2016	Pro Cycling Manager 2016	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Pro Cycling Manager 2017	Pro Cycling Manager 2017	45	1000	1	Exact
+Pro Cycling Manager 2018	Pro Cycling Manager 2018	0	91	1	Exact
+Pro Cycling Manager 2019	Pro Cycling Manager 2019	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Pro Cycling Manager 2020	Pro Cycling Manager 2020	25	0	1	Exact
+Pro Evolution Soccer 2016	Pro Evolution Soccer 2016	40	95	1	Exact
+Pro Evolution Soccer 2017	Pro Evolution Soccer 2017	33	124	1	Exact
+PRO EVOLUTION SOCCER 2018	Pro Evolution Soccer 2018	60	0	1	Exact
+Professional Farmer 2014	Professional Farmer 2014	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Professor Watts: Memory Match	Professor Watts: Memory Match	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Professor Watts Word Search: Into The Ocean	Professor Watts Word Search: Into The Ocean	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Prognostic	Prognostic	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Project: Snowblind	Project: Snowblind	6	7	1	Exact
+Project Aftermath	Project Aftermath	10	56	1	Exact
+Project CARS - Pagani Edition	Project CARS - Pagani Edition	Sin registro de tiempo	Sin registro de tiempo	0.93	Exact
+Project Druid - 2D Labyrinth Explorer-	NA	NA	NA	NA	NA
+ProjectTeo	NA	NA	NA	NA	NA
+Project Xandata	NA	NA	NA	NA	NA
+Pro Rugby Manager 2015	Pro Rugby Manager 2015	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Protein for Muscle	Choaniki: Sei Naru Protein Densetsu	1	0	0.2	Non Exact
+Proteus	Proteus	1	1	1	Exact
+Protocol	Protocol	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+PROTOTYPE 2	Prototype 2	10	19	1	Exact
+Pro Wrestling X	Pro Wrestling X	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Psihanul	NA	NA	NA	NA	NA
+Psi Project	Psi Project	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Pulut Adventure	Pulut Adventure	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Pure Farming 2018	Pure Farming 2018	27	60	1	Exact
+Purrfect Date	Purrfect Date	1	20	1	Exact
+Push Puzzle - Rescue Adventure	NA	NA	NA	NA	NA
+PUSSY	Hentai Pussy 2	1	0	0.36	Non Exact
+PUSSY 2	Hentai Pussy 2	1	0	0.5	Non Exact
+PUSSY 3	NA	NA	NA	NA	NA
+Putin VS ISIS	Putin VS ISIS	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Puyo Puyo Champions	Puyo Puyo Champions	12	0	1	Exact
+Puzzle Agent	Puzzle Agent	3	4	1	Exact
+Puzzle Agent 2	Puzzle Agent 2	3	4	1	Exact
+Puzzle Bots	Puzzle Bots	2	3	1	Exact
+Puzzle Kingdoms	Puzzle Kingdoms	18	30	1	Exact
+Q.U.B.E.	Q.U.B.E.	3	4	0.5	Non Exact
+Quake 4	Quake 4	8	13	1	Exact
+Quake Champions	Quake Champions	28	0	1	Exact
+Quake II: Ground Zero	Quake II: Ground Zero	6	9	1	Exact
+Quake II: The Reckoning	Quake II: The Reckoning	5	9	1	Exact
+Quake III: Team Arena	Quake III: Team Arena	5	12	1	Exact
+Quake III Arena	Quake III Arena	5	17	1	Exact
+Quake Mission Pack 1: Scourge of Armagon	Quake Mission Pack 1: Scourge of Armagon	3	5	1	Exact
+Quake Mission Pack 2: Dissolution of Eternity	Quake Mission Pack 2: Dissolution of Eternity	4	5	1	Exact
+Quasimorphosis	NA	NA	NA	NA	NA
+Quell	Quell	3	4	1	Exact
+Quell Memento	Quell Memento	4	7	1	Exact
+Quell Reflect	Quell Reflect	3	7	1	Exact
+Quest: Escape Room	Quest: Escape Room	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Quest: Escape Room 2	Quest: Escape Room 2	1	1	1	Exact
+Quest: Escape Room 3	Quest: Escape Room 3	0	1	1	Exact
+Quest for Glory Collection	Quest for Glory Collection	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Quiplash	Quiplash	1	1	1	Exact
+R.U.S.E	R.U.S.E.	15	33	0.5	Non Exact
+R.U.S.E.	R.U.S.E.	15	33	0.5	Non Exact
+Rabbit Hole	Rabbit Hole	5	0	1	Exact
+RACE 07 - Formula RaceRoom Add-On	NA	NA	NA	NA	NA
+RACE: Caterham Expansion	RACE: The WTCC Game - Caterham Expansion	Sin registro de tiempo	Sin registro de tiempo	0.6	Non Exact
+Race: The WTCC Game	RACE: The WTCC Game	3	0	1	Exact
+RACE On	Race Injection	Sin registro de tiempo	Sin registro de tiempo	0.5	Non Exact
+RaceRoom Racing Experience 	RaceRoom Racing Experience	14	0	1	Exact
+RAD	RAD	8	0	1	Exact
+RAGE	Rage	11	23	1	Exact
+Rail Cargo Simulator	Rail Cargo Simulator	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Railroad Lines	Railroad Lines	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Railroad Tycoon 2: Platinum	Railroad Tycoon 2: Platinum	64	100	1	Exact
+Railroad Tycoon 3	Railroad Tycoon 3	27	38	1	Exact
+RAKETENWASCHMACHINE	NA	NA	NA	NA	NA
+Random Access Murder	Random Access Murder	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Raptor: Call of the Shadows (1994 Classic Edition)	Raptor: Call of the Shadows	4	11	1	Exact
+Rapture Rejects	Rapture Rejects	0	1	1	Exact
+Rayman: Raving Rabbids	Rayman Raving Rabbids	6	13	1	Exact
+Rayman Origins	Rayman Origins	11	21	1	Exact
+RC Mini Racers	RC Mini Racers	0	2	1	Exact
+Realms of Chaos	Realms of Chaos	3	0	1	Exact
+Reaper - Tale of a Pale Swordsman	Reaper: Tale of a Pale Swordsman	11	35	0.97	Exact
+Rebel Galaxy	Rebel Galaxy	22	53	1	Exact
+Reboant	NA	NA	NA	NA	NA
+Receiver	Receiver	4	6	1	Exact
+Recoil	Recoil	10	0	1	Exact
+Red Faction	Red Faction	6	8	1	Exact
+Red Faction: Armageddon	Red Faction: Armageddon	8	19	1	Exact
+Red Faction II	Red Faction II	4	6	1	Exact
+Red Rose Rising	NA	NA	NA	NA	NA
+Red Solstice 2: Survivors	Red Solstice 2: Survivors	22	0	1	Exact
+Red Wizard Island	NA	NA	NA	NA	NA
+Reflections	Reflections	1	1	1	Exact
+Reformers Intl Ver	Reformers Intl Ver	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Regular Human Basketball	Regular Human Basketball	3	0	1	Exact
+Rekoil	Rekoil	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Relativity Wars - A Science Space RTS	Relativity Wars	Sin registro de tiempo	Sin registro de tiempo	0.67	Non Exact
+Relaxing VR Games: Mahjong	Relaxing VR Games: Mahjong	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Remnants Of The Arcane	Remnants of The Arcane	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+RENEGADE	Renegade	0	2	1	Exact
+Renegade Ops	Renegade Ops	5	14	1	Exact
+Renoir	Renoir	6	0	1	Exact
+Rescue Love Revenge	Rescue Love Revenge	1	2	1	Exact
+Resident Evil 3	Resident Evil 3	6	20	1	Exact
+RESIDENT EVIL RESISTANCE	Resident Evil: Resistance	Sin registro de tiempo	Sin registro de tiempo	0.96	Exact
+Restaurant Empire II	Restaurant Empire II	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Restless Hero	NA	NA	NA	NA	NA
+RetroArch	NA	NA	NA	NA	NA
+Retro Game Crunch	Retro Game Crunch	6	12	1	Exact
+rFactor	rFactor	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+RFLEX	RFLEX	0	10	1	Exact
+Ricochet	Ricochet	40	74	1	Exact
+Rift's Cave	Rift's Cave	Sin registro de tiempo	Sin registro de tiempo	0.91	Non Exact
+Righty Tighty XL	Righty Tighty XL	0	1	1	Exact
+RIP	RIP	1	3	1	Exact
+RIP 2: Strike Back	RIP 2: Strike Back	2	6	1	Exact
+RIP 3: The Last Hero	RIP 3: The Last Hero	3	3	1	Exact
+Riptale	Riptale	16	0	1	Exact
+Rise of the Argonauts	Rise of the Argonauts	12	16	1	Exact
+Rise of the Triad: Dark War	Rise of the Triad: Dark War	8	12	1	Exact
+Roadclub: League Racing	Roadclub: League Racing	7	0	1	Exact
+Road to Ballhalla	Road To Ballhalla	3	10	1	Exact
+Roast Party	NA	NA	NA	NA	NA
+Robbotto	NA	NA	NA	NA	NA
+Robot Heroes	Robot Heroes	1	0	1	Exact
+RollerCoaster Tycoon 2: Triple Thrill Pack	RollerCoaster Tycoon 2: Triple Thrill Pack	24	0	1	Exact
+RollerCoaster Tycoon 3: Platinum!	RollerCoaster Tycoon 3: Platinum!	21	38	1	Exact
+RollerCoaster Tycoon: Deluxe	RollerCoaster Tycoon: Deluxe	15	199	1	Exact
+RUGBY 18	RUGBY 18	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Run	Run	1	2	1	Exact
+Runaway: A Road Adventure	Runaway: A Road Adventure	8	13	1	Exact
+Runaway: A Twist of Fate	Runaway: A Twist of Fate	7	9	1	Exact
+Runaway: The Dream of the Turtle	Runaway 2: The Dream of the Turtle	10	17	0.91	Non Exact
+Rune Classic	Rune Classic	9	13	1	Exact
+RunnerDot	RunnerDot	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Run Zeus Run	Run Zeus Run	0	1	1	Exact
+Russian Roads	Russian Roads	0	5	1	Exact
+RUSSIAPHOBIA	Russiaphobia	0	2	1	Exact
+Rust - Staging Branch	NA	NA	NA	NA	NA
+Rusty Lake Hotel	Rusty Lake Hotel	2	2	1	Exact
+Ruzh Delta Z	Ruzh Delta Z	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+S.T.A.L.K.E.R.: Call of Pripyat	S.T.A.L.K.E.R.: Call of Pripyat	15	32	0.77	Non Exact
+S.T.A.L.K.E.R.: Clear Sky	S.T.A.L.K.E.R.: Clear Sky	13	38	0.72	Non Exact
+Sacred 2 Gold	Sacred 2 Gold	26	68	1	Exact
+Sacrifice Dungeon	Sacrifice Dungeon	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Saints Row 2	Saints Row 2	20	50	1	Exact
+Salt and Sails	NA	NA	NA	NA	NA
+Salt and Sanctuary	Salt & Sanctuary	16	29	0.88	Non Exact
+Salvage	Salvage Op	Sin registro de tiempo	Sin registro de tiempo	0.7	Non Exact
+Sam & Max 101: Culture Shock	Sam & Max 101: Culture Shock	2	3	0.96	Exact
+Sam & Max 102: Situation: Comedy	Sam & Max 102: Situation: Comedy	2	2	0.97	Exact
+Sam & Max 103: The Mole, the Mob and the Meatball	Sam & Max 103: The Mole, the Mob, and the Meatball	2	2	0.88	Non Exact
+Sam & Max 105: Reality 2.0	Sam & Max 105: Reality 2.0	2	3	0.92	Non Exact
+Sam & Max 106: Bright Side of the Moon	Sam & Max 106: Bright Side of the Moon	2	2	0.97	Exact
+Sam & Max 201: Ice Station Santa	Sam & Max 201: Ice Station Santa	3	3	0.97	Exact
+Sam & Max 202: Moai Better Blues	Sam & Max 202: Moai Better Blues	2	3	0.97	Exact
+Sam & Max 203: Night of the Raving Dead	Sam & Max 203: Night of the Raving Dead	3	3	0.97	Exact
+Sam & Max 204: Chariots of the Dogs	Sam & Max 204: Chariots of the Dogs	3	3	0.97	Exact
+Sam & Max 205: What's New Beelzebub?	Sam & Max 205: What's New, Beelzebub?	3	4	0.92	Non Exact
+Sam & Max 301: The Penal Zone	Sam & Max 301: The Penal Zone	4	4	0.97	Exact
+Sam & Max 302: The Tomb of Sammun-Mak	Sam & Max 302: The Tomb of  Sammun-Mak	3	4	0.95	Exact
+Sam & Max 303: They Stole Max's Brain!	Sam & Max 303: They Stole Max's Brain!	3	3	0.95	Exact
+Sam & Max 304: Beyond the Alley of the Dolls	Sam & Max 304: Beyond the Alley of the Dolls	3	3	0.98	Exact
+Sam & Max 305: The City that Dares not Sleep	Sam & Max 305: The City That Dares Not Sleep	3	3	0.98	Exact
+Samantha Swift and the Hidden Roses of Athena	Samantha Swift and the Hidden Roses of Athena	3	3	0.91	Non Exact
+Samurai Cat	Samurai Pizza Cats	1	3	0.61	Non Exact
+Samurai Revenge	Afro Samurai 2: Revenge of Kuma	2	0	0.48	Non Exact
+Santa Sling	Santa Sling	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Save Daddy Trump 3: Rise Of Evil	NA	NA	NA	NA	NA
+Save Jesus	Save Jesus	2	6	1	Exact
+Scania Truck Driving Simulator	Scania Truck Driving Simulator	13	17	1	Exact
+Scanner Sombre	Scanner Sombre	2	2	1	Exact
+Schacht	Schacht	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Schlocks	Schlocks	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Scraps and Patches	Scraps: Modular Vehicle Combat	Sin registro de tiempo	Sin registro de tiempo	0.2	Non Exact
+Scratches: Director's Cut	Scratches	6	10	0.36	Non Exact
+SDST: Deluxe	NA	NA	NA	NA	NA
+Sebastien Loeb Rally EVO	Sébastien Loeb Rally Evo	19	48	0.96	Exact
+Second Hazardous Course	NA	NA	NA	NA	NA
+Secret Agent	Secret Agent	7	12	1	Exact
+SEGA Bass Fishing	Sega Bass Fishing	1	13	1	Exact
+Selenophobia	Selenophobia	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Serious Sam 2	Serious Sam 2	10	14	1	Exact
+Serious Sam: The Random Encounter	Serious Sam: The Random Encounter	2	2	1	Exact
+Serious Sam Classic: The First Encounter	Serious Sam: The First Encounter	6	12	0.8	Non Exact
+Serious Sam Classic: The Second Encounter	Serious Sam: The Second Encounter	8	13	0.8	Non Exact
+Serious Sam Classics: Revolution	Serious Sam Classics: Revolution	12	41	1	Exact
+Serious Sam Double D XXL	Serious Sam: Double D XXL	3	11	0.96	Exact
+Serious Sam Fusion 2017 (beta)	Serious Sam Fusion 2017	24	42	1	Exact
+Seven Wonders of St. Clementine	Seven Wonders of St. Clementine	4	0	0.97	Exact
+Sextris Effect	NA	NA	NA	NA	NA
+Sex with Stalin	Sex with Stalin	0	3	1	Exact
+Sexy Caravan	NA	NA	NA	NA	NA
+Shadow: Treachery cannot be tolerated	NA	NA	NA	NA	NA
+Shadow Puppeteer	Shadow Puppeteer	4	4	1	Exact
+Shadows: Awakening	Shadows: Awakening	24	32	1	Exact
+Shadows: Price For Our Sins	Shadows: Price For Our Sins	4	5	1	Exact
+Shadow Warrior (Classic)	Shadow Warrior	12	35	1	Exact
+Sharknado VR: Eye of the Storm (Arcade Edition)	NA	NA	NA	NA	NA
+Shattered Haven	Shattered Haven	12	21	1	Exact
+Shing!	Shing!	6	11	1	Exact
+Shirina	NA	NA	NA	NA	NA
+Shoppe Keep	Shoppe Keep	16	97	1	Exact
+Sid Meier's Civilization III: Complete	Sid Meier's Civilization III: Complete	23	109	0.74	Non Exact
+Sid Meier's Railroads!	Sid Meier's Railroads!	16	0	0.95	Exact
+Silent Hill: Homecoming	Silent Hill: Homecoming	9	18	1	Exact
+Sinister Halloween	Sinister Halloween	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Sins of a Dark Age	Sins of a Dark Age	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Sisters of Silent Liberty	NA	NA	NA	NA	NA
+Size Matters	Size Matters	2	5	1	Exact
+Skald: Against the Black Priory - the Prologue	Skald: Against the Black Priory - the Prologue	Sin registro de tiempo	Sin registro de tiempo	0.96	Exact
+Sketch Tales	Sketch Tales	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Ski-World Simulator	Ski-World Simulator	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Skyscraper Simulator	Skyscraper Simulator	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Sleeping Dogs: Definitive Edition	Sleeping Dogs: Definitive Edition	14	41	1	Exact
+Slightly Heroes VR	Slightly Heroes VR	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Slime Climb	NA	NA	NA	NA	NA
+Slimy Sextet	Slimy Sextet	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Small Town Terrors: Galdor's Bluff Collector's Edition	Small Town Terrors: Galdor's Bluff	2	3	0.97	Exact
+Small Town Terrors: Livingston	Small Town Terrors: Livingston	2	3	1	Exact
+Small Town Terrors Pilgrim's Hook Collector's Edition	Small Town Terrors: Pilgrim's Hook	3	7	0.94	Exact
+Smoke and Sacrifice	Smoke and Sacrifice	11	20	0.79	Non Exact
+Smugglers 5: Invasion	Smugglers 5: Invasion	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Snail Racer Extreme	Snail Racer Extreme	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Sniper: Ghost Warrior	Sniper: Ghost Warrior	5	15	1	Exact
+Sniper Art of Victory	Sniper: Art of Victory	2	3	0.95	Exact
+Sniper Ghost Warrior 2	Sniper: Ghost Warrior 2	5	11	0.96	Exact
+Soccering	NA	NA	NA	NA	NA
+Soccer Legends	Soccer Legends	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Soccer Pinball Thrills	Soccer Pinball Thrills	0	3	1	Exact
+Soko Match	Soko Match	0	1	1	Exact
+SolForge	SolForge	17	0	1	Exact
+Sonic Adventure DX	Sonic Adventure DX	9	32	1	Exact
+Sonic Adventure 2 	Sonic Adventure 2	9	45	1	Exact
+Sonic and SEGA All Stars Racing	Sonic & Sega All-Stars Racing	5	20	0.9	Non Exact
+Sonic CD	Sonic CD	2	6	1	Exact
+SONIC THE HEDGEHOG 4 Episode I	Sonic the Hedgehog 4: Episode 1	3	6	0.94	Exact
+Sorcerer King: Rivals	Sorcerer King: Rivals	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Soul Harvest	SpellForce 3: Soul Harvest	21	29	0.46	Non Exact
+Soul Reaper	Soul Reaper: Unreap Commander	Sin registro de tiempo	Sin registro de tiempo	0.38	Non Exact
+South Park: The Stick of Truth	South Park: The Stick of Truth	11	20	1	Exact
+Space Ace	Space Ace	1	3	1	Exact
+Space Channel 5: Part 2	Space Channel 5: Part 2	3	11	1	Exact
+SpaceForce: Rogue Universe	SpaceForce: Rogue Universe	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Space Hole 2018	Space Hole 2018	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Space Hulk Ascension	Space Hulk Ascension	21	70	1	Exact
+Space Legends: At the Edge of the Universe	Space Legends: At the Edge of the Universe	4	5	1	Exact
+Space Rangers	Space Rangers	0	40	1	Exact
+Space Trader: Merchant Marine	Space Trader: Merchant Marine	7	13	1	Exact
+Spec Ops: The Line	Spec Ops: The Line	6	16	1	Exact
+Spider shooting bee	NA	NA	NA	NA	NA
+Splasher	Splasher	5	8	1	Exact
+Spore: Creepy & Cute Parts Pack	Spore: Creepy & Cute Parts Pack	2	0	0.97	Exact
+Spore: Galactic Adventures	Spore: Galactic Adventures	9	43	1	Exact
+Sprint Cars: Road to Knoxville	Sprint Cars: Road to Knoxville	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Spud!	Spud!	4	0	1	Exact
+Squad - Public Testing	NA	NA	NA	NA	NA
+StarBallMadNess	StarBallMadNess	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+STARBO - The Story of Leo Cornell	NA	NA	NA	NA	NA
+Starfighter General	Starfighter General	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Stargunner	Stargunner	6	0	1	Exact
+Starmind	NA	NA	NA	NA	NA
+Starseed Pilgrim	Starseed Pilgrim	15	0	1	Exact
+Star Trek	Star Trek	8	13	1	Exact
+Starvoid	Starvoid	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Star Wars: Battlefront 2 (Classic, 2005)	NA	NA	NA	NA	NA
+STAR WARS: Dark Forces	Star Wars: Dark Forces	9	15	1	Exact
+STAR WARS: The Force Unleashed II	Star Wars: The Force Unleashed II	5	12	1	Exact
+STAR WARS: The Force Unleashed Ultimate Sith Edition	Star Wars: The Force Unleashed - Ultimate Sith Edition	8	17	0.96	Exact
+STAR WARS: TIE Fighter Special Edition	Star Wars: TIE Fighter - Special Edition	30	60	0.95	Exact
+STAR WARS: X-Wing Alliance	Star Wars: X-Wing Alliance	20	22	1	Exact
+STAR WARS: X-Wing Special Edition	Star Wars: X-Wing - Special Edition	28	66	0.94	Exact
+STAR WARS Empire at War: Gold Pack	Star Wars: Empire At War - Gold Pack	23	68	0.92	Non Exact
+STAR WARS Episode I Racer	Star Wars Episode I: Racer	5	8	0.96	Exact
+STAR WARS Galactic Battlegrounds Saga	Star Wars: Galactic Battlegrounds Saga	39	44	0.97	Exact
+STAR WARS Jedi Knight: Dark Forces II	Star Wars Jedi Knight: Dark Forces II	9	12	1	Exact
+STAR WARS Jedi Knight: Mysteries of the Sith	Star Wars Jedi Knight: Mysteries of the Sith	8	10	1	Exact
+STAR WARS Jedi Knight II: Jedi Outcast	Star Wars Jedi Knight II: Jedi Outcast	13	18	1	Exact
+STAR WARS Knights of the Old Republic II: The Sith Lords	Star Wars: Knights of the Old Republic II - The Sith Lords	31	53	0.95	Exact
+STAR WARS Rebellion	Star Wars: Rebellion	17	147	0.95	Exact
+STAR WARS Republic Commando	Star Wars: Republic Commando	9	10	0.96	Exact
+STAR WARS Starfighter	Star Wars: Starfighter	4	7	0.95	Exact
+STAR WARS X-Wing vs TIE Fighter: Balance of Power Campaigns	NA	NA	NA	NA	NA
+State of Decay	State of Decay	16	35	1	Exact
+STCC: The Game	STCC: The Game	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+STCC II	NA	NA	NA	NA	NA
+SteamDolls - Order Of Chaos - Free	NA	NA	NA	NA	NA
+SteamWorld Dig 2	SteamWorld Dig 2	7	13	1	Exact
+Steel & Steam: Episode 1	Steel & Steam: Episode 1	Sin registro de tiempo	Sin registro de tiempo	0.96	Exact
+Steel Eagle	NA	NA	NA	NA	NA
+Steel Storm: A.M.M.O.	NA	NA	NA	NA	NA
+Stick RPG 2	Stick RPG 2	4	10	1	Exact
+Stigmatized Property | 	Stigmatized Property	1	1	0.91	Non Exact
+Stock Car Extreme	Stock Car Extreme	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+StockUp	StockUp	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Stories Untold	Stories Untold	3	3	1	Exact
+STORM: Frontline Nation	Storm: Frontline Nation	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Storm United	Storm United	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Story Of the Survivor	Story of the Survivor	0	4	1	Exact
+Stream Fighters	NA	NA	NA	NA	NA
+Street of Sanctuary VR	NA	NA	NA	NA	NA
+Struggling	Struggling	7	0	1	Exact
+SturmFront - The Mutant War: bel Edition	SturmFront - The Mutant War: Übel Edition	2	0	0.93	Exact
+Suli Fallen Harmony	NA	NA	NA	NA	NA
+Sumoman	Sumoman	0	11	1	Exact
+Super Bit Blaster XL	Super Bit Blaster XL	2	4	1	Exact
+Super ComboMan: Smash Edition	Super ComboMan	Sin registro de tiempo	Sin registro de tiempo	0.48	Non Exact
+Super Cyborg	Super Cyborg	2	0	1	Exact
+Super Puzzle Platformer Deluxe	Super Puzzle Platformer Deluxe	5	12	1	Exact
+Super Sportmatchen	Super Sportmatchen	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Super Trench Attack!	Super Trench Attack!	2	5	1	Exact
+Supralympic Runners	NA	NA	NA	NA	NA
+Supreme Commander 2	Supreme Commander 2	14	45	1	Exact
+Survival Escape Room	NA	NA	NA	NA	NA
+Survive in Space	Survive in Space	4	15	1	Exact
+Surviving Mars	Surviving Mars	21	127	1	Exact
+Sushi Slammers	NA	NA	NA	NA	NA
+Swag and Sorcery	Swag and Sorcery	13	19	0.75	Non Exact
+Switchcars	Switchcars	1	6	1	Exact
+Sword Legacy Omen	Sword Legacy: Omen	12	14	0.94	Exact
+Syberia 2	Syberia II	7	10	0.8	Non Exact
+System Shock: Classic	System Shock	13	21	0.57	Non Exact
+Tabletop Simulator	Tabletop Simulator	4	1000	1	Exact
+Taekwondo Grand Prix	NA	NA	NA	NA	NA
+Take Over Body 2	NA	NA	NA	NA	NA
+Tales from Candlekeep: Tomb of Annihilation	Tales from Candlekeep: Tomb of Annihilation	10	17	1	Exact
+Tales from the Borderlands	Tales from the Borderlands	11	11	1	Exact
+Tales of Monkey Island: Chapter 1 - Launch of the Screaming Narwhal	Tales of Monkey Island: Chapter 1 - Launch of the Screaming Narwhal	3	3	0.97	Exact
+Tales of Monkey Island: Chapter 2 - The Siege of Spinner Cay 	Tales of Monkey Island: Chapter 2 - The Siege of Spinner Cay	3	3	0.97	Exact
+Tales of Monkey Island: Chapter 3 - Lair of the Leviathan 	Tales of Monkey Island: Chapter 3 - Lair of the Leviathan	3	3	0.96	Exact
+Tales of Monkey Island: Chapter 4 - The Trial and Execution of Guybrush Threepwood 	Tales of Monkey Island: Chapter 4 - The Trial and Execution of Guybrush Threepwood	3	4	0.93	Exact
+Tales of Monkey Island: Chapter 5 - Rise of the Pirate God	Tales of Monkey Island: Chapter 5 - Rise of the Pirate God	3	4	0.97	Exact
+Tales of Zestiria	Tales of Zestiria	42	136	1	Exact
+Tank Nova	NA	NA	NA	NA	NA
+Tanks2.DE	NA	NA	NA	NA	NA
+Tanks Logic	NA	NA	NA	NA	NA
+TD Heroes	NA	NA	NA	NA	NA
+Team Fortress Classic	Team Fortress Classic	19	0	1	Exact
+Teenage Mutant Ninja Turtles: Out of the Shadows	Teenage Mutant Ninja Turtles: Out of the Shadows	6	11	1	Exact
+Teeny Heist	Teeny Titans	7	15	0.42	Non Exact
+Tell Me Why	Tell Me Why	10	13	1	Exact
+Telltale Texas Hold'Em	Telltale Texas Hold 'Em	1	3	0.91	Non Exact
+Temple with traps	NA	NA	NA	NA	NA
+Tengami	Tengami	1	2	1	Exact
+Terminal illness	NA	NA	NA	NA	NA
+Terminal Velocity	Terminal Velocity	5	12	1	Exact
+Tesla Effect	Tesla Effect: A Tex Murphy Adventure	11	16	0.33	Non Exact
+Tetris Girls	NA	NA	NA	NA	NA
+Texas Cheat'Em	Texas Cheat'em	0	10	0.93	Exact
+That Dragon, Cancer	That Dragon, Cancer	2	2	1	Exact
+The Amazing Adventures of Ash - Afterparty	NA	NA	NA	NA	NA
+The Amazing Spider-Man	The Amazing Spider-Man	9	21	1	Exact
+The Amazing Spider-Man 2	The Amazing Spider-Man 2	7	23	1	Exact
+Theatre of War 2: Africa 1943	Theatre of War 2: Africa 1943	8	0	1	Exact
+The Awesome Adventures of Captain Spirit	The Awesome Adventures of Captain Spirit	2	2	1	Exact
+The Baconing	The Baconing	9	14	1	Exact
+The Banner Saga 3	The Banner Saga 3	10	19	1	Exact
+The Bellows	The Bellows	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+The Book of Unwritten Tales	The Book of Unwritten Tales	13	16	1	Exact
+The Book of Unwritten Tales: The Critter Chronicles	The Book of Unwritten Tales: The Critter Chronicles	7	10	1	Exact
+The Corporate Machine	The Corporate Machine	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+The Culling	The Culling	0	53	1	Exact
+The Curse of Monkey Island	The Curse of Monkey Island	8	10	1	Exact
+The Darkness	The Darkness	9	19	1	Exact
+The Darkness II	The Darkness II	6	15	1	Exact
+The Dealer	NA	NA	NA	NA	NA
+The Descendant	The Descendant	6	10	1	Exact
+The Dig	The Dig	7	8	1	Exact
+The Dwarves	The Dwarves	8	15	1	Exact
+The Elder Scrolls III: Morrowind	The Elder Scrolls III: Morrowind	44	330	1	Exact
+The Elder Scrolls V: Skyrim Special Edition	The Elder Scrolls V: Skyrim - Special Edition	26	213	0.96	Exact
+The Emerald Maiden: Symphony of Dreams	The Emerald Maiden: Symphony of Dreams	2	4	1	Exact
+The Emptiness Deluxe Edition	The Emptiness	3	5	1	Exact
+The Fidelio Incident	The Fidelio Incident	2	2	1	Exact
+The Fiend's Tavern	NA	NA	NA	NA	NA
+The first thrust of God	The First Thrust of God	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+The Golf Club 2019 Featuring PGA TOUR	The Golf Club 2019 featuring PGA TOUR	30	42	1	Exact
+The Great Art Race	The Great Art Race	3	16	1	Exact
+The Guilt and the Shadow	The Guilt and the Shadow	2	0	0.83	Non Exact
+The Hex	The Hex	5	12	1	Exact
+The Home Of Closed Doors	NA	NA	NA	NA	NA
+The Indie Mixtape	The Indie Mixtape	2	0	1	Exact
+The Ingenious Machine: New and Improved Edition	The Ingenious Machine: New and Improved Edition	Sin registro de tiempo	Sin registro de tiempo	0.91	Non Exact
+The I of the Dragon	The I of the Dragon	19	30	1	Exact
+The Journey Down: Chapter Three	The Journey Down: Chapter Three	3	4	1	Exact
+The Lab	The Lab	1	2	1	Exact
+The Last Door - Collector's Edition	The Last Door	4	5	1	Exact
+The Last Leviathan	The Last Leviathan	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+The Last Remnant	The Last Remnant	61	149	1	Exact
+The Legend of Korra	The Legend of Korra	5	14	1	Exact
+The Letter	The Letter	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+The Lonely Gorilla	NA	NA	NA	NA	NA
+The Lonely Helmet	The Lonely Helmet	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+The Longest Journey	The Longest Journey	18	21	1	Exact
+The Momo Game	The Momo Game	1	0	1	Exact
+The Mysterious Cities of Gold - Secret Paths	The Mysterious Cities of Gold: Secret Paths	0	22	0.98	Exact
+The Office Quest	The Office Quest	4	4	1	Exact
+The Official GamingTaylor Game, Great Job!	The Official GamingTaylor Game, Great Job!	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+The Outbound Ghost	The Outbound Ghost	15	26	1	Exact
+The Political Machine 2016	The Political Machine 2016	1	21	1	Exact
+The Quivering	The Quivering	9	0	1	Exact
+There Is No Light 616	There Is No Light 616	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+The Retro Expansion	RACE 07: The Retro Expansion	Sin registro de tiempo	Sin registro de tiempo	0.68	Non Exact
+The Sands Whisper Your Name	NA	NA	NA	NA	NA
+The Secret of Monkey Island: Special Edition	The Secret of Monkey Island	6	7	0.61	Non Exact
+The Secret Order 6: Bloodline	The Secret Order 6: Bloodline	2	3	1	Exact
+The Ship Single Player	NA	NA	NA	NA	NA
+The Ship Tutorial	NA	NA	NA	NA	NA
+The Signal From Tlva	NA	NA	NA	NA	NA
+The Silent Age	The Silent Age	3	4	1	Exact
+The Sims 4	The Sims 4	20	354	1	Exact
+The Stanley Parable	The Stanley Parable	1	8	1	Exact
+The Tower: The Order of XII	The Tower: The Order of XII	2	0	1	Exact
+The Uncertain: Last Quiet Day	The Uncertain: Last Quiet Day	3	5	1	Exact
+The UnderGarden	The UnderGarden	5	10	1	Exact
+THE VIDEOKID	The VideoKid	2	5	1	Exact
+The Walking Dead: Michonne	The Walking Dead: Michonne	4	4	1	Exact
+The Walking Dead: Season Two	NA	NA	NA	NA	NA
+The Walking Dead: The Final Season	The Walking Dead: The Final Season	10	13	1	Exact
+The Walking Dead: The Telltale Definitive Series	The Walking Dead: The Telltale Definitive Series	41	46	1	Exact
+The Way	The Way	7	8	1	Exact
+The Whispered World	The Whispered World	10	13	1	Exact
+The Witcher: Enhanced Edition	The Witcher	35	64	0.38	Non Exact
+The Wolf Among Us	The Wolf Among Us	9	11	1	Exact
+The Wonderful End of the World	The Wonderful End of the World	2	3	1	Exact
+TheWraithTrials	TheWraithTrials	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+The WTCC 2010 Pack	NA	NA	NA	NA	NA
+Thief 2	Thief Simulator 2	Sin registro de tiempo	Sin registro de tiempo	0.41	Non Exact
+Thief: Deadly Shadows	Thief: Deadly Shadows	17	28	1	Exact
+Thief Gold	Thief Gold	20	36	1	Exact
+Third Eye Crime	Third Eye Crime	5	8	1	Exact
+Thomas Was Alone	Thomas Was Alone	4	4	1	Exact
+Thunder Wolves	Thunder Wolves	4	16	1	Exact
+Ticket to Ride: First Journey	Ticket to Ride: First Journey	1	8	1	Exact
+Tidalis	Tidalis	16	180	1	Exact
+Time Gentlemen, Please!	Time Gentlemen, Please!	5	6	1	Exact
+Timelines: Assault on America	Timelines: Assault on America	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+TimeShift	TimeShift	8	10	1	Exact
+Tiny Echo	Tiny Echo	1	2	1	Exact
+Titanfall 2	Titanfall 2	6	15	1	Exact
+Titanic: Adventure Out Of Time	Titanic: Adventure Out of Time	5	0	1	Exact
+Titan Souls	Titan Souls	3	7	1	Exact
+TMM: Entourage	TMM: Entourage	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Tobe's Vertical Adventure	Tobe's Vertical Adventure	2	5	0.96	Exact
+Tomb Raider (VI): The Angel of Darkness	NA	NA	NA	NA	NA
+Tomb Raider: Anniversary	Tomb Raider: Anniversary	12	21	1	Exact
+Tomb Raider: Chronicles	Tomb Raider Chronicles	11	13	1	Exact
+Tomb Raider: Legend	Tomb Raider: Legend	7	15	1	Exact
+Tomb Raider: The Last Revelation	Tomb Raider: The Last Revelation	16	24	1	Exact
+Tomb Raider: Underworld	Tomb Raider: Underworld	10	19	1	Exact
+Tomb Raider III: Adventures of Lara Croft	Tomb Raider III: Adventures of Lara Croft	19	24	1	Exact
+Tom Clancy's Splinter Cell	Tom Clancy's Splinter Cell	13	16	0.96	Exact
+Tom Clancy's Splinter Cell: Chaos Theory	Tom Clancy's Splinter Cell: Chaos Theory	13	19	0.98	Exact
+Tom Clancy's Splinter Cell: Conviction	Tom Clancy's Splinter Cell: Conviction	7	18	0.97	Exact
+Tom Clancy's Splinter Cell: Double Agent	Tom Clancy's Splinter Cell: Double Agent	11	15	0.98	Exact
+Tom Clancy's Splinter Cell Blacklist	Tom Clancy's Splinter Cell: Blacklist	11	28	0.95	Exact
+Topper Carrier	NA	NA	NA	NA	NA
+Torchlight	Torchlight	14	45	1	Exact
+Toro	Toro	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Total Extreme Wrestling 2010	NA	NA	NA	NA	NA
+Total Miner	Total Miner	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Total Pro Golf 3	Total Pro Golf 3	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Town of Salem	Town of Salem	17	48	1	Exact
+Towtruck Simulator 2015	Towtruck Simulator 2015	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Toy Story Mania	Toy Story Mania!	3	4	0.94	Exact
+TrackMania Canyon	TrackMania 2: Canyon	13	47	0.85	Non Exact
+TrackMania Stadium	TrackMania 2: Stadium	10	26	0.86	Non Exact
+TrackMania Valley	TrackMania 2: Valley	11	16	0.85	Non Exact
+Train Town	Train Town	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Trainz: Classic Cabon City	Trainz: Classic Cabon City	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Trainz: Murchison 2	Trainz: Murchison 2	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Trainz: Settle & Carlisle	Trainz: Settle and Carlisle	Sin registro de tiempo	Sin registro de tiempo	0.89	Non Exact
+Trainz Simulator 12	Trainz Simulator 12	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Trainz Trouble	Trainz Trouble	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+TRANSFORMERS: BATTLEGROUNDS	Transformers: Battlegrounds	8	17	1	Exact
+Trash TV	Trash TV	2	2	1	Exact
+TRAUMA	TRAUMA	1	2	1	Exact
+Tree Simulator 2020	NA	NA	NA	NA	NA
+Trekking and Camping Sketch Edition | 	NA	NA	NA	NA	NA
+Trivia Vault: 1980's Trivia	Trivia Vault: 1980's Trivia	Sin registro de tiempo	Sin registro de tiempo	0.96	Exact
+Trivia Vault: 1980's Trivia 2	Trivia Vault: 1980's Trivia 2	Sin registro de tiempo	Sin registro de tiempo	0.97	Exact
+Trivia Vault: Classic Rock Trivia	Trivia Vault: Classic Rock Trivia	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Trivia Vault: Classic Rock Trivia 2	Trivia Vault: Classic Rock Trivia 2	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Trivia Vault: Health Trivia Deluxe	Trivia Vault: Health Trivia Deluxe	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Trivia Vault: Hockey Trivia	Trivia Vault: Hockey Trivia	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Trivia Vault: Mini Mixed Trivia	Trivia Vault: Mini Mixed Trivia	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Trivia Vault: Mini Mixed Trivia 2	Trivia Vault: Mini Mixed Trivia 2	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Trivia Vault: Mini Mixed Trivia 3	Trivia Vault: Mini Mixed Trivia 3	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Trivia Vault: Mini Mixed Trivia 4	Trivia Vault: Mini Mixed Trivia 4	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Trivia Vault: Music Trivia	NA	NA	NA	NA	NA
+Trivia Vault: Science & History Trivia	Trivia Vault: Science & History Trivia	Sin registro de tiempo	Sin registro de tiempo	0.97	Exact
+Trivia Vault: Science & History Trivia 2	Trivia Vault: Science & History Trivia 2	Sin registro de tiempo	Sin registro de tiempo	0.98	Exact
+Trivia Vault: Super Heroes Trivia	Trivia Vault: Super Heroes Trivia	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Trivia Vault: Super Heroes Trivia 2	Trivia Vault: Super Heroes Trivia 2	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Trivia Vault: Video Game Trivia Deluxe	Trivia Vault: Video Game Trivia Deluxe	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Trivia Vault Basketball Trivia	Trivia Vault Basketball Trivia	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Tropico 3 - Steam Special Edition	Tropico 3	25	41	0.29	Non Exact
+Tropico 3: Absolute Power	Tropico 3: Absolute Power 	15	53	1	Exact
+Trucks & Trailers	Trucks & Trailers	8	24	0.94	Exact
+True Bliss	True Bliss	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+True Puzzle	NA	NA	NA	NA	NA
+Tsukumogami	Tsukumogami	13	27	1	Exact
+Twickles	Twickles	0	3	1	Exact
+Twilight Struggle	Twilight Struggle	1	0	1	Exact
+Twisted Lands Trilogy Collector's Edition	Twisted Lands Trilogy	8	11	1	Exact
+Two Brothers	Two Brothers	38	0	1	Exact
+Two Worlds: Epic Edition	Two Worlds: Epic Edition	22	69	1	Exact
+Two Worlds II HD - Shattered Embrace	NA	NA	NA	NA	NA
+UFO: Afterlight	UFO: Afterlight	33	61	1	Exact
+UFO: Afterlight - Old Version	NA	NA	NA	NA	NA
+UFO: Extraterrestrials Gold	UFO: Extraterrestrials GOLD	53	0	1	Exact
+Ultimate Epic Battle Simulator	Ultimate Epic Battle Simulator	1	0	1	Exact
+Ultimate Spider Hero	Ultimate Spider Hero	0	1	1	Exact
+UNCONSCIOUS	NA	NA	NA	NA	NA
+Universe at War: Earth Assault	Universe at War: Earth Assault	15	0	1	Exact
+UnMetal	unMetal	10	14	1	Exact
+Unravel	Unravel	6	13	1	Exact
+Unravel Cyndy	NA	NA	NA	NA	NA
+Unravel Two	Unravel Two	5	13	1	Exact
+Unstoppable Gorg	Unstoppable Gorg	4	12	1	Exact
+Uphill Skiing	Uphill Skiing	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Uplink	Uplink	8	29	1	Exact
+Upwards, Lonely Robot	Upwards, Lonely Robot	2	0	1	Exact
+Urban Chaos	Urban Chaos	15	0	1	Exact
+Utopos	Utopos	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+V-Rally 4	V-Rally 4	26	0	1	Exact
+Vacuum Pilot	JUSTICE SUCKS: Tactical Vacuum Action	4	7	0.16	Non Exact
+Vadine: Bite-Man	NA	NA	NA	NA	NA
+Valley Knights	NA	NA	NA	NA	NA
+VASARA Collection	VASARA Collection	1	12	1	Exact
+Velvet Assassin	Velvet Assassin	10	12	1	Exact
+Vengeful Bat Dungeon Crawler	NA	NA	NA	NA	NA
+Vertical Drop Heroes HD	Vertical Drop Heroes HD	5	14	1	Exact
+Vertiginous Golf	Vertiginous Golf	2	8	1	Exact
+Vietcong	Vietcong	8	23	1	Exact
+Vigil: Blood Bitterness	Vigil: Blood Bitterness	2	2	1	Exact
+Viking: Battle for Asgard	Viking: Battle for Asgard	13	20	1	Exact
+Violation	NA	NA	NA	NA	NA
+Virus Z	Virus Z	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Viscera Cleanup Detail: Santa's Rampage	Viscera Cleanup Detail: Santa's Rampage	2	7	0.97	Exact
+Viscera Cleanup Detail: Shadow Warrior	Viscera Cleanup Detail: Shadow Warrior	2	2	1	Exact
+Visibility	Visibility	0	3	1	Exact
+Volleying	Volleying	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Volta-X	Volta-X	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Wacky Wheels	Wacky Wheels	1	4	1	Exact
+Wailing Heights	Wailing Heights	5	9	1	Exact
+Wallace & Gromit Ep 1: Fright of the Bumblebees	Wallace & Gromit's Grand Adventures - Ep 1: Fright of the Bumblebees	3	3	0.68	Non Exact
+Wallace & Gromit Ep 2: The Last Resort	Wallace & Gromit's Grand Adventures - Ep 2: The Last Resort	2	2	0.63	Non Exact
+Wallace & Gromit Ep 3: Muzzled!	Wallace & Gromit's Grand Adventures - Ep 3: Muzzled!	2	2	0.58	Non Exact
+Wallace & Gromit Ep 4: The Bogey Man	Wallace & Gromit's Grand Adventures - Ep 4: The Bogey Man	2	3	0.61	Non Exact
+Warehouse and Logistics Simulator	Warehouse and Logistics Simulator	Sin registro de tiempo	Sin registro de tiempo	0.88	Non Exact
+Wargroove	Wargroove	20	78	1	Exact
+Warhammer 40,000: Dawn of War - Game of the Year Edition	NA	NA	NA	NA	NA
+Warhammer 40,000: Dawn of War II	Warhammer 40,000: Dawn of War II	15	43	1	Exact
+Warhammer 40,000: Deathwatch - Enhanced Edition	Warhammer 40,000: Deathwatch	15	38	1	Exact
+Warhammer 40,000: Kill Team	Warhammer 40,000: Kill Team	3	7	1	Exact
+Warhammer 40,000: Regicide	Warhammer 40,000: Regicide	13	0	1	Exact
+Warhammer 40,000: Sanctus Reach	Warhammer 40,000: Sanctus Reach	0	52	1	Exact
+Warhammer: Vermintide 2	Warhammer: Vermintide 2	10	124	1	Exact
+Warlock's Citadel	Warlock's Tower	7	12	0.53	Non Exact
+War of the Roses	War of the Roses	8	50	1	Exact
+War of the Roses Balance Beta	NA	NA	NA	NA	NA
+Wasteland 1 - The Original Classic	NA	NA	NA	NA	NA
+WAVESHAPER	WAVESHAPER	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Weird Park Trilogy	Weird Park: Trilogy	9	11	0.95	Exact
+Weird Worlds: Return to Infinite Space	Weird Worlds: Return to Infinite Space	1	2	1	Exact
+Wet Beach Pussies	Wet Beach Pussies	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+We Were Here Together	We Were Here Together	6	8	1	Exact
+Where is my Heart?	Where Is My Heart?	2	4	1	Exact
+White Day: A Labyrinth Named School	White Day: A Labyrinth Named School	9	29	1	Exact
+Why War?	NA	NA	NA	NA	NA
+Windscape	Windscape	0	10	1	Exact
+WINDSHIFT	NA	NA	NA	NA	NA
+Winter Break	NA	NA	NA	NA	NA
+Witch Zoe - Hentai Shuffle	NA	NA	NA	NA	NA
+Wonderland Nights: White Rabbit's Diary	Wonderland Nights: White Rabbit's Diary	Sin registro de tiempo	Sin registro de tiempo	0.97	Exact
+Woodcutter Simulator 2013	Woodcutter Simulator 2013	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Word Rescue	Word Rescue	3	0	1	Exact
+World of Mixed Martial Arts 3	World of Mixed Martial Arts 3	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+World of Warships	World of Warships	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+World War 1 Centennial Edition	World War 1 Centennial Edition	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Worms	Worms	3	12	1	Exact
+Worms Blast	Worms Blast	13	14	1	Exact
+Worms Crazy Golf	Worms Crazy Golf	4	12	1	Exact
+Worms Pinball	Worms Pinball	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Worms Rumble	Worms Rumble	50	103	1	Exact
+Worms Ultimate Mayhem	Worms: Ultimate Mayhem	7	19	0.95	Exact
+WRC 5	WRC 5: FIA World Rally Championship	14	24	0.14	Non Exact
+WRC 6	WRC 6: FIA World Rally Championship	16	0	0.14	Non Exact
+Wrestling Spirit 3	Wrestling Spirit 3	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+WWE 2K15	WWE 2K15	20	66	1	Exact
+WWE 2K BATTLEGROUNDS	WWE 2K Battlegrounds	8	14	1	Exact
+X-COM: Apocalypse	X-COM: Apocalypse	29	64	1	Exact
+X-COM: Enforcer	X-COM: Enforcer	4	8	1	Exact
+X-COM: Interceptor	X-COM: Interceptor	1	21	1	Exact
+X-COM: Terror from the Deep	X-COM: Terror from the Deep	31	108	1	Exact
+X-COM: UFO Defense	X-COM: UFO Defense	38	73	1	Exact
+XCOM: Chimera Squad	XCOM: Chimera Squad	21	55	1	Exact
+XCOM: Enemy Unknown	XCOM: Enemy Unknown	27	63	1	Exact
+Xenophage	Xenophage: Alien Bloodsport	1	0	0.33	Non Exact
+XIII - Classic	XIII	9	11	0.33	Non Exact
+Year Walk	Year Walk	2	3	1	Exact
+Yet another tower defence	Yet another tower defence	0	7	1	Exact
+Yoku's Island Express	Yoku's Island Express	6	11	0.95	Exact
+You have a drunk friend	You Have a Drunk Friend	8	0	1	Exact
+You Must	You Must	1	0	1	Exact
+Your Doodles Are Bugged!	Your Doodles Are Bugged!	7	30	1	Exact
+Yu-Gi-Oh! Duel Links	Yu-Gi-Oh! Duel Links	121	631	1	Exact
+Yu-Gi-Oh!  Master Duel	Yu-Gi-Oh! Master Duel	22	83	0.95	Exact
+Z.A.R.	Z.A.R.	7	0	0.5	Non Exact
+Z1 Battle Royale	Z1 Battle Royale	69	0	1	Exact
+Z: Escape	Z: Escape	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Zamarian	Zamarian	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Zango's Shark Adventure	NA	NA	NA	NA	NA
+Zhulik.exe	Zhulik.exe	0	1	0.9	Non Exact
+Zombie Bowl-O-Rama	Zombie Bowl-O-Rama	2	5	1	Exact
+Zombie Hazard	NA	NA	NA	NA	NA
+Zombie Kill of the Week - Reborn	Zombie: Kill of the Week - Reborn	3	17	0.91	Non Exact
+Zombieland: Double Tap - Road Trip	Zombieland: Double Tap - Road Trip	3	8	0.94	Exact
+Zombie Shooter	Zombie Shooter	2	3	1	Exact
+Zone of Lacryma	Zone of Lacryma	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Zooicide	Zooicide	Sin registro de tiempo	Sin registro de tiempo	1	Exact
+Zup! S	Zup! S	1	2	1	Exact
+Zup! Zero 2	Zup! Zero 2	1	1	1	Exact
+frit	Fritz 6	Sin registro de tiempo	Sin registro de tiempo	0.57	Non Exact
+ 	God of War: Ragnarök	25	52	0	Non Exact
+Cubeetle - Game of creation	NA	NA	NA	NA	NA
+	God of War: Ragnarök	25	52	0	Non Exact
+	God of War: Ragnarök	25	52	0	Non Exact
+ Deliver Me	Paranoia: Deliver Me	0	14	0.5	Non Exact
+	God of War: Ragnarök	25	52	0	Non Exact
+Idle	NGU Idle	595	2825	0.5	Non Exact
+() \/ Fall...in Love (Demo)	God of War: Ragnarök	25	52	0	Non Exact
+	God of War: Ragnarök	25	52	0	Non Exact
+	God of War: Ragnarök	25	52	0	Non Exact
+NA	NA	NA	NA	NA	NA

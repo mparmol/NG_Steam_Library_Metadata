@@ -402,8 +402,8 @@ while(i<dim(game_list)[1])
         }
       }else
       {
-        print("Descansando buffer 1 min")
-        Sys.sleep(60)
+        print("Descansando buffer 2 min")
+        Sys.sleep(120)
         cont_long_string=cont_long_string-1  ###MIRAR
       }
     }
