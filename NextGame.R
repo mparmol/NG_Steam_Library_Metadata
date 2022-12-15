@@ -190,11 +190,6 @@ for(i in 1:dim(game_list)[1]) ## Muy bien todo esto, pero mantener el nombre ori
   {
     game_list[i,1]=gsub("&","",game_list[i,1])
   }
-  
-  if(grepl(" - ",game_list[i,1])) #######################
-  {
-    game_list[i,1]=gsub(" - "," ",game_list[i,1])
-  }
 
   if(grepl("\\'",game_list[i,1]))
   {
@@ -250,7 +245,7 @@ while(i<dim(game_list)[1])
     cont_long_string=0
     valor_unico=0
     
-    while(band_f==0 & cont_long_string<length(strsplit(game_list[i,1], " ")[[1]])+7)
+    while(band_f==0 & cont_long_string<length(strsplit(game_list[i,1], " ")[[1]])+9)
     {
       cont_long_string=cont_long_string+1
 
@@ -391,9 +386,18 @@ while(i<dim(game_list)[1])
           }else if(grepl("Game of the Year Edition$",game_list[i,1])) #######################
           {
             pasted_value=paste("'",gsub("Game of the Year Edition","",game_list[i,1]),"'",sep="")
+          }else if(grepl("[0-9]:",game_list[i,1])) #######################
+          {
+            pasted_value=paste("'",gsub("[0-9]","",game_list[i,1]),"'",sep="")
+          }else if(grepl("[0-9] - ",game_list[i,1])) #######################
+          {
+            pasted_value=paste("'",gsub("[0-9] - ","",game_list[i,1]),"'",sep="")
           }else if(grepl(":",game_list[i,1])) #######################
           {
             pasted_value=paste("'",gsub(":","",game_list[i,1]),"'",sep="")
+          }else if(grepl(" - ",game_list[i,1])) #######################
+          {
+            pasted_value=paste("'",gsub(" - "," ",game_list[i,1]),"'",sep="")
           }else
           {
             pasted_value<-strsplit(game_list[i,1], " ")[[1]][1]
