@@ -4,8 +4,6 @@
 
 require("data.table")
 require("stringr")
-#library(data.table)
-#library(stringr)
 
 isEmpty <- function(x) { #This function checks if a data frame is empty or not
   return(length(x)==0)
@@ -14,8 +12,8 @@ isEmpty <- function(x) { #This function checks if a data frame is empty or not
 if(!file.exists("Games.txt"))
 {
   system("rm -rf index.html?tab=all")
-  system("wget https://steamcommunity.com/id/marko_pakete/games/?tab=all")
-  #system("wget https://steamcommunity.com/id/guayabazo/games/?tab=all")
+  #system("wget https://steamcommunity.com/id/marko_pakete/games/?tab=all")
+  system("wget https://steamcommunity.com/profiles/76561197992225029/games/?tab=all")
 
   # André: https://steamcommunity.com/profiles/76561198012006378/games/?tab=all
   # Jolas: https://steamcommunity.com/id/guayabazo/games/?tab=all
@@ -41,6 +39,9 @@ if(!file.exists("Games.txt"))
 #https://www.kaggle.com/datasets/ca06934a676693b069bc319eb7c76647afbcf8019dc4828cabb50678a064f3ff BAJAR METADATO
 #https://github.com/Duerkos/steam_analysis BAJAR METADATA
 #https://github.com/scjustice/steam_webscraper EL SCRAPPER PRO
+#https://steamdb.info/faq/#how-are-we-getting-this-information LISTA BUENA DE SCRIPTS
+#https://developer.valvesoftware.com/wiki/SteamCMD App importante de VALVE para usar steam desde comando
+#https://github.com/dgibbs64/SteamCMD-AppID-List This repo stores every AppID and its name available on Steam as json, CSV, xml and MD table by grabbing the info from the SteamAPI.
 
 ### Extract gameplay time
 
@@ -48,7 +49,7 @@ game_list<-read.delim("Games.txt")
 game_list_aux<-game_list
 ###Limpiar nombre, chequeo de estado.
 
-for(i in 1:dim(game_list)[1]) ## Muy bien todo esto, pero mantener el nombre original para llevarlo a tabla final...
+for(i in 1:dim(game_list)[1])
 {
   aux_game_name<-gsub(" ","",game_list[i,1])
 
@@ -121,11 +122,6 @@ for(i in 1:dim(game_list)[1]) ## Muy bien todo esto, pero mantener el nombre ori
     game_list[i,1]=gsub("Maximum Edition","",game_list[i,1])
   }
 
-  #if(grepl("Reloaded$",game_list[i,1])) #######################
-  #{
-  #  game_list[i,1]=gsub("Reloaded","",game_list[i,1])
-  #}
-
   if(grepl("Remastered$",game_list[i,1])) #######################
   {
     game_list[i,1]=gsub("Remastered","",game_list[i,1])
@@ -145,16 +141,6 @@ for(i in 1:dim(game_list)[1]) ## Muy bien todo esto, pero mantener el nombre ori
   {
     game_list[i,1]=gsub("Mega Drive","",game_list[i,1])
   }
-
-  #if(grepl("Enhanced Edition$",game_list[i,1])) #######################
-  #{
-  #  game_list[i,1]=gsub("Enhanced Edition","",game_list[i,1])
-  #}
-
-  #if(grepl("Definitive Edition$",game_list[i,1])) #######################
-  #{
-  #  game_list[i,1]=gsub("Definitive Edition","",game_list[i,1])
-  #}
 
   if(grepl("Complete$",game_list[i,1])) #######################
   {
@@ -180,11 +166,6 @@ for(i in 1:dim(game_list)[1]) ## Muy bien todo esto, pero mantener el nombre ori
   {
     game_list[i,1]=gsub(" and "," ",game_list[i,1])
   }
-
-  #if(grepl(":",game_list[i,1])) #######################
-  #{
-  #  game_list[i,1]=gsub(":","",game_list[i,1])
-  #}
 
   if(grepl(" & ",game_list[i,1])) #######################
   {

@@ -110,3 +110,14 @@ La info de Completationist no la coge bien en la tabla, arreglar...
 - Seguimos metiendo cambios, y ahora dejamos algunas cosas y las quitamos solo cuando el algoritmo no encuentre nada, forzándolo...no hacer desde un principio porque en un principio, si queremos probar a poner ":" ya deberíamos haber procesado un mínimo el nombre
 - En próxima versión intentar quitar los número que esté en medio de un nombre, no se leen
 - Red Comrades Save the Galaxy: Reloaded vuelve a fallar...?
+
+15-12-22
+
+- Metido los cambios para eliminar los números que estén en el centro, va bien por ejemplo para Broken Sword 3
+
+16-12-22
+
+- Comprobar: "Castlevania: Lords of Shadow - Ultimate Edition: 2h 4h Castlevania: Lords of Shadow - Reverie DLC"
+- Los juegos como Resident evil 0 o Age of Empires II quizá podrían solucionarse poniendo ":" al final. Saw y Monaco podría comprobarse si tienen similaridad 1, si no añadir ":" al final.
+- Ahora fall "Event[0]", no quitar "[" si encuentra algo antes
+- PUBG vuelve a fallar!!! por qué! arreglar!
