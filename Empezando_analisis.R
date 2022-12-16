@@ -7,7 +7,11 @@ datos_lim[,4]<-as.numeric(datos_lim[,4])
 
 library(ggplot2)
 
+datos_lim<-datos_lim[datos_lim[,3]>0,]
+datos_lim<-datos_lim[datos_lim[,4]>0,]
 
 ggplot(datos_lim, aes(V4,V3,label=V1)) + geom_point() + theme_bw() + geom_text(hjust=0, vjust=0) + ylab("Tiempo pasartelo (h)") + xlab("Tiempo completarlo 100% (h)")
 
-hist(datos_lim$X184)
+datos_lim<-datos_lim[datos_lim[,1]!="Team Fortress 2",]
+
+ggplot(datos_lim, aes(V4,V3,label=V1)) + geom_point() + theme_bw() + geom_text(hjust=0, vjust=0) + ylab("Tiempo pasartelo (h)") + xlab("Tiempo completarlo 100% (h)")
