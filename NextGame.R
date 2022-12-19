@@ -12,8 +12,8 @@ isEmpty <- function(x) { #This function checks if a data frame is empty or not
 if(!file.exists("Games.txt"))
 {
   system("rm -rf index.html?tab=all")
-  #system("wget https://steamcommunity.com/id/marko_pakete/games/?tab=all")
-  system("wget https://steamcommunity.com/profiles/76561197992225029/games/?tab=all")
+  system("wget https://steamcommunity.com/id/marko_pakete/games/?tab=all")
+  #system("wget https://steamcommunity.com/profiles/76561197992225029/games/?tab=all")
 
   # André: https://steamcommunity.com/profiles/76561198012006378/games/?tab=all
   # Jolas: https://steamcommunity.com/id/guayabazo/games/?tab=all
@@ -41,6 +41,7 @@ if(!file.exists("Games.txt"))
 #https://github.com/scjustice/steam_webscraper EL SCRAPPER PRO
 #https://steamdb.info/faq/#how-are-we-getting-this-information LISTA BUENA DE SCRIPTS
 #https://developer.valvesoftware.com/wiki/SteamCMD App importante de VALVE para usar steam desde comando
+#https://github.com/mdeguzis/steamcmd-wrapper
 #https://github.com/dgibbs64/SteamCMD-AppID-List This repo stores every AppID and its name available on Steam as json, CSV, xml and MD table by grabbing the info from the SteamAPI.
 
 ### Extract gameplay time
@@ -226,7 +227,7 @@ while(i<dim(game_list)[1])
     cont_long_string=0
     valor_unico=0
     
-    while(band_f==0 & cont_long_string<length(strsplit(game_list[i,1], " ")[[1]])+9)
+    while(band_f==0 & cont_long_string<length(strsplit(game_list[i,1], " ")[[1]])+11)
     {
       cont_long_string=cont_long_string+1
 
@@ -333,6 +334,11 @@ while(i<dim(game_list)[1])
           }
         }else
         {
+          if(grepl("'",game_list[i,1])) #######################
+          {
+             game_list[i,1]=gsub("'","",game_list[i,1])
+          }
+
           if(cont_long_string<length(strsplit(game_list[i,1], " ")[[1]]))
           {
             pasted_value<-NULL
@@ -354,31 +360,54 @@ while(i<dim(game_list)[1])
             pasted_value=paste(pasted_value,"'",sep="")
           }else if(grepl("^Disney ",game_list[i,1])) #######################
           {
-            pasted_value=paste("'",gsub("Disney ","",game_list[i,1]),"'",sep="")
+            game_list[i,1]=paste("'",gsub("Disney ","",game_list[i,1]),"'",sep="")
+            pasted_value=game_list[i,1]
           }else if(grepl("Enhanced Edition$",game_list[i,1])) #######################
           {
-            pasted_value=paste("'",gsub("Enhanced Edition","",game_list[i,1]),"'",sep="")
+            game_list[i,1]=paste("'",gsub("Enhanced Edition","",game_list[i,1]),"'",sep="")
+            pasted_value=game_list[i,1]
           }else if(grepl("Definitive Edition$",game_list[i,1])) #######################
           {
-            pasted_value=paste("'",gsub("Definitive Edition","",game_list[i,1]),"'",sep="")
+            game_list[i,1]=paste("'",gsub("Definitive Edition","",game_list[i,1]),"'",sep="")
+            pasted_value=game_list[i,1]
           }else if(grepl("Edition$",game_list[i,1])) #######################
           {
-            pasted_value=paste("'",gsub("Edition","",game_list[i,1]),"'",sep="")
+            game_list[i,1]=paste("'",gsub("Edition","",game_list[i,1]),"'",sep="")
+            pasted_value=game_list[i,1]
           }else if(grepl("Game of the Year Edition$",game_list[i,1])) #######################
           {
-            pasted_value=paste("'",gsub("Game of the Year Edition","",game_list[i,1]),"'",sep="")
+            game_list[i,1]=paste("'",gsub("Game of the Year Edition","",game_list[i,1]),"'",sep="")
+            pasted_value=game_list[i,1]
+          }else if(grepl("Classic$",game_list[i,1])) #######################
+          {
+            game_list[i,1]=paste("'",gsub("Classic","",game_list[i,1]),"'",sep="")
+            pasted_value=game_list[i,1]
           }else if(grepl("[0-9]:",game_list[i,1])) #######################
           {
-            pasted_value=paste("'",gsub("[0-9]","",game_list[i,1]),"'",sep="")
+            game_list[i,1]=paste("'",gsub("[0-9]","",game_list[i,1]),"'",sep="")
+            pasted_value=game_list[i,1]
           }else if(grepl("[0-9] - ",game_list[i,1])) #######################
           {
-            pasted_value=paste("'",gsub("[0-9] - ","",game_list[i,1]),"'",sep="")
+            game_list[i,1]=paste("'",gsub("[0-9] - ","",game_list[i,1]),"'",sep="")
+            pasted_value=game_list[i,1]
           }else if(grepl(":",game_list[i,1])) #######################
           {
-            pasted_value=paste("'",gsub(":","",game_list[i,1]),"'",sep="")
+            game_list[i,1]=paste("'",gsub(":"," ",game_list[i,1]),"'",sep="")
+            pasted_value=game_list[i,1]
           }else if(grepl(" - ",game_list[i,1])) #######################
           {
-            pasted_value=paste("'",gsub(" - "," ",game_list[i,1]),"'",sep="")
+            game_list[i,1]=paste("'",gsub(" - "," ",game_list[i,1]),"'",sep="")
+            pasted_value=game_list[i,1]
+          }else if(!is.na(as.roman(strsplit(game_list[i,1], " ")[[1]][length(strsplit(game_list[i,1], " ")[[1]])]))) #######################
+          {
+            if(is.numeric(type.convert(strsplit(game_list[i,1], " ")[[1]][length(strsplit(game_list[i,1], " ")[[1]])],as.is=TRUE)))
+            {
+              game_list[i,1]=paste("'",paste(paste(paste(strsplit(game_list[i,1], " ")[[1]][1:length(strsplit(game_list[i,1], " ")[[1]])-1],sep=" "),collapse=" "),as.roman(strsplit(game_list[i,1], " ")[[1]][length(strsplit(game_list[i,1]," ")[[1]])]),collapse=" "),"'",sep="")
+            }else
+            {
+              game_list[i,1]=paste("'",paste(paste(paste(strsplit(game_list[i,1], " ")[[1]][1:length(strsplit(game_list[i,1], " ")[[1]])-1],sep=" "),collapse=" "),as.numeric(as.roman(strsplit(game_list[i,1], " ")[[1]][length(strsplit(game_list[i,1]," ")[[1]])])),collapse=" "),"'",sep="")
+            }
+            pasted_value=game_list[i,1]
           }else
           {
             pasted_value<-strsplit(game_list[i,1], " ")[[1]][1]

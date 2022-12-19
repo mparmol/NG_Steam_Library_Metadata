@@ -121,3 +121,8 @@ La info de Completationist no la coge bien en la tabla, arreglar...
 - Los juegos como Resident evil 0 o Age of Empires II quizá podrían solucionarse poniendo ":" al final. Saw y Monaco podría comprobarse si tienen similaridad 1, si no añadir ":" al final.
 - Ahora fall "Event[0]", no quitar "[" si encuentra algo antes
 - PUBG vuelve a fallar!!! por qué! arreglar!
+
+19-12-22
+
+- Varias mejoras para rescatar NA, como números romanos, : sin espacios y que no se iba guardando de forma gradual la eliminación de caracteres o expresiones. Comparar este resultado con el de V8...
+- Aún queda hacer lo de SAW. Cuando sea una paralabra debe buscarse similitud 100%
