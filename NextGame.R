@@ -227,7 +227,7 @@ while(i<dim(game_list)[1])
     cont_long_string=0
     valor_unico=0
     
-    while(band_f==0 & cont_long_string<length(strsplit(game_list[i,1], " ")[[1]])+11)
+    while(band_f==0 & cont_long_string<length(strsplit(game_list[i,1], " ")[[1]])+12)
     {
       cont_long_string=cont_long_string+1
 
@@ -370,17 +370,21 @@ while(i<dim(game_list)[1])
           {
             game_list[i,1]=paste("'",gsub("Definitive Edition","",game_list[i,1]),"'",sep="")
             pasted_value=game_list[i,1]
-          }else if(grepl("Edition$",game_list[i,1])) #######################
-          {
-            game_list[i,1]=paste("'",gsub("Edition","",game_list[i,1]),"'",sep="")
-            pasted_value=game_list[i,1]
           }else if(grepl("Game of the Year Edition$",game_list[i,1])) #######################
           {
             game_list[i,1]=paste("'",gsub("Game of the Year Edition","",game_list[i,1]),"'",sep="")
             pasted_value=game_list[i,1]
+          }else if(grepl("Edition$",game_list[i,1])) #######################
+          {
+            game_list[i,1]=paste("'",gsub("Edition","",game_list[i,1]),"'",sep="")
+            pasted_value=game_list[i,1]
           }else if(grepl("Classic$",game_list[i,1])) #######################
           {
             game_list[i,1]=paste("'",gsub("Classic","",game_list[i,1]),"'",sep="")
+            pasted_value=game_list[i,1]
+          }else if(grepl("The Original$",game_list[i,1])) #######################
+          {
+            game_list[i,1]=paste("'",gsub("The Original","",game_list[i,1]),"'",sep="")
             pasted_value=game_list[i,1]
           }else if(grepl("[0-9]:",game_list[i,1])) #######################
           {
