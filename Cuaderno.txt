@@ -127,3 +127,8 @@ La info de Completationist no la coge bien en la tabla, arreglar...
 - Varias mejoras para rescatar NA, como números romanos, : sin espacios y que no se iba guardando de forma gradual la eliminación de caracteres o expresiones. Comparar este resultado con el de V8...
 - Aún queda hacer lo de SAW. Cuando sea una paralabra debe buscarse similitud 100%
 -  Está mucho mejor el 9, mirar bien los non-exact y solventar problemas de juegos de arriba
+
+20-12-22
+
+- Aún quedna por resolver puntos anteriores, mirar
+- Avanzamos con la búsqueda de metadatos. Escritos scripts: Updates_Principales.R, GatherData_Steam_NOUSAR.py y AppID_from_name_NOUSAR.sh (estos no usar). Bajamos toda la info de AppID del archivo que se ve en ese script de R, matcheamos por nombre a nuesta tabla y luego vamos a biscar la info por AppID desde SteamSpy
