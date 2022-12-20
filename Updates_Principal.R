@@ -13,6 +13,7 @@
 
 require("data.table")
 require("stringr")
+require("rvest")
 
 isEmpty <- function(x) { #This function checks if a data frame is empty or not
   return(length(x)==0)
@@ -26,7 +27,7 @@ game_list<-read.delim("Games_HowLong_v9.txt")
 
 ### Más info: https://partner.steamgames.com/doc/webapi/ISteamApps#GetAppList
 
-library(rvest)
+
 
 AppID_List <- read_html("https://api.steampowered.com/ISteamApps/GetAppList/v2/")
 
