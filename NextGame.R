@@ -438,4 +438,4 @@ while(i<dim(game_list)[1])
 }
 
 game_list[,1]<-game_list_aux[,1]
-write.table(game_list,"Games_HowLong.txt",quote = F,row.names = F,col.names = F,sep = "\t")
+write.table(game_list,"Games_HowLong_222.txt",quote = F,row.names = F,col.names = F,sep = "\t")
