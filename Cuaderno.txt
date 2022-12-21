@@ -131,4 +131,10 @@ La info de Completationist no la coge bien en la tabla, arreglar...
 20-12-22
 
 - Aún quedna por resolver puntos anteriores, mirar
-- Avanzamos con la búsqueda de metadatos. Escritos scripts: Updates_Principales.R, GatherData_Steam_NOUSAR.py y AppID_from_name_NOUSAR.sh (estos no usar). Bajamos toda la info de AppID del archivo que se ve en ese script de R, matcheamos por nombre a nuesta tabla y luego vamos a biscar la info por AppID desde SteamSpy
+- Avanzamos con la búsqueda de metadatos. Escritos scripts: Updates_Principales.R, GatherData_Steam_NOUSAR.py y AppID_from_name_NOUSAR.sh (estos no usar). Bajamos toda la info de AppID del archivo que se ve en ese script de R, matcheamos por nombre a nuesta tabla y luego vamos a buscar la info por AppID desde SteamSpy
+
+21-12-22
+
+- Procesamos los datos del HTML y llamamos al Spy...pero va muy lento, la primera parte donde tengo todos los AppIDs posibles hay que quiarle el "for" y ponerlo con sapply.
+- El nuevo proceso coge bien los AppID y los busca en SteamSpy!! Va bien, pero errores al procesar el archivo inicial...no procesar por : porque perdemos info!
+- Cuando coja desde un AppID, que mire bien si tiene los campos. Un mismo juego puede aparecer con dos AppID y uno estar vacío y por tanto sobrescribir el bueno
