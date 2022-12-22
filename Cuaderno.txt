@@ -22,10 +22,14 @@ X - Warhammer 40,000 no sale bien, me cargo las ","
 X - Probar el archivo solo con las últimas lineas de "Game.txt", que no tenga que quitarlas a mano
 X - Quitar simbolos especiales del Game.txt, pero mantener en una columna el nombre original
 
+- Juegos con logros más rápidos/sencillos: diferencia menor de tiempo entre completacionista y base, se puede relativizar a tiempo de juego base y se genera un índice (cuanto más alto mejor)
+- Etiqueta de "Tiempo en completarlo/logros", "Removed", "Géneros", "Completado", "Puntuación en %", "Fecha salida", "Cuándo se compró"
+
 Proyecto 2
 Visualizar datos
-- Juegos con logros más fáciles: diferencia menor de tiempo entre completacionista y base, se puede relativizar a tiempo de juego base y se genera un índice (cuanto más alto mejor)
-- Etiqueta de "Tiempo en completarlo/logros", "Removed", "Géneros", "Completado", "Puntuación en %", "Fecha salida", "Cuándo se compró"
+  - Summary datos: Número de juegos, tiempo total de juego, tiempo medio de juego, conteo de generos, puntuación media y desviación, número de juegos por develop y publisher
+  - Gráficas: Distribución de juegos por tiempo de completación. Correlación entre tiempo de juego y logreo, puntuación...correlación pairwiese entre todas las variables (plot). Gráfico de puntuación de juegos. DonutPie de generos y subdivisión en tiempo/puntuación. Mapa nombre de juegos en función de género, puntuación y tiempo de juego.
+  - Integración varios usuarios. Mapa con variables que sean los juegos (con sus características) 
 
 Proyecto 3
 Recomendación juegos
@@ -33,6 +37,7 @@ Recomendación juegos
 
 Proyecto 4
 Recomendación de compra
+- Con SteamSpy se ve el precio del juego y su posible descuento
 
 
 4-12-22
@@ -140,3 +145,4 @@ La info de Completationist no la coge bien en la tabla, arreglar...
 - Cuando coja desde un AppID, que mire bien si tiene los campos. Un mismo juego puede aparecer con dos AppID y uno estar vacío y por tanto sobrescribir el bueno
 - Coge bien info, pero no se descarga por completo la base de datos de AppID...meterla en un bucle a que se descargue entera? 
 - Otro como Saw y Monaco: "Candle"
+- Aparece "Gloom" duplicado en la tabla, la lía!!!! Ver si tengo dos Gloom, dejar de quiatar nombres duplicados (ya no hace falta)

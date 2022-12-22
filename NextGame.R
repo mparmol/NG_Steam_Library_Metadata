@@ -1,27 +1,29 @@
 ##NextGame
 
-### Extract game list, from windows
-
-require("data.table")
-require("stringr")
-
-isEmpty <- function(x) { #This function checks if a data frame is empty or not
-  return(length(x)==0)
-}
-
-if(!file.exists("Games.txt"))
-{
-  system("rm -rf index.html?tab=all")
-  system("wget https://steamcommunity.com/id/marko_pakete/games/?tab=all")
-  #system("wget https://steamcommunity.com/profiles/76561197992225029/games/?tab=all")
-
   # André: https://steamcommunity.com/profiles/76561198012006378/games/?tab=all
   # Jolas: https://steamcommunity.com/id/guayabazo/games/?tab=all
   # Álvaro: https://steamcommunity.com/profiles/76561197992225029/games/?tab=all
   # Jimmy: https://steamcommunity.com/profiles/76561198124010932/games/?tab=all
   # Álvaro: https://steamcommunity.com/id/DuckSaucer77/games/?tab=all
 
-  file_process<-as.data.frame(fread("index.html?tab=all",fill = T))
+### Extract game list, from windows
+
+require("data.table")
+require("stringr")
+require("rvest")
+require("RCurl")
+
+isEmpty <- function(x) { #This function checks if a data frame is empty or not
+  return(length(x)==0)
+}
+
+if(!file.exists("Games_buscar.txt") & !file.exists("Games.txt"))
+{
+  ####### Nombre de la tabla, todos los caracteres
+
+  info_Steam<-getURL("https://steamcommunity.com/id/marko_pakete/games/?tab=all")
+  file_process<-as.data.frame(info_Steam)
+
   h<-file_process[grep("rgGames",file_process[,1]),]
 
   res_games<-data.frame(matrix(nrow=str_count(h,'"name"')[1]))
@@ -31,7 +33,33 @@ if(!file.exists("Games.txt"))
     res_games[i,1]<-substr(strsplit(sapply(strsplit(h[1], '"name"'), "[[", i),",\\\"")[[1]][1],3,nchar(strsplit(sapply(strsplit(h[1], '"name"'), "[[", i),",\\\"")[[1]][1])-1)
   }
 
-  write.table(res_games,"Games.txt",quote = F,row.names = F,col.names = F)
+  game_list_orig<-as.data.frame(res_games[-1,])
+
+  write.table(game_list_orig,"Games.txt",quote = F,row.names = F,col.names = F)
+
+  ####### Para buscar en howlong to beat
+  
+  system("rm -rf index.html?tab=all")
+  system("wget https://steamcommunity.com/id/marko_pakete/games/?tab=all")
+  
+  file_process<-as.data.frame(fread("index.html?tab=all",fill = T))
+  
+  h<-file_process[grep("rgGames",file_process[,1]),]
+
+  res_games<-data.frame(matrix(nrow=str_count(h,'"name"')[1]))
+
+  for(i in 2:(str_count(h,'"name"')[1]+1))
+  {
+    res_games[i,1]<-substr(strsplit(sapply(strsplit(h[1], '"name"'), "[[", i),",\\\"")[[1]][1],3,nchar(strsplit(sapply(strsplit(h[1], '"name"'), "[[", i),",\\\"")[[1]][1])-1)
+  }
+
+  game_list<-as.data.frame(res_games[-1,])
+
+  write.table(game_list,"Games_buscar.txt",quote = F,row.names = F,col.names = F)
+}else
+{
+  game_list_orig<-read.delim("Games.txt",header=F)
+  game_list<-read.delim("Games_buscar.txt",header=F)
 }
 
 #https://github.com/Depressurizer/Depressurizer/releases
@@ -46,7 +74,6 @@ if(!file.exists("Games.txt"))
 
 ### Extract gameplay time
 
-game_list<-read.delim("Games.txt")
 game_list_aux<-game_list
 ###Limpiar nombre, chequeo de estado.
 
@@ -54,17 +81,17 @@ for(i in 1:dim(game_list)[1])
 {
   aux_game_name<-gsub(" ","",game_list[i,1])
 
-  if(!isEmpty(which(game_list[,1]==aux_game_name)) & length(strsplit(game_list[i,1], " ")[[1]])>1)
-  {
-    aa<-which(game_list[,1]==aux_game_name)
-    game_list<-as.data.frame(game_list[-aa,])
-    game_list_aux<-as.data.frame(game_list_aux[-aa,])
-  }else if(!isEmpty(which(game_list[,1]==aux_game_name)) & length(which(game_list[,1]==aux_game_name))>1)
-  {
-    aa<-which(game_list[,1]==aux_game_name)
-    game_list<-as.data.frame(game_list[-aa[2:length(aa)],])
-    game_list_aux<-as.data.frame(game_list_aux[-aa[2:length(aa)],])
-  }
+  #if(!isEmpty(which(game_list[,1]==aux_game_name)) & length(strsplit(game_list[i,1], " ")[[1]])>1)
+  #{
+  #  aa<-which(game_list[,1]==aux_game_name)
+  #  game_list<-as.data.frame(game_list[-aa,])
+  #  game_list_aux<-as.data.frame(game_list_aux[-aa,])
+  #}else if(!isEmpty(which(game_list[,1]==aux_game_name)) & length(which(game_list[,1]==aux_game_name))>1)
+  #{
+  #  aa<-which(game_list[,1]==aux_game_name)
+  #  game_list<-as.data.frame(game_list[-aa[2:length(aa)],])
+  #  game_list_aux<-as.data.frame(game_list_aux[-aa[2:length(aa)],])
+  #}
 
   if(grepl("\\\\u00fc",game_list[i,1])) #######################
   {
@@ -438,4 +465,5 @@ while(i<dim(game_list)[1])
 }
 
 game_list[,1]<-game_list_aux[,1]
-write.table(game_list,"Games_HowLong_222.txt",quote = F,row.names = F,col.names = F,sep = "\t")
+game_list[,7]<-game_list_orig[,1]
+write.table(game_list,"Games_HowLong.txt",quote = F,row.names = F,col.names = F,sep = "\t")
