@@ -16,7 +16,7 @@
 require("data.table")
 require("stringr")
 require("rvest")
-library("RCurl")
+require("RCurl")
 
 isEmpty <- function(x) { #This function checks if a data frame is empty or not
   return(length(x)==0)
@@ -33,21 +33,31 @@ game_list<-read.delim("Games_HowLong_v9.txt")
 
 if(!file.exists("TODO.txt"))
 {
-  AppID_List <- html_text(html_node(read_html("https://api.steampowered.com/ISteamApps/GetAppList/v2/"),"p"))
+  #AppID_List <- html_text(html_node(read_html("https://api.steampowered.com/ISteamApps/GetAppList/v2/"),"p"))
+  AppID_List <- getURL("https://api.steampowered.com/ISteamApps/GetAppList/v2/")
 
-  res_games<-data.frame(matrix(ncol=2,nrow=str_count(AppID_List,'"name"')[1]))
+  hola<-gsub("\\\"\\},\\{\\\"appid\\\":","``",AppID_List)
+  hola2<-gsub(",\"name\":\"","``",hola)
+  hola3<-gsub("\\{\\\"applist\\\":\\{\\\"apps\\\":\\[\\{\\\"appid\\\":","",hola2)
+  hola4<-gsub("\\\"\\}\\]\\}\\}","",hola3)
 
-  for(i in 2:3500)
-  #for(i in 2:(str_count(AppID_List,'"name"')[1]+1))
-  {
-    res_games[i,1]<-strsplit(strsplit(strsplit(sapply(strsplit(AppID_List, '\\{'), "[[", i),"\\}")[[1]][1],":")[[1]][2],",")[[1]][1]
-    res_games[i,2]<-strsplit(strsplit(strsplit(sapply(strsplit(AppID_List, '\\{'), "[[", i),"\\}")[[1]][1],":\\\"")[[1]][2],'\\\"')[[1]][1]
-  }
+
+  uooo<-data.frame(matrix(strsplit(hola4,"\\`\\`")[[1]],ncol=2,byrow=T))
+  res_games<-uooo
+
+  #res_games<-data.frame(matrix(ncol=2,nrow=dim(uooo)[1]))
+
+  #for(i in 2:3500)
+  ##for(i in 2:(str_count(AppID_List,'"name"')[1]+1))
+  ##{
+    ##res_games[i,1]<-strsplit(strsplit(strsplit(sapply(strsplit(AppID_List, '\\{'), "[[", i),"\\}")[[1]][1],":")[[1]][2],",")[[1]][1]
+    ##res_games[i,2]<-strsplit(strsplit(strsplit(sapply(strsplit(AppID_List, '\\{'), "[[", i),"\\}")[[1]][1],":\\\"")[[1]][2],'\\\"')[[1]][1]
+  ##}
 
   write.table(res_games,"TODO.txt",quote = F,row.names = F,col.names = F,sep="\t")
 }else 
 {
-  res_games<-read.delim("TODO.txt",sep="\t")
+  res_games<-read.delim("TODO.txt",sep="\t",header=F)
 }
 
 
@@ -76,7 +86,9 @@ for(i in 1:dim(game_list)[1])
     game_list[i,14]<-strsplit(strsplit(meta_juego,"developer\\\":\\\"")[[1]][2],"\\\",\\\"")[[1]][1]
     game_list[i,15]<-strsplit(strsplit(meta_juego,"publisher\\\":\\\"")[[1]][2],"\\\",\\\"")[[1]][1]
   }
+
+  write.table(game_list,"Games_HowLong_AppID_metadato.txt",quote = F,row.names = F,col.names = F,sep = "\t")
+
 }
 
-write.table(game_list,"Games_HowLong_AppID_metadato.txt",quote = F,row.names = F,col.names = F,sep = "\t")
 
