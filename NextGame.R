@@ -10,6 +10,7 @@
 
 require("data.table")
 require("stringr")
+require("stringi")
 require("rvest")
 require("RCurl")
 
@@ -248,7 +249,22 @@ while(i<dim(game_list)[1])
 {
   if(is.na(game_list[i,2]))
   {
-    pasted_value=paste("'",game_list[i,1],"'",sep="")
+    if(length(strsplit(game_list[i,1]," ")[[1]])==1)
+    {
+      pasted_value_tunning=paste("'",game_list[i,1],":'",sep="")
+      pasted_value=paste("'",game_list[i,1],"'",sep="")
+    }else
+    {
+      pasted_value=paste("'",game_list[i,1],"'",sep="")
+    }
+
+    if(!is.na(as.numeric(as.roman(strsplit(game_list[i,1], " ")[[1]][length(strsplit(game_list[i,1], " ")[[1]])]))) & length(strsplit(game_list[i,1]," ")[[1]])>1)
+    {
+      pasted_value=paste("'",game_list[i,1],":'",sep="")
+    }else if(!is.na(as.numeric(strsplit(game_list[i,1], " ")[[1]][length(strsplit(game_list[i,1], " ")[[1]])])) & length(strsplit(game_list[i,1]," ")[[1]])>1)
+    {
+      pasted_value=paste("'",game_list[i,1],":'",sep="")
+    }
 
     band_f=0
     cont_long_string=0
@@ -260,6 +276,11 @@ while(i<dim(game_list)[1])
 
       system(paste("node New.js ",pasted_value," > aux_time.txt", sep=""))
     
+      if(length(strsplit(game_list[i,1]," ")[[1]])==1)
+      {
+        system(paste("node New.js ",pasted_value_tunning," > aux_time_tunning.txt", sep=""))
+      }
+
       if(file.info("aux_time.txt")$size>0)
       {
         data_time<-read.delim("aux_time.txt")
@@ -272,7 +293,7 @@ while(i<dim(game_list)[1])
         if(dim(data_time)[1]>0 & valor_unico==0)
         {
           band_f=1
-
+          #print(pasted_value)
           data_time<-paste(data_time)
 
           name_list_j<-NULL
@@ -303,8 +324,76 @@ while(i<dim(game_list)[1])
           name_list_j_gpm[which(max(name_list_j_simil)==name_list_j_simil)][1]
           name_list_j_gpc[which(max(name_list_j_simil)==name_list_j_simil)][1]
         
+          if(length(strsplit(game_list[i,1]," ")[[1]])==1)
+          {
+            data_time_t<-read.delim("aux_time_tunning.txt")
+
+            if(dim(data_time_t)[1]>0)
+            {
+              data_time_t<-paste(data_time_t)
+              name_list_j_t<-NULL
+              name_list_j_gpm_t<-NULL
+              name_list_j_gpc_t<-NULL
+              name_list_j_simil_t<-NULL
+
+              for(u in 2:(str_count(data_time_t,"  name: ")[1]+1))
+              {
+
+                if(grepl(pattern = "\\',",sapply(strsplit(sapply(strsplit(data_time_t, "  name: "), "[[", u),"\\\""), "[[",1)))
+                {
+                  name_list_j_t<-c(name_list_j_t, sapply(strsplit(sapply(strsplit(sapply(strsplit(data_time_t, "  name: "), "[[", u),"\\,\\\""), "[[",1),"\\'"), "[[",2))
+                }else
+                {
+                  name_list_j_t<-c(name_list_j_t, sapply(strsplit(sapply(strsplit(data_time_t, "  name: "), "[[", u),"\\,\\\""), "[[",1))
+
+                }
+                
+                name_list_j_gpm_t<-c(name_list_j_gpm_t, sapply(strsplit(sapply(strsplit(data_time_t, "gameplayMain: "), "[[", u),","), "[[",1))
+                name_list_j_gpc_t<-c(name_list_j_gpc_t, sapply(strsplit(sapply(strsplit(data_time_t, "gameplayCompletionist: "), "[[", u),","), "[[",1))
+                name_list_j_simil_t<-c(name_list_j_simil_t, sapply(strsplit(sapply(strsplit(data_time_t, "similarity: "), "[[", u),","), "[[",1))
+              }
+
+              name_list_j_simil_t<-as.numeric(name_list_j_simil_t)
+            
+              name_list_j_t[which(max(name_list_j_simil_t)==name_list_j_simil_t)][1]
+              name_list_j_gpm_t[which(max(name_list_j_simil_t)==name_list_j_simil_t)][1]
+              name_list_j_gpc_t[which(max(name_list_j_simil_t)==name_list_j_simil_t)][1]
+
+              if(nchar(tolower(stri_trans_general(game_list[i,1], "latin-ascii")))==nchar(tolower(gsub(":","",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]))) & !is.na(match(tolower(stri_trans_general(game_list[i,1], "latin-ascii")),tolower(strsplit(gsub(":","",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1])," ")[[1]]))))
+              {
+                
+              }else if(nchar(tolower(stri_trans_general(game_list[i,1], "latin-ascii")))==nchar(tolower(gsub(":","",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]))) & !is.na(match(tolower(stri_trans_general(game_list[i,1], "latin-ascii")),tolower(strsplit(gsub(" ","_",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1])," ")[[1]]))))
+              {
+
+              }else
+              {
+                #if(max(name_list_j_simil_t)>max(name_list_j_simil))
+                #{
+                  name_list_j_gpm<-name_list_j_gpm_t
+                  name_list_j_gpc<-name_list_j_gpc_t
+                  name_list_j_simil<-name_list_j_simil_t
+                  name_list_j<-name_list_j_t
+                #}
+              }
+            }
+
+            if(nchar(name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1])==nchar(tolower(stri_trans_general(game_list[i,1], "latin-ascii")))+1 & grepl(" ",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1],fixed=TRUE))
+            {
+              name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]<-gsub(" ","",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1])
+            }else if(nchar(name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1])==nchar(tolower(stri_trans_general(game_list[i,1], "latin-ascii"))) & grepl("_",game_list[i,1],fixed=TRUE) & !grepl("\\.",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]))
+            {
+              name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]<-gsub(" ","_",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1])
+            }else if(nchar(name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1])==nchar(tolower(stri_trans_general(game_list[i,1], "latin-ascii"))) & grepl("_",game_list[i,1],fixed=TRUE) & grepl("\\.",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]))
+            {
+              name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]<-gsub("\\.","_",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1])
+            }
+          }
+
           #if((grepl(paste("'",game_list[i,1],"'",sep=""),data_time,fixed=TRUE) | grepl(str_to_title(paste("'",game_list[i,1],"'",sep="")),data_time,fixed=TRUE))) # Busca el nombre exacto, si no se sale de la búsqueda. Si no encuentra el nombre exacto en la lista, convierte todo a minúscula menos la primera letra
-          if(max(name_list_j_simil)>0.925)
+          if(length(strsplit(game_list[i,1]," ")[[1]])==1 & is.na(match(tolower(stri_trans_general(game_list[i,1], "latin-ascii")),tolower(strsplit(gsub(":","",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1])," ")[[1]]))))
+          {print("hola")
+            band_f=0
+          }else if(max(name_list_j_simil)>0.925)
           {
             if(name_list_j_gpm[which(max(name_list_j_simil)==name_list_j_simil)][1]>0)
             {
@@ -366,7 +455,10 @@ while(i<dim(game_list)[1])
              game_list[i,1]=gsub("'","",game_list[i,1])
           }
 
-          if(cont_long_string<length(strsplit(game_list[i,1], " ")[[1]]))
+          if(length(strsplit(game_list[i,1]," ")[[1]])==1)
+          {
+            pasted_value=paste("'",game_list[i,1],"'",sep="")
+          }else if(cont_long_string<length(strsplit(game_list[i,1], " ")[[1]]))
           {
             pasted_value<-NULL
 

@@ -11,6 +11,7 @@
 *.sln.docstates
 
 aux_time.txt
+aux_time_tunning.txt
 .Rhistory
 Games.txt
 Games_buscar.txt
@@ -26,6 +27,9 @@ Games_HowLong_back_bueno.txt
 TODO.txt
 Games_HowLong_AppID.txt
 Games_HowLong_AppID_metadato.txt
+index.html
+Games_buscar_back_UNICO.txt
+nuevo1.txt
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs

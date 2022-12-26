@@ -146,3 +146,34 @@ La info de Completationist no la coge bien en la tabla, arreglar...
 - Coge bien info, pero no se descarga por completo la base de datos de AppID...meterla en un bucle a que se descargue entera? 
 - Otro como Saw y Monaco: "Candle"
 - Aparece "Gloom" duplicado en la tabla, la lía!!!! Ver si tengo dos Gloom, dejar de quiatar nombres duplicados (ya no hace falta)
+
+25-12-22
+
+- Arreglado Monaco y Candle. Saw es complicado, lo dejamos como NA, perdemos ese valor (por ahora)
+- Parece que también arreglado Resident Evil 0 y Age of Empires II
+- Todo el día intentando arreglar los juegos que son una sola palabra y daban falsos positivos:
+  RiMe
+  Watch_Dogs
+  Sig_Null
+  Contagion
+  Resident Evil 0
+  Candle
+  RiMe
+  UltraGoodness
+  BioShock
+  Symphony
+  140
+  OR
+  ShapeShifter
+  Unhack
+  RIVE
+  CHUCHEL
+  WASTED
+  Nongünz
+  Monaco
+  Saw
+  Resident Evil 0
+  Age of Empires II (hola)
+- Mañana arreglar el primer paso donde se guardan nombres con caracteres especiales. Con el paquete "stringi::stri_trans_general(x, "Hangul-Latin")" pueden pasarse los caracteres que son "\uxxx" a su carácter especial, no hace falta que se guarde un archivo extra.
+- Faltan algunos que fallan, por ejemplo ABZÛ no sale bien por el caracter especial. Arreglarlo.
+- The Darkness II no va bien, arreglar

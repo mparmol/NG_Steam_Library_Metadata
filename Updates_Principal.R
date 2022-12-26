@@ -17,6 +17,7 @@ require("data.table")
 require("stringr")
 require("rvest")
 require("RCurl")
+require("readr")
 
 isEmpty <- function(x) { #This function checks if a data frame is empty or not
   return(length(x)==0)
@@ -35,9 +36,14 @@ jejeje<-NULL
 #if(!file.exists("TODO.txt"))
 #{
   #AppID_List <- html_text(html_node(read_html("https://api.steampowered.com/ISteamApps/GetAppList/v2/"),"p"))
-  for(i in 1:10)
-  {
-    AppID_List <- try(getURL("https://api.steampowered.com/ISteamApps/GetAppList/v2/"))
+  #for(i in 1:10)
+  #{
+    #AppID_List <- getURL("https://api.steampowered.com/ISteamApps/GetAppList/v2/")
+
+    system("rm -rf index.html")
+    system("wget https://api.steampowered.com/ISteamApps/GetAppList/v2/")
+    
+    AppID_List <- read_file("index.html")
 
     hola<-gsub("\\\"\\},\\{\\\"appid\\\":","``",AppID_List)
     hola2<-gsub(",\"name\":\"","``",hola)
@@ -49,7 +55,7 @@ jejeje<-NULL
     res_games<-uooo
     jejeje<-rbind(jejeje,res_games)
     print(dim(res_games))
-  }
+  #}
 
   res_games<-jejeje[!duplicated(jejeje),]
 
@@ -72,8 +78,8 @@ jejeje<-NULL
 
 game_list$AppID<-res_games[match(game_list[,7],res_games[,2]),1]
 game_list$AppID_name<-res_games[match(game_list[,7],res_games[,2]),2]
-game_list$AppID_2<-res_games[match(game_list[,2],res_games[,2]),1]
-game_list$AppID_name_2<-res_games[match(game_list[,2],res_games[,2]),2]
+#game_list$AppID_2<-res_games[match(game_list[,2],res_games[,2]),1]
+#game_list$AppID_name_2<-res_games[match(game_list[,2],res_games[,2]),2]
 
 write.table(game_list,"Games_HowLong_AppID.txt",quote = F,row.names = F,col.names = F,sep = "\t")
 
@@ -92,11 +98,11 @@ for(i in 1:dim(game_list)[1])
   if(!is.na(game_list[i,8]))
   {
     meta_juego<-getURL(paste("https://steamspy.com/api.php?request=appdetails&appid=",game_list[i,8],sep=""))
-    game_list[i,12]<-strsplit(strsplit(meta_juego,"genre\\\":\\\"")[[1]][2],"\\\",\\\"")[[1]][1]
-    game_list[i,13]<-strsplit(strsplit(meta_juego,"positive\\\":")[[1]][2],",\\\"")[[1]][1]
-    game_list[i,14]<-strsplit(strsplit(meta_juego,"negative\\\":")[[1]][2],",\\\"")[[1]][1]
-    game_list[i,15]<-strsplit(strsplit(meta_juego,"developer\\\":\\\"")[[1]][2],"\\\",\\\"")[[1]][1]
-    game_list[i,16]<-strsplit(strsplit(meta_juego,"publisher\\\":\\\"")[[1]][2],"\\\",\\\"")[[1]][1]
+    game_list[i,10]<-strsplit(strsplit(meta_juego,"genre\\\":\\\"")[[1]][2],"\\\",\\\"")[[1]][1]
+    game_list[i,11]<-strsplit(strsplit(meta_juego,"positive\\\":")[[1]][2],",\\\"")[[1]][1]
+    game_list[i,12]<-strsplit(strsplit(meta_juego,"negative\\\":")[[1]][2],",\\\"")[[1]][1]
+    game_list[i,13]<-strsplit(strsplit(meta_juego,"developer\\\":\\\"")[[1]][2],"\\\",\\\"")[[1]][1]
+    game_list[i,14]<-strsplit(strsplit(meta_juego,"publisher\\\":\\\"")[[1]][2],"\\\",\\\"")[[1]][1]
   }
 
   write.table(game_list,"Games_HowLong_AppID_metadato.txt",quote = F,row.names = F,col.names = F,sep = "\t")
