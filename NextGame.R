@@ -18,7 +18,7 @@ isEmpty <- function(x) { #This function checks if a data frame is empty or not
   return(length(x)==0)
 }
 
-if(!file.exists("Games_buscar.txt") & !file.exists("Games.txt"))
+if(!file.exists("Games_buscar.txt"))
 {
   ####### Nombre de la tabla, todos los caracteres
 
@@ -34,33 +34,40 @@ if(!file.exists("Games_buscar.txt") & !file.exists("Games.txt"))
     res_games[i,1]<-substr(strsplit(sapply(strsplit(h[1], '"name"'), "[[", i),",\\\"")[[1]][1],3,nchar(strsplit(sapply(strsplit(h[1], '"name"'), "[[", i),",\\\"")[[1]][1])-1)
   }
 
-  game_list_orig<-as.data.frame(res_games[-1,])
-
-  write.table(game_list_orig,"Games.txt",quote = F,row.names = F,col.names = F)
+  game_list_orig<-as.data.frame(res_games)
+  
+  #write.table(game_list_orig,"Games.txt",quote = F,row.names = F,col.names = F)
 
   ####### Para buscar en howlong to beat
   
   system("rm -rf index.html?tab=all")
   system("wget https://steamcommunity.com/id/marko_pakete/games/?tab=all")
-  
+
   file_process<-as.data.frame(fread("index.html?tab=all",fill = T))
   
   h<-file_process[grep("rgGames",file_process[,1]),]
 
-  res_games<-data.frame(matrix(nrow=str_count(h,'"name"')[1]))
+  res_games<-data.frame(matrix(ncol=7,nrow=str_count(h,'"name"')[1]))
 
   for(i in 2:(str_count(h,'"name"')[1]+1))
   {
     res_games[i,1]<-substr(strsplit(sapply(strsplit(h[1], '"name"'), "[[", i),",\\\"")[[1]][1],3,nchar(strsplit(sapply(strsplit(h[1], '"name"'), "[[", i),",\\\"")[[1]][1])-1)
+    
+    #if(grepl("\\\\\\u",res_games[i,1]))
+    #{
+    #  res_games[i,1]=gsub("\\\\\\u","",res_games[i,1])
+    #}
+    
+    res_games[i,7]<-game_list_orig[i,1]
   }
 
   game_list<-as.data.frame(res_games[-1,])
-
-  write.table(game_list,"Games_buscar.txt",quote = F,row.names = F,col.names = F)
+  game_list_orig<-game_list_orig[-1,]
+  write.table(game_list,"Games_buscar.txt",quote = F,row.names = F,col.names = F,sep="\t")
 }else
 {
-  game_list_orig<-read.delim("Games.txt",header=F)
-  game_list<-read.delim("Games_buscar.txt",header=F)
+  #game_list_orig<-read.delim("Games.txt",header=F)
+  game_list<-read.delim("Games_buscar.txt",header=F,sep="\t")
 }
 
 #https://github.com/Depressurizer/Depressurizer/releases
@@ -100,10 +107,22 @@ for(i in 1:dim(game_list)[1])
     game_list_aux[i,1]=gsub("\\\\u00fc","ü",game_list_aux[i,1])
   }
 
+  if(grepl("\\\\u00db",game_list[i,1])) #######################
+  {
+    game_list[i,1]=gsub("\\\\u00db","Û",game_list[i,1])
+    game_list_aux[i,1]=gsub("\\\\u00db","Û",game_list_aux[i,1])
+  }
+
   if(grepl("\\\\u[a-zA-Z0-9]{4}",game_list[i,1])) #######################
   {
     game_list[i,1]=gsub("\\\\u[a-zA-Z0-9]{4}","",game_list[i,1])
     game_list_aux[i,1]=gsub("\\\\u[a-zA-Z0-9]{4}","",game_list_aux[i,1])
+    #print(game_list[i,1])
+    #print(game_list[i,7])
+    if(nchar(gsub(" ","",game_list[i,1]))==0)
+    {
+      game_list[i,1]=game_list[i,7]
+    }
   }
 
   if(grepl("Transformed Collection$",game_list[i,1])) #######################
@@ -151,14 +170,14 @@ for(i in 1:dim(game_list)[1])
     game_list[i,1]=gsub("Maximum Edition","",game_list[i,1])
   }
 
-  if(grepl("Remastered$",game_list[i,1])) #######################
-  {
-    game_list[i,1]=gsub("Remastered","",game_list[i,1])
-  }
-
   if(grepl("Remastered Edition$",game_list[i,1])) #######################
   {
     game_list[i,1]=gsub("Remastered Edition","",game_list[i,1])
+  }
+
+  if(grepl("Remastered$",game_list[i,1])) #######################
+  {
+    game_list[i,1]=gsub("Remastered","",game_list[i,1])
   }
 
   if(grepl("The Visual Novel$",game_list[i,1])) #######################
@@ -211,10 +230,10 @@ for(i in 1:dim(game_list)[1])
     game_list[i,1]=gsub("\\|","_",game_list[i,1])
   }
 
-  if(grepl("\\.",game_list[i,1]))
-  {
-    game_list[i,1]=gsub("\\.","_",game_list[i,1])
-  }
+  #if(grepl("\\.",game_list[i,1]))
+  #{
+  #  game_list[i,1]=gsub("\\.","_",game_list[i,1])
+  #}
 
   if(grepl("\\)$",game_list[i,1]))
   {
@@ -251,19 +270,21 @@ while(i<dim(game_list)[1])
   {
     if(length(strsplit(game_list[i,1]," ")[[1]])==1)
     {
+      game_list[i,1]<-gsub(" ","",game_list[i,1])
+      
+      pasted_value_tunning=paste("'",game_list[i,1],":'",sep="")
+      pasted_value=paste("'",game_list[i,1],"'",sep="")
+    }else if(!is.na(as.numeric(as.roman(strsplit(game_list[i,1], " ")[[1]][length(strsplit(game_list[i,1], " ")[[1]])]))) & length(strsplit(game_list[i,1]," ")[[1]])>1)
+    {
+      pasted_value_tunning=paste("'",game_list[i,1],":'",sep="")
+      pasted_value=paste("'",game_list[i,1],"'",sep="")
+    }else if(!is.na(as.numeric(strsplit(game_list[i,1], " ")[[1]][length(strsplit(game_list[i,1], " ")[[1]])])) & length(strsplit(game_list[i,1]," ")[[1]])>1)
+    {
       pasted_value_tunning=paste("'",game_list[i,1],":'",sep="")
       pasted_value=paste("'",game_list[i,1],"'",sep="")
     }else
     {
       pasted_value=paste("'",game_list[i,1],"'",sep="")
-    }
-
-    if(!is.na(as.numeric(as.roman(strsplit(game_list[i,1], " ")[[1]][length(strsplit(game_list[i,1], " ")[[1]])]))) & length(strsplit(game_list[i,1]," ")[[1]])>1)
-    {
-      pasted_value=paste("'",game_list[i,1],":'",sep="")
-    }else if(!is.na(as.numeric(strsplit(game_list[i,1], " ")[[1]][length(strsplit(game_list[i,1], " ")[[1]])])) & length(strsplit(game_list[i,1]," ")[[1]])>1)
-    {
-      pasted_value=paste("'",game_list[i,1],":'",sep="")
     }
 
     band_f=0
@@ -450,14 +471,22 @@ while(i<dim(game_list)[1])
           }
         }else
         {
-          if(grepl("'",game_list[i,1])) #######################
+          if(grepl("^'",game_list[i,1])) #######################
           {
              game_list[i,1]=gsub("'","",game_list[i,1])
           }
 
           if(length(strsplit(game_list[i,1]," ")[[1]])==1)
           {
-            pasted_value=paste("'",game_list[i,1],"'",sep="")
+            if(grepl("\\.",game_list[i,1]))
+            {
+              game_list[i,1]=paste("'",gsub("\\.","_",game_list[i,1]),"'",sep="")
+              pasted_value=game_list[i,1]
+            }else
+            {
+              pasted_value=paste("'",game_list[i,1],"'",sep="")
+            }
+
           }else if(cont_long_string<length(strsplit(game_list[i,1], " ")[[1]]))
           {
             pasted_value<-NULL
@@ -521,6 +550,10 @@ while(i<dim(game_list)[1])
           {
             game_list[i,1]=paste("'",gsub(" - "," ",game_list[i,1]),"'",sep="")
             pasted_value=game_list[i,1]
+          }else if(grepl("\\.",game_list[i,1]))
+          {
+            game_list[i,1]=paste("'",gsub("\\.","_",game_list[i,1]),"'",sep="")
+            pasted_value=game_list[i,1]
           }else if(!is.na(as.roman(strsplit(game_list[i,1], " ")[[1]][length(strsplit(game_list[i,1], " ")[[1]])]))) #######################
           {
             if(is.numeric(type.convert(strsplit(game_list[i,1], " ")[[1]][length(strsplit(game_list[i,1], " ")[[1]])],as.is=TRUE)))
@@ -557,5 +590,5 @@ while(i<dim(game_list)[1])
 }
 
 game_list[,1]<-game_list_aux[,1]
-game_list[,7]<-game_list_orig[,1]
+#game_list[,7]<-game_list_orig[,1]
 write.table(game_list,"Games_HowLong.txt",quote = F,row.names = F,col.names = F,sep = "\t")

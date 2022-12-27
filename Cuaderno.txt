@@ -177,3 +177,9 @@ La info de Completationist no la coge bien en la tabla, arreglar...
 - Mañana arreglar el primer paso donde se guardan nombres con caracteres especiales. Con el paquete "stringi::stri_trans_general(x, "Hangul-Latin")" pueden pasarse los caracteres que son "\uxxx" a su carácter especial, no hace falta que se guarde un archivo extra.
 - Faltan algunos que fallan, por ejemplo ABZÛ no sale bien por el caracter especial. Arreglarlo.
 - The Darkness II no va bien, arreglar
+- Ver nuevo1.txt
+- Si se guarda de esta forma el Game.txt, no se puede cargar luego bien. No se guarda el Spyto con el TM bien. Las líneas que van después de Ifrit no funcionan bien...mirar!!
+
+26-12-22
+
+- Sigue el problema de Spyro, problemas con \...además problemas con juegos como PAYDAY 2, que añade automáticamente : y encuentra otra cosa. Arreglar.
