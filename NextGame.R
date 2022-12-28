@@ -238,6 +238,12 @@ for(i in 1:dim(game_list)[1])
   if(grepl("\\)$",game_list[i,1]))
   {
     game_list[i,1]=strsplit(game_list[i,1],"\\(")[[1]][1]
+    
+    if(nchar(gsub(" ","",game_list[i,1]))==0)
+    {
+      game_list[i,1]=game_list[i,7]
+      game_list[i,1]=strsplit(game_list[i,1],"\\(")[[1]][1]
+    }
   }
 
   if(grepl("\\]$",game_list[i,1]))

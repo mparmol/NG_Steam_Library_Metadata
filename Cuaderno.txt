@@ -183,3 +183,7 @@ La info de Completationist no la coge bien en la tabla, arreglar...
 26-12-22
 
 - Sigue el problema de Spyro, problemas con \...además problemas con juegos como PAYDAY 2, que añade automáticamente : y encuentra otra cosa. Arreglar.
+
+27-12-22
+
+- TOdo Ok. Siguen habiendo falsos positivos pero la mayoría de NA están arreglados. Mañana correr todo full y explorar el "HowLong"
