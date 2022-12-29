@@ -103,6 +103,7 @@ for(i in 1:dim(game_list)[1])
     game_list[i,12]<-strsplit(strsplit(meta_juego,"negative\\\":")[[1]][2],",\\\"")[[1]][1]
     game_list[i,13]<-strsplit(strsplit(meta_juego,"developer\\\":\\\"")[[1]][2],"\\\",\\\"")[[1]][1]
     game_list[i,14]<-strsplit(strsplit(meta_juego,"publisher\\\":\\\"")[[1]][2],"\\\",\\\"")[[1]][1]
+    Sys.sleep(1)
   }
 
   write.table(game_list,"Games_HowLong_AppID_metadato.txt",quote = F,row.names = F,col.names = F,sep = "\t")

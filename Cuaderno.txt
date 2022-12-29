@@ -187,3 +187,7 @@ La info de Completationist no la coge bien en la tabla, arreglar...
 27-12-22
 
 - TOdo Ok. Siguen habiendo falsos positivos pero la mayoría de NA están arreglados. Mañana correr todo full y explorar el "HowLong"
+
+28-12-22
+
+- Tenemos tabla final con HowLong. Explorar, arreglar algunos como Event[0]
