@@ -191,3 +191,12 @@ La info de Completationist no la coge bien en la tabla, arreglar...
 28-12-22
 
 - Tenemos tabla final con HowLong. Explorar, arreglar algunos como Event[0]
+
+29-12-22
+
+- Tenemos una versión muy avanzada. Ahora ordenar la tabla por NA en horas y NA en info de SteamSpy. Coger los jeugos de ambas columnas y buscar patrones. Luego coger columna de % de match con How long, intentar depurar este punto.
+- Resident Evil 0 y Ages of Empires II vuelven a tener su problema.
+
+01-01-23
+
+- Arreglados errores que estaban listados, como Resident Evil 0, Ages of Empires II, Event[0]...

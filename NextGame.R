@@ -18,6 +18,55 @@ isEmpty <- function(x) { #This function checks if a data frame is empty or not
   return(length(x)==0)
 }
 
+word2num <- function(word){
+    wsplit <- strsplit(tolower(word)," ")[[1]]
+    one_digits <- list(zero=0, one=1, two=2, three=3, four=4, five=5,
+                       six=6, seven=7, eight=8, nine=9)
+    teens <- list(eleven=11, twelve=12, thirteen=13, fourteen=14, fifteen=15,
+                  sixteen=16, seventeen=17, eighteen=18, nineteen=19)
+    ten_digits <- list(ten=10, twenty=20, thirty=30, forty=40, fifty=50,
+                       sixty=60, seventy=70, eighty=80, ninety=90)
+    doubles <- c(teens,ten_digits)
+    out <- 0
+    i <- 1
+    while(i <= length(wsplit)){
+        j <- 1
+        if(i==1 && wsplit[i]=="hundred")
+            temp <- 100
+        else if(i==1 && wsplit[i]=="thousand")
+            temp <- 1000
+        else if(wsplit[i] %in% names(one_digits))
+            temp <- as.numeric(one_digits[wsplit[i]])
+        else if(wsplit[i] %in% names(teens))
+            temp <- as.numeric(teens[wsplit[i]])
+        else if(wsplit[i] %in% names(ten_digits))
+            temp <- (as.numeric(ten_digits[wsplit[i]]))
+        if(i < length(wsplit) && wsplit[i+1]=="hundred"){
+            if(i>1 && wsplit[i-1] %in% c("hundred","thousand"))
+                out <- out + 100*temp
+            else
+                out <- 100*(out + temp)
+            j <- 2
+        }
+        else if(i < length(wsplit) && wsplit[i+1]=="thousand"){
+            if(i>1 && wsplit[i-1] %in% c("hundred","thousand"))
+                out <- out + 1000*temp
+            else
+                out <- 1000*(out + temp)
+            j <- 2
+        }
+        else if(i < length(wsplit) && wsplit[i+1] %in% names(doubles)){
+            temp <- temp*100
+            out <- out + temp
+        }
+        else{
+            out <- out + temp
+        }
+        i <- i + j
+    }
+    return(list(word,out))
+}
+
 if(!file.exists("Games_buscar.txt"))
 {
   ####### Nombre de la tabla, todos los caracteres
@@ -237,7 +286,7 @@ for(i in 1:dim(game_list)[1])
 
   if(grepl("\\)$",game_list[i,1]))
   {
-    game_list[i,1]=strsplit(game_list[i,1],"\\(")[[1]][1]
+    game_list[i,1]=strsplit(game_list[i,1]," \\(")[[1]][1]
     
     if(nchar(gsub(" ","",game_list[i,1]))==0)
     {
@@ -246,14 +295,19 @@ for(i in 1:dim(game_list)[1])
     }
   }
 
-  if(grepl("\\]$",game_list[i,1]))
+  if(grepl("\\]$",game_list[i,1]) & length(strsplit(game_list[i,1]," ")[[1]])>1)
   {
     game_list[i,1]=strsplit(game_list[i,1],"\\[")[[1]][1]
   }
 
-  if(grepl("^\\[",game_list[i,1]))
+  if(grepl("^\\[",game_list[i,1]) & length(strsplit(game_list[i,1]," ")[[1]])>1)
   {
     game_list[i,1]=strsplit(game_list[i,1],"\\]")[[1]][2]
+  }
+
+  if(!is.na(game_list[i,1]) & length(strsplit(game_list[i,1]," ")[[1]])*2==nchar(game_list[i,1])+1)
+  {
+    game_list[i,1]=gsub(" ","",game_list[i,1])
   }
 
 }
@@ -274,10 +328,17 @@ while(i<dim(game_list)[1])
 {
   if(is.na(game_list[i,2]))
   {
+    pasted_value_tunning=NULL
+
     if(length(strsplit(game_list[i,1]," ")[[1]])==1)
     {
       game_list[i,1]<-gsub(" ","",game_list[i,1])
       
+      if(grepl("\\\\/",game_list[i,1]))
+      {
+        game_list[i,1]=gsub("\\\\/"," / ",game_list[i,1])
+      }
+
       pasted_value_tunning=paste("'",game_list[i,1],":'",sep="")
       pasted_value=paste("'",game_list[i,1],"'",sep="")
     }else if(!is.na(as.numeric(as.roman(strsplit(game_list[i,1], " ")[[1]][length(strsplit(game_list[i,1], " ")[[1]])]))) & length(strsplit(game_list[i,1]," ")[[1]])>1)
@@ -296,14 +357,16 @@ while(i<dim(game_list)[1])
     band_f=0
     cont_long_string=0
     valor_unico=0
-    
-    while(band_f==0 & cont_long_string<length(strsplit(game_list[i,1], " ")[[1]])+12)
+    cont_slash=0
+
+    while(band_f==0 & cont_long_string<length(strsplit(game_list[i,1], " ")[[1]])+13)
     {
       cont_long_string=cont_long_string+1
 
       system(paste("node New.js ",pasted_value," > aux_time.txt", sep=""))
     
-      if(length(strsplit(game_list[i,1]," ")[[1]])==1)
+      #if(length(strsplit(game_list[i,1]," ")[[1]])==1)
+      if(!is.null(pasted_value_tunning))
       {
         system(paste("node New.js ",pasted_value_tunning," > aux_time_tunning.txt", sep=""))
       }
@@ -351,7 +414,8 @@ while(i<dim(game_list)[1])
           name_list_j_gpm[which(max(name_list_j_simil)==name_list_j_simil)][1]
           name_list_j_gpc[which(max(name_list_j_simil)==name_list_j_simil)][1]
         
-          if(length(strsplit(game_list[i,1]," ")[[1]])==1)
+          #if(length(strsplit(game_list[i,1]," ")[[1]])==1)
+          if(!is.null(pasted_value_tunning))
           {
             data_time_t<-read.delim("aux_time_tunning.txt")
 
@@ -391,7 +455,7 @@ while(i<dim(game_list)[1])
                 
               }else if(nchar(tolower(stri_trans_general(game_list[i,1], "latin-ascii")))==nchar(tolower(gsub(":","",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]))) & !is.na(match(tolower(stri_trans_general(game_list[i,1], "latin-ascii")),tolower(strsplit(gsub(" ","_",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1])," ")[[1]]))))
               {
-
+                
               }else
               {
                 #if(max(name_list_j_simil_t)>max(name_list_j_simil))
@@ -417,8 +481,10 @@ while(i<dim(game_list)[1])
           }
 
           #if((grepl(paste("'",game_list[i,1],"'",sep=""),data_time,fixed=TRUE) | grepl(str_to_title(paste("'",game_list[i,1],"'",sep="")),data_time,fixed=TRUE))) # Busca el nombre exacto, si no se sale de la búsqueda. Si no encuentra el nombre exacto en la lista, convierte todo a minúscula menos la primera letra
-          if(length(strsplit(game_list[i,1]," ")[[1]])==1 & is.na(match(tolower(stri_trans_general(game_list[i,1], "latin-ascii")),tolower(strsplit(gsub(":","",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1])," ")[[1]]))))
+          if(length(strsplit(game_list[i,1]," ")[[1]])==1 & is.na(match(gsub(":","",tolower(stri_trans_general(game_list[i,1], "latin-ascii"))),stri_trans_general(tolower(strsplit(gsub(":","",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1])," ")[[1]]), "latin-ascii"))))
           {print("hola")
+          print(pasted_value)
+          print(name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1])
             band_f=0
           }else if(max(name_list_j_simil)>0.925)
           {
@@ -493,6 +559,15 @@ while(i<dim(game_list)[1])
               pasted_value=paste("'",game_list[i,1],"'",sep="")
             }
 
+          }else if(grepl("\\\\/",game_list[i,1]) & cont_slash==0)
+          {        
+            game_list[i,1]=paste("'",gsub("\\\\","",game_list[i,1]),"'",sep="")
+            pasted_value=game_list[i,1]
+            cont_slash=1
+          }else if(grepl("/",game_list[i,1]) & cont_slash==1)
+          {        
+            game_list[i,1]=paste("'",strsplit(game_list[i,1],"/")[[1]][1],"'",sep="")
+            pasted_value=game_list[i,1]
           }else if(cont_long_string<length(strsplit(game_list[i,1], " ")[[1]]))
           {
             pasted_value<-NULL
@@ -570,6 +645,13 @@ while(i<dim(game_list)[1])
               game_list[i,1]=paste("'",paste(paste(paste(strsplit(game_list[i,1], " ")[[1]][1:length(strsplit(game_list[i,1], " ")[[1]])-1],sep=" "),collapse=" "),as.numeric(as.roman(strsplit(game_list[i,1], " ")[[1]][length(strsplit(game_list[i,1]," ")[[1]])])),collapse=" "),"'",sep="")
             }
             pasted_value=game_list[i,1]
+          }else if(!isEmpty(try(as.numeric(word2num(strsplit(game_list[i,1], " ")[[1]][length(strsplit(game_list[i,1], " ")[[1]])])[[2]]))) & length(strsplit(game_list[i,1]," ")[[1]])>1)
+          {
+            #print("hola")
+            game_list[i,1]=paste("'",paste(paste(paste(strsplit(game_list[i,1], " ")[[1]][1:length(strsplit(game_list[i,1], " ")[[1]])-1],sep=" "),collapse=" "),as.numeric(word2num(strsplit(game_list[i,1], " ")[[1]][length(strsplit(game_list[i,1], " ")[[1]])])[[2]]),collapse=" "),"'",sep="")
+            pasted_value=game_list[i,1]
+            #pasted_value_tunning=paste("'",game_list[i,1],":'",sep="")
+            #pasted_value=paste("'",game_list[i,1],"'",sep="")
           }else
           {
             pasted_value<-strsplit(game_list[i,1], " ")[[1]][1]

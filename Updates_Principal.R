@@ -69,7 +69,8 @@ jejeje<-NULL
     ##res_games[i,2]<-strsplit(strsplit(strsplit(sapply(strsplit(AppID_List, '\\{'), "[[", i),"\\}")[[1]][1],":\\\"")[[1]][2],'\\\"')[[1]][1]
   ##}
 
-  write.table(res_games,"TODO.txt",quote = F,row.names = F,col.names = F,sep="\t")
+  #write.table(res_games,"TODO.txt",quote = F,row.names = F,col.names = F,sep="\t")
+
 #}else 
 #{
   #res_games<-read.delim("TODO.txt",sep="\t",header=F)
@@ -81,7 +82,7 @@ game_list$AppID_name<-res_games[match(game_list[,7],res_games[,2]),2]
 #game_list$AppID_2<-res_games[match(game_list[,2],res_games[,2]),1]
 #game_list$AppID_name_2<-res_games[match(game_list[,2],res_games[,2]),2]
 
-write.table(game_list,"Games_HowLong_AppID.txt",quote = F,row.names = F,col.names = F,sep = "\t")
+#write.table(game_list,"Games_HowLong_AppID.txt",quote = F,row.names = F,col.names = F,sep = "\t")
 
 #library(rvest)
 #my_df <- as.data.frame(read_html(index.html) %>% html_table(fill=TRUE))
