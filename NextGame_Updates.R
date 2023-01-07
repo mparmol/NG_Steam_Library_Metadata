@@ -73,7 +73,7 @@ if(!file.exists("Games_buscar.txt"))
 {
   ####### Nombre de la tabla, todos los caracteres
 
-  info_Steam<-getURL("https://steamcommunity.com/profiles/76561198124010932/games/?tab=all")
+  info_Steam<-getURL("https://steamcommunity.com/id/marko_pakete/games/?tab=all")
   file_process<-as.data.frame(info_Steam)
 
   h<-file_process[grep("rgGames",file_process[,1]),]
@@ -92,7 +92,7 @@ if(!file.exists("Games_buscar.txt"))
   ####### Para buscar en howlong to beat
   
   system("rm -rf index.html?tab=all")
-  system("wget https://steamcommunity.com/profiles/76561198124010932/games/?tab=all")
+  system("wget https://steamcommunity.com/id/marko_pakete/games/?tab=all")
 
   file_process<-as.data.frame(fread("index.html?tab=all",fill = T))
   
