@@ -271,6 +271,7 @@ while(i<dim(game_list)[1])
     valor_unico=0
     cont_slash=0
     scape_key=0
+    scape_roman_key=0
 
     #while(band_f==0 & cont_long_string<length(strsplit(game_list[i,1], " ")[[1]])+39)
     while(band_f==0 & scape_key<1)
@@ -500,9 +501,9 @@ while(i<dim(game_list)[1])
           {
             game_list[i,1]=paste("'",gsub("Collection","",game_list[i,1]),"'",sep="")
             pasted_value=game_list[i,1]
-          }else if(grepl("Collector's Edition$",game_list[i,1])) #######################
+          }else if(grepl("Collectors Edition$",game_list[i,1])) #######################
           {
-            game_list[i,1]=paste("'",gsub("Collector's Edition","",game_list[i,1]),"'",sep="")
+            game_list[i,1]=paste("'",gsub("Collectors Edition","",game_list[i,1]),"'",sep="")
             pasted_value=game_list[i,1]
           }else if(grepl("Ultimate Edition$",game_list[i,1])) #######################
           {
@@ -618,6 +619,10 @@ while(i<dim(game_list)[1])
           {
             game_list[i,1]=paste("'",gsub("Game of the Year Edition","",game_list[i,1]),"'",sep="")
             pasted_value=game_list[i,1]
+          }else if(grepl("Digital Edition$",game_list[i,1])) #######################
+          {
+            game_list[i,1]=paste("'",gsub("Digital Edition","",game_list[i,1]),"'",sep="")
+            pasted_value=game_list[i,1]
           }else if(grepl("Edition$",game_list[i,1])) #######################
           {
             game_list[i,1]=paste("'",gsub("Edition","",game_list[i,1]),"'",sep="")
@@ -637,6 +642,14 @@ while(i<dim(game_list)[1])
           }else if(grepl("[0-9] - ",game_list[i,1])) #######################
           {
             game_list[i,1]=paste("'",gsub("[0-9] - ","",game_list[i,1]),"'",sep="")
+            pasted_value=game_list[i,1]
+          }else if(grepl(" the ",game_list[i,1])) #######################
+          {
+            game_list[i,1]=paste("'",gsub(" the "," ",game_list[i,1]),"'",sep="")
+            pasted_value=game_list[i,1]
+          }else if(grepl(" The ",game_list[i,1])) #######################
+          {
+            game_list[i,1]=paste("'",gsub(" The "," ",game_list[i,1]),"'",sep="")
             pasted_value=game_list[i,1]
           }else if(grepl(":",game_list[i,1])) #######################
           {
@@ -660,6 +673,7 @@ while(i<dim(game_list)[1])
               game_list[i,1]=paste("'",paste(paste(paste(strsplit(game_list[i,1], " ")[[1]][1:length(strsplit(game_list[i,1], " ")[[1]])-1],sep=" "),collapse=" "),as.numeric(as.roman(strsplit(game_list[i,1], " ")[[1]][length(strsplit(game_list[i,1]," ")[[1]])])),collapse=" "),"'",sep="")
             }
             pasted_value=game_list[i,1]
+            scape_roman_key=scape_roman_key+1
           }else if(is.numeric(try(as.numeric(word2num(strsplit(game_list[i,1], " ")[[1]][length(strsplit(game_list[i,1], " ")[[1]])])[[2]]),silent=TRUE)) & length(strsplit(game_list[i,1]," ")[[1]])>1)
           {
             #print("hola")
@@ -673,7 +687,7 @@ while(i<dim(game_list)[1])
             valor_unico<-1
           } 
 
-          if(pasted_value==game_list_back_change)
+          if(pasted_value==game_list_back_change | scape_roman_key==2)
           {
             scape_key=scape_key+1
           }

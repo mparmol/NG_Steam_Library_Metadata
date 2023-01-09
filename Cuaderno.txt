@@ -208,3 +208,12 @@ La info de Completationist no la coge bien en la tabla, arreglar...
 - La búsqueda del tunning está controlada con un while. Hasta que salga un resultado está buclado.
 - El orden al generar la columna 7 del archivo es diferente...hacer de otra forma!! Ver bien cuando se consiga una ejecución completa
 - Rescatar Watch Dogs??
+
+09-01-23
+
+- Revisar lo de quitar ":" antes y después de hacer el bucle de poner los : a lo largo de toda la búsqueda
+- Para futuro, actualizar el "Game_buscar" con los últimos juegos incluidos
+- Seguro que no se puede generar el 7 desde el 1?
+- El archivo que descargamos tiene info del AppID!! Coger este campo y hacer el match a partir de aquí para SteamSpy, más fiable (campo único). Esto soluciona juegos como "Magic 2015". Haciendo esto no hace falta correr de nuevo el script para descargar la info en la columna 7, aquí guardaremos el AppID y nos quedaremos con el valor de nombre que saquemos...evitamos problemas, ya no bailarán los nombres. Para esto, los que se queden vacíos en 1 que no se rellenen con el campo del 7...
+- Añadir info de los juego que están logreados al 100%: "https://steamcommunity.com/id/marko_pakete/games/?tab=perfect"
+- Caído el enlace de info total de juegos de Steam? Por la mañana iba. Ya va, tener en cuenta que puede caerse de vez en cuando
