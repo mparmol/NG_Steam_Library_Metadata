@@ -200,3 +200,11 @@ La info de Completationist no la coge bien en la tabla, arreglar...
 01-01-23
 
 - Arreglados errores que estaban listados, como Resident Evil 0, Ages of Empires II, Event[0]...
+
+08-01-23
+
+- Arreglados problemas con juegos con " ' ", número romanos...
+- Arreglado el bucle del while, ya no es un +30 si no que hay una variable que lo controla con una sola interacción
+- La búsqueda del tunning está controlada con un while. Hasta que salga un resultado está buclado.
+- El orden al generar la columna 7 del archivo es diferente...hacer de otra forma!! Ver bien cuando se consiga una ejecución completa
+- Rescatar Watch Dogs??
