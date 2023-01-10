@@ -176,6 +176,11 @@ for(i in 1:dim(game_list)[1])
     }
   }
 
+  if(grepl("ARCADE GAME SERIES: ",game_list[i,1])) #######################
+  {
+    game_list[i,1]=paste("'",gsub("ARCADE GAME SERIES: ","",game_list[i,1]),"'",sep="")
+  }
+
   if(grepl(" & ",game_list[i,1])) #######################
   {
     game_list[i,1]=gsub("&","",game_list[i,1])
@@ -385,7 +390,7 @@ while(i<dim(game_list)[1])
               {
                                 
               }else if(!is.na(as.numeric(as.roman(strsplit(game_list[i,1], " ")[[1]][length(strsplit(game_list[i,1], " ")[[1]])]))) & !is.na(as.numeric(as.roman(strsplit(name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1], " ")[[1]][length(strsplit(name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1], " ")[[1]])]))) & (as.numeric(as.roman(strsplit(game_list[i,1], " ")[[1]][length(strsplit(game_list[i,1], " ")[[1]])]))==as.numeric(as.roman(strsplit(name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1], " ")[[1]][length(strsplit(name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1], " ")[[1]])]))))
-              {
+              {#else if(!is.na(as.numeric(as.roman(strsplit(game_list[i,1], " ")[[1]][length(strsplit(game_list[i,1], " ")[[1]])]))) & !is.na(as.numeric(as.roman(strsplit(name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1], " ")[[1]][length(strsplit(name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1], " ")[[1]])]))) & (as.numeric(as.roman(strsplit(game_list[i,1], " ")[[1]][length(strsplit(game_list[i,1], " ")[[1]])]))==as.numeric(as.roman(strsplit(name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1], " ")[[1]][length(strsplit(name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1], " ")[[1]])]))) & length(strsplit(game_list[i,1], " ")[[1]])==length(strsplit(name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1], " ")[[1]]))
 
               }else
               {
@@ -412,7 +417,7 @@ while(i<dim(game_list)[1])
           }
 
           #if((grepl(paste("'",game_list[i,1],"'",sep=""),data_time,fixed=TRUE) | grepl(str_to_title(paste("'",game_list[i,1],"'",sep="")),data_time,fixed=TRUE))) # Busca el nombre exacto, si no se sale de la búsqueda. Si no encuentra el nombre exacto en la lista, convierte todo a minúscula menos la primera letra
-          if(length(strsplit(game_list[i,1]," ")[[1]])==1 & is.na(match(gsub(":","",tolower(stri_trans_general(game_list[i,1], "latin-ascii"))),stri_trans_general(tolower(strsplit(gsub(":","",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1])," ")[[1]]), "latin-ascii"))))
+          if(length(strsplit(game_list[i,1]," ")[[1]])==1 & (is.na(match(gsub(":","",tolower(stri_trans_general(game_list[i,1], "latin-ascii"))),stri_trans_general(tolower(strsplit(gsub(" ","_",gsub(":","",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]))," ")[[1]]), "latin-ascii"))) & is.na(match(gsub(":","",tolower(stri_trans_general(game_list[i,1], "latin-ascii"))),stri_trans_general(tolower(strsplit(gsub(" ","",gsub(":","",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]))," ")[[1]]), "latin-ascii")))))
           {print("hola")
           print(scape_key)
           print(pasted_value)
@@ -561,10 +566,6 @@ while(i<dim(game_list)[1])
           {
             game_list[i,1]=paste("'",gsub("- Anniversary Edition","",game_list[i,1]),"'",sep="")
             pasted_value=game_list[i,1]
-          }else if(grepl("ARCADE GAME SERIES: ",game_list[i,1])) #######################
-          {
-            game_list[i,1]=paste("'",gsub("ARCADE GAME SERIES: ","",game_list[i,1]),"'",sep="")
-            pasted_value=game_list[i,1]
           }else if(grepl(" and ",game_list[i,1])) #######################
           {
             game_list[i,1]=paste("'",gsub(" and "," ",game_list[i,1]),"'",sep="")
@@ -577,6 +578,10 @@ while(i<dim(game_list)[1])
           }else if(grepl("/",game_list[i,1]) & cont_slash==1)
           {        
             game_list[i,1]=paste("'",strsplit(game_list[i,1],"/")[[1]][1],"'",sep="")
+            pasted_value=game_list[i,1]
+          }else if(grepl("\\\\",game_list[i,1]))
+          {        
+            game_list[i,1]=paste("'",gsub("\\\\","",game_list[i,1]),"'",sep="")
             pasted_value=game_list[i,1]
           }else if(cont_long_string<length(strsplit(game_list[i,1], " ")[[1]]))
           {#print("aqui")

@@ -217,3 +217,9 @@ La info de Completationist no la coge bien en la tabla, arreglar...
 - El archivo que descargamos tiene info del AppID!! Coger este campo y hacer el match a partir de aquí para SteamSpy, más fiable (campo único). Esto soluciona juegos como "Magic 2015". Haciendo esto no hace falta correr de nuevo el script para descargar la info en la columna 7, aquí guardaremos el AppID y nos quedaremos con el valor de nombre que saquemos...evitamos problemas, ya no bailarán los nombres. Para esto, los que se queden vacíos en 1 que no se rellenen con el campo del 7...
 - Añadir info de los juego que están logreados al 100%: "https://steamcommunity.com/id/marko_pakete/games/?tab=perfect"
 - Caído el enlace de info total de juegos de Steam? Por la mañana iba. Ya va, tener en cuenta que puede caerse de vez en cuando
+- Mirar: "Resident Evil 2 \1-Shot Demo\", "Thief 2", "Watch_Dogs", "ShapeShifter", "House of 1000 Doors: The Palm of Zoroaster Collector's Edition", "UltraGoodness", "BioShock Remastered", "Paranormal State: Poison Spring Collector's Edition", "The Last Door: Season 2 - Collector's Edition", "ARCADE GAME SERIES: PAC-MAN", "Infected: The Twin Vaccine - Collector's Edition", "Lost Legends: The Weeping Woman Collector's Edition", "Midnight Mysteries: Witches of Abraham - Collector's Edition", "Small Town Terrors: Galdor's Bluff Collector's Edition", "Small Town Terrors Pilgrim's Hook Collector's Edition", "The Last Door - Collector's Edition", "Twisted Lands Trilogy Collector's Edition"
+  · Cambiado al principio el "\\'" que era "_" a ""
+  · Se elimina "\\\\" cuando no lo sigue un "/"
+  · Añadida una nueva condición cuando termina en número para ver si se cambia o no por el otro hit. Deben tener el mismo número de palabras.
+  · "ARCADE GAME SERIES:" se quita al principio
+- He restaurado lo de que la longitud debe ser igual (volverá a caer Thief 2 entonces) y la "\\'" a "_" al principio...a ver cómo solucionarlo
