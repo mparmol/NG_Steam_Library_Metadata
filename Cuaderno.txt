@@ -232,5 +232,6 @@ La info de Completationist no la coge bien en la tabla, arreglar...
 - Obtenemos el dato desde AppID, cogemos desde aquí el nombre final. Si funciona, modificar para que no busque los datos dos veces, prescindir de columna 7...modificar ese campo en el código para que no falle
 - Tenemos una última versión de metadato. De aquí mirar los NAs e intetar depurar más esos últimos 300. 
 - Pensar corte de exactitud.
-- Mirar el cálculo de la columna que se suma número de votos, por qué falla.
+- Mirar el cálculo de la columna que se suma número de votos, por qué falla. Arreglado parece...
 - Mirar "Risen 2 - Dark Waters"
+- Modificar el script. El bloque donde se eliminan partes del nombre puede ser una lista que se va recorriendo. Lo mismo con el bloque donde se pone "Exact"-"No Exact", dejar sólo uno.
