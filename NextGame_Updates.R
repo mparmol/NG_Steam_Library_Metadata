@@ -73,7 +73,7 @@ if(!file.exists("Games_buscar.txt"))
 {
   ####### Nombre de la tabla, todos los caracteres
 
-  info_Steam<-getURL("https://steamcommunity.com/id/marko_pakete/games/?tab=all")
+  info_Steam<-getURL("https://steamcommunity.com/profiles/76561198012006378/games/?tab=all")
   file_process<-as.data.frame(info_Steam)
 
   h<-file_process[grep("rgGames",file_process[,1]),]
@@ -92,7 +92,7 @@ if(!file.exists("Games_buscar.txt"))
   ####### Para buscar en howlong to beat
   
   system("rm -rf index.html?tab=all")
-  system("wget https://steamcommunity.com/id/marko_pakete/games/?tab=all")
+  system("wget https://steamcommunity.com/profiles/76561198012006378/games/?tab=all")
 
   file_process<-as.data.frame(fread("index.html?tab=all",fill = T))
   
@@ -816,10 +816,12 @@ for(i in 1:dim(game_list)[1])
 
 }
 
-game_list$rating<-(game_list[,12]/(game_list[,12]+game_list[,13]))*100
-game_list$tot_votes<-game_list[,12]+game_list[,13]
+game_list<-read.delim("Games_HowLong_AppID_metadato.txt",header=F)
 
-game_list_final_output<-game_list[,c(10,8,11,17,16,3,4,14,15)]
+game_list$rating<-(game_list[,12]/(game_list[,12]+game_list[,13]))*100
+game_list$tot_votes<-(game_list[,12]+game_list[,13])
+
+game_list_final_output<-game_list[,c(7,8,11,17,16,3,4,14,15)]
 
 colnames(game_list_final_output)<-c("Name","AppID","Genre","Votes_total","Positive_rating","Time_to_finish","Time_to_complete","Developer","Publisher")
 
