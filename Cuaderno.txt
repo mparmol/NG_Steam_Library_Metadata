@@ -230,3 +230,7 @@ La info de Completationist no la coge bien en la tabla, arreglar...
 - Añadida nueva línea cuando el juego es una palabra, que lo busque como hacía antes ademas de modificarlos para juegos como Watch Dogs
 - Añadida la info de AppID desde el archivo original. De esta forma se va a poder prescindir de bajar la base de datos de juegos dos veces, ya que el nombre lo cogeremos cuando busquemos el metadato desde Steam
 - Obtenemos el dato desde AppID, cogemos desde aquí el nombre final. Si funciona, modificar para que no busque los datos dos veces, prescindir de columna 7...modificar ese campo en el código para que no falle
+- Tenemos una última versión de metadato. De aquí mirar los NAs e intetar depurar más esos últimos 300. 
+- Pensar corte de exactitud.
+- Mirar el cálculo de la columna que se suma número de votos, por qué falla.
+- Mirar "Risen 2 - Dark Waters"
