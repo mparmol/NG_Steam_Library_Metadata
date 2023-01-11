@@ -26,6 +26,7 @@
 #https://github.com/dgibbs64/SteamCMD-AppID-List This repo stores every AppID and its name available on Steam as json, CSV, xml and MD table by grabbing the info from the SteamAPI.
 ### Pillar AppID
 ### Más info: https://partner.steamgames.com/doc/webapi/ISteamApps#GetAppList
+### Cuándo se activaron los juegos: https://store.steampowered.com/account/licenses/
 
 Por hacer:
 
@@ -271,3 +272,4 @@ La info de Completationist no la coge bien en la tabla, arreglar...
 - Corriendo, comparar con la versión guardada a ver cambios
 - Especificar que "Sin registro" es porque tiene ficha pero no tiempo, o el tiempo es menos de 30 min. Los errores son NA, porque no lo encuentra o no tiene ficha.
 - C.O.D.E.R.E.D falla! arreglar...Arreglado
+- Bajar de aquí cuándo se activaron los juegos: https://store.steampowered.com/account/licenses/
