@@ -4,6 +4,28 @@
 ###Data Adquisition-Data Pre-Processing-Machine Algo-Pattern evaluation-Knowledge Representation
 ###                               - Data analysis/Representation
 
+### Cuentas:
+
+  # André: https://steamcommunity.com/profiles/76561198012006378/games/?tab=all
+  # Jolas: https://steamcommunity.com/id/guayabazo/games/?tab=all
+  # Álvaro: https://steamcommunity.com/profiles/76561197992225029/games/?tab=all
+  # Jimmy: https://steamcommunity.com/profiles/76561198124010932/games/?tab=all
+  # Álvaro: https://steamcommunity.com/id/DuckSaucer77/games/?tab=all
+  # Mío: https://steamcommunity.com/id/marko_pakete/games/?tab=all
+
+### Paginas interés:
+
+#https://github.com/Depressurizer/Depressurizer/releases
+#https://github.com/Twombs/Steam-Games-List
+#https://www.kaggle.com/datasets/ca06934a676693b069bc319eb7c76647afbcf8019dc4828cabb50678a064f3ff BAJAR METADATO
+#https://github.com/Duerkos/steam_analysis BAJAR METADATA
+#https://github.com/scjustice/steam_webscraper EL SCRAPPER PRO
+#https://steamdb.info/faq/#how-are-we-getting-this-information LISTA BUENA DE SCRIPTS
+#https://developer.valvesoftware.com/wiki/SteamCMD App importante de VALVE para usar steam desde comando
+#https://github.com/mdeguzis/steamcmd-wrapper
+#https://github.com/dgibbs64/SteamCMD-AppID-List This repo stores every AppID and its name available on Steam as json, CSV, xml and MD table by grabbing the info from the SteamAPI.
+### Pillar AppID
+### Más info: https://partner.steamgames.com/doc/webapi/ISteamApps#GetAppList
 
 Por hacer:
 
@@ -235,3 +257,17 @@ La info de Completationist no la coge bien en la tabla, arreglar...
 - Mirar el cálculo de la columna que se suma número de votos, por qué falla. Arreglado parece...
 - Mirar "Risen 2 - Dark Waters"
 - Modificar el script. El bloque donde se eliminan partes del nombre puede ser una lista que se va recorriendo. Lo mismo con el bloque donde se pone "Exact"-"No Exact", dejar sólo uno.
+
+11-1-23
+
+- Cambios:
+  · Añadido "SEASON UPDATE" y "FINAL EDITION"...Redux, Prelude, Single Player, Legacy Edition...
+  · Quitamos ":" cuando es solo una palabra
+  · Los juegos que acaben en número como MotoGP13 separamos los números y luego buscamos.
+  · Para juegos como Gun'n'zombies, nuevo criterio para encontrarlos
+  · Juegos con "ö" y "ã" arreglados
+  · Quitado los "()" que están en medio de los nombres
+  · Cuando es una sola palabra lo parte en 2 o más a través de las mayúsculas
+- Corriendo, comparar con la versión guardada a ver cambios
+- Especificar que "Sin registro" es porque tiene ficha pero no tiempo, o el tiempo es menos de 30 min. Los errores son NA, porque no lo encuentra o no tiene ficha.
+- C.O.D.E.R.E.D falla! arreglar...Arreglado

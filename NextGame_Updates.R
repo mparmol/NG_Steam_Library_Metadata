@@ -1,12 +1,5 @@
 ##NextGame
 
-  # André: https://steamcommunity.com/profiles/76561198012006378/games/?tab=all
-  # Jolas: https://steamcommunity.com/id/guayabazo/games/?tab=all
-  # Álvaro: https://steamcommunity.com/profiles/76561197992225029/games/?tab=all
-  # Jimmy: https://steamcommunity.com/profiles/76561198124010932/games/?tab=all
-  # Álvaro: https://steamcommunity.com/id/DuckSaucer77/games/?tab=all
-  # Mío: https://steamcommunity.com/id/marko_pakete/games/?tab=all
-
 ### Extract game list, from windows
 
 require("data.table")
@@ -73,7 +66,7 @@ if(!file.exists("Games_buscar.txt"))
 {
   ####### Nombre de la tabla, todos los caracteres
 
-  info_Steam<-getURL("https://steamcommunity.com/profiles/76561198012006378/games/?tab=all")
+  info_Steam<-getURL("https://steamcommunity.com/id/marko_pakete/games/?tab=all")
   file_process<-as.data.frame(info_Steam)
 
   h<-file_process[grep("rgGames",file_process[,1]),]
@@ -92,7 +85,7 @@ if(!file.exists("Games_buscar.txt"))
   ####### Para buscar en howlong to beat
   
   system("rm -rf index.html?tab=all")
-  system("wget https://steamcommunity.com/profiles/76561198012006378/games/?tab=all")
+  system("wget https://steamcommunity.com/id/marko_pakete/games/?tab=all")
 
   file_process<-as.data.frame(fread("index.html?tab=all",fill = T))
   
@@ -122,16 +115,6 @@ if(!file.exists("Games_buscar.txt"))
   game_list<-read.delim("Games_buscar.txt",header=F,sep="\t")
 }
 
-#https://github.com/Depressurizer/Depressurizer/releases
-#https://github.com/Twombs/Steam-Games-List
-#https://www.kaggle.com/datasets/ca06934a676693b069bc319eb7c76647afbcf8019dc4828cabb50678a064f3ff BAJAR METADATO
-#https://github.com/Duerkos/steam_analysis BAJAR METADATA
-#https://github.com/scjustice/steam_webscraper EL SCRAPPER PRO
-#https://steamdb.info/faq/#how-are-we-getting-this-information LISTA BUENA DE SCRIPTS
-#https://developer.valvesoftware.com/wiki/SteamCMD App importante de VALVE para usar steam desde comando
-#https://github.com/mdeguzis/steamcmd-wrapper
-#https://github.com/dgibbs64/SteamCMD-AppID-List This repo stores every AppID and its name available on Steam as json, CSV, xml and MD table by grabbing the info from the SteamAPI.
-
 ### Extract gameplay time
 
 game_list_aux<-game_list
@@ -159,10 +142,22 @@ for(i in 1:dim(game_list)[1])
     game_list_aux[i,1]=gsub("\\\\u00fc","ü",game_list_aux[i,1])
   }
 
+  if(grepl("\\\\u00f6",game_list[i,1])) #######################
+  {
+    game_list[i,1]=gsub("\\\\u00f6","ö",game_list[i,1])
+    game_list_aux[i,1]=gsub("\\\\u00f6","ö",game_list_aux[i,1])
+  }
+
   if(grepl("\\\\u00db",game_list[i,1])) #######################
   {
     game_list[i,1]=gsub("\\\\u00db","Û",game_list[i,1])
     game_list_aux[i,1]=gsub("\\\\u00db","Û",game_list_aux[i,1])
+  }
+
+  if(grepl("\\\\u00e3",game_list[i,1])) #######################
+  {
+    game_list[i,1]=gsub("\\\\u00e3","ã",game_list[i,1])
+    game_list_aux[i,1]=gsub("\\\\u00e3","ã",game_list_aux[i,1])
   }
 
   if(grepl("\\\\u[a-zA-Z0-9]{4}",game_list[i,1])) #######################
@@ -419,8 +414,8 @@ while(i<dim(game_list)[1])
           }
 
           #if((grepl(paste("'",game_list[i,1],"'",sep=""),data_time,fixed=TRUE) | grepl(str_to_title(paste("'",game_list[i,1],"'",sep="")),data_time,fixed=TRUE))) # Busca el nombre exacto, si no se sale de la búsqueda. Si no encuentra el nombre exacto en la lista, convierte todo a minúscula menos la primera letra
-          if(length(strsplit(game_list[i,1]," ")[[1]])==1 & (is.na(match(gsub(":","",tolower(stri_trans_general(game_list[i,1], "latin-ascii"))),stri_trans_general(tolower(strsplit(gsub(" ","_",gsub(":","",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]))," ")[[1]]), "latin-ascii"))) & is.na(match(gsub(":","",tolower(stri_trans_general(game_list[i,1], "latin-ascii"))),stri_trans_general(tolower(strsplit(gsub(" ","",gsub(":","",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]))," ")[[1]]), "latin-ascii"))) & is.na(match(gsub(":","",tolower(stri_trans_general(game_list[i,1], "latin-ascii"))),stri_trans_general(tolower(strsplit(gsub(":","",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1])," ")[[1]]), "latin-ascii")))))
-          {print("hola")
+          if(length(strsplit(game_list[i,1]," ")[[1]])==1 & (is.na(match(gsub(":","",tolower(stri_trans_general(game_list[i,1], "latin-ascii"))),stri_trans_general(tolower(strsplit(gsub(" ","_",gsub(":","",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]))," ")[[1]]), "latin-ascii"))) & is.na(match(gsub(":","",tolower(stri_trans_general(game_list[i,1], "latin-ascii"))),stri_trans_general(tolower(strsplit(gsub("'","_",gsub(":","",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]))," ")[[1]]), "latin-ascii"))) & is.na(match(gsub(":","",tolower(stri_trans_general(game_list[i,1], "latin-ascii"))),stri_trans_general(tolower(strsplit(gsub(" ","",gsub(":","",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]))," ")[[1]]), "latin-ascii"))) & is.na(match(gsub(":","",tolower(stri_trans_general(game_list[i,1], "latin-ascii"))),stri_trans_general(tolower(strsplit(gsub(":","",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1])," ")[[1]]), "latin-ascii")))))
+          {print("hola1")
           print(scape_key)
           print(pasted_value)
           print(name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1])
@@ -498,6 +493,18 @@ while(i<dim(game_list)[1])
             if(grepl("\\.",game_list[i,1]))
             {
               game_list[i,1]=paste("'",gsub("\\.","_",game_list[i,1]),"'",sep="")
+              pasted_value=game_list[i,1]
+            }else if(grepl(":",game_list[i,1]))
+            {
+              game_list[i,1]=paste("'",gsub(":","",game_list[i,1]),"'",sep="")
+              pasted_value=game_list[i,1]
+            }else if(!is.na(as.numeric(strsplit(game_list[i,1], "(?=[A-Za-z])(?<=[0-9])|(?=[0-9])(?<=[A-Za-z])", perl=TRUE)[[1]][2])))
+            {
+              game_list[i,1]=paste("'",paste(strsplit(game_list[i,1], "(?=[A-Za-z])(?<=[0-9])|(?=[0-9])(?<=[A-Za-z])", perl=TRUE)[[1]],collapse = " "),"'",sep="")
+              pasted_value=game_list[i,1]
+            }else if(length(strsplit(str_trim(gsub('([[:upper:]])', ' \\1', game_list[i,1]),side = "both")," ")[[1]])==2)
+            {print("hola2")
+              game_list[i,1]=paste("'",str_trim(gsub('([[:upper:]])', ' \\1', game_list[i,1]),side = "both"),"'",sep="")
               pasted_value=game_list[i,1]
             }else
             {
@@ -618,6 +625,34 @@ while(i<dim(game_list)[1])
           {
             game_list[i,1]=paste("'",gsub("Disney ","",game_list[i,1]),"'",sep="")
             pasted_value=game_list[i,1]
+          }else if(grepl("Single Player$",game_list[i,1])) #######################
+          {
+            game_list[i,1]=paste("'",gsub("Single Player","",game_list[i,1]),"'",sep="")
+            pasted_value=game_list[i,1]
+          }else if(grepl("Legacy Edition$",game_list[i,1])) #######################
+          {
+            game_list[i,1]=paste("'",gsub("Legacy Edition","",game_list[i,1]),"'",sep="")
+            pasted_value=game_list[i,1]
+          }else if(grepl("Redux$",game_list[i,1])) #######################
+          {
+            game_list[i,1]=paste("'",gsub("Redux","",game_list[i,1]),"'",sep="")
+            pasted_value=game_list[i,1]
+          }else if(grepl("Prelude$",game_list[i,1])) #######################
+          {
+            game_list[i,1]=paste("'",gsub("Prelude","",game_list[i,1]),"'",sep="")
+            pasted_value=game_list[i,1]
+          }else if(grepl("Multiplayer$",game_list[i,1])) #######################
+          {
+            game_list[i,1]=paste("'",gsub("Multiplayer","",game_list[i,1]),"'",sep="")
+            pasted_value=game_list[i,1]
+          }else if(grepl("SEASON UPDATE$",game_list[i,1])) #######################
+          {
+            game_list[i,1]=paste("'",gsub("SEASON UPDATE","",game_list[i,1]),"'",sep="")
+            pasted_value=game_list[i,1]
+          }else if(grepl("FINAL EDITION$",game_list[i,1])) #######################
+          {
+            game_list[i,1]=paste("'",gsub("FINAL EDITION","",game_list[i,1]),"'",sep="")
+            pasted_value=game_list[i,1]
           }else if(grepl("Enhanced Edition$",game_list[i,1])) #######################
           {
             game_list[i,1]=paste("'",gsub("Enhanced Edition","",game_list[i,1]),"'",sep="")
@@ -646,7 +681,12 @@ while(i<dim(game_list)[1])
           {
             game_list[i,1]=paste("'",gsub("The Original","",game_list[i,1]),"'",sep="")
             pasted_value=game_list[i,1]
-          }else if(grepl("[0-9]:",game_list[i,1])) #######################
+          }else if(grepl("World Arena$",game_list[i,1])) #######################
+          {
+            game_list[i,1]=paste("'",gsub("World Arena","",game_list[i,1]),"'",sep="")
+            pasted_value=game_list[i,1]
+          }
+          else if(grepl("[0-9]:",game_list[i,1])) #######################
           {
             game_list[i,1]=paste("'",gsub("[0-9]","",game_list[i,1]),"'",sep="")
             pasted_value=game_list[i,1]
@@ -673,6 +713,10 @@ while(i<dim(game_list)[1])
           }else if(grepl("\\.",game_list[i,1]))
           {
             game_list[i,1]=paste("'",gsub("\\.","_",game_list[i,1]),"'",sep="")
+            pasted_value=game_list[i,1]
+          }else if(grepl("\\)",game_list[i,1]))
+          {
+            game_list[i,1]=paste("'",gsub("[()]"," ",game_list[i,1]),"'",sep="")
             pasted_value=game_list[i,1]
           }else if(!is.na(as.roman(strsplit(game_list[i,1], " ")[[1]][length(strsplit(game_list[i,1], " ")[[1]])]))) #######################
           {
@@ -731,10 +775,6 @@ write.table(game_list,"Games_HowLong.txt",quote = F,row.names = F,col.names = F,
 game_list<-read.delim("Games_HowLong.txt",header=F)
 
 #### Más metadato
-
-### Pillar AppID
-
-### Más info: https://partner.steamgames.com/doc/webapi/ISteamApps#GetAppList
 
 binded_table<-NULL
 
