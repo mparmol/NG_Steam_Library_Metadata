@@ -27,6 +27,7 @@
 ### Pillar AppID
 ### Más info: https://partner.steamgames.com/doc/webapi/ISteamApps#GetAppList
 ### Cuándo se activaron los juegos: https://store.steampowered.com/account/licenses/
+#https://medium.com/@senchooo/scraping-all-game-in-steam-using-python-e9f0ad206add
 
 Por hacer:
 
@@ -273,3 +274,8 @@ La info de Completationist no la coge bien en la tabla, arreglar...
 - Especificar que "Sin registro" es porque tiene ficha pero no tiempo, o el tiempo es menos de 30 min. Los errores son NA, porque no lo encuentra o no tiene ficha.
 - C.O.D.E.R.E.D falla! arreglar...Arreglado
 - Bajar de aquí cuándo se activaron los juegos: https://store.steampowered.com/account/licenses/
+
+12-1-23
+
+- Pensar cómo descargar info de "licenses" y añadir la info de cuando se compró un juego.
+- El nombre se coge de la columna 7, que es con el segundo parseo del la tabla inicial áun (más fancy, con R y TM). Ver cómo aparece en Steam, si como la columna 7 o la 10. Mirar "Gauntlet". Quizá es más práctico dejar el 10, así te ahorras el 7 y sus prosibles problemas.
