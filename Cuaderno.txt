@@ -155,7 +155,7 @@ La info de Completationist no la coge bien en la tabla, arreglar...
 
 - Varias mejoras para rescatar NA, como números romanos, : sin espacios y que no se iba guardando de forma gradual la eliminación de caracteres o expresiones. Comparar este resultado con el de V8...
 - Aún queda hacer lo de SAW. Cuando sea una paralabra debe buscarse similitud 100%
--  Está mucho mejor el 9, mirar bien los non-exact y solventar problemas de juegos de arriba
+- Está mucho mejor el 9, mirar bien los non-exact y solventar problemas de juegos de arriba
 
 20-12-22
 
@@ -279,3 +279,14 @@ La info de Completationist no la coge bien en la tabla, arreglar...
 
 - Pensar cómo descargar info de "licenses" y añadir la info de cuando se compró un juego.
 - El nombre se coge de la columna 7, que es con el segundo parseo del la tabla inicial áun (más fancy, con R y TM). Ver cómo aparece en Steam, si como la columna 7 o la 10. Mirar "Gauntlet". Quizá es más práctico dejar el 10, así te ahorras el 7 y sus prosibles problemas.
+
+13-1-23
+
+- Repaso de tabla y viendo cuáles son los que están mal asignados
+- El porcentaje de asignaciones erroneas es de 29/3116 (dataset 11-1-23)
+- El número de NA (no hay ficha o no es capaz de encontrar el real) es de 275/3116 (dataset 11-1-23).
+- Por hacer ahora, apuntado de otros días:
+  · Descargar info de "licenses"
+  · Modificar el script. El bloque donde se eliminan partes del nombre puede ser una lista que se va recorriendo. Lo mismo con el bloque donde se pone "Exact"-"No Exact", dejar sólo uno.
+  · Seguro que no se puede generar el 7 desde el 1? - stringi::stri_trans_general(x, "Hangul-Latin") 
+  · Añadir info de los juego que están logreados al 100%: "https://steamcommunity.com/id/marko_pakete/games/?tab=perfect"
