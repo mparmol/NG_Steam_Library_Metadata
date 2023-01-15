@@ -289,4 +289,15 @@ La info de Completationist no la coge bien en la tabla, arreglar...
   · Descargar info de "licenses"
   · Modificar el script. El bloque donde se eliminan partes del nombre puede ser una lista que se va recorriendo. Lo mismo con el bloque donde se pone "Exact"-"No Exact", dejar sólo uno.
   · Seguro que no se puede generar el 7 desde el 1? - stringi::stri_trans_general(x, "Hangul-Latin") 
-  · Añadir info de los juego que están logreados al 100%: "https://steamcommunity.com/id/marko_pakete/games/?tab=perfect"
+  X · Añadir info de los juego que están logreados al 100%: "https://steamcommunity.com/id/marko_pakete/games/?tab=perfect"
+
+14-1-23
+
+- Ver si hay diferencias en 0 en east new world y el que me dijo Andres.
+- Me falta logro de Demo de Resident?
+- Se ve puntuacion usuarios diectamente?
+- Poner también dato de tiempo jugado.
+
+15-1-23
+
+- Puesto tiempo de juego.
