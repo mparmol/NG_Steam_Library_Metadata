@@ -884,17 +884,17 @@ for(i in 2:(str_count(h,'"name"')[1]+1))
 
 #########################################################################################Played time
 
-info_Steam<-getURL("https://steamcommunity.com/id/marko_pakete/games/?tab=all")
-file_process<-as.data.frame(info_Steam)
+#info_Steam<-getURL("https://steamcommunity.com/id/marko_pakete/games/?tab=all")
+#file_process<-as.data.frame(info_Steam)
 
-h<-file_process[grep("rgGames",file_process[,1]),]
+#h<-file_process[grep("rgGames",file_process[,1]),]
 
-res_games<-data.frame(matrix(nrow=str_count(h,'"name"')[1]))
+#res_games<-data.frame(matrix(nrow=str_count(h,'"name"')[1]))
 
-for(i in 2:(str_count(h,'"name"')[1]+1))
-{
-  game_list[match(substr(strsplit(sapply(strsplit(h[1], '"appid"'), "[[", i),",\\\"")[[1]][1],2,nchar(strsplit(sapply(strsplit(h[1], '"appid"'), "[[", i),",\\\"")[[1]][1])),game_list[,8]),17]<-substr(strsplit(sapply(strsplit(h[1], '"hours_forever"'), "[[", i),",\\\"")[[1]][1],3,nchar(strsplit(sapply(strsplit(h[1], '"hours_forever"'), "[[", i),",\\\"")[[1]][1])-1)
-}
+#for(i in 2:(str_count(h,'"name"')[1]+1))
+#{
+#  game_list[match(substr(strsplit(sapply(strsplit(h[1], '"appid"'), "[[", i),",\\\"")[[1]][1],2,nchar(strsplit(sapply(strsplit(h[1], '"appid"'), "[[", i),",\\\"")[[1]][1])),game_list[,8]),17]<-substr(strsplit(sapply(strsplit(h[1], '"hours_forever"'), "[[", i),",\\\"")[[1]][1],3,nchar(strsplit(sapply(strsplit(h[1], '"hours_forever"'), "[[", i),",\\\"")[[1]][1])-1)
+#}
 
 
 #####
