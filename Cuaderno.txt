@@ -300,4 +300,11 @@ La info de Completationist no la coge bien en la tabla, arreglar...
 
 15-1-23
 
-- Puesto tiempo de juego.
+- Puesto tiempo de juego...aunque no va si no se ha jugado nunca al juego, arreglar.
+- Intentar arreglar el fallo con SteamSpy. Correr este código para ver cómo se comporta:
+
+while(o<10000){
+meta_juego<-tryCatch(error = function(cnd) paste("Ha petado en ",o,sep=""),getURL(paste("https://steamspy.com/api.php?request=appdetails&appid=",game_list[i,8],sep=""))) 
+o=o+1
+print(o)
+}

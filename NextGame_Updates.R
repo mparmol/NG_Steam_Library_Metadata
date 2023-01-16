@@ -853,6 +853,10 @@ if(!file.exists("Games_HowLong_AppID_metadato.txt"))
       game_list[i,13]<-strsplit(strsplit(meta_juego,"negative\\\":")[[1]][2],",\\\"")[[1]][1]
       game_list[i,14]<-strsplit(strsplit(meta_juego,"developer\\\":\\\"")[[1]][2],"\\\",\\\"")[[1]][1]
       game_list[i,15]<-strsplit(strsplit(meta_juego,"publisher\\\":\\\"")[[1]][2],"\\\",\\\"")[[1]][1]
+      if(!grepl('tags\\\":\\[\\]',meta_juego))
+      {
+        game_list[i,16]<-paste(sapply(strsplit(strsplit(strsplit(meta_juego,"tags\\\":\\{")[[1]][2], ',')[[1]],'\\\"'),"[[",2),collapse=", ")
+      }
       Sys.sleep(1)
     }
 
@@ -870,31 +874,26 @@ file_process<-as.data.frame(info_Steam)
 
 h<-file_process[grep("rgGames",file_process[,1]),]
 
-res_games<-data.frame(matrix(nrow=str_count(h,'"name"')[1]))
-
-
 for(i in 2:(str_count(h,'"name"')[1]+1))
 {
   if(!is.na(match(substr(strsplit(sapply(strsplit(h[1], '"appid"'), "[[", i),",\\\"")[[1]][1],2,nchar(strsplit(sapply(strsplit(h[1], '"appid"'), "[[", i),",\\\"")[[1]][1])),game_list[,8])))
   {
-    game_list[match(substr(strsplit(sapply(strsplit(h[1], '"appid"'), "[[", i),",\\\"")[[1]][1],2,nchar(strsplit(sapply(strsplit(h[1], '"appid"'), "[[", i),",\\\"")[[1]][1])),game_list[,8]),16]<-"X"
+    game_list[match(substr(strsplit(sapply(strsplit(h[1], '"appid"'), "[[", i),",\\\"")[[1]][1],2,nchar(strsplit(sapply(strsplit(h[1], '"appid"'), "[[", i),",\\\"")[[1]][1])),game_list[,8]),17]<-"X"
   }
 }
 
 
 #########################################################################################Played time
 
-#info_Steam<-getURL("https://steamcommunity.com/id/marko_pakete/games/?tab=all")
-#file_process<-as.data.frame(info_Steam)
+info_Steam<-getURL("https://steamcommunity.com/id/marko_pakete/games/?tab=all")
+file_process<-as.data.frame(info_Steam)
 
-#h<-file_process[grep("rgGames",file_process[,1]),]
+h<-file_process[grep("rgGames",file_process[,1]),]
 
-#res_games<-data.frame(matrix(nrow=str_count(h,'"name"')[1]))
-
-#for(i in 2:(str_count(h,'"name"')[1]+1))
-#{
-#  game_list[match(substr(strsplit(sapply(strsplit(h[1], '"appid"'), "[[", i),",\\\"")[[1]][1],2,nchar(strsplit(sapply(strsplit(h[1], '"appid"'), "[[", i),",\\\"")[[1]][1])),game_list[,8]),17]<-substr(strsplit(sapply(strsplit(h[1], '"hours_forever"'), "[[", i),",\\\"")[[1]][1],3,nchar(strsplit(sapply(strsplit(h[1], '"hours_forever"'), "[[", i),",\\\"")[[1]][1])-1)
-#}
+for(i in 2:(str_count(h,'"hours_forever"')[1]+1))
+{
+  game_list[match(substr(strsplit(sapply(strsplit(h[1], '"appid"'), "[[", i),",\\\"")[[1]][1],2,nchar(strsplit(sapply(strsplit(h[1], '"appid"'), "[[", i),",\\\"")[[1]][1])),game_list[,8]),18]<-substr(strsplit(sapply(strsplit(h[1], '"hours_forever"'), "[[", i),",\\\"")[[1]][1],3,nchar(strsplit(sapply(strsplit(h[1], '"hours_forever"'), "[[", i),",\\\"")[[1]][1])-1)
+}
 
 
 #####
@@ -902,9 +901,9 @@ for(i in 2:(str_count(h,'"name"')[1]+1))
 game_list$rating<-(game_list[,12]/(game_list[,12]+game_list[,13]))*100
 game_list$tot_votes<-(game_list[,12]+game_list[,13])
 
-game_list_final_output<-game_list[,c(7,8,11,19,18,17,3,4,16,14,15)]
+game_list_final_output<-game_list[,c(7,8,11,16,20,19,18,3,4,17,14,15)]
 
-colnames(game_list_final_output)<-c("Name","AppID","Genre","Votes_total","Positive_rating","Played_time","Time_to_finish","Time_to_complete","100% Completed","Developer","Publisher")
+colnames(game_list_final_output)<-c("Name","AppID","Genre","Tags","Votes_total","Positive_rating","Played_time","Time_to_finish","Time_to_complete","100% Completed","Developer","Publisher")
 
 write.table(game_list_final_output,"Steam_Library_Metadata.txt",quote = F,row.names = F,sep = "\t")
 
