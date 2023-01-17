@@ -28,6 +28,7 @@
 ### Más info: https://partner.steamgames.com/doc/webapi/ISteamApps#GetAppList
 ### Cuándo se activaron los juegos: https://store.steampowered.com/account/licenses/
 #https://medium.com/@senchooo/scraping-all-game-in-steam-using-python-e9f0ad206add
+#https://github.com/woctezuma/steamspypi/issues/10
 
 Por hacer:
 
@@ -301,6 +302,9 @@ La info de Completationist no la coge bien en la tabla, arreglar...
 15-1-23
 
 - Puesto tiempo de juego...aunque no va si no se ha jugado nunca al juego, arreglar.
+
+16-1-23
+
 - Intentar arreglar el fallo con SteamSpy. Correr este código para ver cómo se comporta:
 
 while(o<10000){
@@ -308,3 +312,8 @@ meta_juego<-tryCatch(error = function(cnd) paste("Ha petado en ",o,sep=""),getUR
 o=o+1
 print(o)
 }
+
+17-1-23
+
+- Cuidado con esto, antes de publicarlo: https://github.com/woctezuma/steamspypi/issues/10
+- Añadir información de recursos mínimos
