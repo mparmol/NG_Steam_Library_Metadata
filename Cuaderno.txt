@@ -29,6 +29,9 @@
 ### Cuándo se activaron los juegos: https://store.steampowered.com/account/licenses/
 #https://medium.com/@senchooo/scraping-all-game-in-steam-using-python-e9f0ad206add
 #https://github.com/woctezuma/steamspypi/issues/10
+#https://developer.valvesoftware.com/wiki/Steam_Web_API
+#https://steamcommunity.com/dev/apikey
+#https://partner.steamgames.com/doc/webapi_overview?l=spanish#1
 
 Por hacer:
 
@@ -317,3 +320,10 @@ print(o)
 
 - Cuidado con esto, antes de publicarlo: https://github.com/woctezuma/steamspypi/issues/10
 - Añadir información de recursos mínimos
+
+18-1-23
+
+- Desde esta línea: "https://store.steampowered.com/api/appdetails/?cc=EU&appids=" se puede sacar el release date y requisitos mínimos!!
+- Vamos metiendo datos de release_date y pc_requirements. Aún faltan removed_games y datos de cuándo se compraron
+- Encontrada forma de meter los removed, bajamos info desde steam-tracker. Hay que parsearla ahora.
+- Hay que cambiar los apodos a ids de usuario por defecto, si no este último punto buscando removed no funciona
