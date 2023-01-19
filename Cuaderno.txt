@@ -337,5 +337,5 @@ print(o)
 
 - Añadido el dato de Removed.
 - Hay que correr de nuevo nuestros datos, funcionará bien el tryCatach? comparar con el archivo anterior
-- Los ids a buscar no siempre son los números. Si tiene apodo usar el apodo para descargar la lista de juegos y los que tienen 100% de logros
+- Los ids a buscar (info de usuario) no siempre son los números. Si tiene apodo usar el apodo para descargar la lista de juegos y los que tienen 100% de logros
 - Pasamos del dato de licences...dejamos el script así y metemos esa tabla a mano, para interés personal

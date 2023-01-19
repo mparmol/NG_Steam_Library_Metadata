@@ -73,12 +73,12 @@ cleanFun2 <- function(htmlString) {
   return(gsub("<.*?>", ";?;", htmlString))
 }
 
-id_search="76561198012006378"
-steam_link=paste("https://steamcommunity.com/profiles/",id_search,"/games/?tab=all",sep="")
-#steam_link="https://steamcommunity.com/id/marko_pakete/games/?tab=all"
-steam_link_achiv=paste("https://steamcommunity.com/profiles/",id_search,"/games/?tab=perfect",sep="")
-#steam_link_achiv="https://steamcommunity.com/id/marko_pakete/games/?tab=perfect"
-info_Steam<-paste("https://steam-tracker.com/scan/",id_search,sep="")
+id_search="76561198118578417"
+#steam_link=paste("https://steamcommunity.com/profiles/",id_search,"/games/?tab=all",sep="")
+steam_link="https://steamcommunity.com/id/marko_pakete/games/?tab=all"
+#steam_link_achiv=paste("https://steamcommunity.com/profiles/",id_search,"/games/?tab=perfect",sep="")
+steam_link_achiv="https://steamcommunity.com/id/marko_pakete/games/?tab=perfect"
+info_Steam_removed<-paste("https://steam-tracker.com/scan/",id_search,sep="")
 
 
 if(!file.exists("Games_HowLong.txt"))
@@ -920,7 +920,8 @@ for(i in 1:dim(game_list)[1])
 {
   if(!is.na(game_list[i,8]))
   {
-    meta_juego<-tryCatch(error = function(cnd) paste("Ha petado en ",o,sep=""),getURL(paste("https://store.steampowered.com/api/appdetails/?cc=EU&appids=",game_list[i,8],sep="")))
+    #meta_juego<-tryCatch(error = function(cnd) paste("Ha petado en ",o,sep=""),getURL(paste("https://store.steampowered.com/api/appdetails/?cc=EU&appids=",game_list[i,8],sep="")))
+    meta_juego<-getURL(paste("https://store.steampowered.com/api/appdetails/?cc=EU&appids=",game_list[i,8],sep=""))
     
     if(grepl("\"success\"\\:true",meta_juego))
     {
@@ -928,8 +929,8 @@ for(i in 1:dim(game_list)[1])
 
       app_id_gen<-strsplit(strsplit(meta_juego,"\":")[[1]][1],"\"")[[1]][2]
       game_list[match(app_id_gen,game_list[,8]),19]<-format(ymd(paste(strsplit(strsplit(strsplit(strsplit(meta_juego,"release_date")[[1]][2],"\\\"}")[[1]][1],"\\:\\\"")[[1]][2]," ")[[1]][3],strsplit(strsplit(strsplit(strsplit(meta_juego,"release_date")[[1]][2],"\\\"}")[[1]][1],"\\:\\\"")[[1]][2]," ")[[1]][2],strsplit(strsplit(strsplit(strsplit(meta_juego,"release_date")[[1]][2],"\\\"}")[[1]][1],"\\:\\\"")[[1]][2]," ")[[1]][1],sep=" ")), "%d-%b-%Y")
-      game_list[match(app_id_gen,game_list[,8]),20]<-gsub("Minimum:","",strsplit(gsub("\",\"recommended\":\""," ",cleanFun(strsplit(strsplit(meta_juego,"pc_requirements\\\"\\:\\{\\\"minimum\\\":\\\"")[[1]][2],"\"},\\\"mac_requirements")[[1]][1])),"Recommended:")[[1]][1])
-      game_list[match(app_id_gen,game_list[,8]),21]<-strsplit(gsub("\",\"recommended\":\""," ",cleanFun(strsplit(strsplit(meta_juego,"pc_requirements\\\"\\:\\{\\\"minimum\\\":\\\"")[[1]][2],"\"},\\\"mac_requirements")[[1]][1])),"Recommended:")[[1]][2]
+      game_list[match(app_id_gen,game_list[,8]),20]<-gsub("[\t]+"," ",gsub("Minimum:","",strsplit(gsub("\",\"recommended\":\""," ",cleanFun(strsplit(strsplit(meta_juego,"pc_requirements\\\"\\:\\{\\\"minimum\\\":\\\"")[[1]][2],"\"},\\\"mac_requirements")[[1]][1])),"Recommended:")[[1]][1]))
+      game_list[match(app_id_gen,game_list[,8]),21]<-gsub("[\t]+"," ",strsplit(gsub("\",\"recommended\":\""," ",cleanFun(strsplit(strsplit(meta_juego,"pc_requirements\\\"\\:\\{\\\"minimum\\\":\\\"")[[1]][2],"\"},\\\"mac_requirements")[[1]][1])),"Recommended:")[[1]][2])
     }
 
     Sys.sleep(1.5)
@@ -942,9 +943,9 @@ for(i in 1:dim(game_list)[1])
 
 ######################################################################################Removed games list
 
-system(paste("rm -rf ",info_Steam,sep=""))
-system(paste("wget ",info_Steam,sep=""))
-file_process<-gsub("&amp;","&",gsub("&#039;","'",cleanFun2(read_file(info_Steam))))
+#system(paste("rm -rf ",id_search,sep=""))
+#system(paste("wget ",info_Steam_removed,sep=""))
+file_process<-gsub("&quot;","\\\\",gsub("&amp;","&",gsub("&#039;","'",cleanFun2(read_file(info_Steam_removed)))))
 
 for(i in 2:(str_count(file_process,'\\;\\?\\;')[1]+1))
 {
