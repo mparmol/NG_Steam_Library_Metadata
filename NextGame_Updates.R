@@ -8,6 +8,9 @@ require("stringi")
 require("rvest")
 require("RCurl")
 require("readr")
+library("lubridate")
+
+Sys.setlocale("LC_TIME", "C")
 
 isEmpty <- function(x) { #This function checks if a data frame is empty or not
   return(length(x)==0)
@@ -66,13 +69,17 @@ cleanFun <- function(htmlString) {
   return(gsub("<.*?>", "", htmlString))
 }
 
-#cleanFun2 <- function(htmlString) {
-#  return(gsub("<.*?>", ";?;", htmlString))
-#}
+cleanFun2 <- function(htmlString) {
+  return(gsub("<.*?>", ";?;", htmlString))
+}
 
-id_search="76561198124010932"
+id_search="76561198012006378"
 steam_link=paste("https://steamcommunity.com/profiles/",id_search,"/games/?tab=all",sep="")
+#steam_link="https://steamcommunity.com/id/marko_pakete/games/?tab=all"
 steam_link_achiv=paste("https://steamcommunity.com/profiles/",id_search,"/games/?tab=perfect",sep="")
+#steam_link_achiv="https://steamcommunity.com/id/marko_pakete/games/?tab=perfect"
+info_Steam<-paste("https://steam-tracker.com/scan/",id_search,sep="")
+
 
 if(!file.exists("Games_HowLong.txt"))
 {
@@ -913,14 +920,14 @@ for(i in 1:dim(game_list)[1])
 {
   if(!is.na(game_list[i,8]))
   {
-    meta_juego<-getURL(paste("https://store.steampowered.com/api/appdetails/?cc=EU&appids=",game_list[i,8],sep=""))
+    meta_juego<-tryCatch(error = function(cnd) paste("Ha petado en ",o,sep=""),getURL(paste("https://store.steampowered.com/api/appdetails/?cc=EU&appids=",game_list[i,8],sep="")))
     
     if(grepl("\"success\"\\:true",meta_juego))
     {
       #app_id_gen<-strsplit(strsplit(meta_juego,"steam_appid\\\"\\:")[[1]][2],"\\,")[[1]][1]
 
       app_id_gen<-strsplit(strsplit(meta_juego,"\":")[[1]][1],"\"")[[1]][2]
-      game_list[match(app_id_gen,game_list[,8]),19]<-strsplit(strsplit(strsplit(meta_juego,"release_date")[[1]][2],"\\\"}")[[1]][1],"\\:\\\"")[[1]][2]
+      game_list[match(app_id_gen,game_list[,8]),19]<-format(ymd(paste(strsplit(strsplit(strsplit(strsplit(meta_juego,"release_date")[[1]][2],"\\\"}")[[1]][1],"\\:\\\"")[[1]][2]," ")[[1]][3],strsplit(strsplit(strsplit(strsplit(meta_juego,"release_date")[[1]][2],"\\\"}")[[1]][1],"\\:\\\"")[[1]][2]," ")[[1]][2],strsplit(strsplit(strsplit(strsplit(meta_juego,"release_date")[[1]][2],"\\\"}")[[1]][1],"\\:\\\"")[[1]][2]," ")[[1]][1],sep=" ")), "%d-%b-%Y")
       game_list[match(app_id_gen,game_list[,8]),20]<-gsub("Minimum:","",strsplit(gsub("\",\"recommended\":\""," ",cleanFun(strsplit(strsplit(meta_juego,"pc_requirements\\\"\\:\\{\\\"minimum\\\":\\\"")[[1]][2],"\"},\\\"mac_requirements")[[1]][1])),"Recommended:")[[1]][1])
       game_list[match(app_id_gen,game_list[,8]),21]<-strsplit(gsub("\",\"recommended\":\""," ",cleanFun(strsplit(strsplit(meta_juego,"pc_requirements\\\"\\:\\{\\\"minimum\\\":\\\"")[[1]][2],"\"},\\\"mac_requirements")[[1]][1])),"Recommended:")[[1]][2]
     }
@@ -935,19 +942,26 @@ for(i in 1:dim(game_list)[1])
 
 ######################################################################################Removed games list
 
-info_Steam<-getURL("https://steam-tracker.com/scan/76561198118578417")
+system(paste("rm -rf ",info_Steam,sep=""))
+system(paste("wget ",info_Steam,sep=""))
+file_process<-gsub("&amp;","&",gsub("&#039;","'",cleanFun2(read_file(info_Steam))))
 
-#stri_trans_general(cleanFun2(info_Steam), "latin-ascii")
-
+for(i in 2:(str_count(file_process,'\\;\\?\\;')[1]+1))
+{
+  if(!is.na(match(strsplit(file_process, '\\;\\?\\;')[[1]][i],game_list[,7])))
+  {
+    game_list[match(strsplit(file_process, '\\;\\?\\;')[[1]][i],game_list[,7]),22]<-"X"
+  }
+}
 
 #####
 
-game_list$rating<-(game_list[,12]/(game_list[,12]+game_list[,13]))*100
+game_list$rating<-round((game_list[,12]/(game_list[,12]+game_list[,13]))*100,digits=1)
 game_list$tot_votes<-(game_list[,12]+game_list[,13])
 
-game_list_final_output<-game_list[,c(7,8,11,16,23,22,18,3,4,17,14,15,19,20,21)]
+game_list_final_output<-game_list[,c(7,8,11,16,24,23,18,3,4,17,14,15,19,22,20,21)]
 
-colnames(game_list_final_output)<-c("Name","AppID","Genre","Tags","Votes_total","Positive_rating","Played_time","Time_to_finish","Time_to_complete","100% Completed","Developer","Publisher","Release date","Minimum requirements","Recommended requirements")
+colnames(game_list_final_output)<-c("Name","AppID","Genre","Tags","Votes_total","Positive_rating","Played_time (h)","Time_to_finish (h)","Time_to_complete (h)","100% Completed","Developer","Publisher","Release date","Removed game","Minimum requirements","Recommended requirements")
 
 write.table(game_list_final_output,"Steam_Library_Metadata.txt",quote = F,row.names = F,sep = "\t")
 

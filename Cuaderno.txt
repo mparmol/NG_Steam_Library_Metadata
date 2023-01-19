@@ -7,10 +7,13 @@
 ### Cuentas:
 
   # André: https://steamcommunity.com/profiles/76561198012006378/games/?tab=all
+  # Jolas: https://steamcommunity.com/profiles/76561197987441240/games/?tab=all
   # Jolas: https://steamcommunity.com/id/guayabazo/games/?tab=all
   # Álvaro: https://steamcommunity.com/profiles/76561197992225029/games/?tab=all
   # Jimmy: https://steamcommunity.com/profiles/76561198124010932/games/?tab=all
+  # Álvaro: https://steamcommunity.com/profiles/76561198114943073/games/?tab=all
   # Álvaro: https://steamcommunity.com/id/DuckSaucer77/games/?tab=all
+  # Mío: https://steamcommunity.com/profiles/76561198118578417/games/?tab=all
   # Mío: https://steamcommunity.com/id/marko_pakete/games/?tab=all
 
 ### Paginas interés:
@@ -299,7 +302,7 @@ La info de Completationist no la coge bien en la tabla, arreglar...
 
 - Ver si hay diferencias en 0 en east new world y el que me dijo Andres.
 - Me falta logro de Demo de Resident?
-- Se ve puntuacion usuarios diectamente?
+- Se ve puntuacion usuarios directamente?
 - Poner también dato de tiempo jugado.
 
 15-1-23
@@ -329,3 +332,10 @@ print(o)
 - Encontrada forma de meter los removed, bajamos info desde steam-tracker. Hay que parsearla ahora.
 - Hay que cambiar los apodos a ids de usuario por defecto, si no este último punto buscando removed no funciona
 - Qué info se ve de BlackSouls
+
+19-1-23
+
+- Añadido el dato de Removed.
+- Hay que correr de nuevo nuestros datos, funcionará bien el tryCatach? comparar con el archivo anterior
+- Los ids a buscar no siempre son los números. Si tiene apodo usar el apodo para descargar la lista de juegos y los que tienen 100% de logros
+- Pasamos del dato de licences...dejamos el script así y metemos esa tabla a mano, para interés personal
