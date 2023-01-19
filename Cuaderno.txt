@@ -325,5 +325,7 @@ print(o)
 
 - Desde esta línea: "https://store.steampowered.com/api/appdetails/?cc=EU&appids=" se puede sacar el release date y requisitos mínimos!!
 - Vamos metiendo datos de release_date y pc_requirements. Aún faltan removed_games y datos de cuándo se compraron
+- Arreglago los ids de release_date y pc_requirements. Ver si ahora va bien.
 - Encontrada forma de meter los removed, bajamos info desde steam-tracker. Hay que parsearla ahora.
 - Hay que cambiar los apodos a ids de usuario por defecto, si no este último punto buscando removed no funciona
+- Qué info se ve de BlackSouls

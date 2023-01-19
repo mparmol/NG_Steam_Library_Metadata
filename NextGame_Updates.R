@@ -70,6 +70,9 @@ cleanFun <- function(htmlString) {
 #  return(gsub("<.*?>", ";?;", htmlString))
 #}
 
+id_search="76561198124010932"
+steam_link=paste("https://steamcommunity.com/profiles/",id_search,"/games/?tab=all",sep="")
+steam_link_achiv=paste("https://steamcommunity.com/profiles/",id_search,"/games/?tab=perfect",sep="")
 
 if(!file.exists("Games_HowLong.txt"))
 {
@@ -77,7 +80,7 @@ if(!file.exists("Games_HowLong.txt"))
   {
     ####### Nombre de la tabla, todos los caracteres
 
-    info_Steam<-getURL("https://steamcommunity.com/id/marko_pakete/games/?tab=all")
+    info_Steam<-getURL(steam_link)
     file_process<-as.data.frame(info_Steam)
 
     h<-file_process[grep("rgGames",file_process[,1]),]
@@ -96,7 +99,7 @@ if(!file.exists("Games_HowLong.txt"))
     ####### Para buscar en howlong to beat
     
     system("rm -rf index.html?tab=all")
-    system("wget https://steamcommunity.com/id/marko_pakete/games/?tab=all")
+    system(paste("wget ",steam_link,sep=""))
 
     file_process<-as.data.frame(fread("index.html?tab=all",fill = T))
     
@@ -878,7 +881,7 @@ if(!file.exists("Games_HowLong_AppID_metadato.txt"))
 game_list<-read.delim("Games_HowLong_AppID_metadato.txt",header=F)
 
 
-info_Steam<-getURL("https://steamcommunity.com/id/marko_pakete/games/?tab=perfect")
+info_Steam<-getURL(steam_link_achiv)
 file_process<-as.data.frame(info_Steam)
 
 h<-file_process[grep("rgGames",file_process[,1]),]
@@ -894,7 +897,7 @@ for(i in 2:(str_count(h,'"name"')[1]+1))
 
 #########################################################################################Played time
 
-info_Steam<-getURL("https://steamcommunity.com/id/marko_pakete/games/?tab=all")
+info_Steam<-getURL(steam_link)
 file_process<-as.data.frame(info_Steam)
 
 h<-file_process[grep("rgGames",file_process[,1]),]
@@ -914,8 +917,9 @@ for(i in 1:dim(game_list)[1])
     
     if(grepl("\"success\"\\:true",meta_juego))
     {
-      app_id_gen<-strsplit(strsplit(meta_juego,"steam_appid\\\"\\:")[[1]][2],"\\,")[[1]][1]
+      #app_id_gen<-strsplit(strsplit(meta_juego,"steam_appid\\\"\\:")[[1]][2],"\\,")[[1]][1]
 
+      app_id_gen<-strsplit(strsplit(meta_juego,"\":")[[1]][1],"\"")[[1]][2]
       game_list[match(app_id_gen,game_list[,8]),19]<-strsplit(strsplit(strsplit(meta_juego,"release_date")[[1]][2],"\\\"}")[[1]][1],"\\:\\\"")[[1]][2]
       game_list[match(app_id_gen,game_list[,8]),20]<-gsub("Minimum:","",strsplit(gsub("\",\"recommended\":\""," ",cleanFun(strsplit(strsplit(meta_juego,"pc_requirements\\\"\\:\\{\\\"minimum\\\":\\\"")[[1]][2],"\"},\\\"mac_requirements")[[1]][1])),"Recommended:")[[1]][1])
       game_list[match(app_id_gen,game_list[,8]),21]<-strsplit(gsub("\",\"recommended\":\""," ",cleanFun(strsplit(strsplit(meta_juego,"pc_requirements\\\"\\:\\{\\\"minimum\\\":\\\"")[[1]][2],"\"},\\\"mac_requirements")[[1]][1])),"Recommended:")[[1]][2]
