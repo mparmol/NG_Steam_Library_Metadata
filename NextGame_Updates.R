@@ -893,13 +893,20 @@ file_process<-as.data.frame(info_Steam)
 
 h<-file_process[grep("rgGames",file_process[,1]),]
 
-for(i in 2:(str_count(h,'"name"')[1]+1))
+if(str_count(h,'"name"')[1]>0)
 {
-  if(!is.na(match(substr(strsplit(sapply(strsplit(h[1], '"appid"'), "[[", i),",\\\"")[[1]][1],2,nchar(strsplit(sapply(strsplit(h[1], '"appid"'), "[[", i),",\\\"")[[1]][1])),game_list[,8])))
+  for(i in 2:(str_count(h,'"name"')[1]+1))
   {
-    game_list[match(substr(strsplit(sapply(strsplit(h[1], '"appid"'), "[[", i),",\\\"")[[1]][1],2,nchar(strsplit(sapply(strsplit(h[1], '"appid"'), "[[", i),",\\\"")[[1]][1])),game_list[,8]),17]<-"X"
+    if(!is.na(match(substr(strsplit(sapply(strsplit(h[1], '"appid"'), "[[", i),",\\\"")[[1]][1],2,nchar(strsplit(sapply(strsplit(h[1], '"appid"'), "[[", i),",\\\"")[[1]][1])),game_list[,8])))
+    {
+      game_list[match(substr(strsplit(sapply(strsplit(h[1], '"appid"'), "[[", i),",\\\"")[[1]][1],2,nchar(strsplit(sapply(strsplit(h[1], '"appid"'), "[[", i),",\\\"")[[1]][1])),game_list[,8]),17]<-"X"
+    }
   }
+}else 
+{
+  game_list[,17]<-NA
 }
+
 
 
 #########################################################################################Played time
