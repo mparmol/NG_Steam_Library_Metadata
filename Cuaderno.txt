@@ -341,3 +341,14 @@ print(o)
 - Hay que correr de nuevo nuestros datos, funcionará bien el tryCatach? comparar con el archivo anterior
 - Los ids a buscar (info de usuario) no siempre son los números. Si tiene apodo usar el apodo para descargar la lista de juegos y los que tienen 100% de logros
 - Pasamos del dato de licences...dejamos el script así y metemos esa tabla a mano, para interés personal
+
+20-1-23
+
+- Tengo mi tabla con última versión, revisar: Tener todos los removed, tener todos los completos. Quitar los \t y demás de requisitos
+
+22-1-23
+
+- La tabla está perfecta, todos los removed y los completos.
+- Ahora sí debería quitarse bien los \t.
+- Limpiar todo el código...
+- Que se de el nombre de usuario y se busque el id automáticamente. Lo hacemos con la página "https://www.steamidfinder.com/lookup/gonso0/". Hecho.
