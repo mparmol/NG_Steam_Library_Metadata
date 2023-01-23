@@ -73,7 +73,7 @@ cleanFun2 <- function(htmlString) {
   return(gsub("<.*?>", ";?;", htmlString))
 }
 
-id_search="gonso0"
+id_search="76561198012006378"
 
 ##### get full user data
 
@@ -90,8 +90,8 @@ if(grepl("customURL",user_info))
   steam_link_achiv=paste("https://steamcommunity.com/id/",strsplit(strsplit(strsplit(user_info,"customURL")[[1]][2],"\" rel=")[[1]][1],"/")[[1]][length(strsplit(strsplit(strsplit(user_info,"customURL")[[1]][2],"\" rel=")[[1]][1],"/")[[1]])],"/games/?tab=perfect",sep="")
 }else
 {
-  steam_link=paste("https://steamcommunity.com/profiles/",strsplit(strsplit(strsplit(user_info,"customURL")[[1]][2],"\" rel=")[[1]][1],"/")[[1]][length(strsplit(strsplit(strsplit(user_info,"customURL")[[1]][2],"\" rel=")[[1]][1],"/")[[1]])],"/games/?tab=all",sep="")
-  steam_link_achiv=paste("https://steamcommunity.com/profiles/",strsplit(strsplit(strsplit(user_info,"customURL")[[1]][2],"\" rel=")[[1]][1],"/")[[1]][length(strsplit(strsplit(strsplit(user_info,"customURL")[[1]][2],"\" rel=")[[1]][1],"/")[[1]])],"/games/?tab=perfect",sep="")
+  steam_link=paste("https://steamcommunity.com/profiles/",strsplit(strsplit(strsplit(user_info,"profile<")[[1]][2],"\" rel=\"noopener")[[1]][1],"/")[[1]][length(strsplit(strsplit(strsplit(user_info,"profile<")[[1]][2],"\" rel=\"noopener")[[1]][1],"/")[[1]])],"/games/?tab=all",sep="")
+  steam_link_achiv=paste("https://steamcommunity.com/profiles/",strsplit(strsplit(strsplit(user_info,"profile<")[[1]][2],"\" rel=\"noopener")[[1]][1],"/")[[1]][length(strsplit(strsplit(strsplit(user_info,"profile<")[[1]][2],"\" rel=\"noopener")[[1]][1],"/")[[1]])],"/games/?tab=perfect",sep="")
 }
 
 info_Steam_removed<-paste("https://steam-tracker.com/scan/",strsplit(strsplit(strsplit(user_info,"profile<")[[1]][2],"\" rel=\"noopener")[[1]][1],"/")[[1]][length(strsplit(strsplit(strsplit(user_info,"profile<")[[1]][2],"\" rel=\"noopener")[[1]][1],"/")[[1]])],sep="")
