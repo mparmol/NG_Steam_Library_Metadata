@@ -330,7 +330,7 @@ print(o)
 
 - Desde esta línea: "https://store.steampowered.com/api/appdetails/?cc=EU&appids=" se puede sacar el release date y requisitos mínimos!!
 - Vamos metiendo datos de release_date y pc_requirements. Aún faltan removed_games y datos de cuándo se compraron
-- Arreglago los ids de release_date y pc_requirements. Ver si ahora va bien.
+- Arreglado los ids de release_date y pc_requirements. Ver si ahora va bien.
 - Encontrada forma de meter los removed, bajamos info desde steam-tracker. Hay que parsearla ahora.
 - Hay que cambiar los apodos a ids de usuario por defecto, si no este último punto buscando removed no funciona
 - Qué info se ve de BlackSouls
@@ -356,3 +356,7 @@ print(o)
 23-1-23
 
 - Añadida una ayuda y el usuario como argumento obligatorio, ya sea apodo o numérico
+- No voy a poner "más bonito" el código. Esta será la versión a publicar.
+- Escribir el README bien.
+- Ver: https://github.com/woctezuma/steamspypi/issues/10
+- Los print por pantalla que sean una barra de porcentaje que se llene conforme avanza por las diferentes bases de datos. Puede servir "txtProgressBar" (https://r-coder.com/progress-bar-r/)

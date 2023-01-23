@@ -26,9 +26,10 @@ opt = parse_args(opt_parser);
 if (is.null(opt$input)){
   print_help(opt_parser)
   stop("At least one argument must be supplied (Steam user name or ID).", call.=FALSE)
+}else {
+   id_search=opt$input
 }
 
-id_search=opt
 
 Sys.setlocale("LC_TIME", "C") # Setting database language to English
 
@@ -109,11 +110,9 @@ if(grepl("customURL",user_info)) #If we have steam user tag we get the informati
 
 info_Steam_removed<-paste("https://steam-tracker.com/scan/",strsplit(strsplit(strsplit(user_info,"profile<")[[1]][2],"\" rel=\"noopener")[[1]][1],"/")[[1]][length(strsplit(strsplit(strsplit(user_info,"profile<")[[1]][2],"\" rel=\"noopener")[[1]][1],"/")[[1]])],sep="")
 
-system(paste("rm -rf ",id_search,sep=""))
-
 #### Metadata retrieving from HowLongToBeat
 
-if(!file.exists("Games_HowLong.txt")) #If output already exists (and later APIs fail later) we skip this step
+if(!file.exists("Games_HowLong.txt") & !file.exists(paste("Steam_Metadata_Full_",id_search,".txt",sep=""))) #If output already exists (and later APIs fail later) we skip this step
 {
   if(!file.exists("Games_buscar.txt")) 
   {
@@ -135,7 +134,7 @@ if(!file.exists("Games_HowLong.txt")) #If output already exists (and later APIs 
     
     ####### Para buscar en howlong to beat
     
-    system("rm -rf index.html?tab=all")
+    
     system(paste("wget ",steam_link,sep=""))
 
     file_process<-as.data.frame(fread("index.html?tab=all",fill = T))
@@ -154,6 +153,7 @@ if(!file.exists("Games_HowLong.txt")) #If output already exists (and later APIs 
     game_list<-as.data.frame(res_games[-1,])
     game_list_orig<-game_list_orig[-1,]
     write.table(game_list,"Games_buscar.txt",quote = F,row.names = F,col.names = F,sep="\t")
+    system("rm -rf index.html?tab=all")
   }else
   {
     game_list<-read.delim("Games_buscar.txt",header=F,sep="\t")
@@ -264,8 +264,18 @@ if(!file.exists("Games_HowLong.txt")) #If output already exists (and later APIs 
   cont=0
   i=1
 
+  pb <- progress_bar$new(format = "(:spin) [:bar] :percent [Elapsed time: :elapsedfull || Estimated time remaining: :eta]",
+                       total = dim(game_list)[1],
+                       complete = "=",   # Completion bar character
+                       incomplete = "-", # Incomplete bar character
+                       current = ">",    # Current bar character
+                       clear = FALSE,    # If TRUE, clears the bar when finish
+                       width = 100)      # Width of the progress bar
+
   while(i<dim(game_list)[1])
   {
+    pb$tick()
+    
     if(is.na(game_list[i,2]))
     {
       pasted_value_tunning=NULL
@@ -760,18 +770,22 @@ if(!file.exists("Games_HowLong.txt")) #If output already exists (and later APIs 
       if(band_f==0)
       {
         print(paste(game_list[i,1],": NA",sep = ""))
-      }
-
-      i=i+1
+      } 
     }
+    
+    i=i+1
+  
   }
 
   game_list[,1]<-game_list_aux[,1]
   write.table(game_list,"Games_HowLong.txt",quote = F,row.names = F,col.names = F,sep = "\t")
+  system("rm -rf Games_buscar.txt")
+  system("rm -rf aux_time.txt")
+  system("rm -rf aux_time_tunning.txt")
 }
 ############################################################################################Updates SteamSpy
 
-if(!file.exists("Games_HowLong_AppID_metadato.txt"))
+if(!file.exists(paste("Steam_Metadata_Full_",id_search,".txt",sep="")))
 {
   game_list<-read.delim("Games_HowLong.txt",header=F)
 
@@ -816,14 +830,17 @@ if(!file.exists("Games_HowLong_AppID_metadato.txt"))
       Sys.sleep(1)
     }
 
-    write.table(game_list,"Games_HowLong_AppID_metadato.txt",quote = F,row.names = F,col.names = F,sep = "\t")
+    write.table(game_list,paste("Steam_Metadata_Full_",id_search,".txt",sep=""),quote = F,row.names = F,col.names = F,sep = "\t")
 
   }
+
+  system("rm -rf Games_HowLong.txt")
+  system("rm -rf index.html")
 }
 
 ############################################################################################Completed
 
-game_list<-read.delim("Games_HowLong_AppID_metadato.txt",header=F)
+game_list<-read.delim(paste("Steam_Metadata_Full_",id_search,".txt",sep=""),header=F)
 
 
 info_Steam<-getURL(steam_link_achiv)
@@ -899,7 +916,7 @@ game_list_final_output<-game_list[,c(7,8,11,16,24,23,18,3,4,17,14,15,19,22,20,21
 
 colnames(game_list_final_output)<-c("Name","AppID","Genre","Tags","Votes_total","Positive_rating","Played_time (h)","Time_to_finish (h)","Time_to_complete (h)","100% Completed","Developer","Publisher","Release date","Removed game","Minimum requirements","Recommended requirements")
 
-write.table(game_list_final_output,"Steam_Library_Metadata.txt",quote = F,row.names = F,sep = "\t")
+write.table(game_list_final_output,paste("Steam_Library_Metadata_",id_search,".txt",sep=""),quote = F,row.names = F,sep = "\t")
 
 
 
