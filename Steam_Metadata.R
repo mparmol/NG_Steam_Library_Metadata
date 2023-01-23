@@ -1,4 +1,6 @@
-##NextGame
+##Steam user Metadata
+
+#This script is useful to create a table with all (or almost) the information from your Steam library using different Steam databases
 
 ### Extract game list, from windows
 
@@ -15,9 +17,7 @@ suppressPackageStartupMessages(require("optparse"))
 
 option_list = list(
   make_option(c("-i", "--input"), type="character", default=NULL, 
-              help="Steam user name or ID", metavar="character")#,
-    #make_option(c("-o", "--out"), type="character", default="out.txt", 
-              #help="output file name [default= %default]", metavar="character")
+              help="Steam user name or ID", metavar="character")
 ); 
 
 opt_parser = OptionParser(option_list=option_list);
@@ -30,13 +30,13 @@ if (is.null(opt$input)){
 
 id_search=opt
 
-Sys.setlocale("LC_TIME", "C")
+Sys.setlocale("LC_TIME", "C") # Setting database language to English
 
 isEmpty <- function(x) { #This function checks if a data frame is empty or not
   return(length(x)==0)
 }
 
-word2num <- function(word){
+word2num <- function(word){ #Useful function to convert between ordinal and roman numerals
     wsplit <- strsplit(tolower(word)," ")[[1]]
     one_digits <- list(zero=0, one=1, two=2, three=3, four=4, five=5,
                        six=6, seven=7, eight=8, nine=9)
@@ -85,19 +85,19 @@ word2num <- function(word){
     return(list(word,out))
 }
 
-cleanFun <- function(htmlString) {
+cleanFun <- function(htmlString) { #Clean html coding from string, replacing for a blank
   return(gsub("<.*?>", "", htmlString))
 }
 
-cleanFun2 <- function(htmlString) {
+cleanFun2 <- function(htmlString) { #Clean html coding from string, replacing for a space
   return(gsub("<.*?>", ";?;", htmlString))
 }
 
-##### get full user data
+##### Get full user data
 
-user_info<-getURL(paste("https://www.steamidfinder.com/lookup/",id_search,sep=""),.opts=curlOptions(followlocation=TRUE))
+user_info<-getURL(paste("https://www.steamidfinder.com/lookup/",id_search,sep=""),.opts=curlOptions(followlocation=TRUE)) #Get user information from steamfinder, get both user name if available and ID
 
-if(grepl("customURL",user_info))
+if(grepl("customURL",user_info)) #If we have steam user tag we get the information from it. Otherwise we work from steam id information
 {
   steam_link=paste("https://steamcommunity.com/id/",strsplit(strsplit(strsplit(user_info,"customURL")[[1]][2],"\" rel=")[[1]][1],"/")[[1]][length(strsplit(strsplit(strsplit(user_info,"customURL")[[1]][2],"\" rel=")[[1]][1],"/")[[1]])],"/games/?tab=all",sep="")
   steam_link_achiv=paste("https://steamcommunity.com/id/",strsplit(strsplit(strsplit(user_info,"customURL")[[1]][2],"\" rel=")[[1]][1],"/")[[1]][length(strsplit(strsplit(strsplit(user_info,"customURL")[[1]][2],"\" rel=")[[1]][1],"/")[[1]])],"/games/?tab=perfect",sep="")
@@ -113,10 +113,9 @@ system(paste("rm -rf ",id_search,sep=""))
 
 #### Metadata retrieving from HowLongToBeat
 
-
-if(!file.exists("Games_HowLong.txt"))
+if(!file.exists("Games_HowLong.txt")) #If output already exists (and later APIs fail later) we skip this step
 {
-  if(!file.exists("Games_buscar.txt"))
+  if(!file.exists("Games_buscar.txt")) 
   {
     ####### Nombre de la tabla, todos los caracteres
 
@@ -134,8 +133,6 @@ if(!file.exists("Games_HowLong.txt"))
 
     game_list_orig<-as.data.frame(res_games)
     
-    #write.table(game_list_orig,"Games.txt",quote = F,row.names = F,col.names = F)
-
     ####### Para buscar en howlong to beat
     
     system("rm -rf index.html?tab=all")
@@ -150,12 +147,6 @@ if(!file.exists("Games_HowLong.txt"))
     for(i in 2:(str_count(h,'"name"')[1]+1))
     {
       res_games[i,1]<-substr(strsplit(sapply(strsplit(h[1], '"name"'), "[[", i),",\\\"")[[1]][1],3,nchar(strsplit(sapply(strsplit(h[1], '"name"'), "[[", i),",\\\"")[[1]][1])-1)
-      
-      #if(grepl("\\\\\\u",res_games[i,1]))
-      #{
-      #  res_games[i,1]=gsub("\\\\\\u","",res_games[i,1])
-      #}
-      
       res_games[i,7]<-game_list_orig[i,1]
       res_games[i,8]<-strsplit(strsplit(sapply(strsplit(h[1], '\\,\\{'), "[[", i-1),"appid\\\"\\:")[[1]][2],",")[[1]][1]
     }
@@ -165,30 +156,18 @@ if(!file.exists("Games_HowLong.txt"))
     write.table(game_list,"Games_buscar.txt",quote = F,row.names = F,col.names = F,sep="\t")
   }else
   {
-    #game_list_orig<-read.delim("Games.txt",header=F)
     game_list<-read.delim("Games_buscar.txt",header=F,sep="\t")
   }
 
   ### Extract gameplay time
 
   game_list_aux<-game_list
+
   ###Limpiar nombre, chequeo de estado.
 
   for(i in 1:dim(game_list)[1])
   {
     aux_game_name<-gsub(" ","",game_list[i,1])
-
-    #if(!isEmpty(which(game_list[,1]==aux_game_name)) & length(strsplit(game_list[i,1], " ")[[1]])>1)
-    #{
-    #  aa<-which(game_list[,1]==aux_game_name)
-    #  game_list<-as.data.frame(game_list[-aa,])
-    #  game_list_aux<-as.data.frame(game_list_aux[-aa,])
-    #}else if(!isEmpty(which(game_list[,1]==aux_game_name)) & length(which(game_list[,1]==aux_game_name))>1)
-    #{
-    #  aa<-which(game_list[,1]==aux_game_name)
-    #  game_list<-as.data.frame(game_list[-aa[2:length(aa)],])
-    #  game_list_aux<-as.data.frame(game_list_aux[-aa[2:length(aa)],])
-    #}
 
     if(grepl("\\\\u00fc",game_list[i,1])) #######################
     {
@@ -218,8 +197,7 @@ if(!file.exists("Games_HowLong.txt"))
     {
       game_list[i,1]=gsub("\\\\u[a-zA-Z0-9]{4}","",game_list[i,1])
       game_list_aux[i,1]=gsub("\\\\u[a-zA-Z0-9]{4}","",game_list_aux[i,1])
-      #print(game_list[i,1])
-      #print(game_list[i,7])
+      
       if(nchar(gsub(" ","",game_list[i,1]))==0)
       {
         game_list[i,1]=game_list[i,7]
@@ -245,11 +223,6 @@ if(!file.exists("Games_HowLong.txt"))
     {
       game_list[i,1]=gsub("\\|","_",game_list[i,1])
     }
-
-    #if(grepl("\\.",game_list[i,1]))
-    #{
-    #  game_list[i,1]=gsub("\\.","_",game_list[i,1])
-    #}
 
     if(grepl("\\)$",game_list[i,1]))
     {
@@ -328,14 +301,12 @@ if(!file.exists("Games_HowLong.txt"))
       scape_key=0
       scape_roman_key=0
 
-      #while(band_f==0 & cont_long_string<length(strsplit(game_list[i,1], " ")[[1]])+39)
       while(band_f==0 & scape_key<1)
       {
         cont_long_string=cont_long_string+1
       
         system(paste("node New.js ",pasted_value," > aux_time.txt", sep=""))
       
-        #if(length(strsplit(game_list[i,1]," ")[[1]])==1)
         if(!is.null(pasted_value_tunning))
         {
           system("rm -rf aux_time_tunning.txt")
@@ -343,7 +314,6 @@ if(!file.exists("Games_HowLong.txt"))
           while(file.info("aux_time_tunning.txt")$size==0)
           {
             system(paste("node New.js ",pasted_value_tunning," > aux_time_tunning.txt", sep=""))
-            #print("Descansando buffer 2 min TUNNING")
             Sys.sleep(1)
           }
         }
@@ -360,7 +330,6 @@ if(!file.exists("Games_HowLong.txt"))
           if(dim(data_time)[1]>0 & valor_unico==0)
           {
             band_f=1
-            #print(pasted_value)
             data_time<-paste(data_time)
 
             name_list_j<-NULL
@@ -391,7 +360,6 @@ if(!file.exists("Games_HowLong.txt"))
             name_list_j_gpm[which(max(name_list_j_simil)==name_list_j_simil)][1]
             name_list_j_gpc[which(max(name_list_j_simil)==name_list_j_simil)][1]
           
-            #if(length(strsplit(game_list[i,1]," ")[[1]])==1)
             if(!is.null(pasted_value_tunning))
             {
               data_time_t<-read.delim("aux_time_tunning.txt")
@@ -439,35 +407,21 @@ if(!file.exists("Games_HowLong.txt"))
                 }else if(nchar(tolower(gsub("\\!","",stri_trans_general(game_list[i,1], "latin-ascii"))))==nchar(tolower(gsub(":","",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]))) & !is.na(match(tolower(gsub("\\!","",stri_trans_general(game_list[i,1], "latin-ascii"))),tolower(gsub("\\'","_",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1])))))
                 {
                                   
-                }#else if(!is.na(as.numeric(as.roman(strsplit(game_list[i,1], " ")[[1]][length(strsplit(game_list[i,1], " ")[[1]])]))) & !is.na(as.numeric(as.roman(strsplit(name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1], " ")[[1]][length(strsplit(name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1], " ")[[1]])]))) & (as.numeric(as.roman(strsplit(game_list[i,1], " ")[[1]][length(strsplit(game_list[i,1], " ")[[1]])]))==as.numeric(as.roman(strsplit(name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1], " ")[[1]][length(strsplit(name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1], " ")[[1]])]))))
-                else if(!is.na(as.numeric(as.roman(strsplit(game_list[i,1], " ")[[1]][length(strsplit(game_list[i,1], " ")[[1]])]))) & !is.na(as.numeric(as.roman(strsplit(name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1], " ")[[1]][length(strsplit(name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1], " ")[[1]])]))) & (as.numeric(as.roman(strsplit(game_list[i,1], " ")[[1]][length(strsplit(game_list[i,1], " ")[[1]])]))==as.numeric(as.roman(strsplit(name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1], " ")[[1]][length(strsplit(name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1], " ")[[1]])]))) & length(strsplit(game_list[i,1], " ")[[1]])==length(strsplit(name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1], " ")[[1]]))
+                }else if(!is.na(as.numeric(as.roman(strsplit(game_list[i,1], " ")[[1]][length(strsplit(game_list[i,1], " ")[[1]])]))) & !is.na(as.numeric(as.roman(strsplit(name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1], " ")[[1]][length(strsplit(name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1], " ")[[1]])]))) & (as.numeric(as.roman(strsplit(game_list[i,1], " ")[[1]][length(strsplit(game_list[i,1], " ")[[1]])]))==as.numeric(as.roman(strsplit(name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1], " ")[[1]][length(strsplit(name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1], " ")[[1]])]))) & length(strsplit(game_list[i,1], " ")[[1]])==length(strsplit(name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1], " ")[[1]]))
                 {
 
                 }else
                 {
-                  #if(max(name_list_j_simil_t)>max(name_list_j_simil))
-                  #{
-                    name_list_j_gpm<-name_list_j_gpm_t
-                    name_list_j_gpc<-name_list_j_gpc_t
-                    name_list_j_simil<-name_list_j_simil_t
-                    name_list_j<-name_list_j_t
-                  #}
+               
+                  name_list_j_gpm<-name_list_j_gpm_t
+                  name_list_j_gpc<-name_list_j_gpc_t
+                  name_list_j_simil<-name_list_j_simil_t
+                  name_list_j<-name_list_j_t
+                  
                 }
-              }
-
-              if(nchar(name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1])==nchar(tolower(stri_trans_general(game_list[i,1], "latin-ascii")))+1 & grepl(" ",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1],fixed=TRUE))
-              {
-                #name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]<-gsub(" ","",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1])
-              }else if(nchar(name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1])==nchar(tolower(stri_trans_general(game_list[i,1], "latin-ascii"))) & grepl("_",game_list[i,1],fixed=TRUE) & !grepl("\\.",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]))
-              {
-                #name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]<-gsub(" ","_",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1])
-              }else if(nchar(name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1])==nchar(tolower(stri_trans_general(game_list[i,1], "latin-ascii"))) & grepl("_",game_list[i,1],fixed=TRUE) & grepl("\\.",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]))
-              {
-                #name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]<-gsub("\\.","_",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1])
               }
             }
 
-            #if((grepl(paste("'",game_list[i,1],"'",sep=""),data_time,fixed=TRUE) | grepl(str_to_title(paste("'",game_list[i,1],"'",sep="")),data_time,fixed=TRUE))) # Busca el nombre exacto, si no se sale de la búsqueda. Si no encuentra el nombre exacto en la lista, convierte todo a minúscula menos la primera letra
             if(length(strsplit(game_list[i,1]," ")[[1]])==1 & (is.na(match(gsub(":","",tolower(stri_trans_general(game_list[i,1], "latin-ascii"))),stri_trans_general(tolower(strsplit(gsub(" ","_",gsub(":","",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]))," ")[[1]]), "latin-ascii"))) & is.na(match(gsub(":","",tolower(stri_trans_general(game_list[i,1], "latin-ascii"))),stri_trans_general(tolower(strsplit(gsub("'","_",gsub(":","",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]))," ")[[1]]), "latin-ascii"))) & is.na(match(gsub(":","",tolower(stri_trans_general(game_list[i,1], "latin-ascii"))),stri_trans_general(tolower(strsplit(gsub(" ","",gsub(":","",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]))," ")[[1]]), "latin-ascii"))) & is.na(match(gsub(":","",tolower(stri_trans_general(game_list[i,1], "latin-ascii"))),stri_trans_general(tolower(strsplit(gsub(":","",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1])," ")[[1]]), "latin-ascii")))))
             {print("hola1")
             print(scape_key)
@@ -532,9 +486,7 @@ if(!file.exists("Games_HowLong.txt"))
               }
             }
           }else
-          {#print("cambio")
-            #print(scape_key)
-
+          {
             game_list_back_change=pasted_value
 
             if(grepl("^'",game_list[i,1])) #######################
@@ -651,7 +603,7 @@ if(!file.exists("Games_HowLong.txt"))
               game_list[i,1]=paste("'",gsub("\\\\","",game_list[i,1]),"'",sep="")
               pasted_value=game_list[i,1]
             }else if(cont_long_string<length(strsplit(game_list[i,1], " ")[[1]]))
-            {#print("aqui")
+            {
               pasted_value<-NULL
 
               for(y in 1:length(strsplit(game_list[i,1], " ")[[1]]))
@@ -785,13 +737,10 @@ if(!file.exists("Games_HowLong.txt"))
               scape_roman_key=scape_roman_key+1
             }else if(is.numeric(try(as.numeric(word2num(strsplit(game_list[i,1], " ")[[1]][length(strsplit(game_list[i,1], " ")[[1]])])[[2]]),silent=TRUE)) & length(strsplit(game_list[i,1]," ")[[1]])>1)
             {
-              #print("hola")
               game_list[i,1]=paste("'",paste(paste(paste(strsplit(game_list[i,1], " ")[[1]][1:length(strsplit(game_list[i,1], " ")[[1]])-1],sep=" "),collapse=" "),as.numeric(word2num(strsplit(game_list[i,1], " ")[[1]][length(strsplit(game_list[i,1], " ")[[1]])])[[2]]),collapse=" "),"'",sep="")
               pasted_value=game_list[i,1]
-              #pasted_value_tunning=paste("'",game_list[i,1],":'",sep="")
-              #pasted_value=paste("'",game_list[i,1],"'",sep="")
             }else
-            {#print("uqee")
+            {
               pasted_value<-strsplit(game_list[i,1], " ")[[1]][1]
               valor_unico<-1
             } 
@@ -803,7 +752,6 @@ if(!file.exists("Games_HowLong.txt"))
           }
         }else
         {
-          #print("Descansando buffer 2 min")
           Sys.sleep(1)
           cont_long_string=cont_long_string-1  ###MIRAR
         }
@@ -812,8 +760,6 @@ if(!file.exists("Games_HowLong.txt"))
       if(band_f==0)
       {
         print(paste(game_list[i,1],": NA",sep = ""))
-        #game_list[i,2]<-"NA"
-        #game_list[i,3]<-"NA"
       }
 
       i=i+1
@@ -821,7 +767,6 @@ if(!file.exists("Games_HowLong.txt"))
   }
 
   game_list[,1]<-game_list_aux[,1]
-  #game_list[,7]<-game_list_orig[,1]
   write.table(game_list,"Games_HowLong.txt",quote = F,row.names = F,col.names = F,sep = "\t")
 }
 ############################################################################################Updates SteamSpy
@@ -834,13 +779,6 @@ if(!file.exists("Games_HowLong_AppID_metadato.txt"))
 
   binded_table<-NULL
 
-  #if(!file.exists("TODO.txt"))
-  #{
-    #AppID_List <- html_text(html_node(read_html("https://api.steampowered.com/ISteamApps/GetAppList/v2/"),"p"))
-    #for(i in 1:10)
-    #{
-      #AppID_List <- getURL("https://api.steampowered.com/ISteamApps/GetAppList/v2/")
-
   system("rm -rf index.html")
   system("wget https://api.steampowered.com/ISteamApps/GetAppList/v2/")
       
@@ -852,47 +790,13 @@ if(!file.exists("Games_HowLong_AppID_metadato.txt"))
   AppID_List<-gsub("\\\"\\}\\]\\}\\}","",AppID_List)
 
   res_games<-data.frame(matrix(strsplit(AppID_List,"\\`\\`")[[1]],ncol=2,byrow=T))
-  #res_games<-uooo
   binded_table<-rbind(binded_table,res_games)
   print(dim(res_games))
-    #}
 
   res_games<-binded_table[!duplicated(binded_table),]
 
-
-    #res_games<-data.frame(matrix(ncol=2,nrow=dim(uooo)[1]))
-
-    #for(i in 2:3500)
-    ##for(i in 2:(str_count(AppID_List,'"name"')[1]+1))
-    ##{
-      ##res_games[i,1]<-strsplit(strsplit(strsplit(sapply(strsplit(AppID_List, '\\{'), "[[", i),"\\}")[[1]][1],":")[[1]][2],",")[[1]][1]
-      ##res_games[i,2]<-strsplit(strsplit(strsplit(sapply(strsplit(AppID_List, '\\{'), "[[", i),"\\}")[[1]][1],":\\\"")[[1]][2],'\\\"')[[1]][1]
-    ##}
-
-    #write.table(res_games,"TODO.txt",quote = F,row.names = F,col.names = F,sep="\t")
-
-  #}else 
-  #{
-    #res_games<-read.delim("TODO.txt",sep="\t",header=F)
-  #}
-
-
   game_list$AppID<-res_games[match(game_list[,7],res_games[,2]),1]
   game_list$AppID_name<-res_games[match(game_list[,7],res_games[,2]),2]
-  #game_list$AppID_2<-res_games[match(game_list[,2],res_games[,2]),1]
-  #game_list$AppID_name_2<-res_games[match(game_list[,2],res_games[,2]),2]
-
-  #write.table(game_list,"Games_HowLong_AppID.txt",quote = F,row.names = F,col.names = F,sep = "\t")
-
-  #library(rvest)
-  #my_df <- as.data.frame(read_html(index.html) %>% html_table(fill=TRUE))
-
-  ### Datos del juego desde AppID
-
-  ### Más info: https://steamspy.com/api.php
-
-  ### Probar el paquete https://pypi.org/project/steamspypi/
-
 
   for(i in 1:dim(game_list)[1])
   {
@@ -916,6 +820,7 @@ if(!file.exists("Games_HowLong_AppID_metadato.txt"))
 
   }
 }
+
 ############################################################################################Completed
 
 game_list<-read.delim("Games_HowLong_AppID_metadato.txt",header=F)
@@ -940,8 +845,6 @@ if(str_count(h,'"name"')[1]>0)
   game_list[,17]<-NA
 }
 
-
-
 #########################################################################################Played time
 
 info_Steam<-getURL(steam_link)
@@ -960,13 +863,10 @@ for(i in 1:dim(game_list)[1])
 {
   if(!is.na(game_list[i,8]))
   {
-    #meta_juego<-tryCatch(error = function(cnd) paste("Ha petado en ",o,sep=""),getURL(paste("https://store.steampowered.com/api/appdetails/?cc=EU&appids=",game_list[i,8],sep="")))
     meta_juego<-getURL(paste("https://store.steampowered.com/api/appdetails/?cc=EU&appids=",game_list[i,8],sep=""))
     
     if(grepl("\"success\"\\:true",meta_juego))
     {
-      #app_id_gen<-strsplit(strsplit(meta_juego,"steam_appid\\\"\\:")[[1]][2],"\\,")[[1]][1]
-
       app_id_gen<-strsplit(strsplit(meta_juego,"\":")[[1]][1],"\"")[[1]][2]
       game_list[match(app_id_gen,game_list[,8]),19]<-format(ymd(paste(strsplit(strsplit(strsplit(strsplit(meta_juego,"release_date")[[1]][2],"\\\"}")[[1]][1],"\\:\\\"")[[1]][2]," ")[[1]][3],strsplit(strsplit(strsplit(strsplit(meta_juego,"release_date")[[1]][2],"\\\"}")[[1]][1],"\\:\\\"")[[1]][2]," ")[[1]][2],strsplit(strsplit(strsplit(strsplit(meta_juego,"release_date")[[1]][2],"\\\"}")[[1]][1],"\\:\\\"")[[1]][2]," ")[[1]][1],sep=" ")), "%d-%b-%Y")
       game_list[match(app_id_gen,game_list[,8]),20]<-paste(unlist(strsplit(gsub("Minimum:","",strsplit(gsub("\",\"recommended\":\""," ",cleanFun(strsplit(strsplit(meta_juego,"pc_requirements\\\"\\:\\{\\\"minimum\\\":\\\"")[[1]][2],"\"},\\\"mac_requirements")[[1]][1])),"Recommended:")[[1]][1]),"\\\\r|\\\\n|\\\\t"))[unlist(strsplit(gsub("Minimum:","",strsplit(gsub("\",\"recommended\":\""," ",cleanFun(strsplit(strsplit(meta_juego,"pc_requirements\\\"\\:\\{\\\"minimum\\\":\\\"")[[1]][2],"\"},\\\"mac_requirements")[[1]][1])),"Recommended:")[[1]][1]),"\\\\r|\\\\n|\\\\t")) != ""],collapse = " ")
@@ -975,16 +875,11 @@ for(i in 1:dim(game_list)[1])
 
     Sys.sleep(1.5)
   }
-
-  #write.table(game_list,"Games_HowLong_AppID_metadato_DATAA.txt",quote = F,row.names = F,col.names = F,sep = "\t")
-
 }
 
 
 ######################################################################################Removed games list
 
-#system(paste("rm -rf ",id_search,sep=""))
-#system(paste("wget ",info_Steam_removed,sep=""))
 file_process<-gsub("&quot;","\\\\",gsub("&amp;","&",gsub("&#039;","'",cleanFun2(read_file(info_Steam_removed)))))
 
 for(i in 2:(str_count(file_process,'\\;\\?\\;')[1]+1))
