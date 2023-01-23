@@ -352,3 +352,7 @@ print(o)
 - Ahora sí debería quitarse bien los \t.
 - Limpiar todo el código...
 - Que se de el nombre de usuario y se busque el id automáticamente. Lo hacemos con la página "https://www.steamidfinder.com/lookup/gonso0/". Hecho.
+
+23-1-23
+
+- Añadida una ayuda y el usuario como argumento obligatorio, ya sea apodo o numérico

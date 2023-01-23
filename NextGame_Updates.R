@@ -2,13 +2,33 @@
 
 ### Extract game list, from windows
 
-require("data.table")
-require("stringr")
-require("stringi")
-require("rvest")
-require("RCurl")
-require("readr")
-library("lubridate")
+suppressPackageStartupMessages(require("data.table"))
+suppressPackageStartupMessages(require("stringr"))
+suppressPackageStartupMessages(require("stringi"))
+suppressPackageStartupMessages(require("rvest"))
+suppressPackageStartupMessages(require("RCurl"))
+suppressPackageStartupMessages(require("readr"))
+suppressPackageStartupMessages(require("lubridate"))
+suppressPackageStartupMessages(require("optparse"))
+
+#options(warn=-1)
+
+option_list = list(
+  make_option(c("-i", "--input"), type="character", default=NULL, 
+              help="Steam user name or ID", metavar="character")#,
+    #make_option(c("-o", "--out"), type="character", default="out.txt", 
+              #help="output file name [default= %default]", metavar="character")
+); 
+
+opt_parser = OptionParser(option_list=option_list);
+opt = parse_args(opt_parser);
+
+if (is.null(opt$input)){
+  print_help(opt_parser)
+  stop("At least one argument must be supplied (Steam user name or ID).", call.=FALSE)
+}
+
+id_search=opt
 
 Sys.setlocale("LC_TIME", "C")
 
@@ -73,16 +93,9 @@ cleanFun2 <- function(htmlString) {
   return(gsub("<.*?>", ";?;", htmlString))
 }
 
-id_search="76561198012006378"
-
 ##### get full user data
 
-#user_info<-getURL(paste("https://www.steamidfinder.com/lookup/",id_search,sep=""))
-
-system(paste("rm -rf ",id_search,sep=""))
-system(paste("wget https://www.steamidfinder.com/lookup/",id_search,sep=""))
-
-user_info<-(read_file(id_search))
+user_info<-getURL(paste("https://www.steamidfinder.com/lookup/",id_search,sep=""),.opts=curlOptions(followlocation=TRUE))
 
 if(grepl("customURL",user_info))
 {
@@ -96,13 +109,9 @@ if(grepl("customURL",user_info))
 
 info_Steam_removed<-paste("https://steam-tracker.com/scan/",strsplit(strsplit(strsplit(user_info,"profile<")[[1]][2],"\" rel=\"noopener")[[1]][1],"/")[[1]][length(strsplit(strsplit(strsplit(user_info,"profile<")[[1]][2],"\" rel=\"noopener")[[1]][1],"/")[[1]])],sep="")
 
+system(paste("rm -rf ",id_search,sep=""))
 
-
-#steam_link=paste("https://steamcommunity.com/profiles/",id_search,"/games/?tab=all",sep="")
-####steam_link="https://steamcommunity.com/id/marko_pakete/games/?tab=all"
-#steam_link_achiv=paste("https://steamcommunity.com/profiles/",id_search,"/games/?tab=perfect",sep="")
-####steam_link_achiv="https://steamcommunity.com/id/marko_pakete/games/?tab=perfect"
-####info_Steam_removed<-paste("https://steam-tracker.com/scan/",id_search,sep="")
+#### Metadata retrieving from HowLongToBeat
 
 
 if(!file.exists("Games_HowLong.txt"))
