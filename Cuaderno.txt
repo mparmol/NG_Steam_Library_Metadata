@@ -360,3 +360,9 @@ print(o)
 - Escribir el README bien.
 - Ver: https://github.com/woctezuma/steamspypi/issues/10
 - Los print por pantalla que sean una barra de porcentaje que se llene conforme avanza por las diferentes bases de datos. Puede servir "txtProgressBar" (https://r-coder.com/progress-bar-r/)
+- Añadido prints y una segunda progress bar.
+
+24-1-23
+
+- Modificar cómo se añade info a la columna 1 y 7. Hay un paso donde se copia de una tabla a otra, hacerlo por ID no directo.
+- Ver cuántos "for" del final puedo quitar y dejar solo uno, debería ser fácil. Tengo que imprimir el código...

@@ -12,8 +12,9 @@ suppressPackageStartupMessages(require("RCurl"))
 suppressPackageStartupMessages(require("readr"))
 suppressPackageStartupMessages(require("lubridate"))
 suppressPackageStartupMessages(require("optparse"))
+suppressPackageStartupMessages(require("progress"))
 
-#options(warn=-1)
+
 
 option_list = list(
   make_option(c("-i", "--input"), type="character", default=NULL, 
@@ -112,11 +113,15 @@ info_Steam_removed<-paste("https://steam-tracker.com/scan/",strsplit(strsplit(st
 
 #### Metadata retrieving from HowLongToBeat
 
+options(warn=-1)
+
 if(!file.exists("Games_HowLong.txt") & !file.exists(paste("Steam_Metadata_Full_",id_search,".txt",sep=""))) #If output already exists (and later APIs fail later) we skip this step
 {
   if(!file.exists("Games_buscar.txt")) 
   {
     ####### Nombre de la tabla, todos los caracteres
+
+    print("Creating table with names and appid")
 
     info_Steam<-getURL(steam_link)
     file_process<-as.data.frame(info_Steam)
@@ -135,7 +140,7 @@ if(!file.exists("Games_HowLong.txt") & !file.exists(paste("Steam_Metadata_Full_"
     ####### Para buscar en howlong to beat
     
     
-    system(paste("wget ",steam_link,sep=""))
+    system(paste("wget -q ",steam_link,sep=""))
 
     file_process<-as.data.frame(fread("index.html?tab=all",fill = T))
     
@@ -165,8 +170,11 @@ if(!file.exists("Games_HowLong.txt") & !file.exists(paste("Steam_Metadata_Full_"
 
   ###Limpiar nombre, chequeo de estado.
 
+  print("Cleaning game names")
+
   for(i in 1:dim(game_list)[1])
   {
+    
     aux_game_name<-gsub(" ","",game_list[i,1])
 
     if(grepl("\\\\u00fc",game_list[i,1])) #######################
@@ -272,10 +280,14 @@ if(!file.exists("Games_HowLong.txt") & !file.exists(paste("Steam_Metadata_Full_"
                        clear = FALSE,    # If TRUE, clears the bar when finish
                        width = 100)      # Width of the progress bar
 
+  print(paste("Total entries in ",id_search," database: ",dim(game_list)[1],sep=""))
+  print("Retrieving info from HowLongToBeat")
+
   while(i<dim(game_list)[1])
   {
-    pb$tick()
     
+    pb$tick()
+
     if(is.na(game_list[i,2]))
     {
       pasted_value_tunning=NULL
@@ -433,18 +445,18 @@ if(!file.exists("Games_HowLong.txt") & !file.exists(paste("Steam_Metadata_Full_"
             }
 
             if(length(strsplit(game_list[i,1]," ")[[1]])==1 & (is.na(match(gsub(":","",tolower(stri_trans_general(game_list[i,1], "latin-ascii"))),stri_trans_general(tolower(strsplit(gsub(" ","_",gsub(":","",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]))," ")[[1]]), "latin-ascii"))) & is.na(match(gsub(":","",tolower(stri_trans_general(game_list[i,1], "latin-ascii"))),stri_trans_general(tolower(strsplit(gsub("'","_",gsub(":","",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]))," ")[[1]]), "latin-ascii"))) & is.na(match(gsub(":","",tolower(stri_trans_general(game_list[i,1], "latin-ascii"))),stri_trans_general(tolower(strsplit(gsub(" ","",gsub(":","",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]))," ")[[1]]), "latin-ascii"))) & is.na(match(gsub(":","",tolower(stri_trans_general(game_list[i,1], "latin-ascii"))),stri_trans_general(tolower(strsplit(gsub(":","",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1])," ")[[1]]), "latin-ascii")))))
-            {print("hola1")
-            print(scape_key)
-            print(pasted_value)
-            print(name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1])
+            {
+            #print(scape_key)
+            #print(pasted_value)
+            #print(name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1])
               band_f=1
-              print(paste(game_list[i,1],": NA",sep = ""))
+              #print(paste(game_list[i,1],": NA",sep = ""))
               
             }else if(max(name_list_j_simil)>0.925)
             {
               if(name_list_j_gpm[which(max(name_list_j_simil)==name_list_j_simil)][1]>0)
               {
-                print(paste(game_list_aux[i,1],": ",name_list_j_gpm[which(max(name_list_j_simil)==name_list_j_simil)][1],"h"," ",name_list_j_gpc[which(max(name_list_j_simil)==name_list_j_simil)][1],"h"," ",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1],sep = ""))
+                #print(paste(game_list_aux[i,1],": ",name_list_j_gpm[which(max(name_list_j_simil)==name_list_j_simil)][1],"h"," ",name_list_j_gpc[which(max(name_list_j_simil)==name_list_j_simil)][1],"h"," ",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1],sep = ""))
                 game_list[i,2]<-name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]
                 game_list[i,3]<-name_list_j_gpm[which(max(name_list_j_simil)==name_list_j_simil)][1]
                 game_list[i,4]<-name_list_j_gpc[which(max(name_list_j_simil)==name_list_j_simil)][1]
@@ -452,7 +464,7 @@ if(!file.exists("Games_HowLong.txt") & !file.exists(paste("Steam_Metadata_Full_"
                 game_list[i,6]<-"Exact"
               }else if(name_list_j_gpc[which(max(name_list_j_simil)==name_list_j_simil)][1]>0)
               {
-                print(paste(game_list_aux[i,1],": ",name_list_j_gpm[which(max(name_list_j_simil)==name_list_j_simil)][1],"h"," ",name_list_j_gpc[which(max(name_list_j_simil)==name_list_j_simil)][1],"h"," ",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1],sep = ""))
+                #print(paste(game_list_aux[i,1],": ",name_list_j_gpm[which(max(name_list_j_simil)==name_list_j_simil)][1],"h"," ",name_list_j_gpc[which(max(name_list_j_simil)==name_list_j_simil)][1],"h"," ",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1],sep = ""))
                 game_list[i,2]<-name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]
                 game_list[i,3]<-name_list_j_gpm[which(max(name_list_j_simil)==name_list_j_simil)][1]
                 game_list[i,4]<-name_list_j_gpc[which(max(name_list_j_simil)==name_list_j_simil)][1]
@@ -460,7 +472,7 @@ if(!file.exists("Games_HowLong.txt") & !file.exists(paste("Steam_Metadata_Full_"
                 game_list[i,6]<-"Exact"
               }else
               {
-                print(paste(game_list_aux[i,1],": Sin registro de tiempo"," ",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1],sep = ""))
+                #print(paste(game_list_aux[i,1],": Sin registro de tiempo"," ",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1],sep = ""))
                 game_list[i,2]<-name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]
                 game_list[i,3]<-"Sin registro de tiempo"
                 game_list[i,4]<-"Sin registro de tiempo"
@@ -471,7 +483,7 @@ if(!file.exists("Games_HowLong.txt") & !file.exists(paste("Steam_Metadata_Full_"
             {
               if(name_list_j_gpm[which(max(name_list_j_simil)==name_list_j_simil)][1]>0)
               {
-                print(paste(game_list_aux[i,1],": ",name_list_j_gpm[which(max(name_list_j_simil)==name_list_j_simil)][1],"h"," ",name_list_j_gpc[which(max(name_list_j_simil)==name_list_j_simil)][1],"h"," ",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1],sep = ""))
+                #print(paste(game_list_aux[i,1],": ",name_list_j_gpm[which(max(name_list_j_simil)==name_list_j_simil)][1],"h"," ",name_list_j_gpc[which(max(name_list_j_simil)==name_list_j_simil)][1],"h"," ",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1],sep = ""))
                 game_list[i,2]<-name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]
                 game_list[i,3]<-name_list_j_gpm[which(max(name_list_j_simil)==name_list_j_simil)][1]
                 game_list[i,4]<-name_list_j_gpc[which(max(name_list_j_simil)==name_list_j_simil)][1]
@@ -479,7 +491,7 @@ if(!file.exists("Games_HowLong.txt") & !file.exists(paste("Steam_Metadata_Full_"
                 game_list[i,6]<-"Non Exact"
               }else if(name_list_j_gpc[which(max(name_list_j_simil)==name_list_j_simil)][1]>0)
               {
-                print(paste(game_list_aux[i,1],": ",name_list_j_gpm[which(max(name_list_j_simil)==name_list_j_simil)][1],"h"," ",name_list_j_gpc[which(max(name_list_j_simil)==name_list_j_simil)][1],"h"," ",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1],sep = ""))
+                #print(paste(game_list_aux[i,1],": ",name_list_j_gpm[which(max(name_list_j_simil)==name_list_j_simil)][1],"h"," ",name_list_j_gpc[which(max(name_list_j_simil)==name_list_j_simil)][1],"h"," ",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1],sep = ""))
                 game_list[i,2]<-name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]
                 game_list[i,3]<-name_list_j_gpm[which(max(name_list_j_simil)==name_list_j_simil)][1]
                 game_list[i,4]<-name_list_j_gpc[which(max(name_list_j_simil)==name_list_j_simil)][1]
@@ -487,7 +499,7 @@ if(!file.exists("Games_HowLong.txt") & !file.exists(paste("Steam_Metadata_Full_"
                 game_list[i,6]<-"Non Exact"
               }else
               {
-                print(paste(game_list_aux[i,1],": Sin registro de tiempo"," ",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1],sep = ""))
+                #print(paste(game_list_aux[i,1],": Sin registro de tiempo"," ",name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1],sep = ""))
                 game_list[i,2]<-name_list_j[which(max(name_list_j_simil)==name_list_j_simil)][1]
                 game_list[i,3]<-"Sin registro de tiempo"
                 game_list[i,4]<-"Sin registro de tiempo"
@@ -519,7 +531,7 @@ if(!file.exists("Games_HowLong.txt") & !file.exists(paste("Steam_Metadata_Full_"
                 game_list[i,1]=paste("'",paste(strsplit(game_list[i,1], "(?=[A-Za-z])(?<=[0-9])|(?=[0-9])(?<=[A-Za-z])", perl=TRUE)[[1]],collapse = " "),"'",sep="")
                 pasted_value=game_list[i,1]
               }else if(length(strsplit(str_trim(gsub('([[:upper:]])', ' \\1', game_list[i,1]),side = "both")," ")[[1]])==2)
-              {print("hola2")
+              {
                 game_list[i,1]=paste("'",str_trim(gsub('([[:upper:]])', ' \\1', game_list[i,1]),side = "both"),"'",sep="")
                 pasted_value=game_list[i,1]
               }else
@@ -769,13 +781,14 @@ if(!file.exists("Games_HowLong.txt") & !file.exists(paste("Steam_Metadata_Full_"
 
       if(band_f==0)
       {
-        print(paste(game_list[i,1],": NA",sep = ""))
+        #print(paste(game_list[i,1],": NA",sep = ""))
       } 
     }
     
     i=i+1
-  
   }
+
+  pb$tick()  
 
   game_list[,1]<-game_list_aux[,1]
   write.table(game_list,"Games_HowLong.txt",quote = F,row.names = F,col.names = F,sep = "\t")
@@ -783,7 +796,12 @@ if(!file.exists("Games_HowLong.txt") & !file.exists(paste("Steam_Metadata_Full_"
   system("rm -rf aux_time.txt")
   system("rm -rf aux_time_tunning.txt")
 }
+
+options(warn=0)
+
 ############################################################################################Updates SteamSpy
+
+print("Retrieving more data: votes, developer, publisher...")
 
 if(!file.exists(paste("Steam_Metadata_Full_",id_search,".txt",sep="")))
 {
@@ -794,7 +812,7 @@ if(!file.exists(paste("Steam_Metadata_Full_",id_search,".txt",sep="")))
   binded_table<-NULL
 
   system("rm -rf index.html")
-  system("wget https://api.steampowered.com/ISteamApps/GetAppList/v2/")
+  system("wget -q https://api.steampowered.com/ISteamApps/GetAppList/v2/")
       
   AppID_List <- read_file("index.html")
 
@@ -805,15 +823,26 @@ if(!file.exists(paste("Steam_Metadata_Full_",id_search,".txt",sep="")))
 
   res_games<-data.frame(matrix(strsplit(AppID_List,"\\`\\`")[[1]],ncol=2,byrow=T))
   binded_table<-rbind(binded_table,res_games)
-  print(dim(res_games))
+  
+  print(paste("Total entries in Steam database: ",dim(res_games)[1]))
 
   res_games<-binded_table[!duplicated(binded_table),]
 
   game_list$AppID<-res_games[match(game_list[,7],res_games[,2]),1]
   game_list$AppID_name<-res_games[match(game_list[,7],res_games[,2]),2]
 
+  pb <- progress_bar$new(format = "(:spin) [:bar] :percent [Elapsed time: :elapsedfull || Estimated time remaining: :eta]",
+                    total = dim(game_list)[1],
+                    complete = "=",   # Completion bar character
+                    incomplete = "-", # Incomplete bar character
+                    current = ">",    # Current bar character
+                    clear = FALSE,    # If TRUE, clears the bar when finish
+                    width = 100)      # Width of the progress bar
+
   for(i in 1:dim(game_list)[1])
   {
+    pb$tick()
+
     if(!is.na(game_list[i,8]))
     {
       meta_juego<-getURL(paste("https://steamspy.com/api.php?request=appdetails&appid=",game_list[i,8],sep=""))
@@ -842,11 +871,12 @@ if(!file.exists(paste("Steam_Metadata_Full_",id_search,".txt",sep="")))
 
 game_list<-read.delim(paste("Steam_Metadata_Full_",id_search,".txt",sep=""),header=F)
 
-
 info_Steam<-getURL(steam_link_achiv)
 file_process<-as.data.frame(info_Steam)
 
 h<-file_process[grep("rgGames",file_process[,1]),]
+
+print("Retrieving info of 100% achivement completed games")
 
 if(str_count(h,'"name"')[1]>0)
 {
@@ -864,6 +894,8 @@ if(str_count(h,'"name"')[1]>0)
 
 #########################################################################################Played time
 
+print("Retrieving played time info")
+
 info_Steam<-getURL(steam_link)
 file_process<-as.data.frame(info_Steam)
 
@@ -876,8 +908,21 @@ for(i in 2:(str_count(h,'"hours_forever"')[1]+1))
 
 #########################################################################################Released date and pc requirements
 
+pb <- progress_bar$new(format = "(:spin) [:bar] :percent [Elapsed time: :elapsedfull || Estimated time remaining: :eta]",
+                    total = dim(game_list)[1],
+                    complete = "=",   # Completion bar character
+                    incomplete = "-", # Incomplete bar character
+                    current = ">",    # Current bar character
+                    clear = FALSE,    # If TRUE, clears the bar when finish
+                    width = 100)      # Width of the progress bar
+
+
+print("Retrieving release date and pc requirements")
+
 for(i in 1:dim(game_list)[1])
 {
+  pb$tick()
+
   if(!is.na(game_list[i,8]))
   {
     meta_juego<-getURL(paste("https://store.steampowered.com/api/appdetails/?cc=EU&appids=",game_list[i,8],sep=""))
@@ -897,6 +942,8 @@ for(i in 1:dim(game_list)[1])
 
 ######################################################################################Removed games list
 
+print("Retrieving removed games info")
+
 file_process<-gsub("&quot;","\\\\",gsub("&amp;","&",gsub("&#039;","'",cleanFun2(read_file(info_Steam_removed)))))
 
 for(i in 2:(str_count(file_process,'\\;\\?\\;')[1]+1))
@@ -909,6 +956,8 @@ for(i in 2:(str_count(file_process,'\\;\\?\\;')[1]+1))
 
 #####
 
+print("Subsampling table with only useful information")
+
 game_list$rating<-round((game_list[,12]/(game_list[,12]+game_list[,13]))*100,digits=1)
 game_list$tot_votes<-(game_list[,12]+game_list[,13])
 
@@ -917,6 +966,8 @@ game_list_final_output<-game_list[,c(7,8,11,16,24,23,18,3,4,17,14,15,19,22,20,21
 colnames(game_list_final_output)<-c("Name","AppID","Genre","Tags","Votes_total","Positive_rating","Played_time (h)","Time_to_finish (h)","Time_to_complete (h)","100% Completed","Developer","Publisher","Release date","Removed game","Minimum requirements","Recommended requirements")
 
 write.table(game_list_final_output,paste("Steam_Library_Metadata_",id_search,".txt",sep=""),quote = F,row.names = F,sep = "\t")
+
+print(paste("Finished! Output files are: ",paste("Steam_Metadata_Full_",id_search,".txt",sep="")," and ",paste("Steam_Library_Metadata_",id_search,".txt",sep=""),sep=""))
 
 
 
