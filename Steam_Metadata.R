@@ -121,44 +121,55 @@ if(!file.exists("Games_HowLong.txt") & !file.exists(paste("Steam_Metadata_Full_"
   {
     ####### Nombre de la tabla, todos los caracteres
 
-    print("Creating table with names and appid")
+    print("Creating table with names, played time and appid")
 
     info_Steam<-getURL(steam_link)
     file_process<-as.data.frame(info_Steam)
 
     h<-file_process[grep("rgGames",file_process[,1]),]
 
-    res_games<-data.frame(matrix(nrow=str_count(h,'"name"')[1]))
+    game_list_orig<-data.frame(matrix(nrow=str_count(h,'"name"')[1]))
 
-    for(i in 2:(str_count(h,'"name"')[1]+1))
-    {
-      res_games[i,1]<-substr(strsplit(sapply(strsplit(h[1], '"name"'), "[[", i),",\\\"")[[1]][1],3,nchar(strsplit(sapply(strsplit(h[1], '"name"'), "[[", i),",\\\"")[[1]][1])-1)
-    }
 
-    game_list_orig<-as.data.frame(res_games)
-    
-    ####### Para buscar en howlong to beat
-    
-    
     system(paste("wget -q ",steam_link,sep=""))
 
     file_process<-as.data.frame(fread("index.html?tab=all",fill = T))
     
-    h<-file_process[grep("rgGames",file_process[,1]),]
+    h2<-file_process[grep("rgGames",file_process[,1]),]
 
-    res_games<-data.frame(matrix(ncol=8,nrow=str_count(h,'"name"')[1]))
+    res_games<-data.frame(matrix(ncol=24,nrow=str_count(h2,'"name"')[1]))
+
+    pb <- progress_bar$new(format = "(:spin) [:bar] :percent [Elapsed time: :elapsedfull || Estimated time remaining: :eta]",
+                       total = (str_count(h,'"name"')[1]+1),
+                       complete = "=",   # Completion bar character
+                       incomplete = "-", # Incomplete bar character
+                       current = ">",    # Current bar character
+                       clear = FALSE,    # If TRUE, clears the bar when finish
+                       width = 100)      # Width of the progress bar
 
     for(i in 2:(str_count(h,'"name"')[1]+1))
     {
-      res_games[i,1]<-substr(strsplit(sapply(strsplit(h[1], '"name"'), "[[", i),",\\\"")[[1]][1],3,nchar(strsplit(sapply(strsplit(h[1], '"name"'), "[[", i),",\\\"")[[1]][1])-1)
-      res_games[i,7]<-game_list_orig[i,1]
-      res_games[i,8]<-strsplit(strsplit(sapply(strsplit(h[1], '\\,\\{'), "[[", i-1),"appid\\\"\\:")[[1]][2],",")[[1]][1]
+      pb$tick()
+
+      game_list_orig[i,1]<-substr(strsplit(sapply(strsplit(h[1], '"name"'), "[[", i),",\\\"")[[1]][1],3,nchar(strsplit(sapply(strsplit(h[1], '"name"'), "[[", i),",\\\"")[[1]][1])-1)
+      game_list_orig[i,2]<-strsplit(strsplit(sapply(strsplit(h[1], '\\,\\{'), "[[", i-1),"appid\\\"\\:")[[1]][2],",")[[1]][1]
+      if(i<(str_count(h,'"hours_forever"')[1]+1))
+      {
+        game_list_orig[i,3]<-substr(strsplit(sapply(strsplit(h[1], '"hours_forever"'), "[[", i),",\\\"")[[1]][1],3,nchar(strsplit(sapply(strsplit(h[1], '"hours_forever"'), "[[", i),",\\\"")[[1]][1])-1)
+      }
+
+      res_games[i,1]<-substr(strsplit(sapply(strsplit(h2[1], '"name"'), "[[", i),",\\\"")[[1]][1],3,nchar(strsplit(sapply(strsplit(h2[1], '"name"'), "[[", i),",\\\"")[[1]][1])-1)
+      res_games[i,8]<-strsplit(strsplit(sapply(strsplit(h2[1], '\\,\\{'), "[[", i-1),"appid\\\"\\:")[[1]][2],",")[[1]][1]
+      res_games[i,7]<-game_list_orig[match(res_games[i,8],game_list_orig[,2]),1]
+      res_games[i,18]<-game_list_orig[match(res_games[i,8],game_list_orig[,2]),3]
+
     }
 
     game_list<-as.data.frame(res_games[-1,])
     game_list_orig<-game_list_orig[-1,]
     write.table(game_list,"Games_buscar.txt",quote = F,row.names = F,col.names = F,sep="\t")
     system("rm -rf index.html?tab=all")
+    
   }else
   {
     game_list<-read.delim("Games_buscar.txt",header=F,sep="\t")
@@ -170,7 +181,7 @@ if(!file.exists("Games_HowLong.txt") & !file.exists(paste("Steam_Metadata_Full_"
 
   ###Limpiar nombre, chequeo de estado.
 
-  print("Cleaning game names")
+  print("Preprocessing game names")
 
   for(i in 1:dim(game_list)[1])
   {
@@ -797,14 +808,12 @@ if(!file.exists("Games_HowLong.txt") & !file.exists(paste("Steam_Metadata_Full_"
   system("rm -rf aux_time_tunning.txt")
 }
 
-options(warn=0)
-
 ############################################################################################Updates SteamSpy
-
-print("Retrieving more data: votes, developer, publisher...")
 
 if(!file.exists(paste("Steam_Metadata_Full_",id_search,".txt",sep="")))
 {
+  print("Retrieving more data: votes, developer, publisher, release date, pc requirements...")
+
   game_list<-read.delim("Games_HowLong.txt",header=F)
 
   #### Más metadato
@@ -828,8 +837,8 @@ if(!file.exists(paste("Steam_Metadata_Full_",id_search,".txt",sep="")))
 
   res_games<-binded_table[!duplicated(binded_table),]
 
-  game_list$AppID<-res_games[match(game_list[,7],res_games[,2]),1]
-  game_list$AppID_name<-res_games[match(game_list[,7],res_games[,2]),2]
+  game_list[,9]<-res_games[match(game_list[,7],res_games[,2]),1]
+  game_list[,10]<-res_games[match(game_list[,7],res_games[,2]),2]
 
   pb <- progress_bar$new(format = "(:spin) [:bar] :percent [Elapsed time: :elapsedfull || Estimated time remaining: :eta]",
                     total = dim(game_list)[1],
@@ -856,6 +865,17 @@ if(!file.exists(paste("Steam_Metadata_Full_",id_search,".txt",sep="")))
       {
         game_list[i,16]<-paste(sapply(strsplit(strsplit(strsplit(meta_juego,"tags\\\":\\{")[[1]][2], ',')[[1]],'\\\"'),"[[",2),collapse=", ")
       }
+
+      meta_juego<-getURL(paste("https://store.steampowered.com/api/appdetails/?cc=EU&appids=",game_list[i,8],sep=""))
+    
+      if(grepl("\"success\"\\:true",meta_juego))
+      {
+        app_id_gen<-strsplit(strsplit(meta_juego,"\":")[[1]][1],"\"")[[1]][2]
+        game_list[match(app_id_gen,game_list[,8]),19]<-format(ymd(paste(strsplit(strsplit(strsplit(strsplit(meta_juego,"release_date")[[1]][2],"\\\"}")[[1]][1],"\\:\\\"")[[1]][2]," ")[[1]][3],strsplit(strsplit(strsplit(strsplit(meta_juego,"release_date")[[1]][2],"\\\"}")[[1]][1],"\\:\\\"")[[1]][2]," ")[[1]][2],strsplit(strsplit(strsplit(strsplit(meta_juego,"release_date")[[1]][2],"\\\"}")[[1]][1],"\\:\\\"")[[1]][2]," ")[[1]][1],sep=" ")), "%d-%b-%Y")
+        game_list[match(app_id_gen,game_list[,8]),20]<-paste(unlist(strsplit(gsub("Minimum:","",strsplit(gsub("\",\"recommended\":\""," ",cleanFun(strsplit(strsplit(meta_juego,"pc_requirements\\\"\\:\\{\\\"minimum\\\":\\\"")[[1]][2],"\"},\\\"mac_requirements")[[1]][1])),"Recommended:")[[1]][1]),"\\\\r|\\\\n|\\\\t"))[unlist(strsplit(gsub("Minimum:","",strsplit(gsub("\",\"recommended\":\""," ",cleanFun(strsplit(strsplit(meta_juego,"pc_requirements\\\"\\:\\{\\\"minimum\\\":\\\"")[[1]][2],"\"},\\\"mac_requirements")[[1]][1])),"Recommended:")[[1]][1]),"\\\\r|\\\\n|\\\\t")) != ""],collapse = " ")
+        game_list[match(app_id_gen,game_list[,8]),21]<-paste(unlist(strsplit(strsplit(gsub("\",\"recommended\":\""," ",cleanFun(strsplit(strsplit(meta_juego,"pc_requirements\\\"\\:\\{\\\"minimum\\\":\\\"")[[1]][2],"\"},\\\"mac_requirements")[[1]][1])),"Recommended:")[[1]][2],"\\\\r|\\\\n|\\\\t"))[unlist(strsplit(strsplit(gsub("\",\"recommended\":\""," ",cleanFun(strsplit(strsplit(meta_juego,"pc_requirements\\\"\\:\\{\\\"minimum\\\":\\\"")[[1]][2],"\"},\\\"mac_requirements")[[1]][1])),"Recommended:")[[1]][2],"\\\\r|\\\\n|\\\\t")) != ""],collapse = " ")
+      }
+
       Sys.sleep(1)
     }
 
@@ -866,6 +886,8 @@ if(!file.exists(paste("Steam_Metadata_Full_",id_search,".txt",sep="")))
   system("rm -rf Games_HowLong.txt")
   system("rm -rf index.html")
 }
+
+options(warn=0)
 
 ############################################################################################Completed
 
@@ -892,54 +914,6 @@ if(str_count(h,'"name"')[1]>0)
   game_list[,17]<-NA
 }
 
-#########################################################################################Played time
-
-print("Retrieving played time info")
-
-info_Steam<-getURL(steam_link)
-file_process<-as.data.frame(info_Steam)
-
-h<-file_process[grep("rgGames",file_process[,1]),]
-
-for(i in 2:(str_count(h,'"hours_forever"')[1]+1))
-{
-  game_list[match(substr(strsplit(sapply(strsplit(h[1], '"appid"'), "[[", i),",\\\"")[[1]][1],2,nchar(strsplit(sapply(strsplit(h[1], '"appid"'), "[[", i),",\\\"")[[1]][1])),game_list[,8]),18]<-substr(strsplit(sapply(strsplit(h[1], '"hours_forever"'), "[[", i),",\\\"")[[1]][1],3,nchar(strsplit(sapply(strsplit(h[1], '"hours_forever"'), "[[", i),",\\\"")[[1]][1])-1)
-}
-
-#########################################################################################Released date and pc requirements
-
-pb <- progress_bar$new(format = "(:spin) [:bar] :percent [Elapsed time: :elapsedfull || Estimated time remaining: :eta]",
-                    total = dim(game_list)[1],
-                    complete = "=",   # Completion bar character
-                    incomplete = "-", # Incomplete bar character
-                    current = ">",    # Current bar character
-                    clear = FALSE,    # If TRUE, clears the bar when finish
-                    width = 100)      # Width of the progress bar
-
-
-print("Retrieving release date and pc requirements")
-
-for(i in 1:dim(game_list)[1])
-{
-  pb$tick()
-
-  if(!is.na(game_list[i,8]))
-  {
-    meta_juego<-getURL(paste("https://store.steampowered.com/api/appdetails/?cc=EU&appids=",game_list[i,8],sep=""))
-    
-    if(grepl("\"success\"\\:true",meta_juego))
-    {
-      app_id_gen<-strsplit(strsplit(meta_juego,"\":")[[1]][1],"\"")[[1]][2]
-      game_list[match(app_id_gen,game_list[,8]),19]<-format(ymd(paste(strsplit(strsplit(strsplit(strsplit(meta_juego,"release_date")[[1]][2],"\\\"}")[[1]][1],"\\:\\\"")[[1]][2]," ")[[1]][3],strsplit(strsplit(strsplit(strsplit(meta_juego,"release_date")[[1]][2],"\\\"}")[[1]][1],"\\:\\\"")[[1]][2]," ")[[1]][2],strsplit(strsplit(strsplit(strsplit(meta_juego,"release_date")[[1]][2],"\\\"}")[[1]][1],"\\:\\\"")[[1]][2]," ")[[1]][1],sep=" ")), "%d-%b-%Y")
-      game_list[match(app_id_gen,game_list[,8]),20]<-paste(unlist(strsplit(gsub("Minimum:","",strsplit(gsub("\",\"recommended\":\""," ",cleanFun(strsplit(strsplit(meta_juego,"pc_requirements\\\"\\:\\{\\\"minimum\\\":\\\"")[[1]][2],"\"},\\\"mac_requirements")[[1]][1])),"Recommended:")[[1]][1]),"\\\\r|\\\\n|\\\\t"))[unlist(strsplit(gsub("Minimum:","",strsplit(gsub("\",\"recommended\":\""," ",cleanFun(strsplit(strsplit(meta_juego,"pc_requirements\\\"\\:\\{\\\"minimum\\\":\\\"")[[1]][2],"\"},\\\"mac_requirements")[[1]][1])),"Recommended:")[[1]][1]),"\\\\r|\\\\n|\\\\t")) != ""],collapse = " ")
-      game_list[match(app_id_gen,game_list[,8]),21]<-paste(unlist(strsplit(strsplit(gsub("\",\"recommended\":\""," ",cleanFun(strsplit(strsplit(meta_juego,"pc_requirements\\\"\\:\\{\\\"minimum\\\":\\\"")[[1]][2],"\"},\\\"mac_requirements")[[1]][1])),"Recommended:")[[1]][2],"\\\\r|\\\\n|\\\\t"))[unlist(strsplit(strsplit(gsub("\",\"recommended\":\""," ",cleanFun(strsplit(strsplit(meta_juego,"pc_requirements\\\"\\:\\{\\\"minimum\\\":\\\"")[[1]][2],"\"},\\\"mac_requirements")[[1]][1])),"Recommended:")[[1]][2],"\\\\r|\\\\n|\\\\t")) != ""],collapse = " ")
-    }
-
-    Sys.sleep(1.5)
-  }
-}
-
-
 ######################################################################################Removed games list
 
 print("Retrieving removed games info")
@@ -958,8 +932,8 @@ for(i in 2:(str_count(file_process,'\\;\\?\\;')[1]+1))
 
 print("Subsampling table with only useful information")
 
-game_list$rating<-round((game_list[,12]/(game_list[,12]+game_list[,13]))*100,digits=1)
-game_list$tot_votes<-(game_list[,12]+game_list[,13])
+game_list[,23]<-round((game_list[,12]/(game_list[,12]+game_list[,13]))*100,digits=1)
+game_list[,24]<-(game_list[,12]+game_list[,13])
 
 game_list_final_output<-game_list[,c(7,8,11,16,24,23,18,3,4,17,14,15,19,22,20,21)]
 

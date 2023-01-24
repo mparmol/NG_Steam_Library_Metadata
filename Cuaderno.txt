@@ -366,3 +366,5 @@ print(o)
 
 - Modificar cómo se añade info a la columna 1 y 7. Hay un paso donde se copia de una tabla a otra, hacerlo por ID no directo.
 - Ver cuántos "for" del final puedo quitar y dejar solo uno, debería ser fácil. Tengo que imprimir el código...
+- Reducido un bucle for y arreglado el matcheo del principio entre el 1 y 7...ya no copia tal cual, si no que busca AppID
+- Pasado played_time también al principio.
