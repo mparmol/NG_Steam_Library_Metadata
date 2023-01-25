@@ -1,3 +1,12 @@
+---
+output: rmarkdown::github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(collapse=TRUE, comment="##", fig.retina=2, fig.path = "README_figs/README-")
+```
 
 #**NextGame project - Steam Library Metadata**
 
@@ -14,6 +23,9 @@ For this purpose different APIs are used.
 · [HowLongToBeat](https://github.com/ckatzorke/howlongtobeat)
 · [SteamSpy](https://steamspy.com/api.php)
 
+```
+`r version[['version.string']]`
+```
 ###**Steam_Metadata.R**
 
 ###**Installation**
@@ -68,3 +80,21 @@ Sometimes you will get the error:
 
 Don't worry! It's the HowLongToBeat API trying to download games information
 
+```{r,echo=FALSE,warning=FALSE}
+suppressPackageStartupMessages(require("optparse"))
+
+option_list = list(
+  make_option(c("-i", "--input"), type="character", default=NULL, 
+              help="Steam user name or ID", metavar="character")
+); 
+
+opt_parser = OptionParser(option_list=option_list);
+opt = parse_args(opt_parser);
+
+if (is.null(opt$input)){
+  print_help(opt_parser)
+  stop("At least one argument must be supplied (Steam user name or ID).", call.=FALSE)
+}else {
+   id_search=opt$input
+}
+```
