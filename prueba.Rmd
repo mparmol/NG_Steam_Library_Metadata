@@ -1,0 +1,244 @@
+---
+title: "PE-DA"
+output: html_document
+date: "2023-01-24"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r,warning=FALSE,message=FALSE}
+
+library(Seurat)
+library(SeuratDisk)
+library(ggplot2)
+library(randomcoloR)
+library(harmony)
+library(ggpubr)
+library(clustree)
+library(DelayedArray)
+library(ComplexHeatmap)
+library("DAseq")
+library(Seurat)
+library(SeuratDisk)
+library(RColorBrewer)
+
+python2use <- "/home/marcos/mambaforge/bin/python"
+
+GPU <- 5
+
+reduction<-3
+
+zscore_sc <- function(seurat_obj) {
+  
+  
+  counts <- DelayedArray::DelayedArray(seurat_obj@assays$RNA@data)
+  counts <- (counts - DelayedMatrixStats::rowMeans2(counts)) / DelayedMatrixStats::rowSds(counts)
+  counts[base::is.nan(counts)] <- 0
+  return(counts)
+}
+
+#lineage="Stromal"
+lineage="Epithelium"
+
+path_folder="/home/marcos/Documentos/Projects/BioIT_github/SC-PE/"
+
+if(lineage=="Stromal")
+{
+  dir.create(file.path(paste(path_folder,"Stromal_Lineage/",sep="")), showWarnings = FALSE)
+  path_output=paste(path_folder,"Stromal_Lineage/",sep="")
+}else if(lineage=="Epithelium")
+{
+  dir.create(file.path(paste(path_folder,"Epithelium_Lineage/",sep="")), showWarnings = FALSE)
+  path_output=paste(path_folder,"Epithelium_Lineage/",sep="")
+}
+
+```
+
+```{r lineage_subsample}
+
+################################################################################################ Solo Stroma
+
+SC.integrated <- readRDS(paste(path_folder,"biop_secretory_filtered_PRE_integrated.rds",sep=""))
+cell_types_vector <- SC.integrated$predicted.id
+
+if(lineage=="Stromal")
+{
+  lin1<-c(3,1,7,2,21,5,25) ##Activar si Stroma
+  theta_value<-2
+  cell_types_vector<-gsub("weak_assigment|Glandular|Lumenal|Ciliated|SOX9","Others",cell_types_vector)
+}else if(lineage=="Epithelium")
+{
+  lin1<-c(4,29,0,6,28,11,19,20,24,18,23,8,27,16,12) ##Activar si Epitelio
+  theta_value<-3
+  cell_types_vector<-gsub("weak_assigment|dS|PV STEAP4|eS|Fibroblast C7|Endothelial ACKR1","Others",cell_types_vector)
+}
+
+
+# #Activar si Stroma
+ #Activar si Stroma
+
+sc_loom_merged <- SC.integrated[, SC.integrated$RNA_snn_res.1 %in% lin1]
+
+DefaultAssay(object = sc_loom_merged) <- "RNA"
+sc_loom_merged <- sc_loom_merged[, which(sc_loom_merged$orig.ident != "No data")]
+sc_Harmony <- sc_loom_merged
+
+set.seed(1)
+
+sc_Harmony <- sc_Harmony  %>% Seurat::NormalizeData(verbose = FALSE) %>%
+  FindVariableFeatures(selection.method = "vst", nfeatures = 4000) %>% 
+  ScaleData(verbose = T) %>% 
+  RunPCA(pc.genes = pbmc@var.genes, npcs = 30, verbose = FALSE)
+
+#Distintos valores de thehta, recomiendo usar de 0 a 3 con saltos de 1 o 0.5
+theta <- list(c(1),c(2),c(3),c(4))
+for (theta_value in theta) {
+  print(theta_value)
+  #group.by.vars, aqui iria el momento del ciclo menstrual que segun hizo Bea y el el run de secuenciación, si no quedase bien integrado
+  sc_Harmony <- RunHarmony(object = sc_Harmony, assay.use = "RNA", group.by.vars = c("Patient_Group"), theta = theta_value, plot_convergence = T, reduction.save = paste("harmony_Protocol_seq_run_theta",paste0(theta_value, collapse = "_"), sep = "_"), epsilon.harmony = -Inf)
+}
+#beepr::beep(6)
+
+
+for (theta_value in theta) {
+  sc_Harmony <- sc_Harmony %>% 
+    RunUMAP(reduction.name = paste("UMAP_Protocol_seq_run",paste0(theta_value, collapse = "_"), sep = "_"),reduction = paste("harmony_Protocol_seq_run_theta",paste0(theta_value, collapse = "_"), sep = "_"), dims = 1:30) %>% 
+    FindNeighbors(reduction = paste("harmony_Protocol_seq_run_theta",paste0(theta_value, collapse = "_"), sep = "_"), dims = 1:30) %>% 
+    FindClusters(resolution = 0.5) %>% 
+    identity()
+  
+  reduction_var <- paste("UMAP_Protocol_seq_run",paste0(theta_value, collapse = "_"), sep = "_")
+  # Diferentes umaps, yo pondria la identidad celular predicha, el run de secuencaicón, fase del ciclo menstrual y nFeature_RNA 
+  umap1 <- DimPlot(sc_Harmony, group.by = "predicted.id", label = T, raster = F, reduction = reduction_var)
+  umap2 <- DimPlot(sc_Harmony, group.by = "Patient_Group", label = T, raster = F, reduction = reduction_var)
+  umap3 <- DimPlot(sc_Harmony, group.by = "Group", label = T, raster = F, reduction = reduction_var)
+  umap4 <- DimPlot(sc_Harmony, group.by = "Seq_run", label = T, raster = F, reduction = reduction_var) + NoLegend()
+  multi_umap_2 <- ggarrange(umap1, umap2, umap3, umap4, ncol = 2, nrow = 2) 
+  ggsave(filename = paste(path_output,paste0("16052022_multi_umap_Pro_seq_run_thehta", paste0(theta_value, collapse = "_"),"late.pdf"),sep=""), plot = multi_umap_2, device = "pdf", dpi = 320, width = 16, height = 16)
+  #beepr::beep(sound = 8)
+}
+
+SC.integrated <- sc_Harmony
+
+if(lineage=="Stromal")
+{
+  theta_value<-2
+}else if(lineage=="Epithelium")
+{
+  theta_value<-3
+} #### Es la mejor en esta iteracción, cambiar con respecto a lo que se muestre en los resultados anteriores.
+
+reduction_var <- paste("UMAP_Protocol_seq_run",paste0(theta_value, collapse = "_"), sep = "_")
+
+umap_features <- FeaturePlot(object = SC.integrated, features = "nFeature_RNA", max.cutoff = "q95", min.cutoff = "q5", raster = F, reduction = reduction_var) ##NEW_LINE 
+paste0("umap_only_Epi_raw_1000_integrated_NPC_8k_FeaturePlot", paste0(theta_value, collapse = "_"),".pdf")
+ggsave(filename = paste(path_output,paste0("umap_only_Epi_raw_1000_integrated_NPC_8k_FeaturePlot", paste0(theta_value, collapse = "_"),".pdf"),sep=""), plot = umap_features, device = "pdf", width = 14, height = 14, dpi = 320)
+
+UMAP_merged <- eval(parse(text=paste0("SC.integrated@reductions$",reduction_var,"@cell.embeddings")))
+write.csv(x = UMAP_merged, file = paste(path_output,paste0("UMAP_merged",paste0(theta_value, collapse = "_"),".csv"),sep=""))
+
+saveRDS(object = SC.integrated, file = paste(path_output,paste0("biop_secretory_filtered_integrated.rds"),sep=""))
+
+
+##########################################################################################################
+
+plan("sequential")
+DefaultAssay(object = SC.integrated) <- "RNA" 
+#SC.integrated <- NormalizeData(SC.integrated, assay = "integrated")
+
+plan("multiprocess", workers = 6)
+options(future.globals.maxSize = as.numeric(object.size(SC.integrated) + 1073741824))
+gc()
+
+
+### Clustree
+
+clus_vector <- c(0.5,0.6,0.7,0.8,0.9,1,1.1,1.2,1.3,1.4,1.5,1.6,1.7,1.8,1.9,2,2.1,2.2,2.3,2.4,2.5,2.6,2.7,2.8,2.9,3)
+SC.integrated <- SetIdent(object = SC.integrated, value = "orig.ident")
+
+#SC.integrated <- DietSeurat(SC.integrated,dimreducs=c("harmony_Protocol_seq_run_theta_2")) ###Cambiar con cada iteracción
+
+SC.integrated <- FindNeighbors(SC.integrated ,reduction = "harmony_Protocol_seq_run_theta_2", dims = 1:30) ###Cambiar con cada iteracción
+
+for (x in clus_vector) {
+  SC.integrated <- FindClusters(SC.integrated, verbose = FALSE, resolution = x)
+  print(x)
+}
+clustree_all <- clustree(x = SC.integrated, prefix = "RNA_snn_res.", show_axis = TRUE)
+ggsave(clustree_all, filename = paste(path_output,"clusstree_strom_SCT.png",sep=""), device = "png", dpi = 320, width = 12, height = 24)
+SaveH5Seurat(object = SC.integrated, filename = paste(path_output,"ClusTree_sub_strom_integrated_clusters_SeqRun.H5Seurat",sep=""), overwrite = T)
+
+
+##### Find markers
+
+plan("multiprocess", workers = 5)
+options(future.globals.maxSize = as.numeric(object.size(SC.integrated) + 1073741824))
+SC.integrated <- SetIdent(object = SC.integrated, value = "RNA_snn_res.1.3") #### Aquí se mira el resultado de clustree y se elige que snn poner. Por defecto seurat_clusters en la primera ejecucuion
+sc_cluster_markers <- FindAllMarkers(SC.integrated, assay = "RNA", min.pct = 0.3)
+plan("sequential")
+
+write.csv(sc_cluster_markers, file = paste(path_output,paste0("markers_cluster_type_strom.csv"),sep=""))
+
+umap_seu_clust <- DimPlot(SC.integrated, group.by = "RNA_snn_res.1.3", label = T, raster = T, reduction = "UMAP_Protocol_seq_run_2")
+ggsave(filename = paste(path_output,paste0("umap_only_Epi_raw_1000_integrated_NPC_8k_Seu_clust_Clustree.pdf"),sep=""), plot = umap_seu_clust, device = "pdf", width = 14, height = 14, dpi = 320)
+
+sc_cluster_markers %>%
+  group_by(cluster) %>%
+  top_n(n = 5, wt = avg_log2FC) -> top5
+
+umap_seu_dot <- DotPlot(object = SC.integrated, assay = "RNA", features = unique(top5$gene), group.by = "RNA_snn_res.1.3", cols = "RdYlBu") + theme(axis.text.x = element_text(angle = 75, vjust = 1, hjust=1)) + NoLegend() 
+ggsave(filename = paste(path_output,paste0("umap_only_Epi_raw_1000_integrated_NPC_8k_Seu_DotPlot.pdf"),sep=""), plot = umap_seu_dot, device = "pdf", width = 14, height = 14, dpi = 320)
+
+cc<-SC.integrated
+
+zscore_seurat <- zscore_sc(cc)
+cluster_annot <- cc@meta.data
+zscore_seurat <- zscore_seurat[unique(top5$gene),]
+quantiles_matrix <- quantile(zscore_seurat, c(0.1, 0.95))
+
+col_fun = circlize::colorRamp2(c(quantiles_matrix[1],0,quantiles_matrix[2]), c("#FF00FF", "black", "#FFFF00"))
+
+heatmap <- Heatmap(as.matrix(zscore_seurat), name = "z-score",  
+                   column_split = factor(cluster_annot[,"RNA_snn_res.1.3"]),
+                   cluster_columns = TRUE,
+                   show_column_dend = T,
+                   cluster_column_slices = TRUE,
+                   column_title_gp = gpar(fontsize = 8),
+                   column_gap = unit(0.5, "mm"),
+                   cluster_rows = TRUE,
+                   show_row_dend = FALSE,
+                   col = col_fun,
+                   row_names_gp = gpar(fontsize = 4),
+                   column_title_rot = 90,
+                   top_annotation = HeatmapAnnotation(foo = anno_block(labels_gp = gpar(fontsize = 5),gp = gpar(fill = scales::hue_pal()(9),fontsize = 5))),
+                   show_column_names = FALSE,
+                   use_raster = TRUE,
+                   raster_quality = 4)
+
+pdf(file = paste(path_output,paste0("Heatmap_Stroma.pdf"),sep=""), width = 16, height = 10)
+draw(heatmap)
+dev.off()
+
+####
+
+n<-60
+
+qual_col_pals = brewer.pal.info[brewer.pal.info$category == 'qual',]
+col_vector = unlist(mapply(brewer.pal, qual_col_pals$maxcolors, rownames(qual_col_pals)))
+cols=sample(col_vector,length(unique(cell_types_vector)))
+
+
+
+SC.integrated$predicted.id <- cell_types_vector
+SC.integrated <- SetIdent(SC.integrated, value = "predicted.id")
+
+umap1 <- DimPlot(SC.integrated, group.by = "RNA_snn_res.1.3", label = T, raster = T, reduction = "UMAP_Protocol_seq_run_2")
+umap2 <- DimPlot(SC.integrated, group.by = "predicted.id", label = T, raster = F, reduction = reduction_var, cols = cols)
+multi_umap_2 <- ggarrange(umap1, umap2, ncol = 2, nrow = 1) 
+
+ggsave(filename = paste(path_output,paste0("Both", paste0(theta_value, collapse = "_"),".pdf"),sep=""), plot = multi_umap_2, device = "pdf", dpi = 320, width = 15, height = 8)
+
+
+```
