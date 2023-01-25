@@ -15,9 +15,9 @@ For this purpose different APIs are used.
 · [HowLongToBeat](https://github.com/ckatzorke/howlongtobeat)
 · [SteamSpy](https://steamspy.com/api.php)
 
-###**Steam_Metadata.R**
+### **Steam_Metadata.R**
 
-###**Installation**
+### **Installation**
 
 ### Install miniconda (available for Windows and Linux):
 
@@ -35,7 +35,7 @@ Install the dependency
 
 > npm install howlongtobeat --save
 
-###**R dependencies**
+### **R dependencies**
 
 **Packages**
 
@@ -49,7 +49,7 @@ Install the dependency
 · [`optparse`](https://cran.r-project.org/web/packages/optparse/index.html) v`r packageVersion("optparse")`. 
 · [`progress`](https://cran.r-project.org/web/packages/progress/index.html) v`r packageVersion("progress")`. 
 
-###**Usage**
+### **Usage**
 
 
 
@@ -59,7 +59,7 @@ Install the dependency
 2. Run script indicating
     > Rscript NextGame.R 
 
-###**Troubleshooting**
+### **Troubleshooting**
 
 Sometimes you will get the error:
 
