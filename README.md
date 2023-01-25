@@ -1,6 +1,6 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-#**NextGame project - Steam Library Metadata**
+# **NextGame project - Steam Library Metadata**
 
 The purpose of this project is the creation of the metadata table for a Steam specefic user.
 
