@@ -375,3 +375,7 @@ Hacer:
   · Crear entorno de conda con dependencias
   · Guardada la versión definitiva como "definitive". Ver en los puntos anteriores si falta algo...si no, hacer todo lo apuntado en este día ya, dejar todo escrito (post de twitter y Steam incluido) e iniciar script 2, análisis y plots en un Rmarkdown.
   · Cuando esté la versión definitva, subir la tabla a Drive y crear columna de completado (con fecha) y añadir a mano las licencias.
+
+25-1-23
+
+- Quitar las "," que haya en la tabla. Datos de Raúl.
