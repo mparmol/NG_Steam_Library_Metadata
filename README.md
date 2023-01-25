@@ -1,63 +1,110 @@
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
 # **NextGame project - Steam Library Metadata**
 
-The purpose of this project is the creation of the metadata table for a Steam specefic user.
+Steam is the largest video game distribution service nowadays. As the number of videogames found in their database increase, it does for its users libraries too. This could end in the "problem" of not knowing what games do you actually own, or more conretally, their characterisitics. If you want to start a new game it could depend on many factors, like genre, users valoration, how much time will it take to finish it or the pc requirements. The purpose of this project is the creation of the metadata table for a Steam library specefic user, with all the possible information related to the games it owns, in a structured easy-readible way.
 
-The information is scrapped from different databases:
-· [Steam](https://store.steampowered.com/) 
-· [HowLongToBeat](https://howlongtobeat.com/): Database with potential completion time for many games. It is maintained by users, as records are inserted manually. Showed time data is a computed measure from all collaborators.
-· [SteamSpy](https://steamspy.com/): Steam data database maintained by their own API. They show certain metadata in an easier way compared to Steam database. 
+The information is scrapped from four different databases:
+
+· [Steam](https://store.steampowered.com/)\
+· [HowLongToBeat](https://howlongtobeat.com/): Database with potential completion time for many games. It is maintained by users, as records are inserted manually. Showed time data is a computed measure from all collaborators.\
+· [SteamSpy](https://steamspy.com/): Steam data database maintained by their own API. They show certain metadata in an easier way compared to Steam database.\
 · [Steam-tracker](https://steam-tracker.com/): Steam-tracker aims to show different data from certain Steam users, where the most interesting would be the information about removed games.
 
 For this purpose different APIs are used.
-· [Steam](https://store.steampowered.com/api/appdetails/)
-· [HowLongToBeat](https://github.com/ckatzorke/howlongtobeat)
+
+· [Steam](https://store.steampowered.com/api/appdetails/)\
+· [HowLongToBeat](https://github.com/ckatzorke/howlongtobeat)\
 · [SteamSpy](https://steamspy.com/api.php)
 
-### **Steam_Metadata.R**
+## **Steam_Metadata.R**
 
 ### **Installation**
 
-### Install miniconda (available for Windows and Linux):
+· The tool could be used in any OS (Windows/Linux/Mac).
 
-https://docs.conda.io/en/latest/miniconda.html
+Steam_Metadata.R is a R scripted tool that will require R locally installed to run. If you already have R installed in a Conda environment you can skip this step and move forward to [step 3](#3--install-howlongtobeat-api) 
 
-### Create conda environment with R:
+#### 1- Download and install miniconda (available for Windows and Linux)
 
-> conda create -n r_env r-essentials r-base
+Anaconda (or miniconda) is an enviroment creator aplication to install packages independencies safely. Download your OS version from their webpage. Install and configure it. 
 
-### Install Howlongtobeat API
+> https://docs.conda.io/en/latest/miniconda.html
 
-> https://github.com/ckatzorke/howlongtobeat
+#### 2- Create conda environment with R (R \>= 4.1.0)
 
-Install the dependency
+Execute miniconda and create a new environment with R. It will install latest R version, but check it is at least version \>=4.1.0.
 
-> npm install howlongtobeat --save
+```bash 
+> conda create -n steam_metadata r-essentials r-base
+```
 
-### **R dependencies**
+#### 3- Install HowLongToBeat API
 
-**Packages**
+HowLongToBeat API is based on javascript coding: https://github.com/ckatzorke/howlongtobeat. Follow their tutorial to install needed dependencies and support them for their wrapper (thanks!).
 
-· [`data.table`](https://cran.r-project.org/web/packages/data.table/index.html) v`r packageVersion("data.table")`. 
-· [`stringr`](https://cran.r-project.org/web/packages/stringr/index.html) v`r packageVersion("stringr")`.
-· [`stringi`](https://cran.r-project.org/web/packages/stringi/index.html) v`r packageVersion("stringi")`. 
-· [`rvest`](https://cran.r-project.org/web/packages/rvest/index.html) v`r packageVersion("rvest")`. 
-· [`RCurl`](https://cran.r-project.org/web/packages/RCurl/index.html) v`r packageVersion("RCurl")`. 
-· [`readr`](https://cran.r-project.org/web/packages/readr/index.html) v`r packageVersion("readr")`. 
-· [`lubridate`](https://cran.r-project.org/web/packages/lubridate/index.html) v`r packageVersion("lubridate")`. 
-· [`optparse`](https://cran.r-project.org/web/packages/optparse/index.html) v`r packageVersion("optparse")`. 
-· [`progress`](https://cran.r-project.org/web/packages/progress/index.html) v`r packageVersion("progress")`. 
+#### 4- Install R dependencies
+
+Some R packages are needed to fetch data and process it. 
+
+   - First you will have to load your conda environment
+    
+```bash
+> conda activate steam_metadata
+```    
+   - Load R
+ 
+```bash
+> R
+```
+   - Install dependecies
+    
+**Packages (recommended version)**
+
+· [`data.table`](https://cran.r-project.org/web/packages/data.table/index.html) v1.14.6\
+· [`stringr`](https://cran.r-project.org/web/packages/stringr/index.html) v1.4.1\
+· [`stringi`](https://cran.r-project.org/web/packages/stringi/index.html) v1.7.8\
+· [`rvest`](https://cran.r-project.org/web/packages/rvest/index.html) v1.0.3\
+· [`RCurl`](https://cran.r-project.org/web/packages/RCurl/index.html) v1.98-1.9\
+· [`readr`](https://cran.r-project.org/web/packages/readr/index.html) v2.1.3\
+· [`lubridate`](https://cran.r-project.org/web/packages/lubridate/index.html) v1.8.0\
+· [`optparse`](https://cran.r-project.org/web/packages/optparse/index.html) v1.7.3\
+· [`progress`](https://cran.r-project.org/web/packages/progress/index.html) v1.2.2
+
+You can install them manually with the command `ìnstall.packages()` or as a bulk:
+
+```R
+install.packages(c("data.table", "stringr", "stringi", "rvest", "RCurl", "readr", "lubridate", "optparse", "progress"))
+```
+
+   - Exit R
 
 ### **Usage**
 
+```bash
+Usage: Steam_Metadata.R [options]
 
 
+Options:
+-i CHARACTER, --input=CHARACTER
+	Steam user name or ID
+
+-h, --help
+	Show this help message and exit
+```
 
 1. Load conda environment. 
-    > conda activate r_env
-2. Run script indicating
-    > Rscript NextGame.R 
+
+```bash
+> conda activate steam_metadata
+```    
+
+2. Run script with the parameter -i followed by user pseudonym or accound id
+
+```bash
+> Rscript Steam_Metadata.R -i *user_name*
+```    
+3. Relax and chill
+
+### **Output**
 
 ### **Troubleshooting**
 
