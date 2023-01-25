@@ -1,12 +1,12 @@
 # **NextGame project - Steam Library Metadata**
 
-Steam is the largest video game distribution service nowadays. As the number of videogames found in their database increase, it does for its users libraries too. This could end in the "problem" of not knowing what games do you actually own, or more conretally, their characterisitics. If you want to start a new game it could depend on many factors, like genre, users valoration, how much time will it take to finish it or the pc requirements. The purpose of this project is the creation of the metadata table for a Steam library specefic user, with all the possible information related to the games it owns, in a structured easy-readible way.
+Steam is the largest video game distribution service nowadays. As the number of videogames found in their database increase, it does for its users' libraries too. This could end in the "problem" of not knowing what games you own, or more concretely, their characteristics. If you want to start a new game it could depend on many factors, like genre, user rating, how much time will it take to finish it or the pc requirements. The purpose of this project is the creation of the metadata table for a Steam library-specific user, with all the possible information related to the games it owns, in a structured easy-readable way.
 
 The information is scrapped from four different databases:
 
 · [Steam](https://store.steampowered.com/)\
 · [HowLongToBeat](https://howlongtobeat.com/): Database with potential completion time for many games. It is maintained by users, as records are inserted manually. Showed time data is a computed measure from all collaborators.\
-· [SteamSpy](https://steamspy.com/): Steam data database maintained by their own API. They show certain metadata in an easier way compared to Steam database.\
+· [SteamSpy](https://steamspy.com/): Steam data database maintained by their own API. They show certain metadata more readily compared to Steam's database.\
 · [Steam-tracker](https://steam-tracker.com/): Steam-tracker aims to show different data from certain Steam users, where the most interesting would be the information about removed games.
 
 For this purpose different APIs are used.
@@ -21,17 +21,17 @@ For this purpose different APIs are used.
 
 · The tool could be used in any OS (Windows/Linux/Mac).
 
-Steam_Metadata.R is a R scripted tool that will require R locally installed to run. If you already have R installed in a Conda environment you can skip this step and move forward to [step 3](#3--install-howlongtobeat-api) 
+Steam_Metadata.R is an R-scripted tool that will require R locally installed to run. If you already have R installed in a Conda environment you can skip this step and move forward to [step 3](#3--install-howlongtobeat-api) 
 
 #### 1- Download and install miniconda (available for Windows and Linux)
 
-Anaconda (or miniconda) is an enviroment creator aplication to install packages independencies safely. Download your OS version from their webpage. Install and configure it. 
+Anaconda (or miniconda) is an environment creator application to install packages independencies safely. Download your OS version from their webpage. Install and configure it. 
 
 > https://docs.conda.io/en/latest/miniconda.html
 
 #### 2- Create conda environment with R (R \>= 4.1.0)
 
-Execute miniconda and create a new environment with R. It will install latest R version, but check it is at least version \>=4.1.0.
+Execute miniconda and create a new environment with R. It will install the latest R version, but check it is at least version \>=4.1.0.
 
 ```bash 
 > conda create -n steam_metadata r-essentials r-base
@@ -45,7 +45,7 @@ HowLongToBeat API is based on javascript coding: https://github.com/ckatzorke/ho
 
 Some R packages are needed to fetch data and process it. 
 
-   - First you will have to load your conda environment
+   - First, you will have to load your conda environment
     
 ```bash
 > conda activate steam_metadata
@@ -79,6 +79,8 @@ install.packages(c("data.table", "stringr", "stringi", "rvest", "RCurl", "readr"
 
 ### **Usage**
 
+First, the user profile from which you want to fetch information must be set to public. You can follow [Team17 tutorial](https://support.team17.com/hc/en-gb/articles/360003517458-Steam-Privacy-Settings) to change it to public in case you don't have it yet.
+
 ```bash
 Usage: Steam_Metadata.R [options]
 
@@ -97,7 +99,7 @@ Options:
 > conda activate steam_metadata
 ```    
 
-2. Run script with the parameter -i followed by user pseudonym or accound id
+2. Run script with the parameter *-i* followed by user pseudonym or account id
 
 ```bash
 > Rscript Steam_Metadata.R -i *user_name*
@@ -106,13 +108,29 @@ Options:
 
 ### **Output**
 
+The script generates two tables as output: 
+
+- `Steam_Metadata_Full_*user_id*`: Here we can find all columns generated from the tool. Some columns could be interesting for analysts, like the similarity one, which shows how similar is the game name compared to the name found in HowLongToBeat database.
+- `Steam_Library_Metadata_*user_id*`: Processed and cleaned metadata table. It has 16 columns with the following information:
+
+| Name | AppID | Genre | Tags | Votes_total | Positive_rating | Played_time (h) | Time_to_finish (h) | Time_to_compelte (h) | 100%_Completed | Developer | Publisher | Release_date | Removed_game | Minimum requirements | Recommended requirement |
+| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+
 ### **Troubleshooting**
 
-Sometimes you will get the error:
+Sometimes you will get a similar error while processing HowLongToBeat:
 
 
 > (node:3834371) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 2)
 (node:3834371) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
 
-Don't worry! It's the HowLongToBeat API trying to download games information
+Don't worry! It's the HowLongToBeat API trying to download games information. It will eventually continue the analysis.
+
+On the other hand, you can get the following error when using Steam API:
+
+> Error in function (type, msg, asError = TRUE)  :
+  Failed to connect to store.steampowered.com port 443 after 21036 ms: Couldn't connect to server
+
+In this case, run the script again. It will automatically continue from the last checkpoint file.
+
 
