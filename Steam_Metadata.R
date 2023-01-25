@@ -156,7 +156,7 @@ if(!file.exists("Games_HowLong.txt") & !file.exists(paste("Steam_Metadata_Full_"
       game_list_orig[i,2]<-strsplit(strsplit(sapply(strsplit(h[1], '\\,\\{'), "[[", i-1),"appid\\\"\\:")[[1]][2],",")[[1]][1]
       if(i<(str_count(h,'"hours_forever"')[1]+1))
       {
-        game_list_orig[i,3]<-substr(strsplit(sapply(strsplit(h[1], '"hours_forever"'), "[[", i),",\\\"")[[1]][1],3,nchar(strsplit(sapply(strsplit(h[1], '"hours_forever"'), "[[", i),",\\\"")[[1]][1])-1)
+        game_list_orig[i,3]<-gsub(",","",substr(strsplit(sapply(strsplit(h[1], '"hours_forever"'), "[[", i),",\\\"")[[1]][1],3,nchar(strsplit(sapply(strsplit(h[1], '"hours_forever"'), "[[", i),",\\\"")[[1]][1])-1))
       }
 
       res_games[i,1]<-substr(strsplit(sapply(strsplit(h2[1], '"name"'), "[[", i),",\\\"")[[1]][1],3,nchar(strsplit(sapply(strsplit(h2[1], '"name"'), "[[", i),",\\\"")[[1]][1])-1)
@@ -866,10 +866,10 @@ if(!file.exists(paste("Steam_Metadata_Full_",id_search,".txt",sep=""))) # Useful
       Sys.sleep(1)
     }
 
-    write.table(game_list,paste("Steam_Metadata_Full_",id_search,".txt",sep=""),quote = F,row.names = F,col.names = F,sep = "\t")
 
   }
 
+  write.table(game_list,paste("Steam_Metadata_Full_",id_search,".txt",sep=""),quote = F,row.names = F,col.names = F,sep = "\t")
   system("rm -rf Games_HowLong.txt")
   system("rm -rf index.html")
 }
@@ -924,7 +924,7 @@ game_list[,24]<-(game_list[,12]+game_list[,13])
 
 game_list_final_output<-game_list[,c(7,8,11,16,24,23,18,3,4,17,14,15,19,22,20,21)]
 
-colnames(game_list_final_output)<-c("Name","AppID","Genre","Tags","Votes_total","Positive_rating","Played_time (h)","Time_to_finish (h)","Time_to_complete (h)","100% Completed","Developer","Publisher","Release date","Removed game","Minimum requirements","Recommended requirements")
+colnames(game_list_final_output)<-c("Name","AppID","Genre","Tags","Votes_total","Positive_rating","Played_time (h)","Time_to_finish (h)","Time_to_complete (h)","100%_Completed","Developer","Publisher","Release_date","Removed_game","Minimum_requirements","Recommended_requirements")
 
 write.table(game_list_final_output,paste("Steam_Library_Metadata_",id_search,".txt",sep=""),quote = F,row.names = F,sep = "\t")
 

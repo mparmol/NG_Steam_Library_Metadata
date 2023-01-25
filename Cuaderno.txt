@@ -368,12 +368,13 @@ print(o)
 - Ver cuántos "for" del final puedo quitar y dejar solo uno, debería ser fácil. Tengo que imprimir el código...
 - Reducido un bucle for y arreglado el matcheo del principio entre el 1 y 7...ya no copia tal cual, si no que busca AppID
 - Pasado played_time también al principio.
+- Guardada la versión definitiva como "definitive". 
 Hacer:
   X Poner todo código en inglés y comentado.
   X Qué archivos deben sincronizarse...ver qué archivos están en los pcs...hacer carpeta con un bin.
-  · Empezar a escribir el README. Montarlo sobre un Rmarkdown?
-  · Crear entorno de conda con dependencias
-  · Guardada la versión definitiva como "definitive". Ver en los puntos anteriores si falta algo...si no, hacer todo lo apuntado en este día ya, dejar todo escrito (post de twitter y Steam incluido) e iniciar script 2, análisis y plots en un Rmarkdown.
+  X Empezar a escribir el README. Montarlo sobre un Rmarkdown?
+  - Crear entorno de conda con dependencias
+  · Ver en los puntos anteriores si falta algo...si no, hacer todo lo apuntado en este día ya, dejar todo escrito (post de twitter y Steam incluido) e iniciar script 2, análisis y plots en un Rmarkdown.
   · Cuando esté la versión definitva, subir la tabla a Drive y crear columna de completado (con fecha) y añadir a mano las licencias.
 
 25-1-23
