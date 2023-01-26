@@ -6,6 +6,7 @@ The information is scrapped from four different databases:
 
 · [Steam](https://store.steampowered.com/)\
 · [HowLongToBeat](https://howlongtobeat.com/): Database with potential completion time for many games. It is maintained by users, as records are inserted manually. Showed time data is a computed measure from all collaborators.\
+· [SteamIdFinder](https://www.steamidfinder.com/): Check any SteamID or user pseudonym for any user profile information.\
 · [SteamSpy](https://steamspy.com/): Steam data database maintained by their own API. They show certain metadata more readily compared to Steam's database.\
 · [Steam-tracker](https://steam-tracker.com/): Steam-tracker aims to show different data from certain Steam users, where the most interesting would be the information about removed games.
 

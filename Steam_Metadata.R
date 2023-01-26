@@ -116,9 +116,9 @@ info_Steam_removed<-paste("https://steam-tracker.com/scan/",strsplit(strsplit(st
 
 options(warn=-1) # We exclude warnings to show on the screen
 
-if(!file.exists("Games_HowLong.txt") & !file.exists(paste("Steam_Metadata_Full_",id_search,".txt",sep=""))) #If output already exists (and later APIs fail later) we skip this step
+if(!file.exists(paste("Game_HowLong_",id_search,".txt",sep="")) & !file.exists(paste("Steam_Metadata_Full_",id_search,".txt",sep=""))) #If output already exists (and later APIs fail later) we skip this step
 {
-  if(!file.exists("Base_metadata_table.txt")) 
+  if(!file.exists(paste("Base_metadata_table_",id_search,".txt",sep=""))) 
   {
     ####### Within this block, the table is initiated with name, played time and appid information. We use steam user information for this purpose.
 
@@ -168,12 +168,12 @@ if(!file.exists("Games_HowLong.txt") & !file.exists(paste("Steam_Metadata_Full_"
 
     game_list<-as.data.frame(res_games[-1,])
     game_list_orig<-game_list_orig[-1,]
-    write.table(game_list,"Base_metadata_table.txt",quote = F,row.names = F,col.names = F,sep="\t")
+    write.table(game_list,paste("Base_metadata_table_",id_search,".txt",sep=""),quote = F,row.names = F,col.names = F,sep="\t")
     system("rm -rf index.html?tab=all") # Temporary files are removed.
     
   }else
   {
-    game_list<-read.delim("Base_metadata_table.txt",header=F,sep="\t")
+    game_list<-read.delim(paste("Base_metadata_table_",id_search,".txt",sep=""),header=F,sep="\t")
   }
 
   ### Extract gameplay time
@@ -789,8 +789,8 @@ if(!file.exists("Games_HowLong.txt") & !file.exists(paste("Steam_Metadata_Full_"
   pb$tick()  
 
   game_list[,1]<-game_list_aux[,1]
-  write.table(game_list,"Games_HowLong.txt",quote = F,row.names = F,col.names = F,sep = "\t")
-  system("rm -rf Base_metadata_table.txt") # Temporary files are removed
+  write.table(game_list,paste("Game_HowLong_",id_search,".txt",sep=""),quote = F,row.names = F,col.names = F,sep = "\t")
+  system(paste("rm -rf ",paste("Base_metadata_table_",id_search,".txt",sep=""),sep="")) # Temporary files are removed
   system("rm -rf aux_time.txt")
   system("rm -rf aux_time_second.txt")
 }
@@ -801,7 +801,7 @@ if(!file.exists(paste("Steam_Metadata_Full_",id_search,".txt",sep=""))) # Useful
 {
   print("Scraping more data: votes, developer, publisher, release date, pc requirements...")
 
-  game_list<-read.delim("Games_HowLong.txt",header=F)
+  game_list<-read.delim(paste("Game_HowLong_",id_search,".txt",sep=""),header=F)
 
   #### Más metadato
 
@@ -876,7 +876,7 @@ if(!file.exists(paste("Steam_Metadata_Full_",id_search,".txt",sep=""))) # Useful
   }
 
   write.table(game_list,paste("Steam_Metadata_Full_",id_search,".txt",sep=""),quote = F,row.names = F,col.names = F,sep = "\t")
-  system("rm -rf Games_HowLong.txt")
+  system(paste("rm -rf ",paste("Game_HowLong_",id_search,".txt",sep=""),sep=""))
   system("rm -rf index.html")
 }
 
