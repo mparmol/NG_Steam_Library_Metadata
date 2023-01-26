@@ -80,7 +80,8 @@ install.packages(c("data.table", "stringr", "stringi", "rvest", "RCurl", "readr"
 
 ### **Usage**
 
-First, the user profile from which you want to fetch information must be set to public. You can follow [Team17 tutorial](https://support.team17.com/hc/en-gb/articles/360003517458-Steam-Privacy-Settings) to change it to public in case you don't have it yet.
+First, the user profile from which you want to fetch information must be set to public. You can follow [Team17 tutorial](https://support.team17.com/hc/en-gb/articles/360003517458-Steam-Privacy-Settings) to change it to public in case you don't have it yet. You can get the user ID by accesing it profile on Steam and looking at the URL. For example, my account would be:
+> https://steamcommunity.com/id/marko_pakete/ (marko_pakete)
 
 ```bash
 Usage: Steam_Metadata.R [options]
@@ -100,12 +101,16 @@ Options:
 > conda activate steam_metadata
 ```    
 
-2. Run script with the parameter *-i* followed by user pseudonym or account id
+2. Run script with the parameter *-i* followed by user pseudonym or account id.
 
 ```bash
 > Rscript Steam_Metadata.R -i *user_name*
 ```    
-3. Relax and chill
+3. Relax and chill. Excution time will depend on the library size, but time range from:
+
+> · **100 Games~** -> 8 min\
+> · **3000 Games~** -> 4 h\
+> · **15k+ Games~** -> 50h+ (depending on the API's)
 
 ### **Output**
 
