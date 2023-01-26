@@ -846,7 +846,6 @@ if(!file.exists(paste("Steam_Metadata_Full_",id_search,".txt",sep=""))) # Useful
       while(!grepl("name",meta_game))
       {
         meta_game<-getURL(paste("https://steamspy.com/api.php?request=appdetails&appid=",game_list[i,8],sep="")) # We complete the information using steamspy API. Here we save the information for genre, votes, developer...
-        Sys.sleep(1)
       }
 
       game_list[i,10]<-strsplit(strsplit(meta_game,"name\\\":\\\"")[[1]][2],"\\\",\\\"")[[1]][1]
