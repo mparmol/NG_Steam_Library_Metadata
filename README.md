@@ -133,4 +133,13 @@ On the other hand, you can get the following error when using Steam API:
 
 In this case, run the script again. It will automatically continue from the last checkpoint file.
 
+Anothe possible error could come while using SteamSpy API. Just re-run the script.
+
+> Error in function (type, msg, asError = TRUE)  :
+  getaddrinfo() thread failed to start
+
+
+
+
+
 

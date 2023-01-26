@@ -839,9 +839,16 @@ if(!file.exists(paste("Steam_Metadata_Full_",id_search,".txt",sep=""))) # Useful
   {
     pb$tick()
 
+    meta_game=NA
+
     if(!is.na(game_list[i,8]))
     {
-      meta_game<-getURL(paste("https://steamspy.com/api.php?request=appdetails&appid=",game_list[i,8],sep="")) # We complete the information using steamspy API. Here we save the information for genre, votes, developer...
+      while(!grepl("name",meta_game))
+      {
+        meta_game<-getURL(paste("https://steamspy.com/api.php?request=appdetails&appid=",game_list[i,8],sep="")) # We complete the information using steamspy API. Here we save the information for genre, votes, developer...
+        Sys.sleep(1)
+      }
+
       game_list[i,10]<-strsplit(strsplit(meta_game,"name\\\":\\\"")[[1]][2],"\\\",\\\"")[[1]][1]
       game_list[i,11]<-strsplit(strsplit(meta_game,"genre\\\":\\\"")[[1]][2],"\\\",\\\"")[[1]][1]
       game_list[i,12]<-strsplit(strsplit(meta_game,"positive\\\":")[[1]][2],",\\\"")[[1]][1]
