@@ -131,6 +131,7 @@ if(!file.exists(paste("Game_HowLong_",id_search,".txt",sep="")) & !file.exists(p
 
     game_list_orig<-data.frame(matrix(nrow=str_count(h,'"name"')[1]))
 
+    system("rm -rf index.html?tab=all")
 
     system(paste("wget -q ",steam_link,sep="")) # Second time we extract user information from Steam.
 
@@ -148,21 +149,25 @@ if(!file.exists(paste("Game_HowLong_",id_search,".txt",sep="")) & !file.exists(p
                        clear = FALSE,    # If TRUE, clears the bar when finish
                        width = 100)      # Width of the progress bar
 
+    print(paste("Total entries in ",id_search," database: ",(str_count(h,'"name"')[1]),sep="")) # This is the number of IDs that are going to be evaluated and scrapped within different databases
+
+
     for(i in 2:(str_count(h,'"name"')[1]+1)) # This for loop gets the basic information in a table.
     {
       pb$tick() 
 
       game_list_orig[i,1]<-substr(strsplit(sapply(strsplit(h[1], '"name"'), "[[", i),",\\\"")[[1]][1],3,nchar(strsplit(sapply(strsplit(h[1], '"name"'), "[[", i),",\\\"")[[1]][1])-1)
       game_list_orig[i,2]<-strsplit(strsplit(sapply(strsplit(h[1], '\\,\\{'), "[[", i-1),"appid\\\"\\:")[[1]][2],",")[[1]][1]
-      if(i<(str_count(h,'"hours_forever"')[1]+1))
-      {
-        game_list_orig[i,3]<-gsub(",","",substr(strsplit(sapply(strsplit(h[1], '"hours_forever"'), "[[", i),",\\\"")[[1]][1],3,nchar(strsplit(sapply(strsplit(h[1], '"hours_forever"'), "[[", i),",\\\"")[[1]][1])-1))
-      }
 
       res_games[i,1]<-substr(strsplit(sapply(strsplit(h2[1], '"name"'), "[[", i),",\\\"")[[1]][1],3,nchar(strsplit(sapply(strsplit(h2[1], '"name"'), "[[", i),",\\\"")[[1]][1])-1)
       res_games[i,8]<-strsplit(strsplit(sapply(strsplit(h2[1], '\\,\\{'), "[[", i-1),"appid\\\"\\:")[[1]][2],",")[[1]][1]
+      
+      if(i<(str_count(h2,'"hours_forever"')[1]+1))
+      {
+        res_games[i,18]<-gsub(",","",substr(strsplit(sapply(strsplit(h2[1], '"hours_forever"'), "[[", i),",\\\"")[[1]][1],3,nchar(strsplit(sapply(strsplit(h2[1], '"hours_forever"'), "[[", i),",\\\"")[[1]][1])-1))
+      }
+
       res_games[i,7]<-game_list_orig[match(res_games[i,8],game_list_orig[,2]),1]
-      res_games[i,18]<-game_list_orig[match(res_games[i,8],game_list_orig[,2]),3]
 
     }
 
@@ -290,7 +295,6 @@ if(!file.exists(paste("Game_HowLong_",id_search,".txt",sep="")) & !file.exists(p
                        clear = FALSE,    # If TRUE, clears the bar when finish
                        width = 100)      # Width of the progress bar
 
-  print(paste("Total entries in ",id_search," database: ",dim(game_list)[1],sep="")) # This is the number of IDs that are going to be evaluated and scrapped within different databases
   print("Scraping info from HowLongToBeat") # This is the most tricky part of the scrapping process. Games alocated in HowLongToBeat don't have the AppID correctly annotated so we have to match the names using regular expressions and similarity systems.
 
   while(i<dim(game_list)[1])
