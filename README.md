@@ -112,6 +112,12 @@ Options:
 > · **3000 Games~** -> 4 h\
 > · **15k+ Games~** -> 50h+ (depending on the API's)
 
+**Example**
+
+```
+Rscript Steam_Metadata.R -i marko_pakete
+```
+
 ### **Output**
 
 The script generates two tables as output: 
