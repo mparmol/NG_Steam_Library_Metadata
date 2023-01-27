@@ -1,4 +1,5 @@
-# **NextGame project - Steam Library Metadata**
+# **NextGame project - Steam Library Metadata** ![Stars](https://img.shields.io/github/stars/mparmol/NG_Steam_Library_Metadata)
+
 
 Steam is the largest video game distribution service nowadays. As the number of videogames found in their database increase, it does for its users' libraries too. This could end in the "problem" of not knowing what games you own, or more concretely, their characteristics. If you want to start a new game it could depend on many factors, like genre, user rating, how much time will it take to finish it or the pc requirements. The purpose of this project is the creation of the metadata table for a Steam library-specific user, with all the possible information related to the games it owns, in a structured easy-readable way.
 
@@ -18,11 +19,16 @@ For this purpose different APIs are used.
 
 ## **Steam_Metadata.R**
 
+#### [**1- Installation**](#installation)
+#### [**2- Usage**](#usage)
+#### [**3- Output**](#output)
+#### [**4- Troubleshooting**](#troubleshooting)
+
 ### **Installation**
 
 · The tool could be used in any OS (Windows/Linux/Mac).
 
-Steam_Metadata.R is an R-scripted tool that will require R locally installed to run. If you already have R installed in a Conda environment you can skip this step and move forward to [step 3](#3--install-howlongtobeat-api) 
+Steam_Metadata.R is an R-scripted tool that will require R locally installed to run. If you already have R installed in a Conda environment you can skip this step and move forward to [step 3](#3--install-howlongtobeat-api). 
 
 #### 1- Download and install miniconda (available for Windows and Linux)
 
@@ -106,11 +112,7 @@ Options:
 ```bash
 > Rscript Steam_Metadata.R -i *user_name*
 ```    
-3. Relax and chill. Excution time will depend on the library size, but time range from:
-
-> · **100 Games~** -> 8 min\
-> · **3000 Games~** -> 4 h\
-> · **15k+ Games~** -> 50h+ (depending on the API's)
+3. Relax and chill.[^1]
 
 **Example**
 
@@ -125,8 +127,9 @@ The script generates two tables as output:
 - `Steam_Metadata_Full_*user_id*`: Here we can find all columns generated from the tool. Some columns could be interesting for analysts, like the similarity one, which shows how similar is the game name compared to the name found in HowLongToBeat database.
 - `Steam_Library_Metadata_*user_id*`: Processed and cleaned metadata table. It has 16 columns with the following information:
 
-| Name | AppID | Genre | Tags | Votes_total | Positive_rating | Played_time (h) | Time_to_finish (h) | Time_to_compelte (h) | 100%_Completed | Developer | Publisher | Release_date | Removed_game | Minimum requirements | Recommended requirement |
+| Name | AppID | Genre | Tags | Votes_total | Positive_rating | Played_time (h) | Time_to_finish (h) | Time_to_complete (h) | 100%_Completed | Developer | Publisher | Release_date | Removed_game | Minimum requirements | Recommended requirements |
 | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+| Game name | AppID | A game could be assigned to more than one genre | How game is categorized | Total votes to date for a game | Percentage of positive votes (positive/positive+negative) | Total played time for a game | Time to finish the main campaign | Time to obtain all achivements or finish the game witll al possible extra | Games with all achievements unlocked | Developer | Publisher (could change with time) | Final version release date | Not available for purchase games | PC minimun requierements | PC recommended requirements |   
 
 ### **Troubleshooting**
 
@@ -150,7 +153,7 @@ Anothe possible error could come while using SteamSpy API. Just re-run the scrip
 > Error in function (type, msg, asError = TRUE)  :
   getaddrinfo() thread failed to start
 
-
+[^1]: Excution time will depend on the library size, but time range from: **100 Games~** -> 8 min, **3000 Games~** -> 4 h, **15k+ Games~** -> 50h+ (depending on the API's)
 
 
 
