@@ -156,10 +156,11 @@ if(!file.exists(paste("Game_HowLong_",id_search,".txt",sep="")) & !file.exists(p
     {
       pb$tick() 
 
-      game_list_orig[i,1]<-tryCatch(substr(strsplit(sapply(strsplit(h[1], '"name"'), "[[", i),",\\\"")[[1]][1],3,
-      nchar(strsplit(sapply(strsplit(h[1], '"name"'), "[[", i),",\\\"")[[1]][1])-1),
-      error=function(e){substr(strsplit(sapply(strsplit(h2[1], '"name"'), "[[", i),",\\\"")[[1]][1],3,
-      nchar(strsplit(sapply(strsplit(h2[1], '"name"'), "[[", i),",\\\"")[[1]][1])-1)}) #TryCatch exception for games with symbols in the name, we save the name removing that information.
+      game_list_orig[i,1]<-tryCatch(substr(strsplit(sapply(strsplit(h[1], '"name"'), "[[", i),",\\\"")[[1]][1],3,nchar(strsplit(sapply(strsplit(h[1], '"name"'), "[[", i),",\\\"")[[1]][1])-1),
+      error=function(e){
+      print(paste("ERROR: ",sapply(strsplit(h[1], '"name"'), "[[", i)))
+      substr(strsplit(sapply(strsplit(h2[1], '"name"'), "[[", i),",\\\"")[[1]][1],3,nchar(strsplit(sapply(strsplit(h2[1], '"name"'), "[[", i),",\\\"")[[1]][1])-1)
+      }) #TryCatch exception for games with symbols in the name, we save the name removing that information.
 
       #game_list_orig[i,1]<-substr(strsplit(sapply(strsplit(h[1], '"name"'), "[[", i),",\\\"")[[1]][1],3,nchar(strsplit(sapply(strsplit(h[1], '"name"'), "[[", i),",\\\"")[[1]][1])-1)
       game_list_orig[i,2]<-strsplit(strsplit(sapply(strsplit(h[1], '\\,\\{'), "[[", i-1),"appid\\\"\\:")[[1]][2],",")[[1]][1]
