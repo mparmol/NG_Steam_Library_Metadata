@@ -197,6 +197,7 @@ if(!file.exists(paste("Game_HowLong_",id_search,".txt",sep="")) & !file.exists(p
   {
     
     aux_game_name<-gsub(" ","",game_list[i,1])
+    game_list[i,1]<-trimws(game_list[i,1], "l")
 
     if(grepl("\\\\u00fc",game_list[i,1])) #######################
     {
@@ -348,7 +349,7 @@ if(!file.exists(paste("Game_HowLong_",id_search,".txt",sep="")) & !file.exists(p
         cont_long_string=cont_long_string+1 #This variable is useful when trying to look for game names combination with ":"
       
         system(paste("node ./bin/HLTB.js ",pasted_value," > aux_time.txt", sep="")) #This is the HowLongToBeat API. We give the game name and obtain a json formated file with the information.
-      
+        print(paste(pasted_value,i))
         if(!is.null(pasted_value_tunning)) # Here we check if we are coputing a second combination for the game name, we will have to compare both results.
         {
           system("rm -rf aux_time_second.txt")
@@ -356,6 +357,7 @@ if(!file.exists(paste("Game_HowLong_",id_search,".txt",sep="")) & !file.exists(p
           while(file.info("aux_time_second.txt")$size==0) # The API may fail with a runtime error. This way we maintain the script active lookign for a response.
           {
             system(paste("node ./bin/HLTB.js ",pasted_value_tunning," > aux_time_second.txt", sep=""))
+            print(paste(pasted_value_tunning,i))
             Sys.sleep(1)
           }
         }
@@ -384,11 +386,16 @@ if(!file.exists(paste("Game_HowLong_",id_search,".txt",sep="")) & !file.exists(p
 
               if(grepl(pattern = "\\',",sapply(strsplit(sapply(strsplit(data_time, "  name: "), "[[", u),"\\\""), "[[",1)))
               {
-                name_list_j<-c(name_list_j, sapply(strsplit(sapply(strsplit(sapply(strsplit(data_time, "  name: "), "[[", u),"\\,\\\""), "[[",1),"\\'"), "[[",2))
+                if(str_count(sapply(strsplit(sapply(strsplit(data_time, "  name: "), "[[", u),"\\,\\\""), "[[",1),"'")[1]==1)
+                {
+                  name_list_j<-c(name_list_j, sapply(strsplit(sapply(strsplit(sapply(strsplit(data_time, "  name: "), "[[", u),"\\,\\\""), "[[",1),"\\'"), "[[",1))
+                }else
+                {
+                  name_list_j<-c(name_list_j, sapply(strsplit(sapply(strsplit(sapply(strsplit(data_time, "  name: "), "[[", u),"\\,\\\""), "[[",1),"\\'"), "[[",2))
+                }              
               }else
               {
                 name_list_j<-c(name_list_j, sapply(strsplit(sapply(strsplit(data_time, "  name: "), "[[", u),"\\,\\\""), "[[",1))
-
               }
               
               name_list_j_gpm<-c(name_list_j_gpm, sapply(strsplit(sapply(strsplit(data_time, "gameplayMain: "), "[[", u),","), "[[",1)) # Main game play time
