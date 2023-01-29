@@ -197,7 +197,7 @@ if(!file.exists(paste("Game_HowLong_",id_search,".txt",sep="")) & !file.exists(p
   {
     
     aux_game_name<-gsub(" ","",game_list[i,1])
-    game_list[i,1]<-trimws(game_list[i,1], "l")
+    
 
     if(grepl("\\\\u00fc",game_list[i,1])) #######################
     {
@@ -244,6 +244,11 @@ if(!file.exists(paste("Game_HowLong_",id_search,".txt",sep="")) & !file.exists(p
       game_list[i,1]=gsub("&","",game_list[i,1])
     }
 
+    if(grepl("&",game_list[i,1])) #######################
+    {
+      game_list[i,1]=gsub("&","_",game_list[i,1])
+    }
+
     if(grepl("\\'",game_list[i,1]))
     {
       game_list[i,1]=gsub("\\'","_",game_list[i,1])
@@ -279,6 +284,8 @@ if(!file.exists(paste("Game_HowLong_",id_search,".txt",sep="")) & !file.exists(p
     {
       game_list[i,1]=gsub(" ","",game_list[i,1])
     }
+
+    game_list[i,1]<-trimws(game_list[i,1], "l")
 
   }
 

@@ -11,7 +11,7 @@
 *.sln.docstates
 
 aux_time.txt
-aux_time_tunning.txt
+aux_time_second.txt
 .Rhistory
 Games.txt
 Games_buscar.txt
