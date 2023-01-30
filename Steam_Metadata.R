@@ -197,7 +197,6 @@ if(!file.exists(paste("Game_HowLong_",id_search,".txt",sep="")) & !file.exists(p
   {
     
     aux_game_name<-gsub(" ","",game_list[i,1])
-    
 
     if(grepl("\\\\u00fc",game_list[i,1])) #######################
     {
@@ -227,11 +226,6 @@ if(!file.exists(paste("Game_HowLong_",id_search,".txt",sep="")) & !file.exists(p
     {
       game_list[i,1]=gsub("\\\\u[a-zA-Z0-9]{4}","",game_list[i,1])
       game_list_aux[i,1]=gsub("\\\\u[a-zA-Z0-9]{4}","",game_list_aux[i,1])
-      
-      if(nchar(gsub(" ","",game_list[i,1]))==0)
-      {
-        game_list[i,1]=game_list[i,7]
-      }
     }
 
     if(grepl("ARCADE GAME SERIES: ",game_list[i,1])) #######################
@@ -270,6 +264,11 @@ if(!file.exists(paste("Game_HowLong_",id_search,".txt",sep="")) & !file.exists(p
       }
     }
 
+    if(grepl("^\\[",game_list[i,1]) & grepl("\\]$",game_list[i,1]))
+    {
+      game_list[i,1]=gsub("\\]","",gsub("\\[","",game_list[i,1]))
+    }
+
     if(grepl("\\]$",game_list[i,1]) & length(strsplit(game_list[i,1]," ")[[1]])>1)
     {
       game_list[i,1]=strsplit(game_list[i,1],"\\[")[[1]][1]
@@ -280,6 +279,11 @@ if(!file.exists(paste("Game_HowLong_",id_search,".txt",sep="")) & !file.exists(p
       game_list[i,1]=strsplit(game_list[i,1],"\\]")[[1]][2]
     }
 
+    if(grepl("^\\:",game_list[i,1]))
+    {
+      game_list[i,1]=gsub("\\:","",game_list[i,1])
+    }
+
     if(!is.na(game_list[i,1]) & length(strsplit(game_list[i,1]," ")[[1]])*2==nchar(game_list[i,1])+1)
     {
       game_list[i,1]=gsub(" ","",game_list[i,1])
@@ -287,6 +291,10 @@ if(!file.exists(paste("Game_HowLong_",id_search,".txt",sep="")) & !file.exists(p
 
     game_list[i,1]<-trimws(game_list[i,1], "l")
 
+    if(nchar(game_list[i,1])==0)
+    {
+      game_list[i,1]=game_list[i,7]
+    }
   }
 
   game_list[i,1]<-NA
@@ -356,7 +364,7 @@ if(!file.exists(paste("Game_HowLong_",id_search,".txt",sep="")) & !file.exists(p
         cont_long_string=cont_long_string+1 #This variable is useful when trying to look for game names combination with ":"
       
         system(paste("node ./bin/HLTB.js ",pasted_value," > aux_time.txt", sep="")) #This is the HowLongToBeat API. We give the game name and obtain a json formated file with the information.
-        print(paste(pasted_value,i))
+        print(paste(pasted_value,game_list[i,7],i))
         if(!is.null(pasted_value_tunning)) # Here we check if we are coputing a second combination for the game name, we will have to compare both results.
         {
           system("rm -rf aux_time_second.txt")
