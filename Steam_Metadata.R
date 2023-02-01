@@ -875,9 +875,19 @@ if(!file.exists(paste("Steam_Metadata_Full_",id_search,".txt",sep=""))) # Useful
 
     if(!is.na(game_list[i,8]))
     {
-      while(!grepl("name",meta_game))
+      steamSpy <- FALSE
+
+      while(!grepl("name",meta_game) | !steamSpy)
       {
-        meta_game<-getURL(paste("https://steamspy.com/api.php?request=appdetails&appid=",game_list[i,8],sep="")) # We complete the information using steamspy API. Here we save the information for genre, votes, developer...
+        tmp<-tryCatch({
+          meta_game<-getURL(paste("https://steamspy.com/api.php?request=appdetails&appid=",game_list[i,8],sep="")) # We complete the information using steamspy API. Here we save the information for genre, votes, developer...
+          steamSpy<-TRUE
+        },
+        error=function(e){
+        print("ERROR: SteamSpy API Timeout, waiting 1 min")
+        Sys.sleep(60)
+        #getURL(paste("https://steamspy.com/api.php?request=appdetails&appid=",game_list[i,8],sep=""))
+        })
       }
 
       game_list[i,10]<-strsplit(strsplit(meta_game,"name\\\":\\\"")[[1]][2],"\\\",\\\"")[[1]][1]
@@ -891,8 +901,21 @@ if(!file.exists(paste("Steam_Metadata_Full_",id_search,".txt",sep=""))) # Useful
         game_list[i,16]<-paste(sapply(strsplit(strsplit(strsplit(meta_game,"tags\\\":\\{")[[1]][2], ',')[[1]],'\\\"'),"[[",2),collapse=", ")
       }
 
-      meta_game<-getURL(paste("https://store.steampowered.com/api/appdetails/?cc=EU&appids=",game_list[i,8],sep="")) # Using the Steam API we get the release date and pc requirements information
-    
+      steamS <- FALSE
+
+      while(!steamS)
+      {
+        tmp<-tryCatch({
+          meta_game<-getURL(paste("https://store.steampowered.com/api/appdetails/?cc=EU&appids=",game_list[i,8],sep="")) # Using the Steam API we get the release date and pc requirements information
+          steamS<-TRUE
+        },
+        error=function(e){
+        print("ERROR: Steam API Timeout, waiting 1 min")
+        Sys.sleep(60)
+        #getURL(paste("https://store.steampowered.com/api/appdetails/?cc=EU&appids=",game_list[i,8],sep=""))
+        })
+      }
+
       if(grepl("\"success\"\\:true",meta_game))
       {
         app_id_gen<-strsplit(strsplit(meta_game,"\":")[[1]][1],"\"")[[1]][2]
