@@ -153,7 +153,7 @@ Anothe possible error could come while using SteamSpy API. Just re-run the scrip
 > Error in function (type, msg, asError = TRUE)  :
   getaddrinfo() thread failed to start
 
-[^1]: Excution time will depend on the library size, but time range from: **100 Games~** -> 8 min, **3000 Games~** -> 4 h, **15k+ Games~** -> 30h (depending on the API's)
+[^1]: Excution time will depend on the library size, but time range from: **100 Games~** -> 8 min, **3000 Games~** -> 4 h, **15k+ Games~** -> 25h (depending on the API's). Working to improve performance!
 
 
 
