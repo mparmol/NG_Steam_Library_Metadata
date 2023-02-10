@@ -1003,6 +1003,7 @@ game_list[,23]<-round((game_list[,12]/(game_list[,12]+game_list[,13]))*100,digit
 game_list[,24]<-(game_list[,12]+game_list[,13])
 
 write.table(game_list,paste("Steam_Metadata_Full_",id_search,".txt",sep=""),quote = F,row.names = F,col.names = F,sep = "\t")
+system(paste("rm -rf ",paste("Steam_Metadata_SSpySteam_",id_search,".txt",sep=""),sep=""))
 
 game_list_final_output<-game_list[,c(7,8,11,16,24,23,18,3,4,17,14,15,19,22,20,21)]
 
