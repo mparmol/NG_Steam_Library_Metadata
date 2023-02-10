@@ -116,7 +116,7 @@ info_Steam_removed<-paste("https://steam-tracker.com/scan/",strsplit(strsplit(st
 
 options(warn=-1) # We exclude warnings to show on the screen
 
-if(!file.exists(paste("Game_HowLong_",id_search,".txt",sep="")) & !file.exists(paste("Steam_Metadata_Full_",id_search,".txt",sep=""))) #If output already exists (and later APIs fail later) we skip this step
+if(!file.exists(paste("Game_HowLong_",id_search,".txt",sep="")) & !file.exists(paste("Steam_Metadata_SSpySteam_",id_search,".txt",sep=""))) #If output already exists (and later APIs fail later) we skip this step
 {
   if(!file.exists(paste("Base_metadata_table_",id_search,".txt",sep=""))) 
   {
@@ -848,7 +848,7 @@ if(!file.exists(paste("Game_HowLong_",id_search,".txt",sep="")) & !file.exists(p
 
 ############################################################################################Updates SteamSpy
 
-if(!file.exists(paste("Steam_Metadata_Full_",id_search,".txt",sep=""))) # Useful when stoping the analysis at this point. Checkpoint.
+if(!file.exists(paste("Steam_Metadata_SSpySteam_",id_search,".txt",sep=""))) # Useful when stoping the analysis at this point. Checkpoint.
 {
   print("Scraping more data: votes, developer, publisher, release date, pc requirements...")
 
@@ -949,7 +949,7 @@ if(!file.exists(paste("Steam_Metadata_Full_",id_search,".txt",sep=""))) # Useful
 
   }
 
-  write.table(game_list,paste("Steam_Metadata_Full_",id_search,".txt",sep=""),quote = F,row.names = F,col.names = F,sep = "\t")
+  write.table(game_list,paste("Steam_Metadata_SSpySteam_",id_search,".txt",sep=""),quote = F,row.names = F,col.names = F,sep = "\t")
   system(paste("rm -rf ",paste("Game_HowLong_",id_search,".txt",sep=""),sep=""))
   system("rm -rf index.html")
 }
@@ -958,7 +958,7 @@ options(warn=0)
 
 ############################################################################################Completed
 
-game_list<-read.delim(paste("Steam_Metadata_Full_",id_search,".txt",sep=""),header=F)
+game_list<-read.delim(paste("Steam_Metadata_SSpySteam_",id_search,".txt",sep=""),header=F)
 
 info_Steam<-getURL(steam_link_achiv) # From the proper user steam page we can get the list of games that are 100% achievements completed.
 file_process<-as.data.frame(info_Steam)
@@ -1001,6 +1001,8 @@ print("Subsampling table with only useful information")
 
 game_list[,23]<-round((game_list[,12]/(game_list[,12]+game_list[,13]))*100,digits=1)
 game_list[,24]<-(game_list[,12]+game_list[,13])
+
+write.table(game_list,paste("Steam_Metadata_Full_",id_search,".txt",sep=""),quote = F,row.names = F,col.names = F,sep = "\t")
 
 game_list_final_output<-game_list[,c(7,8,11,16,24,23,18,3,4,17,14,15,19,22,20,21)]
 
