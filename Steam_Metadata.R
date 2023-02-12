@@ -139,7 +139,7 @@ if(!file.exists(paste("Game_HowLong_",id_search,".txt",sep="")) & !file.exists(p
     
     h2<-file_process[grep("rgGames",file_process[,1]),]
 
-    res_games<-data.frame(matrix(ncol=24,nrow=str_count(h2,'"name"')[1]))
+    res_games<-data.frame(matrix(ncol=25,nrow=str_count(h2,'"name"')[1]))
 
     pb <- progress_bar$new(format = "(:spin) [:bar] :percent [Elapsed time: :elapsedfull || Estimated time remaining: :eta]", # Execution time progress bar is declared at this point
                        total = (str_count(h,'"name"')[1]+1),
@@ -172,9 +172,12 @@ if(!file.exists(paste("Game_HowLong_",id_search,".txt",sep="")) & !file.exists(p
       {
         res_games[i,18]<-gsub(",","",substr(strsplit(sapply(strsplit(h2[1], '"hours_forever"'), "[[", i),",\\\"")[[1]][1],3,nchar(strsplit(sapply(strsplit(h2[1], '"hours_forever"'), "[[", i),",\\\"")[[1]][1])-1))
       }
+      if(substr(strsplit(sapply(strsplit(h2[1], '"global_achievements"'), "[[", i),",\\\"")[[1]][1],2,nchar(strsplit(sapply(strsplit(h2[1], '"global_achievements"'), "[[", i),",\\\"")[[1]][1]))=="true")
+      {
+        res_games[i,25]<-"X"
+      }
 
       res_games[i,7]<-trimws(game_list_orig[match(res_games[i,8],game_list_orig[,2]),1],"l")
-
     }
 
     game_list<-as.data.frame(res_games[-1,])
@@ -1010,9 +1013,9 @@ game_list[,24]<-(game_list[,12]+game_list[,13])
 write.table(game_list,paste("Steam_Metadata_Full_",id_search,".txt",sep=""),quote = F,row.names = F,col.names = F,sep = "\t")
 system(paste("rm -rf ",paste("Steam_Metadata_SSpySteam_",id_search,".txt",sep=""),sep=""))
 
-game_list_final_output<-game_list[,c(7,8,11,16,24,23,18,3,4,17,14,15,19,22,20,21)]
+game_list_final_output<-game_list[,c(7,8,11,16,24,23,18,3,4,25,17,14,15,19,22,20,21)]
 
-colnames(game_list_final_output)<-c("Name","AppID","Genre","Tags","Votes_total","Positive_rating","Played_time (h)","Time_to_finish (h)","Time_to_complete (h)","100%_Completed","Developer","Publisher","Release_date","Removed_game","Minimum_requirements","Recommended_requirements")
+colnames(game_list_final_output)<-c("Name","AppID","Genre","Tags","Votes_total","Positive_rating","Played_time (h)","Time_to_finish (h)","Time_to_complete (h)","Achievements","100%_Completed","Developer","Publisher","Release_date","Removed_game","Minimum_requirements","Recommended_requirements")
 
 write.table(game_list_final_output,paste("Steam_Library_Metadata_",id_search,".txt",sep=""),quote = F,row.names = F,sep = "\t")
 
