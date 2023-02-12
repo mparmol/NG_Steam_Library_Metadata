@@ -1,7 +1,7 @@
 # **NextGame project - Steam Library Metadata** ![Stars](https://img.shields.io/github/stars/mparmol/NG_Steam_Library_Metadata)
 
 
-Steam is the largest video game distribution service nowadays. As the number of videogames found in their database increase, it does for its users' libraries too. This could end in the "problem" of not knowing what games you own, or more concretely, their characteristics. If you want to start a new game it could depend on many factors, like genre, user rating, how much time will it take to finish it or the pc requirements. The purpose of this project is the creation of the metadata table for a Steam library-specific user, with all the possible information related to the games it owns, in a structured easy-readable way.
+Steam is currently the biggest video game distribution platform. As the number of games in their database increases, so does the number of games in the libraries of its users. This can result in the problem of not being aware of the games in one's library and their characteristics. When deciding on which game to start, several factors come into play, such as genre, user rating, completion time, and PC requirements. The aim of this project is to create a metadata table for a specific Steam library user, containing all relevant information about the games in a structured and easily readable format. The analysis of the metadata could be performed following this example [Metadata Analysis tool](https://github.com/mparmol/NG_Metadata_Analysis).
 
 The information is scrapped from four different databases:
 
@@ -32,7 +32,7 @@ Steam_Metadata.R is an R-scripted tool that will require R locally installed to 
 
 #### 1- Download and install miniconda (available for Windows and Linux)
 
-Anaconda (or miniconda) is an environment creator application to install packages independencies safely. Download your OS version from their webpage. Install and configure it. 
+Anaconda or Miniconda is a software application used to create isolated environments for package installations. To use it, simply download the appropriate version for your operating system from the Anaconda website and install it.
 
 > https://docs.conda.io/en/latest/miniconda.html
 
@@ -127,9 +127,9 @@ The script generates two tables as output:
 - `Steam_Metadata_Full_*user_id*`: Here we can find all columns generated from the tool. Some columns could be interesting for analysts, like the similarity one, which shows how similar is the game name compared to the name found in HowLongToBeat database.
 - `Steam_Library_Metadata_*user_id*`: Processed and cleaned metadata table. It has 16 columns with the following information:
 
-| Name | AppID | Genre | Tags | Votes_total | Positive_rating | Played_time (h) | Time_to_finish (h) | Time_to_complete (h) | 100%_Completed | Developer | Publisher | Release_date | Removed_game | Minimum requirements | Recommended requirements |
+| Name | AppID | Genre | Tags | Votes_total | Positive_rating | Played_time (h) | Time_to_finish (h) | Time_to_complete (h) | Achievements | 100%_Completed | Developer | Publisher | Release_date | Removed_game | Minimum requirements | Recommended requirements |
 | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
-| Game name | AppID | A game could be assigned to more than one genre | How game is categorized | Total votes to date for a game | Percentage of positive votes (positive/positive+negative) | Total played time for a game | Time to finish the main campaign | Time to obtain all achivements or finish the game witll al possible extra | Games with all achievements unlocked | Developer | Publisher (could change with time) | Final version release date | Not available for purchase games | PC minimun requierements | PC recommended requirements |   
+| Game name | AppID | A game could be assigned to more than one genre | How game is categorized | Total votes to date for a game | Percentage of positive votes (positive/positive+negative) | Total played time for a game | Time to finish the main campaign | Time to obtain all achivements or finish the game witll al possible extra | Games with achievements | Games with all achievements unlocked | Developer | Publisher (could change with time) | Final version release date | Not available for purchase games | PC minimun requierements | PC recommended requirements |   
 
 ### **Troubleshooting**
 
@@ -140,21 +140,5 @@ Sometimes you will get a similar error while processing HowLongToBeat:
 (node:3834371) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
 
 Don't worry! It's the HowLongToBeat API trying to download games information. It will eventually continue the analysis.
-
-On the other hand, you can get the following error when using Steam API:
-
-> Error in function (type, msg, asError = TRUE)  :
-  Failed to connect to store.steampowered.com port 443 after 21036 ms: Couldn't connect to server
-
-In this case, run the script again. It will automatically continue from the last checkpoint file.
-
-Anothe possible error could come while using SteamSpy API. Just re-run the script.
-
-> Error in function (type, msg, asError = TRUE)  :
-  getaddrinfo() thread failed to start
-
-[^1]: Excution time will depend on the library size, but time range from: **100 Games~** -> 8 min, **3000 Games~** -> 4 h, **15k+ Games~** -> 25h (depending on the API's). Working to improve performance!
-
-
 
 
