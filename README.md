@@ -1,7 +1,7 @@
 # **NextGame project - Steam Library Metadata** ![Stars](https://img.shields.io/github/stars/mparmol/NG_Steam_Library_Metadata)
 
 
-Steam is currently the biggest video game distribution platform. As the number of games in their database increases, so does the number of games in the libraries of its users. This can result in the problem of not being aware of the games in one's library and their characteristics. When deciding on which game to start, several factors come into play, such as genre, user rating, completion time, and PC requirements. The aim of this project is to create a metadata table for a specific Steam library user, containing all relevant information about the games in a structured and easily readable format. The analysis of the metadata could be performed following this example [Metadata Analysis tool](https://github.com/mparmol/NG_Metadata_Analysis).
+Steam is currently the biggest video game distribution platform. As the number of games in their database increases, so does the number of games in the libraries of its users. This can result in the problem of not being aware of the games in one's library and their characteristics. When deciding on which game to start, several factors come into play, such as genre, user rating, completion time, and PC requirements. The aim of this project is to create a metadata table for a specific Steam library user, containing all relevant information about the games in a structured and easily readable format. The examination of the metadata can be conducted using the [Metadata Analysis tool](https://github.com/mparmol/NG_Metadata_Analysis) as a guide.
 
 The information is scrapped from four different databases:
 
