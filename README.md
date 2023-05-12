@@ -75,8 +75,8 @@ Some R packages are needed to fetch data and process it.
 · [`lubridate`](https://cran.r-project.org/web/packages/lubridate/index.html) v1.8.0\
 · [`optparse`](https://cran.r-project.org/web/packages/optparse/index.html) v1.7.3\
 · [`progress`](https://cran.r-project.org/web/packages/progress/index.html) v1.2.2\
-· [`httr`](https://cran.r-project.org/web/packages/progress/index.html) v1.4.4\
-· [`jsonlite`](https://cran.r-project.org/web/packages/progress/index.html) v1.8.3
+· [`httr`](https://cran.r-project.org/web/packages/httr/index.html) v1.4.4\
+· [`jsonlite`](https://cran.r-project.org/web/packages/jsonlite/index.html) v1.8.3
 
 You can install them manually with the command `ìnstall.packages()` or as a bulk:
 
