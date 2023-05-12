@@ -3,7 +3,7 @@
 
 Steam is currently the biggest video game distribution platform. As the number of games in their database increases, so does the number of games in the libraries of its users. This can result in the problem of not being aware of the games in one's library and their characteristics. When deciding on which game to start, several factors come into play, such as genre, user rating, completion time, and PC requirements. The aim of this project is to create a metadata table for a specific Steam library user, containing all relevant information about the games in a structured and easily readable format. The examination of the metadata can be conducted using the [Metadata Analysis tool](https://github.com/mparmol/NG_Metadata_Analysis) as a guide.
 
-The information is scrapped from four different databases:
+The information is scrapped from five different databases:
 
 · [Steam](https://store.steampowered.com/)\
 · [HowLongToBeat](https://howlongtobeat.com/): Database with potential completion time for many games. It is maintained by users, as records are inserted manually. Showed time data is a computed measure from all collaborators.\
@@ -74,12 +74,14 @@ Some R packages are needed to fetch data and process it.
 · [`readr`](https://cran.r-project.org/web/packages/readr/index.html) v2.1.3\
 · [`lubridate`](https://cran.r-project.org/web/packages/lubridate/index.html) v1.8.0\
 · [`optparse`](https://cran.r-project.org/web/packages/optparse/index.html) v1.7.3\
-· [`progress`](https://cran.r-project.org/web/packages/progress/index.html) v1.2.2
+· [`progress`](https://cran.r-project.org/web/packages/progress/index.html) v1.2.2\
+· [`httr`](https://cran.r-project.org/web/packages/progress/index.html) v1.4.4\
+· [`jsonlite`](https://cran.r-project.org/web/packages/progress/index.html) v1.8.3
 
 You can install them manually with the command `ìnstall.packages()` or as a bulk:
 
 ```R
-install.packages(c("data.table", "stringr", "stringi", "rvest", "RCurl", "readr", "lubridate", "optparse", "progress"))
+install.packages(c("data.table", "stringr", "stringi", "rvest", "RCurl", "readr", "lubridate", "optparse", "progress", "httr", "jsonlite"))
 ```
 
    - Exit R
@@ -115,14 +117,14 @@ Options:
 2. Run script with the parameter *-i* followed by user pseudonym or account id.
 
 ```bash
-> Rscript Steam_Metadata.R -i *user_name*
+> Rscript Steam_Metadata.R -i *user_name* -a *API_token*
 ```    
 3. Relax and chill.[^1]
 
 **Example**
 
 ```
-Rscript Steam_Metadata.R -i marko_pakete
+Rscript Steam_Metadata.R -i marko_pakete -a API_TOKEN
 ```
 
 ### **Output**
