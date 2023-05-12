@@ -894,7 +894,7 @@ if(!file.exists(paste("Steam_Metadata_SSpySteam_",id_search,".txt",sep=""))) # U
   res_games<-data.frame(matrix(strsplit(AppID_List,"\\`\\`")[[1]],ncol=2,byrow=T))
   binded_table<-rbind(binded_table,res_games)
   
-  print(paste("Total entries in Steam database: ",dim(res_games)[1])) # This is the total number Steam AppID we are getting information for
+  print(paste("Total entries in Steam database:",dim(res_games)[1])) # This is the total number Steam AppID we are getting information for
 
   res_games<-binded_table[!duplicated(binded_table),]
 
@@ -973,7 +973,7 @@ if(!file.exists(paste("Steam_Metadata_SSpySteam_",id_search,".txt",sep=""))) # U
   }
 
   write.table(game_list,paste("Steam_Metadata_SSpySteam_",id_search,".txt",sep=""),quote = F,row.names = F,col.names = F,sep = "\t")
-  system(paste("rm -rf ",paste("Game_HowLong_",id_search,".txt",sep=""),sep=""))
+  #system(paste("rm -rf ",paste("Game_HowLong_",id_search,".txt",sep=""),sep=""))
   system("rm -rf index.html")
 }
 
