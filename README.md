@@ -86,8 +86,10 @@ install.packages(c("data.table", "stringr", "stringi", "rvest", "RCurl", "readr"
 
 ### **Usage**
 
-First, the user profile from which you want to fetch information must be set to public. You can follow [Team17 tutorial](https://support.team17.com/hc/en-gb/articles/360003517458-Steam-Privacy-Settings) to change it to public in case you don't have it yet. You can get the user ID by accesing it profile on Steam and looking at the URL. For example, my account would be:
+· User profile from which you want to fetch information must be set to public. You can follow [Team17 tutorial](https://support.team17.com/hc/en-gb/articles/360003517458-Steam-Privacy-Settings) to change it to public in case you don't have it yet. You can get the user ID by accesing it profile on Steam and looking at the URL. For example, my account would be:
 > https://steamcommunity.com/id/marko_pakete/ (marko_pakete)
+
+· Steam Web API Token is needed. You can follow [this link](https://steamcommunity.com/dev/apikey) to get your personal token. 
 
 ```bash
 Usage: Steam_Metadata.R [options]
@@ -96,6 +98,9 @@ Usage: Steam_Metadata.R [options]
 Options:
 -i CHARACTER, --input=CHARACTER
 	Steam user name or ID
+
+-a CHARACTER, --appid=CHARACTER
+   Steam Web API Token
 
 -h, --help
 	Show this help message and exit
