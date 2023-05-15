@@ -176,13 +176,16 @@ if(!file.exists(paste("Game_HowLong_",id_search,".txt",sep="")) & !file.exists(p
       res_games[i,1]<-substr(strsplit(sapply(strsplit(h2[1], '"name"'), "[[", i),",\\\"")[[1]][1],3,nchar(strsplit(sapply(strsplit(h2[1], '"name"'), "[[", i),",\\\"")[[1]][1])-1)
       res_games[i,8]<-strsplit(strsplit(sapply(strsplit(h2[1], '\\,\\{'), "[[", i-1),"appid\\\"\\:")[[1]][2],",")[[1]][1]
       
-      if(i<(str_count(h2,'"playtime_forever"')[1]+1))
-      {
-        res_games[i,18]<-round(as.numeric(gsub(",","",substr(strsplit(sapply(strsplit(h2[1], '"playtime_forever"'), "[[", i),",\\\"")[[1]][1],2,nchar(strsplit(sapply(strsplit(h2[1], '"playtime_forever"'), "[[", i),",\\\"")[[1]][1]))))/60,digits=2)
+      res_games[i,18]<-round(as.numeric(gsub(",","",substr(strsplit(sapply(strsplit(h2[1], '"playtime_forever"'), "[[", i),",\\\"")[[1]][1],2,nchar(strsplit(sapply(strsplit(h2[1], '"playtime_forever"'), "[[", i),",\\\"")[[1]][1]))))/60,digits=2)
         
-        if(res_games[i,18]>0)
+      if(res_games[i,18]>0)
+      {
+        if(!is.na(as.character(as_date(as_datetime(as.numeric(gsub("[[:punct:]]", "",strsplit(sapply(strsplit(h2[1], '"rtime_last_played"'), "[[", i),"\\},\\{")[[1]][1])))))))
         {
           res_games[i,28]<-as.character(as_date(as_datetime(as.numeric(gsub("[[:punct:]]", "",strsplit(sapply(strsplit(h2[1], '"rtime_last_played"'), "[[", i),"\\},\\{")[[1]][1])))))
+        }else
+        {
+          res_games[i,28]<-as.character(as_date(as_datetime(as.numeric(gsub("[[:punct:]]", "",strsplit(sapply(strsplit(h2[1], '"rtime_last_played"'), "[[", i),"\\,")[[1]][1])))))
         }
       }
 
@@ -1047,12 +1050,14 @@ print("Subsampling table with only useful information")
 game_list[,23]<-round((game_list[,12]/(game_list[,12]+game_list[,13]))*100,digits=1)
 game_list[,24]<-(game_list[,12]+game_list[,13])
 
+game_list<-game_list[order(game_list$V18,decreasing=T),]
+
 write.table(game_list,paste("Steam_Metadata_Full_",id_search,".txt",sep=""),quote = F,row.names = F,col.names = F,sep = "\t")
 system(paste("rm -rf ",paste("Steam_Metadata_SSpySteam_",id_search,".txt",sep=""),sep=""))
 
-game_list_final_output<-game_list[,c(7,8,11,16,24,23,18,3,4,25,17,14,15,19,22,20,21)]
+game_list_final_output<-game_list[,c(7,8,11,16,24,23,18,3,4,25,26,27,17,28,14,15,19,22,20,21)]
 
-colnames(game_list_final_output)<-c("Name","AppID","Genre","Tags","Votes_total","Positive_rating","Played_time (h)","Time_to_finish (h)","Time_to_complete (h)","Achievements","100%_Completed","Developer","Publisher","Release_date","Removed_game","Minimum_requirements","Recommended_requirements")
+colnames(game_list_final_output)<-c("Name","AppID","Genre","Tags","Votes_total","Positive_rating","Played_time (h)","Time_to_finish (h)","Time_to_complete (h)","Achievements","First_achievement","Last_achievement","100%_Completed","Last_game","Developer","Publisher","Release_date","Removed_game","Minimum_requirements","Recommended_requirements")
 
 write.table(game_list_final_output,paste("Steam_Library_Metadata_",id_search,".txt",sep=""),quote = F,row.names = F,sep = "\t")
 
