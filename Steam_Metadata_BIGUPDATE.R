@@ -1014,6 +1014,11 @@ if(!file.exists(paste("Steam_Metadata_SSpySteam_",id_search,".txt",sep=""))) # U
         game_list[match(app_id_gen,game_list[,8]),21]<-gsub("\t"," ",paste(unlist(strsplit(strsplit(gsub("\",\"recommended\":\""," ",cleanFun(strsplit(strsplit(meta_game,"pc_requirements\\\"\\:\\{\\\"minimum\\\":\\\"")[[1]][2],"\"},\\\"mac_requirements")[[1]][1])),"Recommended:")[[1]][2],"\\\\r|\\\\n|\\\\t"))[unlist(strsplit(strsplit(gsub("\",\"recommended\":\""," ",cleanFun(strsplit(strsplit(meta_game,"pc_requirements\\\"\\:\\{\\\"minimum\\\":\\\"")[[1]][2],"\"},\\\"mac_requirements")[[1]][1])),"Recommended:")[[1]][2],"\\\\r|\\\\n|\\\\t")) != ""],collapse = " "))
       }
 
+      if(nchar(as.character(game_list[i,1]))==0)
+      {
+        game_list[i,1]=game_list[i,7]
+      }
+
       Sys.sleep(1)
     }
 
@@ -1021,7 +1026,7 @@ if(!file.exists(paste("Steam_Metadata_SSpySteam_",id_search,".txt",sep=""))) # U
   }
 
   write.table(game_list,paste("Steam_Metadata_SSpySteam_",id_search,".txt",sep=""),quote = F,row.names = F,col.names = F,sep = "\t")
-  #system(paste("rm -rf ",paste("Game_HowLong_",id_search,".txt",sep=""),sep=""))
+  system(paste("rm -rf ",paste("Game_HowLong_",id_search,".txt",sep=""),sep=""))
   system("rm -rf index.html")
 }
 
@@ -1062,6 +1067,3 @@ colnames(game_list_final_output)<-c("Name","AppID","Genre","Tags","Votes_total",
 write.table(game_list_final_output,paste("Steam_Library_Metadata_",id_search,".txt",sep=""),quote = F,row.names = F,sep = "\t")
 
 print(paste("Finished! Output files are: ",paste("Steam_Metadata_Full_",id_search,".txt",sep="")," and ",paste("Steam_Library_Metadata_",id_search,".txt",sep=""),sep=""))
-
-
-
