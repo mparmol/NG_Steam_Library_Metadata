@@ -1014,11 +1014,6 @@ if(!file.exists(paste("Steam_Metadata_SSpySteam_",id_search,".txt",sep=""))) # U
         game_list[match(app_id_gen,game_list[,8]),21]<-gsub("\t"," ",paste(unlist(strsplit(strsplit(gsub("\",\"recommended\":\""," ",cleanFun(strsplit(strsplit(meta_game,"pc_requirements\\\"\\:\\{\\\"minimum\\\":\\\"")[[1]][2],"\"},\\\"mac_requirements")[[1]][1])),"Recommended:")[[1]][2],"\\\\r|\\\\n|\\\\t"))[unlist(strsplit(strsplit(gsub("\",\"recommended\":\""," ",cleanFun(strsplit(strsplit(meta_game,"pc_requirements\\\"\\:\\{\\\"minimum\\\":\\\"")[[1]][2],"\"},\\\"mac_requirements")[[1]][1])),"Recommended:")[[1]][2],"\\\\r|\\\\n|\\\\t")) != ""],collapse = " "))
       }
 
-      if(nchar(as.character(game_list[i,1]))==0)
-      {
-        game_list[i,1]=game_list[i,7]
-      }
-
       Sys.sleep(1)
     }
 
