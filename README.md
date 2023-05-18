@@ -134,8 +134,8 @@ The script generates two tables as output:
 - `Steam_Metadata_Full_*user_id*`: Here we can find all columns generated from the tool. Some columns could be interesting for analysts, like the similarity one, which shows how similar is the game name compared to the name found in HowLongToBeat database.
 - `Steam_Library_Metadata_*user_id*`: Processed and cleaned metadata table. It has 16 columns with the following information:
 
-| Name | AppID | Genre | Tags | Votes_total | Positive_rating | Played_time (h) | Time_to_finish (h) | Time_to_complete (h) | Achievements | 100%_Completed | Developer | Publisher | Release_date | Removed_game | Minimum requirements | Recommended requirements |
-| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+| Name | AppID | Genre | Tags | Votes_total | Positive_rating | Played_time (h) | Time_to_finish (h) | Time_to_complete (h) | Achievements | First_achievement | Last_achievement | 100%_Completed | Developer | Publisher | Release_date | Removed_game | Minimum requirements | Recommended requirements |
+| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
 | Game name | AppID | A game could be assigned to more than one genre | How game is categorized | Total votes to date for a game | Percentage of positive votes (positive/positive+negative) | Total played time for a game | Time to finish the main campaign | Time to obtain all achivements or finish the game witll al possible extra | Games with achievements | Games with all achievements unlocked | Developer | Publisher (could change with time) | Final version release date | Not available for purchase games | PC minimun requierements | PC recommended requirements |   
 
 ### **Troubleshooting**
