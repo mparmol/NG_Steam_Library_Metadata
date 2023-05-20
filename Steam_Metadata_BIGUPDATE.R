@@ -1055,9 +1055,9 @@ game_list<-game_list[order(game_list$V18,decreasing=T),]
 write.table(game_list,paste("Steam_Metadata_Full_",id_search,".txt",sep=""),quote = F,row.names = F,col.names = F,sep = "\t")
 system(paste("rm -rf ",paste("Steam_Metadata_SSpySteam_",id_search,".txt",sep=""),sep=""))
 
-game_list_final_output<-game_list[,c(7,8,11,16,24,23,18,3,4,25,26,27,17,28,14,15,19,22,20,21)]
+game_list_final_output<-game_list[,c(7,8,11,16,24,23,18,3,4,17,25,26,27,28,14,15,19,22,20,21)]
 
-colnames(game_list_final_output)<-c("Name","AppID","Genre","Tags","Votes_total","Positive_rating","Played_time (h)","Time_to_finish (h)","Time_to_complete (h)","Achievements","First_achievement","Last_achievement","Percentage_achievements","Last_game","Developer","Publisher","Release_date","Removed_game","Minimum_requirements","Recommended_requirements")
+colnames(game_list_final_output)<-c("Name","AppID","Genre","Tags","Votes_total","Positive_rating","Played_time (h)","Time_to_finish (h)","Time_to_complete (h)","Achievements","Percentage_achievements","First_achievement","Last_achievement","Last_game","Developer","Publisher","Release_date","Removed_game","Minimum_requirements","Recommended_requirements")
 
 write.table(game_list_final_output,paste("Steam_Library_Metadata_",id_search,".txt",sep=""),quote = F,row.names = F,sep = "\t")
 
