@@ -13,20 +13,24 @@ suppressPackageStartupMessages(require("readr"))
 suppressPackageStartupMessages(require("lubridate"))
 suppressPackageStartupMessages(require("optparse"))
 suppressPackageStartupMessages(require("progress"))
+suppressPackageStartupMessages(require("httr"))
+suppressPackageStartupMessages(require("jsonlite"))
 
 ######## Input control block
 
 option_list = list(
   make_option(c("-i", "--input"), type="character", default=NULL, 
-              help="Steam user name or ID", metavar="character")
+              help="Steam user name or ID", metavar="character"),
+  make_option(c("-a", "--appid"), type="character", default=NULL, 
+              help="Steam user APP_ID", metavar="character")
 ); 
 
 opt_parser = OptionParser(option_list=option_list);
 opt = parse_args(opt_parser);
 
-if (is.null(opt$input)){
+if (is.null(opt$input) | is.null(opt$appid)){
   print_help(opt_parser)
-  stop("At least one argument must be supplied (Steam user name or ID).", call.=FALSE)
+  stop("Both argument must be supplied (Steam user name or ID and APP_ID).", call.=FALSE)
 }else {
    id_search=opt$input
 }
@@ -100,15 +104,16 @@ cleanFun2 <- function(htmlString) { #Clean html coding from string, replacing fo
 
 user_info<-getURL(paste("https://www.steamidfinder.com/lookup/",id_search,sep=""),.opts=curlOptions(followlocation=TRUE)) #Get user information from steamfinder
 
-if(grepl("customURL",user_info)) #If we have steam user tag we get the information from it. Otherwise we work from steam id information
-{
-  steam_link=paste("https://steamcommunity.com/id/",strsplit(strsplit(strsplit(user_info,"customURL")[[1]][2],"\" rel=")[[1]][1],"/")[[1]][length(strsplit(strsplit(strsplit(user_info,"customURL")[[1]][2],"\" rel=")[[1]][1],"/")[[1]])],"/games/?tab=all",sep="")
-  steam_link_achiv=paste("https://steamcommunity.com/id/",strsplit(strsplit(strsplit(user_info,"customURL")[[1]][2],"\" rel=")[[1]][1],"/")[[1]][length(strsplit(strsplit(strsplit(user_info,"customURL")[[1]][2],"\" rel=")[[1]][1],"/")[[1]])],"/games/?tab=perfect",sep="")
-}else
-{
-  steam_link=paste("https://steamcommunity.com/profiles/",strsplit(strsplit(strsplit(user_info,"profile<")[[1]][2],"\" rel=\"noopener")[[1]][1],"/")[[1]][length(strsplit(strsplit(strsplit(user_info,"profile<")[[1]][2],"\" rel=\"noopener")[[1]][1],"/")[[1]])],"/games/?tab=all",sep="")
-  steam_link_achiv=paste("https://steamcommunity.com/profiles/",strsplit(strsplit(strsplit(user_info,"profile<")[[1]][2],"\" rel=\"noopener")[[1]][1],"/")[[1]][length(strsplit(strsplit(strsplit(user_info,"profile<")[[1]][2],"\" rel=\"noopener")[[1]][1],"/")[[1]])],"/games/?tab=perfect",sep="")
-}
+
+steam_link=paste("https://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=",opt$appid,"&steamid=",strsplit(strsplit(strsplit(user_info,"profile<")[[1]][2],"\" rel=\"noopener")[[1]][1],"/")[[1]][length(strsplit(strsplit(strsplit(user_info,"profile<")[[1]][2],"\" rel=\"noopener")[[1]][1],"/")[[1]])],"&include_appinfo=1&format=json",sep="")
+
+
+#https://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=APP_ID&steamid=", steam_id, "&include_appinfo=1&format=json
+#https://api.steampowered.com/ISteamUserStats/GetPlayerAchievements/v1/?key=APP_ID&appid=7850&steamid=76561198118578417&include_appinfo=1&format=json
+
+
+#steam_link=paste("https://steamcommunity.com/profiles/",strsplit(strsplit(strsplit(user_info,"profile<")[[1]][2],"\" rel=\"noopener")[[1]][1],"/")[[1]][length(strsplit(strsplit(strsplit(user_info,"profile<")[[1]][2],"\" rel=\"noopener")[[1]][1],"/")[[1]])],"/games/?tab=all",sep="")
+#steam_link_achiv=paste("https://steamcommunity.com/profiles/",strsplit(strsplit(strsplit(user_info,"profile<")[[1]][2],"\" rel=\"noopener")[[1]][1],"/")[[1]][length(strsplit(strsplit(strsplit(user_info,"profile<")[[1]][2],"\" rel=\"noopener")[[1]][1],"/")[[1]])],"/games/?tab=perfect",sep="")
 
 info_Steam_removed<-paste("https://steam-tracker.com/scan/",strsplit(strsplit(strsplit(user_info,"profile<")[[1]][2],"\" rel=\"noopener")[[1]][1],"/")[[1]][length(strsplit(strsplit(strsplit(user_info,"profile<")[[1]][2],"\" rel=\"noopener")[[1]][1],"/")[[1]])],sep="")
 
@@ -124,22 +129,25 @@ if(!file.exists(paste("Game_HowLong_",id_search,".txt",sep="")) & !file.exists(p
 
     print("Creating table with names, played time and appid")
 
-    info_Steam<-getURL(steam_link) # We get the information from the same link in two different ways. One is useful to remove special characters (that may be a problem for database curation) and the other that maintains those characters.
+    info_Steam<-rawToChar(GET(steam_link)$content) # We get the information from the same link in two different ways. One is useful to remove special characters (that may be a problem for database curation) and the other that maintains those characters.
+    
     file_process<-as.data.frame(info_Steam)
 
-    h<-file_process[grep("rgGames",file_process[,1]),]
+    h<-file_process[grep("game_count",file_process[,1]),]
 
     game_list_orig<-data.frame(matrix(nrow=str_count(h,'"name"')[1]))
 
-    system("rm -rf index.html?tab=all")
+    #system("rm -rf index.html?tab=all")
 
-    system(paste("wget -q ",steam_link,sep="")) # Second time we extract user information from Steam.
+    #system(paste("wget -q ",steam_link,sep="")) # Second time we extract user information from Steam.
 
-    file_process<-as.data.frame(fread("index.html?tab=all",fill = T))
+    #file_process<-as.data.frame(fread("index.html?tab=all",fill = T))
     
-    h2<-file_process[grep("rgGames",file_process[,1]),]
+    file_process<-as.data.frame(rawToChar(GET(paste0("https://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=",opt$appid,"&steamid=",strsplit(strsplit(strsplit(user_info,"profile<")[[1]][2],"\" rel=\"noopener")[[1]][1],"/")[[1]][length(strsplit(strsplit(strsplit(user_info,"profile<")[[1]][2],"\" rel=\"noopener")[[1]][1],"/")[[1]])],"&include_appinfo=1&format=json"))$content))
 
-    res_games<-data.frame(matrix(ncol=25,nrow=str_count(h2,'"name"')[1]))
+    h2<-file_process[grep("game_count",file_process[,1]),]
+
+    res_games<-data.frame(matrix(ncol=28,nrow=str_count(h2,'"name"')[1]))
 
     pb <- progress_bar$new(format = "(:spin) [:bar] :percent [Elapsed time: :elapsedfull || Estimated time remaining: :eta]", # Execution time progress bar is declared at this point
                        total = (str_count(h,'"name"')[1]+1),
@@ -168,17 +176,72 @@ if(!file.exists(paste("Game_HowLong_",id_search,".txt",sep="")) & !file.exists(p
       res_games[i,1]<-substr(strsplit(sapply(strsplit(h2[1], '"name"'), "[[", i),",\\\"")[[1]][1],3,nchar(strsplit(sapply(strsplit(h2[1], '"name"'), "[[", i),",\\\"")[[1]][1])-1)
       res_games[i,8]<-strsplit(strsplit(sapply(strsplit(h2[1], '\\,\\{'), "[[", i-1),"appid\\\"\\:")[[1]][2],",")[[1]][1]
       
-      if(i<(str_count(h2,'"hours_forever"')[1]+1))
+      res_games[i,18]<-round(as.numeric(gsub(",","",substr(strsplit(sapply(strsplit(h2[1], '"playtime_forever"'), "[[", i),",\\\"")[[1]][1],2,nchar(strsplit(sapply(strsplit(h2[1], '"playtime_forever"'), "[[", i),",\\\"")[[1]][1]))))/60,digits=2)
+        
+      if(res_games[i,18]>0)
       {
-        res_games[i,18]<-gsub(",","",substr(strsplit(sapply(strsplit(h2[1], '"hours_forever"'), "[[", i),",\\\"")[[1]][1],3,nchar(strsplit(sapply(strsplit(h2[1], '"hours_forever"'), "[[", i),",\\\"")[[1]][1])-1))
-      }
-      if(substr(strsplit(sapply(strsplit(h2[1], '"global_achievements"'), "[[", i),",\\\"")[[1]][1],2,nchar(strsplit(sapply(strsplit(h2[1], '"global_achievements"'), "[[", i),",\\\"")[[1]][1]))=="true")
-      {
-        res_games[i,25]<-"X"
+        if(!is.na(as.character(as_date(as_datetime(as.numeric(gsub("[[:punct:]]", "",strsplit(sapply(strsplit(h2[1], '"rtime_last_played"'), "[[", i),"\\},\\{")[[1]][1])))))))
+        {
+          res_games[i,28]<-as.character(as_date(as_datetime(as.numeric(gsub("[[:punct:]]", "",strsplit(sapply(strsplit(h2[1], '"rtime_last_played"'), "[[", i),"\\},\\{")[[1]][1])))))
+        }else
+        {
+          res_games[i,28]<-as.character(as_date(as_datetime(as.numeric(gsub("[[:punct:]]", "",strsplit(sapply(strsplit(h2[1], '"rtime_last_played"'), "[[", i),"\\,")[[1]][1])))))
+        }
       }
 
+      #if(substr(strsplit(sapply(strsplit(h2[1], '"global_achievements"'), "[[", i),",\\\"")[[1]][1],2,nchar(strsplit(sapply(strsplit(h2[1], '"global_achievements"'), "[[", i),",\\\"")[[1]][1]))=="true")
+      #{
+      #  res_games[i,25]<-"X"
+      #}
+
       res_games[i,7]<-trimws(game_list_orig[match(res_games[i,8],game_list_orig[,2]),1],"l")
+
+      ############################################################################################Completed
+
+      achiG<-rawToChar(GET(paste0("https://api.steampowered.com/ISteamUserStats/GetPlayerAchievements/v1/?key=",opt$appid,"&appid=",game_list_orig[i,2],"&steamid=",strsplit(strsplit(strsplit(user_info,"profile<")[[1]][2],"\" rel=\"noopener")[[1]][1],"/")[[1]][length(strsplit(strsplit(strsplit(user_info,"profile<")[[1]][2],"\" rel=\"noopener")[[1]][1],"/")[[1]])],"&include_appinfo=1&format=json"))$content)
+
+      if(grepl("achievements",achiG))
+      {
+        res_games[i,25]<-str_count(achiG,'"apiname"')[1] #Total number achievements
+        res_games[i,17]<-round((str_count(achiG,'achieved\\":1')/res_games[i,25])*100,digits=2) #Percentage of completion
+
+        if(res_games[i,17]>0)
+        {
+          res_games[i,26]<-as.character(sort(as_date(as_datetime(as.numeric(unlist(str_extract_all(achiG, "(?<=unlocktime\":)\\d+")))[which(as.numeric(unlist(str_extract_all(achiG, "(?<=unlocktime\":)\\d+"))) != 0)])))[1]) #First achievement
+          res_games[i,27]<-as.character(sort(as_date(as_datetime(as.numeric(unlist(str_extract_all(achiG, "(?<=unlocktime\":)\\d+")))[which(as.numeric(unlist(str_extract_all(achiG, "(?<=unlocktime\":)\\d+"))) != 0)])))[length(unlist(str_extract_all(achiG, "(?<=unlocktime\":)\\d+"))[which(as.numeric(unlist(str_extract_all(achiG, "(?<=unlocktime\":)\\d+"))) != 0)])]) #Last achievement
+        }
+      }
+        
+
+          #info_Steam<-getURL(steam_link_achiv) # From the proper user steam page we can get the list of games that are 100% achievements completed.
+          #file_process<-as.data.frame(info_Steam)
+
+          #h<-file_process[grep("rgGames",file_process[,1]),]
+
+          #print("Scraping info of 100% achievement completed games")
+
+          #if(str_count(h,'"name"')[1]>0)
+          #{
+          #  for(i in 2:(str_count(h,'"name"')[1]+1))
+          #  {
+          #    if(!is.na(match(substr(strsplit(sapply(strsplit(h[1], '"appid"'), "[[", i),",\\\"")[[1]][1],2,nchar(strsplit(sapply(strsplit(h[1], '"appid"'), "[[", i),",\\\"")[[1]][1])),game_list[,8])))
+          #    {
+          #      game_list[match(substr(strsplit(sapply(strsplit(h[1], '"appid"'), "[[", i),",\\\"")[[1]][1],2,nchar(strsplit(sapply(strsplit(h[1], '"appid"'), "[[", i),",\\\"")[[1]][1])),game_list[,8]),17]<-"X"
+          #    }
+          #  }
+          #}else 
+          #{
+          #  game_list[,17]<-NA
+          #}
+
+
     }
+
+    char_conver<-data.frame(res_games[grepl("ü|ö|Û|ã",res_games[,1]),1],gsub("[[:punct:]]", "", iconv(res_games[grepl("ü|ö|Û|ã",res_games[,1]),1], to = "ASCII//TRANSLIT")))
+    match_indices<-match(res_games[,1], char_conver[,1])
+    # Reemplazar los valores de la columna info1 solo en los casos donde hay match
+    res_games[,1]<-ifelse(!is.na(match_indices), char_conver[,2][match_indices], res_games[,1])
+    res_games[,1]<-iconv(res_games[,1], to = "ASCII", sub="")
 
     game_list<-as.data.frame(res_games[-1,])
     game_list_orig<-game_list_orig[-1,]
@@ -304,14 +367,14 @@ if(!file.exists(paste("Game_HowLong_",id_search,".txt",sep="")) & !file.exists(p
 
     game_list[i,1]<-trimws(game_list[i,1], "l")
 
-    if(nchar(game_list[i,1])==0)
+    if(nchar(as.character(game_list[i,1]))==0)
     {
       game_list[i,1]=game_list[i,7]
     }
   }
 
-  game_list[i,1]<-NA
-  game_list_aux[i,1]<-NA
+  #game_list[i,1]<-NA
+  #game_list_aux[i,1]<-NA
 
   ###
 
@@ -323,7 +386,7 @@ if(!file.exists(paste("Game_HowLong_",id_search,".txt",sep="")) & !file.exists(p
   i=1
 
   pb <- progress_bar$new(format = "(:spin) [:bar] :percent [Elapsed time: :elapsedfull || Estimated time remaining: :eta]", # We initiate a bar progress at this point
-                       total = dim(game_list)[1],
+                       total = dim(game_list)[1]+1,
                        complete = "=",   # Completion bar character
                        incomplete = "-", # Incomplete bar character
                        current = ">",    # Current bar character
@@ -332,7 +395,7 @@ if(!file.exists(paste("Game_HowLong_",id_search,".txt",sep="")) & !file.exists(p
 
   print("Scraping info from HowLongToBeat") # This is the most tricky part of the scrapping process. Games alocated in HowLongToBeat don't have the AppID correctly annotated so we have to match the names using regular expressions and similarity systems.
 
-  while(i<dim(game_list)[1])
+  while(i<=dim(game_list)[1])
   {
     
     pb$tick()
@@ -879,7 +942,7 @@ if(!file.exists(paste("Steam_Metadata_SSpySteam_",id_search,".txt",sep=""))) # U
   res_games<-data.frame(matrix(strsplit(AppID_List,"\\`\\`")[[1]],ncol=2,byrow=T))
   binded_table<-rbind(binded_table,res_games)
   
-  print(paste("Total entries in Steam database: ",dim(res_games)[1])) # This is the total number Steam AppID we are getting information for
+  print(paste("Total entries in Steam database:",dim(res_games)[1])) # This is the total number Steam AppID we are getting information for
 
   res_games<-binded_table[!duplicated(binded_table),]
 
@@ -964,32 +1027,9 @@ if(!file.exists(paste("Steam_Metadata_SSpySteam_",id_search,".txt",sep=""))) # U
 
 options(warn=0)
 
-############################################################################################Completed
+######################################################################################Removed games list
 
 game_list<-read.delim(paste("Steam_Metadata_SSpySteam_",id_search,".txt",sep=""),header=F)
-
-info_Steam<-getURL(steam_link_achiv) # From the proper user steam page we can get the list of games that are 100% achievements completed.
-file_process<-as.data.frame(info_Steam)
-
-h<-file_process[grep("rgGames",file_process[,1]),]
-
-print("Scraping info of 100% achievement completed games")
-
-if(str_count(h,'"name"')[1]>0)
-{
-  for(i in 2:(str_count(h,'"name"')[1]+1))
-  {
-    if(!is.na(match(substr(strsplit(sapply(strsplit(h[1], '"appid"'), "[[", i),",\\\"")[[1]][1],2,nchar(strsplit(sapply(strsplit(h[1], '"appid"'), "[[", i),",\\\"")[[1]][1])),game_list[,8])))
-    {
-      game_list[match(substr(strsplit(sapply(strsplit(h[1], '"appid"'), "[[", i),",\\\"")[[1]][1],2,nchar(strsplit(sapply(strsplit(h[1], '"appid"'), "[[", i),",\\\"")[[1]][1])),game_list[,8]),17]<-"X"
-    }
-  }
-}else 
-{
-  game_list[,17]<-NA
-}
-
-######################################################################################Removed games list
 
 print("Scraping removed games info")
 
@@ -1010,16 +1050,15 @@ print("Subsampling table with only useful information")
 game_list[,23]<-round((game_list[,12]/(game_list[,12]+game_list[,13]))*100,digits=1)
 game_list[,24]<-(game_list[,12]+game_list[,13])
 
+game_list<-game_list[order(game_list$V18,decreasing=T),]
+
 write.table(game_list,paste("Steam_Metadata_Full_",id_search,".txt",sep=""),quote = F,row.names = F,col.names = F,sep = "\t")
 system(paste("rm -rf ",paste("Steam_Metadata_SSpySteam_",id_search,".txt",sep=""),sep=""))
 
-game_list_final_output<-game_list[,c(7,8,11,16,24,23,18,3,4,25,17,14,15,19,22,20,21)]
+game_list_final_output<-game_list[,c(7,8,11,16,24,23,18,3,4,25,17,26,27,28,14,15,19,22,20,21)]
 
-colnames(game_list_final_output)<-c("Name","AppID","Genre","Tags","Votes_total","Positive_rating","Played_time (h)","Time_to_finish (h)","Time_to_complete (h)","Achievements","100%_Completed","Developer","Publisher","Release_date","Removed_game","Minimum_requirements","Recommended_requirements")
+colnames(game_list_final_output)<-c("Name","AppID","Genre","Tags","Votes_total","Positive_rating","Played_time (h)","Time_to_finish (h)","Time_to_complete (h)","Achievements","Percentage_achievements","First_achievement","Last_achievement","Last_game","Developer","Publisher","Release_date","Removed_game","Minimum_requirements","Recommended_requirements")
 
 write.table(game_list_final_output,paste("Steam_Library_Metadata_",id_search,".txt",sep=""),quote = F,row.names = F,sep = "\t")
 
 print(paste("Finished! Output files are: ",paste("Steam_Metadata_Full_",id_search,".txt",sep="")," and ",paste("Steam_Library_Metadata_",id_search,".txt",sep=""),sep=""))
-
-
-
