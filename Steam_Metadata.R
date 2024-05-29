@@ -147,7 +147,7 @@ if(!file.exists(paste("Game_HowLong_",id_search,".txt",sep="")) & !file.exists(p
 
     h2<-file_process[grep("game_count",file_process[,1]),]
 
-    res_games<-data.frame(matrix(ncol=28,nrow=str_count(h2,'"name"')[1]))
+    res_games<-data.frame(matrix(ncol=30,nrow=str_count(h2,'"name"')[1]))
 
     pb <- progress_bar$new(format = "(:spin) [:bar] :percent [Elapsed time: :elapsedfull || Estimated time remaining: :eta]", # Execution time progress bar is declared at this point
                        total = (str_count(h,'"name"')[1]+1),
@@ -213,6 +213,20 @@ if(!file.exists(paste("Game_HowLong_",id_search,".txt",sep="")) & !file.exists(p
       }
         
 
+      ###Sacar datos de porcentaje de jugadores que tienen los logros mas raros
+      
+      perJ<-rawToChar(GET(paste0("https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v2/?gameid=",res_games[i,8]))$content)
+      
+      if(str_count(perJ,'"percent"')>0)
+      {
+        
+        split_strings <- strsplit(perJ, '"percent"')
+        
+        res_games[i,29]<-paste0(round(mean(as.numeric(as.character(unlist(lapply(strsplit(gsub(":","",sapply(split_strings, function(x) x[-1])),"}"), function(x) x[[1]]))))),digits = 2)," ± ",round(sd(as.numeric(as.character(unlist(lapply(strsplit(gsub(":","",sapply(split_strings, function(x) x[-1])),"}"), function(x) x[[1]]))))),digits = 2)) ##Media y desviación del porcentaje de todos los logros
+
+        res_games[i,30]<-round(as.numeric(as.character(strsplit(gsub(":","",sapply(strsplit(perJ, '"percent"'), "[[", str_count(perJ,'"percent"')+1)),"}")[[1]][1])), digits = 2) #Porcentaje del logro más raro
+      }
+      
           #info_Steam<-getURL(steam_link_achiv) # From the proper user steam page we can get the list of games that are 100% achievements completed.
           #file_process<-as.data.frame(info_Steam)
 
@@ -1055,9 +1069,9 @@ game_list<-game_list[order(game_list$V18,decreasing=T),]
 write.table(game_list,paste("Steam_Metadata_Full_",id_search,".txt",sep=""),quote = F,row.names = F,col.names = F,sep = "\t")
 system(paste("rm -rf ",paste("Steam_Metadata_SSpySteam_",id_search,".txt",sep=""),sep=""))
 
-game_list_final_output<-game_list[,c(7,8,11,16,24,23,18,3,4,25,17,26,27,28,14,15,19,22,20,21)]
+game_list_final_output<-game_list[,c(7,8,11,16,24,23,18,3,4,25,29,30,17,26,27,28,14,15,19,22,20,21)]
 
-colnames(game_list_final_output)<-c("Name","AppID","Genre","Tags","Votes_total","Positive_rating","Played_time (h)","Time_to_finish (h)","Time_to_complete (h)","Achievements","Percentage_achievements","First_achievement","Last_achievement","Last_game","Developer","Publisher","Release_date","Removed_game","Minimum_requirements","Recommended_requirements")
+colnames(game_list_final_output)<-c("Name","AppID","Genre","Tags","Votes_total","Positive_rating","Played_time (h)","Time_to_finish (h)","Time_to_complete (h)","Achievements","Percentage_players_five_last_achievements","Percentage_players_last_achievement","Percentage_achievements","First_achievement","Last_achievement","Last_game","Developer","Publisher","Release_date","Removed_game","Minimum_requirements","Recommended_requirements")
 
 write.table(game_list_final_output,paste("Steam_Library_Metadata_",id_search,".txt",sep=""),quote = F,row.names = F,sep = "\t")
 
