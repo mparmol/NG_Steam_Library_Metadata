@@ -214,18 +214,21 @@ if(!file.exists(paste("Game_HowLong_",id_search,".txt",sep="")) & !file.exists(p
         
 
       ###Sacar datos de porcentaje de jugadores que tienen los logros mas raros
+      perJ <- jsonlite::fromJSON(httr::content(httr::GET(paste0("https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v2/?gameid=", res_games[i, 8])), "text"))
       
-      perJ<-rawToChar(GET(paste0("https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v2/?gameid=",res_games[i,8]))$content)
-      
-      if(str_count(perJ,'"percent"')>0)
-      {
+      if (length(perJ$achievementpercentages$achievements) > 0) {
         
-        split_strings <- strsplit(perJ, '"percent"')
+        percents <- as.numeric(perJ$achievementpercentages$achievements$percent)
         
-        res_games[i,29]<-paste0(round(mean(as.numeric(as.character(unlist(lapply(strsplit(gsub(":","",sapply(split_strings, function(x) x[-1])),"}"), function(x) x[[1]]))))),digits = 2)," ± ",round(sd(as.numeric(as.character(unlist(lapply(strsplit(gsub(":","",sapply(split_strings, function(x) x[-1])),"}"), function(x) x[[1]]))))),digits = 2)) ##Media y desviación del porcentaje de todos los logros
-
-        res_games[i,30]<-round(as.numeric(as.character(strsplit(gsub(":","",sapply(strsplit(perJ, '"percent"'), "[[", str_count(perJ,'"percent"')+1)),"}")[[1]][1])), digits = 2) #Porcentaje del logro más raro
+        res_games[i, 29] <- paste0(
+          round(mean(percents), digits = 2), 
+          " ± ", 
+          round(sd(percents), digits = 2)
+        ) # Media y desviación estándar
+        
+        res_games[i, 30] <- round(min(percents), digits = 2) # Porcentaje del logro más raro
       }
+      
       
           #info_Steam<-getURL(steam_link_achiv) # From the proper user steam page we can get the list of games that are 100% achievements completed.
           #file_process<-as.data.frame(info_Steam)

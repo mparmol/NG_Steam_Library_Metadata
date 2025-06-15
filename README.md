@@ -46,7 +46,7 @@ Execute miniconda and create a new environment with R. It will install the lates
 
 #### 3- Install HowLongToBeat API
 
-HowLongToBeat API is based on javascript coding: https://github.com/ckatzorke/howlongtobeat. Follow their tutorial to install needed dependencies and support them for their wrapper (thanks!).
+HowLongToBeat API is based on javascript coding: https://github.com/ckatzorke/howlongtobeat. Follow their tutorial to install needed dependencies and support them for their wrapper (thanks!). If this version is too old, try following any updated "fork", latest is: "npm install Mythic1x/howlongtobeat"
 
 #### 4- Install R dependencies
 
